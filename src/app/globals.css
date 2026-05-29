@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0f1410;
+  --cream: #f5f2eb;
+  --green: #1a6b3a;
+  --green-bright: #2d9e58;
+  --amber: #c17d2a;
+  --surface: #ffffff;
+  --muted: #6b7a6e;
+  --border: #e2ddd5;
+}
+
+.dark {
+  --ink: #e8ede9;
+  --cream: #0a0f0b;
+  --green: #2d9e58;
+  --green-bright: #4dc478;
+  --amber: #e09a3a;
+  --surface: #141a15;
+  --muted: #8a9e8d;
+  --border: #1e2a1f;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--cream);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.75;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.font-display { font-family: 'Instrument Serif', serif; }
+.font-mono { font-family: 'DM Mono', monospace; }
