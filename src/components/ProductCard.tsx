@@ -1,70 +1,115 @@
 'use client'
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { Product } from '@/lib/types'
-import { Check, X, ExternalLink } from 'lucide-react'
+import { Check, X, ExternalLink, Award } from 'lucide-react'
 import Link from 'next/link'
+import { useRef } from 'react'
 
-export function ProductCard({ product }: { product: Product }) {
-  const badgeColor: Record<string, string> = {
-    'Best Pick': 'bg-green/10 text-green border-green/20',
-    'Runner-Up': 'bg-amber/10 text-amber border-amber/20',
-    'Budget': 'bg-blue-500/10 text-blue-600 border-blue-500/20',
-  }
+const badgeStyles: Record<string, string> = {
+  'Best Pick': 'bg-green/10 text-green-bright border-green/25',
+  'Runner-Up': 'bg-amber/10 text-amber border-amber/25',
+  'Budget': 'bg-blue-500/10 text-blue-500 border-blue-500/25',
+}
+
+export function ProductCard({ product, index = 0 }: { product: Product; index?: number }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const inView = useInView(ref, { once: true, margin: '-60px' })
+  const scoreColor = product.rating >= 85 ? 'var(--green-bright)' : product.rating >= 70 ? 'var(--amber)' : '#e05a3a'
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="bg-surface border border-border rounded-2xl p-6 hover:border-green/30 transition-colors"
+      ref={ref}
+      initial={{ opacity: 0, y: 28 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+      whileHover={{ y: -2 }}
+      className="bg-surface border border-border rounded-2xl overflow-hidden hover:border-green/30 hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-black/25 transition-all duration-300"
     >
-      <div className="flex items-start justify-between mb-4">
-        <div>
-          {product.badge && (
-            <span className={`font-mono text-xs uppercase tracking-wider border px-2 py-0.5 rounded-full ${badgeColor[product.badge] ?? ''}`}>
-              {product.badge}
-            </span>
-          )}
-          <h3 className="font-display text-xl text-ink mt-2">{product.name}</h3>
-          <p className="text-muted text-sm">{product.brand} · {product.price}</p>
-        </div>
-        <div className="text-right">
-          <div className="font-display text-3xl text-ink">{product.rating}</div>
-          <div className="font-mono text-xs text-muted">/100</div>
+      {/* Header */}
+      <div className="p-5 pb-0">
+        <div className="flex items-start justify-between gap-4 mb-4">
+          <div className="flex-1">
+            {product.badge && (
+              <span className={`inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider border px-2.5 py-1 rounded-full mb-2 ${badgeStyles[product.badge] ?? ''}`}>
+                <Award className="w-2.5 h-2.5" />
+                {product.badge}
+              </span>
+            )}
+            <h3 className="font-display text-xl text-ink leading-tight">{product.name}</h3>
+            <p className="text-muted text-sm mt-0.5">{product.brand} · {product.price}</p>
+          </div>
+          {/* Circular score */}
+          <div className="relative shrink-0 w-14 h-14">
+            <svg className="w-14 h-14 -rotate-90" viewBox="0 0 56 56">
+              <circle cx="28" cy="28" r="24" fill="none" stroke="var(--border)" strokeWidth="4" />
+              <motion.circle
+                cx="28" cy="28" r="24"
+                fill="none"
+                stroke={scoreColor}
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeDasharray={`${2 * Math.PI * 24}`}
+                initial={{ strokeDashoffset: 2 * Math.PI * 24 }}
+                animate={inView ? { strokeDashoffset: 2 * Math.PI * 24 * (1 - product.rating / 100) } : {}}
+                transition={{ duration: 1.2, delay: index * 0.1 + 0.3, ease: [0.16, 1, 0.3, 1] }}
+              />
+            </svg>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="font-mono text-xs font-medium text-ink">{product.rating}</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 mb-5">
+      {/* Score bar */}
+      <div className="px-5 pb-4">
+        <div className="h-1 bg-border rounded-full overflow-hidden">
+          <motion.div
+            className="h-full rounded-full"
+            style={{ backgroundColor: scoreColor }}
+            initial={{ width: 0 }}
+            animate={inView ? { width: `${product.rating}%` } : {}}
+            transition={{ duration: 1, delay: index * 0.1 + 0.2, ease: [0.16, 1, 0.3, 1] }}
+          />
+        </div>
+      </div>
+
+      {/* Pros / Cons */}
+      <div className="px-5 pb-5 grid grid-cols-2 gap-4">
         <div>
-          <p className="font-mono text-xs uppercase tracking-wide text-green mb-2">Pros</p>
-          <ul className="space-y-1">
+          <p className="font-mono text-[10px] uppercase tracking-widest text-green-bright mb-2">Pros</p>
+          <ul className="space-y-1.5">
             {product.pros.map(pro => (
               <li key={pro} className="flex items-start gap-1.5 text-sm text-ink">
-                <Check className="w-3.5 h-3.5 text-green mt-0.5 shrink-0" />
-                {pro}
+                <Check className="w-3.5 h-3.5 text-green-bright mt-0.5 shrink-0" />
+                <span>{pro}</span>
               </li>
             ))}
           </ul>
         </div>
         <div>
-          <p className="font-mono text-xs uppercase tracking-wide text-amber mb-2">Cons</p>
-          <ul className="space-y-1">
+          <p className="font-mono text-[10px] uppercase tracking-widest text-amber mb-2">Cons</p>
+          <ul className="space-y-1.5">
             {product.cons.map(con => (
               <li key={con} className="flex items-start gap-1.5 text-sm text-muted">
                 <X className="w-3.5 h-3.5 text-amber mt-0.5 shrink-0" />
-                {con}
+                <span>{con}</span>
               </li>
             ))}
           </ul>
         </div>
       </div>
 
-      <Link
-        href={product.affiliateUrl}
-        className="flex items-center justify-center gap-2 w-full py-3 bg-green text-white rounded-xl font-medium hover:bg-green-bright transition-colors text-sm cursor-pointer"
-      >
-        View on Amazon <ExternalLink className="w-3.5 h-3.5" />
-      </Link>
+      {/* CTA */}
+      <div className="px-5 pb-5">
+        <Link
+          href={product.affiliateUrl}
+          className="group flex items-center justify-center gap-2 w-full py-3 bg-green text-white rounded-xl font-medium text-sm hover:bg-green-bright transition-colors cursor-pointer"
+        >
+          View Best Price
+          <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+        </Link>
+      </div>
     </motion.div>
   )
 }
