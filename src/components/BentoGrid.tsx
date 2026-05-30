@@ -50,13 +50,14 @@ function ArticleCard({ article, size = 'sm' }: { article: Article; size?: 'lg' |
             {frontmatter.title}
           </h2>
           <p className="mt-2 text-muted text-sm line-clamp-2 flex-1">{frontmatter.description}</p>
-          <div className="mt-4 pt-4 border-t border-border flex items-center justify-between text-xs text-muted">
-            <div className="flex items-center gap-1.5">
+          <p className="mt-2 text-xs text-muted font-mono">{frontmatter.author}</p>
+          <div className="mt-4 pt-4 border-t border-border flex items-center justify-between">
+            <span className="flex items-center gap-1.5 text-xs text-muted">
               <Clock className="w-3 h-3" />
               {frontmatter.readTime}
-            </div>
-            <span className="flex items-center gap-1 text-green opacity-0 group-hover:opacity-100 transition-opacity font-medium">
-              Read <ArrowUpRight className="w-3 h-3" />
+            </span>
+            <span className="flex items-center gap-1.5 text-xs font-semibold text-green-bright group-hover:gap-2.5 transition-all duration-200">
+              Read article <ArrowUpRight className="w-3.5 h-3.5" />
             </span>
           </div>
         </div>

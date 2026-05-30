@@ -29,7 +29,7 @@ export default function ArticlePage({ params }: { params: { category: string; sl
   return (
     <div className="pt-28 pb-24">
       {/* Article header */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
         <AnimatedSection delay={0}>
           <div className="flex items-center gap-2 mb-4">
             <span className="font-mono text-xs uppercase tracking-widest text-green-bright">{frontmatter.category}</span>
@@ -56,7 +56,7 @@ export default function ArticlePage({ params }: { params: { category: string; sl
       {/* Hero image */}
       {frontmatter.image && (
         <AnimatedSection delay={0.1}>
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-14">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-14">
             <div className="relative h-64 md:h-[420px] rounded-2xl overflow-hidden">
               <Image src={frontmatter.image} alt={frontmatter.title} fill className="object-cover" priority />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
@@ -65,7 +65,7 @@ export default function ArticlePage({ params }: { params: { category: string; sl
         </AnimatedSection>
       )}
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-14">
           <div>
             {frontmatter.verdict && <QuickVerdict verdict={frontmatter.verdict} score={frontmatter.score} />}
