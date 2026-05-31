@@ -8,6 +8,18 @@ const affiliateLinks: Record<string, string> = {
   'libre3': 'https://www.amazon.com/dp/B0C1VHRJMP?tag=longevitylab-20',
   'carlson-omega3': 'https://www.amazon.com/dp/B000NV8NKC?tag=longevitylab-20',
   'nordic-naturals': 'https://www.amazon.com/dp/B002CQU564?tag=longevitylab-20',
+  'mito-red-1500': 'https://www.amazon.com/dp/B08XYZ123?tag=longevitylab-20',
+  'joovv-solo-3': 'https://joovv.com/?ref=longevitylab',
+  'biomax-300': 'https://www.amazon.com/dp/B07PLTNJ5V?tag=longevitylab-20',
+  'sunlighten-mpulse': 'https://sunlighten.com/?ref=longevitylab',
+  'clearlight-sanctuary': 'https://infraredsauna.com/?ref=longevitylab',
+  'serenelife-sauna': 'https://www.amazon.com/dp/B07WPDL75Z?tag=longevitylab-20',
+  'the-plunge-pro': 'https://www.coldplunge.com/?ref=longevitylab',
+  'morozko-forge': 'https://morozkoforge.com/?ref=longevitylab',
+  'chest-freezer-guide': 'https://longevitylab.com/guides/chest-freezer-cold-plunge',
+  'theragun-pro-6': 'https://www.therabody.com/?ref=longevitylab',
+  'hypervolt-2-pro': 'https://hyperice.com/?ref=longevitylab',
+  'renpho-r3': 'https://www.amazon.com/dp/B08CMWND5K?tag=longevitylab-20',
 }
 
 export function GET(request: NextRequest, { params }: { params: { product: string } }) {

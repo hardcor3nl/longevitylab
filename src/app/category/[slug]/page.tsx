@@ -10,6 +10,7 @@ const categoryMeta: Record<string, { title: string; description: string }> = {
   diagnostics: { title: 'Diagnostic Tests', description: 'Reviews of at-home and lab diagnostic panels for longevity optimization.' },
   protocols: { title: 'Longevity Protocols', description: 'Science-backed protocols for sleep, exercise, nutrition, and stress management.' },
   best: { title: 'Best Picks', description: 'Our top recommendations, curated for maximum impact on health and longevity.' },
+  recovery: { title: 'Recovery & Biohacking', description: 'Expert reviews of red light therapy panels, home saunas, cold plunges, and recovery devices for longevity and performance.' },
 }
 
 export default function CategoryPage({ params }: { params: { slug: string } }) {
