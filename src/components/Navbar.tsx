@@ -63,8 +63,8 @@ export function Navbar() {
   const links = [
     { href: '/category/supplements', label: 'Supplements' },
     { href: '/category/wearables', label: 'Wearables' },
-    { href: '/category/diagnostics', label: 'Diagnostics' },
-    { href: '/category/protocols', label: 'Protocols' },
+    { href: '/database', label: 'Database' },
+    { href: '/quiz', label: 'Bio Age Quiz' },
     { href: '/best', label: 'Best Picks' },
   ]
 
