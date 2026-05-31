@@ -64,6 +64,7 @@ export function Navbar() {
     { href: '/category/supplements', label: 'Supplements' },
     { href: '/category/wearables', label: 'Wearables' },
     { href: '/database', label: 'Database' },
+    { href: '/protocols', label: 'Protocols' },
     { href: '/quiz', label: 'Bio Age Quiz' },
     { href: '/best', label: 'Best Picks' },
   ]

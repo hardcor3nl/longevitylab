@@ -6,6 +6,7 @@ import { EmailCapture } from '@/components/EmailCapture'
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { DatabaseTeaser } from '@/components/DatabaseTeaser'
 import { QuizTeaser } from '@/components/QuizTeaser'
+import { ProtocolsTeaser } from '@/components/ProtocolsTeaser'
 
 export const revalidate = 86400
 
@@ -20,6 +21,7 @@ export default function HomePage() {
         <BentoGrid articles={allArticles.slice(0, 6)} />
       </AnimatedSection>
       <DatabaseTeaser />
+      <ProtocolsTeaser />
       <QuizTeaser />
       <EmailCapture />
     </>
