@@ -66,6 +66,7 @@ export function Navbar() {
     { href: '/category/recovery', label: 'Recovery' },
     { href: '/database', label: 'Database' },
     { href: '/protocols', label: 'Protocols' },
+    { href: '/glossary', label: 'Glossary' },
     { href: '/quiz', label: 'Bio Age Quiz' },
     { href: '/best', label: 'Best Picks' },
   ]
@@ -73,12 +74,16 @@ export function Navbar() {
   return (
     <>
       {/* Reading progress bar */}
-      <div className="fixed top-0 left-0 right-0 h-[2px] z-[60]" style={{ background: 'var(--border)' }}>
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-[2px] z-[60]"
+        animate={{ opacity: progress > 2 ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+      >
         <motion.div
           className="h-full origin-left"
-          style={{ background: 'var(--green-bright)', scaleX: progress / 100 }}
+          style={{ background: 'linear-gradient(to right, var(--green), var(--green-bright))', scaleX: progress / 100 }}
         />
-      </div>
+      </motion.div>
 
       <nav className={`fixed top-2 left-3 right-3 z-50 rounded-2xl transition-all duration-300 ${
         scrolled

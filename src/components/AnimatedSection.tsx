@@ -7,9 +7,10 @@ interface Props {
   className?: string
   delay?: number
   direction?: 'up' | 'left' | 'right'
+  id?: string
 }
 
-export function AnimatedSection({ children, className = '', delay = 0, direction = 'up' }: Props) {
+export function AnimatedSection({ children, className = '', delay = 0, direction = 'up', id }: Props) {
   const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
@@ -26,7 +27,7 @@ export function AnimatedSection({ children, className = '', delay = 0, direction
   }
 
   return (
-    <motion.div ref={ref} variants={variants} initial="hidden" animate={inView ? 'show' : 'hidden'} className={className}>
+    <motion.div ref={ref} variants={variants} initial="hidden" animate={inView ? 'show' : 'hidden'} className={className} id={id}>
       {children}
     </motion.div>
   )
