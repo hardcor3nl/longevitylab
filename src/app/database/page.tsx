@@ -18,7 +18,7 @@ function ProductCard({ p, index }: { p: Product; index: number }) {
       className="bg-surface border border-border rounded-2xl overflow-hidden hover:border-green/30 hover:shadow-lg hover:shadow-black/5 dark:hover:shadow-black/20 transition-all duration-200 flex flex-col"
     >
       {/* Card header */}
-      <div className="p-5 flex-1">
+      <div className="p-5 flex-1 flex flex-col">
         <div className="flex items-start justify-between gap-3 mb-3">
           <div className="flex-1 min-w-0">
             {p.badge && (
@@ -26,6 +26,7 @@ function ProductCard({ p, index }: { p: Product; index: number }) {
                 {p.badge}
               </span>
             )}
+            <span className="font-mono text-[9px] uppercase tracking-wider text-muted/70">{p.category}</span>
             <p className="font-mono text-[10px] uppercase tracking-widest text-muted mb-0.5">{p.brand}</p>
             <h3 className="font-display text-xl text-ink leading-tight">{p.name}</h3>
             <p className="text-muted text-xs mt-0.5 italic line-clamp-1">{p.tagline}</p>
@@ -66,19 +67,23 @@ function ProductCard({ p, index }: { p: Product; index: number }) {
       </div>
 
       {/* Card footer — buttons */}
-      <div className="px-5 pb-5 space-y-2">
+      <div className="px-5 pb-5 space-y-2 border-t border-border pt-4 mt-auto">
         {p.reviewSlug && (
           <Link href={`/${p.reviewSlug}`}
-            className="flex items-center justify-center gap-2 w-full py-2.5 bg-surface-2 border border-border text-ink rounded-xl text-sm font-medium hover:border-green/40 hover:text-green transition-colors cursor-pointer">
+            className="flex items-center justify-center gap-2 w-full py-2.5 bg-green text-white rounded-xl text-sm font-semibold hover:bg-green-bright transition-colors cursor-pointer group">
             <BookOpen className="w-3.5 h-3.5" />
             {p.reviewLabel ?? 'Read Full Review'}
+            <ArrowUpRight className="w-3 h-3 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
           </Link>
         )}
         {p.affiliateUrl && (
           <Link href={p.affiliateUrl}
-            className="flex items-center justify-center gap-2 w-full py-2.5 bg-green text-white rounded-xl text-sm font-medium hover:bg-green-bright transition-colors cursor-pointer">
+            className={`flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-sm font-medium transition-colors cursor-pointer border ${p.reviewSlug ? 'bg-surface border-border text-muted hover:border-green/40 hover:text-ink' : 'bg-green text-white border-green hover:bg-green-bright'}`}>
             View Best Price <ArrowUpRight className="w-3.5 h-3.5" />
           </Link>
+        )}
+        {!p.reviewSlug && !p.affiliateUrl && (
+          <div className="py-2.5 text-center font-mono text-xs text-muted uppercase tracking-wider">Review coming soon</div>
         )}
       </div>
     </motion.div>
@@ -121,6 +126,19 @@ export default function DatabasePage() {
             {products.length} longevity products across {allCategories.length} categories — ranked by evidence quality.
             Every review article linked directly.
           </p>
+          <div className="flex flex-wrap gap-6 mt-6">
+            {[
+              { value: `${products.length}`, label: 'Products reviewed' },
+              { value: `${allCategories.length}`, label: 'Categories' },
+              { value: products.filter(p => p.reviewSlug).length.toString(), label: 'Full review articles' },
+              { value: products.filter(p => p.evidenceLevel === 'Strong').length.toString(), label: 'Strong evidence' },
+            ].map(stat => (
+              <div key={stat.label} className="flex items-center gap-2">
+                <span className="font-display text-2xl text-ink">{stat.value}</span>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-muted">{stat.label}</span>
+              </div>
+            ))}
+          </div>
         </AnimatedSection>
 
         {/* Search bar */}
@@ -189,10 +207,41 @@ export default function DatabasePage() {
       {/* Category group sections when no filter active */}
       {!activeCategory && !query ? (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+          {/* Jump nav */}
+          <div className="flex gap-3 mb-12 overflow-x-auto scrollbar-hide pb-1">
+            {categoryGroups.map(group => (
+              <button key={group.label}
+                onClick={() => document.getElementById(`group-${group.label.replace(/\s/g,'-')}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                className="flex items-center gap-2 whitespace-nowrap px-4 py-2 bg-surface border border-border rounded-xl text-sm font-medium text-muted hover:text-ink hover:border-green/40 transition-colors cursor-pointer shrink-0">
+                {group.label}
+                <span className="font-mono text-[10px] bg-surface-2 px-1.5 py-0.5 rounded-full">
+                  {products.filter(p => group.categories.includes(p.category)).length}
+                </span>
+              </button>
+            ))}
+          </div>
           {categoryGroups.map((group, gi) => (
-            <AnimatedSection key={group.label} delay={gi * 0.05}>
-              <h2 className="font-display text-3xl text-ink mb-2">{group.label}</h2>
-              <p className="text-muted text-sm mb-6 font-mono">{group.categories.join(' · ')}</p>
+            <AnimatedSection key={group.label} delay={gi * 0.05} id={`group-${group.label.replace(/\s/g,'-')}`}>
+              <div className="flex items-center gap-4 mb-8">
+                <div className="flex-1 h-px bg-border" />
+                <div className="flex items-center gap-3">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">{group.label}</span>
+                  <span className="font-mono text-[10px] text-muted/50">{products.filter(p => group.categories.includes(p.category)).length} products</span>
+                </div>
+                <div className="flex-1 h-px bg-border" />
+              </div>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {group.categories.map(cat => {
+                  const count = products.filter(p => p.category === cat).length
+                  return (
+                    <button key={cat} onClick={() => { setActiveCategory(cat); setShowFilters(false) }}
+                      className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider border border-border text-muted px-3 py-1.5 rounded-full hover:border-green/40 hover:text-ink transition-colors cursor-pointer">
+                      {cat}
+                      <span className="bg-surface-2 text-muted px-1.5 py-0.5 rounded-full text-[9px]">{count}</span>
+                    </button>
+                  )
+                })}
+              </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 {products.filter(p => group.categories.includes(p.category)).map((p, i) => (
                   <ProductCard key={p.id} p={p} index={i} />
