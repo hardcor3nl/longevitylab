@@ -195,6 +195,7 @@ export default function StressResilienceProtocol() {
                   </div>
                 </div>
 
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
                 <div className="bg-amber/5 border border-amber/20 rounded-lg p-4 mt-6">
                   <p className="text-sm text-ink">
                     <strong>Evidence note:</strong> RCTs on grounding mats are mixed (some show inflammatory markers ↓, others don't). However, nature exposure + grounding combination reliably ↓cortisol and ↑HRV.
@@ -259,7 +260,7 @@ export default function StressResilienceProtocol() {
                   </div>
                   <div>
                     <span className="text-muted">Adaptogens</span>
-                    <p className="text-ink font-semibold">Ashwagandha + Lion's Mane</p>
+                    <p className="text-ink font-semibold">Ashwagandha + Lion&apos;s Mane</p>
                   </div>
                   <div>
                     <span className="text-muted">Grounding</span>
