@@ -42,6 +42,14 @@ const comparisons = [
     description: 'We compare Insight Timer, Calm, Headspace, 10% Happier, and Wim Hof. Free options, pricing, science backing, and best use cases revealed.',
   },
   {
+    slug: 'cardio-modalities',
+    title: 'Cardio Modalities Compared',
+    subtitle: 'Running vs Cycling vs Rowing vs Swimming',
+    category: 'Cardiovascular',
+    verdict: 'Stack modalities',
+    description: 'VO₂ max stimulus, injury risk, longevity impact, and cost breakdown for each cardio style. Rowing wins VO₂ gains. Cycling wins sustainability.',
+  },
+  {
     slug: 'creatine-vs-hmb',
     title: 'Creatine vs HMB',
     subtitle: 'Best anti-sarcopenic supplement?',

@@ -70,6 +70,7 @@ export function Navbar() {
     { href: '/cardio', label: 'Cardio' },
     { href: '/nutrition', label: 'Nutrition' },
     { href: '/stress-resilience', label: 'Stress' },
+    { href: '/exotic-methods', label: 'Exotic Methods' },
     { href: '/compare', label: 'Compare' },
     { href: '/protocols', label: 'Protocols' },
     { href: '/glossary', label: 'Glossary' },
