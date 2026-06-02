@@ -26,12 +26,20 @@ const comparisons = [
     description: 'WHOOP wins for HRV and recovery. Oura wins for sleep staging. After 6 months wearing both simultaneously, here\'s the verdict.',
   },
   {
-    slug: 'infrared-vs-traditional-sauna',
+    slug: 'sauna-types',
     title: 'Infrared vs Traditional Sauna',
     subtitle: 'Which delivers better longevity benefits?',
     category: 'Recovery',
     verdict: 'Traditional',
-    description: 'The KIHD mortality data is from traditional saunas. Infrared has unique near-IR benefits. We break down the full evidence comparison.',
+    description: 'The KIHD mortality data is from traditional saunas. Infrared has unique near-IR benefits. We break down temperature, cost, and cardiovascular impact.',
+  },
+  {
+    slug: 'meditation-apps',
+    title: 'Best Meditation Apps Compared',
+    subtitle: 'Insight Timer vs Calm vs Headspace vs more',
+    category: 'Stress & Resilience',
+    verdict: 'Insight Timer',
+    description: 'We compare Insight Timer, Calm, Headspace, 10% Happier, and Wim Hof. Free options, pricing, science backing, and best use cases revealed.',
   },
   {
     slug: 'creatine-vs-hmb',

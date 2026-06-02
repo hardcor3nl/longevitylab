@@ -68,10 +68,11 @@ export function Navbar() {
     { href: '/database', label: 'Database' },
     { href: '/sleep', label: 'Sleep' },
     { href: '/cardio', label: 'Cardio' },
+    { href: '/nutrition', label: 'Nutrition' },
+    { href: '/stress-resilience', label: 'Stress' },
     { href: '/compare', label: 'Compare' },
     { href: '/protocols', label: 'Protocols' },
     { href: '/glossary', label: 'Glossary' },
-    { href: '/best', label: 'Best Picks' },
   ]
 
   return (
