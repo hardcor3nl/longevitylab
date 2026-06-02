@@ -61,20 +61,29 @@ export function Navbar() {
   const closeSearch = () => { setSearchOpen(false); setQuery(''); setResults([]) }
 
   const links = [
-    { href: '/get-started', label: 'Get Started' },
-    { href: '/category/supplements', label: 'Supplements' },
-    { href: '/category/wearables', label: 'Wearables' },
-    { href: '/category/recovery', label: 'Recovery' },
-    { href: '/database', label: 'Database' },
-    { href: '/sleep', label: 'Sleep' },
-    { href: '/cardio', label: 'Cardio' },
-    { href: '/nutrition', label: 'Nutrition' },
-    { href: '/stress-resilience', label: 'Stress' },
-    { href: '/exotic-methods', label: 'Exotic Methods' },
-    { href: '/compare', label: 'Compare' },
-    { href: '/protocols', label: 'Protocols' },
-    { href: '/glossary', label: 'Glossary' },
+    { href: '/get-started', label: 'Get Started', category: 'main' },
+    // Protocols
+    { href: '/sleep', label: 'Sleep', category: 'protocols', icon: '🛏️' },
+    { href: '/cardio', label: 'Cardio', category: 'protocols', icon: '💪' },
+    { href: '/nutrition', label: 'Nutrition', category: 'protocols', icon: '🥗' },
+    { href: '/stress-resilience', label: 'Stress', category: 'protocols', icon: '🧘' },
+    { href: '/exotic-methods', label: 'Exotic Methods', category: 'protocols', icon: '⚡' },
+    // Resources
+    { href: '/category/supplements', label: 'Supplements', category: 'resources', icon: '💊' },
+    { href: '/category/wearables', label: 'Wearables', category: 'resources', icon: '⌚' },
+    { href: '/category/recovery', label: 'Recovery', category: 'resources', icon: '❄️' },
+    { href: '/database', label: 'Database', category: 'resources', icon: '📊' },
+    // Compare
+    { href: '/compare', label: 'Compare', category: 'compare' },
+    // Tools
+    { href: '/glossary', label: 'Glossary', category: 'tools' },
   ]
+
+  const protocolLinks = links.filter(l => l.category === 'protocols')
+  const resourceLinks = links.filter(l => l.category === 'resources')
+  const mainLinks = links.filter(l => l.category === 'main')
+  const compareLinks = links.filter(l => l.category === 'compare')
+  const toolLinks = links.filter(l => l.category === 'tools')
 
   return (
     <>
@@ -105,14 +114,48 @@ export function Navbar() {
               <span className="font-display text-xl text-ink hidden sm:block">LongevityLab</span>
             </Link>
 
-            {/* Desktop nav */}
-            <div className="hidden lg:flex items-center gap-1">
-              {links.map(l => (
+            {/* Desktop nav - organized by section */}
+            <div className="hidden lg:flex items-center gap-3">
+              {/* Main */}
+              {mainLinks.map(l => (
                 <Link key={l.href} href={l.href}
-                  className="px-3 py-1.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-lg transition-all duration-150 cursor-pointer">
+                  className="px-3 py-1.5 text-sm font-medium text-muted hover:text-ink hover:bg-green/10 rounded-lg transition-all duration-150 cursor-pointer">
                   {l.label}
                 </Link>
               ))}
+
+              {/* Divider */}
+              <div className="w-px h-5 bg-border/30"></div>
+
+              {/* Protocols */}
+              <div className="flex items-center gap-1">
+                <span className="text-xs font-mono uppercase tracking-widest text-muted/60 px-2">Protocols</span>
+                {protocolLinks.map(l => (
+                  <Link key={l.href} href={l.href}
+                    className="px-3 py-1.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-lg transition-all duration-150 cursor-pointer flex items-center gap-1.5">
+                    <span className="text-base">{l.icon}</span> {l.label}
+                  </Link>
+                ))}
+              </div>
+
+              {/* Divider */}
+              <div className="w-px h-5 bg-border/30"></div>
+
+              {/* Compare & Resources */}
+              <div className="flex items-center gap-1">
+                {compareLinks.map(l => (
+                  <Link key={l.href} href={l.href}
+                    className="px-3 py-1.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-lg transition-all duration-150 cursor-pointer">
+                    {l.label}
+                  </Link>
+                ))}
+                {resourceLinks.slice(0, 2).map(l => (
+                  <Link key={l.href} href={l.href}
+                    className="px-3 py-1.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-lg transition-all duration-150 cursor-pointer flex items-center gap-1">
+                    <span className="text-sm">{l.icon}</span> {l.label}
+                  </Link>
+                ))}
+              </div>
             </div>
 
             {/* Right controls */}
@@ -233,14 +276,59 @@ export function Navbar() {
               transition={{ duration: 0.2 }}
               className="lg:hidden overflow-hidden border-t border-border"
             >
-              <div className="px-4 py-3 space-y-1">
-                {links.map(l => (
-                  <Link key={l.href} href={l.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="block px-3 py-2.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-xl transition-colors cursor-pointer">
-                    {l.label}
-                  </Link>
-                ))}
+              <div className="px-4 py-4 space-y-4 max-h-[70vh] overflow-y-auto">
+                {/* Main */}
+                <div>
+                  {mainLinks.map(l => (
+                    <Link key={l.href} href={l.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="block px-3 py-2.5 text-sm font-semibold text-ink hover:bg-green/10 rounded-xl transition-colors cursor-pointer mb-2">
+                      {l.label}
+                    </Link>
+                  ))}
+                </div>
+
+                {/* Protocols Section */}
+                <div>
+                  <p className="text-xs font-mono uppercase tracking-widest text-muted/60 px-3 mb-2">Protocols</p>
+                  {protocolLinks.map(l => (
+                    <Link key={l.href} href={l.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="flex items-center gap-2 px-3 py-2.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-xl transition-colors cursor-pointer mb-1">
+                      <span className="text-base">{l.icon}</span> {l.label}
+                    </Link>
+                  ))}
+                </div>
+
+                {/* Resources Section */}
+                <div>
+                  <p className="text-xs font-mono uppercase tracking-widest text-muted/60 px-3 mb-2">Resources</p>
+                  {resourceLinks.map(l => (
+                    <Link key={l.href} href={l.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="flex items-center gap-2 px-3 py-2.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-xl transition-colors cursor-pointer mb-1">
+                      <span className="text-sm">{l.icon}</span> {l.label}
+                    </Link>
+                  ))}
+                </div>
+
+                {/* Compare & Tools */}
+                <div>
+                  {compareLinks.map(l => (
+                    <Link key={l.href} href={l.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="block px-3 py-2.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-xl transition-colors cursor-pointer mb-1">
+                      {l.label}
+                    </Link>
+                  ))}
+                  {toolLinks.map(l => (
+                    <Link key={l.href} href={l.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="block px-3 py-2.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-xl transition-colors cursor-pointer">
+                      {l.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </motion.div>
           )}
