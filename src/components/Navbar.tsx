@@ -61,14 +61,16 @@ export function Navbar() {
   const closeSearch = () => { setSearchOpen(false); setQuery(''); setResults([]) }
 
   const links = [
+    { href: '/get-started', label: 'Get Started' },
     { href: '/category/supplements', label: 'Supplements' },
     { href: '/category/wearables', label: 'Wearables' },
     { href: '/category/recovery', label: 'Recovery' },
     { href: '/database', label: 'Database' },
+    { href: '/sleep', label: 'Sleep' },
+    { href: '/cardio', label: 'Cardio' },
     { href: '/compare', label: 'Compare' },
     { href: '/protocols', label: 'Protocols' },
     { href: '/glossary', label: 'Glossary' },
-    { href: '/quiz', label: 'Bio Age Quiz' },
     { href: '/best', label: 'Best Picks' },
   ]
 
