@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { useTheme } from './ThemeProvider'
-import { Sun, Moon, Search, X, FlaskConical, Menu, ArrowUpRight } from 'lucide-react'
+import { Sun, Moon, Search, X, FlaskConical, Menu, ArrowUpRight, ChevronDown } from 'lucide-react'
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Fuse from 'fuse.js'
@@ -13,16 +13,50 @@ interface SearchResult {
   description: string
 }
 
+const NAV_GROUPS = [
+  {
+    label: 'Protocols',
+    items: [
+      { href: '/sleep', label: 'Sleep Optimization', desc: 'Circadian rhythm & sleep stack' },
+      { href: '/cardio', label: 'Zone 2 & VO₂ Max', desc: 'Cardio training science' },
+      { href: '/nutrition', label: 'Nutrition', desc: 'Longevity eating frameworks' },
+      { href: '/stress-resilience', label: 'Stress Resilience', desc: 'Meditation, adaptogens, breathwork' },
+      { href: '/exotic-methods', label: 'Exotic Methods', desc: 'Peptides, NAD+ IV, advanced protocols' },
+    ],
+  },
+  {
+    label: 'Reviews',
+    items: [
+      { href: '/category/supplements', label: 'Supplements', desc: 'NMN, creatine, magnesium & more' },
+      { href: '/category/wearables', label: 'Wearables', desc: 'WHOOP, Oura, Garmin, CGMs' },
+      { href: '/category/recovery', label: 'Recovery Devices', desc: 'Sauna, cold plunge, red light' },
+      { href: '/category/diagnostics', label: 'Diagnostics', desc: 'Blood tests, VO₂ max, biomarkers' },
+      { href: '/category/best', label: 'Best Of', desc: 'Top-ranked picks by category' },
+    ],
+  },
+  {
+    label: 'Learn',
+    items: [
+      { href: '/protocols', label: 'Expert Protocols', desc: 'Attia, Huberman, Sinclair & more' },
+      { href: '/compare', label: 'Comparisons', desc: 'Head-to-head product breakdowns' },
+      { href: '/database', label: 'Supplement Database', desc: 'Evidence scores for 100+ compounds' },
+      { href: '/glossary', label: 'Glossary', desc: 'Longevity terms explained' },
+    ],
+  },
+]
+
 export function Navbar() {
   const { theme, toggle } = useTheme()
   const [scrolled, setScrolled] = useState(false)
   const [progress, setProgress] = useState(0)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
+  const [activeMenu, setActiveMenu] = useState<string | null>(null)
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<SearchResult[]>([])
   const searchRef = useRef<HTMLInputElement>(null)
   const fuseRef = useRef<Fuse<SearchResult> | null>(null)
+  const menuTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     fetch('/api/search-index')
@@ -55,35 +89,21 @@ export function Navbar() {
   const handleSearch = useCallback((q: string) => {
     setQuery(q)
     if (!q.trim() || !fuseRef.current) { setResults([]); return }
-    setResults(fuseRef.current.search(q).slice(0, 5).map(r => r.item))
+    setResults(fuseRef.current.search(q).slice(0, 6).map(r => r.item))
   }, [])
 
   const closeSearch = () => { setSearchOpen(false); setQuery(''); setResults([]) }
 
-  const links = [
-    { href: '/get-started', label: 'Get Started', category: 'main' },
-    // Protocols
-    { href: '/sleep', label: 'Sleep', category: 'protocols', icon: '🛏️' },
-    { href: '/cardio', label: 'Cardio', category: 'protocols', icon: '💪' },
-    { href: '/nutrition', label: 'Nutrition', category: 'protocols', icon: '🥗' },
-    { href: '/stress-resilience', label: 'Stress', category: 'protocols', icon: '🧘' },
-    { href: '/exotic-methods', label: 'Exotic Methods', category: 'protocols', icon: '⚡' },
-    // Resources
-    { href: '/category/supplements', label: 'Supplements', category: 'resources', icon: '💊' },
-    { href: '/category/wearables', label: 'Wearables', category: 'resources', icon: '⌚' },
-    { href: '/category/recovery', label: 'Recovery', category: 'resources', icon: '❄️' },
-    { href: '/database', label: 'Database', category: 'resources', icon: '📊' },
-    // Compare
-    { href: '/compare', label: 'Compare', category: 'compare' },
-    // Tools
-    { href: '/glossary', label: 'Glossary', category: 'tools' },
-  ]
-
-  const protocolLinks = links.filter(l => l.category === 'protocols')
-  const resourceLinks = links.filter(l => l.category === 'resources')
-  const mainLinks = links.filter(l => l.category === 'main')
-  const compareLinks = links.filter(l => l.category === 'compare')
-  const toolLinks = links.filter(l => l.category === 'tools')
+  const openMenu = (label: string) => {
+    if (menuTimeout.current) clearTimeout(menuTimeout.current)
+    setActiveMenu(label)
+  }
+  const closeMenu = () => {
+    menuTimeout.current = setTimeout(() => setActiveMenu(null), 120)
+  }
+  const keepMenu = () => {
+    if (menuTimeout.current) clearTimeout(menuTimeout.current)
+  }
 
   return (
     <>
@@ -101,11 +121,12 @@ export function Navbar() {
 
       <nav className={`fixed top-2 left-3 right-3 z-50 rounded-2xl transition-all duration-300 ${
         scrolled
-          ? 'bg-cream/80 dark:bg-[#0a0f0b]/80 backdrop-blur-xl shadow-lg shadow-black/5 dark:shadow-black/30 border border-border'
-          : 'bg-cream/60 dark:bg-[#0a0f0b]/60 backdrop-blur-md border border-border/50'
+          ? 'bg-cream/90 dark:bg-[#0a0f0b]/90 backdrop-blur-xl shadow-lg shadow-black/5 dark:shadow-black/30 border border-border'
+          : 'bg-cream/70 dark:bg-[#0a0f0b]/70 backdrop-blur-md border border-border/50'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-5">
           <div className="flex items-center justify-between h-14">
+
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group shrink-0">
               <div className="w-7 h-7 rounded-lg bg-green flex items-center justify-center group-hover:bg-green-bright transition-colors">
@@ -114,48 +135,66 @@ export function Navbar() {
               <span className="font-display text-xl text-ink hidden sm:block">LongevityLab</span>
             </Link>
 
-            {/* Desktop nav - organized by section */}
-            <div className="hidden lg:flex items-center gap-3">
-              {/* Main */}
-              {mainLinks.map(l => (
-                <Link key={l.href} href={l.href}
-                  className="px-3 py-1.5 text-sm font-medium text-muted hover:text-ink hover:bg-green/10 rounded-lg transition-all duration-150 cursor-pointer">
-                  {l.label}
-                </Link>
+            {/* Desktop nav — mega-menu */}
+            <div className="hidden lg:flex items-center gap-1">
+
+              {/* Get Started CTA */}
+              <Link href="/get-started"
+                className="px-3 py-1.5 text-sm font-semibold text-green-bright hover:bg-green/10 rounded-lg transition-all duration-150 cursor-pointer">
+                Get Started
+              </Link>
+
+              <div className="w-px h-4 bg-border/40 mx-1" />
+
+              {/* Dropdown groups */}
+              {NAV_GROUPS.map(group => (
+                <div key={group.label} className="relative"
+                  onMouseEnter={() => openMenu(group.label)}
+                  onMouseLeave={closeMenu}>
+                  <button
+                    className={`flex items-center gap-1 px-3 py-1.5 text-sm font-medium rounded-lg transition-all duration-150 cursor-pointer ${
+                      activeMenu === group.label
+                        ? 'text-ink bg-surface/80'
+                        : 'text-muted hover:text-ink hover:bg-surface/80'
+                    }`}>
+                    {group.label}
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-150 ${activeMenu === group.label ? 'rotate-180' : ''}`} />
+                  </button>
+
+                  <AnimatePresence>
+                    {activeMenu === group.label && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 6, scale: 0.97 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 6, scale: 0.97 }}
+                        transition={{ duration: 0.15 }}
+                        onMouseEnter={keepMenu}
+                        onMouseLeave={closeMenu}
+                        className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-surface border border-border rounded-2xl shadow-xl shadow-black/10 dark:shadow-black/40 overflow-hidden z-50"
+                      >
+                        <div className="p-2">
+                          {group.items.map(item => (
+                            <Link key={item.href} href={item.href}
+                              onClick={() => setActiveMenu(null)}
+                              className="flex flex-col gap-0.5 px-3 py-2.5 rounded-xl hover:bg-surface-2 transition-colors cursor-pointer group">
+                              <span className="text-sm font-medium text-ink group-hover:text-green transition-colors">{item.label}</span>
+                              <span className="text-xs text-muted">{item.desc}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               ))}
 
-              {/* Divider */}
-              <div className="w-px h-5 bg-border/30"></div>
+              <div className="w-px h-4 bg-border/40 mx-1" />
 
-              {/* Protocols */}
-              <div className="flex items-center gap-1">
-                <span className="text-xs font-mono uppercase tracking-widest text-muted/60 px-2">Protocols</span>
-                {protocolLinks.map(l => (
-                  <Link key={l.href} href={l.href}
-                    className="px-3 py-1.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-lg transition-all duration-150 cursor-pointer flex items-center gap-1.5">
-                    <span className="text-base">{l.icon}</span> {l.label}
-                  </Link>
-                ))}
-              </div>
-
-              {/* Divider */}
-              <div className="w-px h-5 bg-border/30"></div>
-
-              {/* Compare & Resources */}
-              <div className="flex items-center gap-1">
-                {compareLinks.map(l => (
-                  <Link key={l.href} href={l.href}
-                    className="px-3 py-1.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-lg transition-all duration-150 cursor-pointer">
-                    {l.label}
-                  </Link>
-                ))}
-                {resourceLinks.slice(0, 2).map(l => (
-                  <Link key={l.href} href={l.href}
-                    className="px-3 py-1.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-lg transition-all duration-150 cursor-pointer flex items-center gap-1">
-                    <span className="text-sm">{l.icon}</span> {l.label}
-                  </Link>
-                ))}
-              </div>
+              {/* Quick links */}
+              <Link href="/quiz"
+                className="px-3 py-1.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-lg transition-all duration-150 cursor-pointer">
+                Quiz
+              </Link>
             </div>
 
             {/* Right controls */}
@@ -167,7 +206,7 @@ export function Navbar() {
                     <motion.div
                       key="search-input"
                       initial={{ width: 32, opacity: 0 }}
-                      animate={{ width: 220, opacity: 1 }}
+                      animate={{ width: 240, opacity: 1 }}
                       exit={{ width: 32, opacity: 0 }}
                       transition={{ duration: 0.2 }}
                       className="flex items-center"
@@ -179,14 +218,13 @@ export function Navbar() {
                           type="text"
                           value={query}
                           onChange={e => handleSearch(e.target.value)}
-                          placeholder="Search articles..."
+                          placeholder="Search..."
                           className="bg-transparent text-sm text-ink placeholder-muted outline-none w-full"
                         />
                         <button onClick={closeSearch} className="cursor-pointer">
                           <X className="w-3.5 h-3.5 text-muted hover:text-ink transition-colors" />
                         </button>
                       </div>
-                      {/* Results dropdown */}
                       <AnimatePresence>
                         {results.length > 0 && (
                           <motion.div
@@ -244,7 +282,7 @@ export function Navbar() {
                 </AnimatePresence>
               </button>
 
-              {/* Mobile menu */}
+              {/* Mobile menu toggle */}
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
                 className="lg:hidden p-2 rounded-xl hover:bg-surface/80 transition-colors cursor-pointer"
@@ -276,59 +314,32 @@ export function Navbar() {
               transition={{ duration: 0.2 }}
               className="lg:hidden overflow-hidden border-t border-border"
             >
-              <div className="px-4 py-4 space-y-4 max-h-[70vh] overflow-y-auto">
-                {/* Main */}
-                <div>
-                  {mainLinks.map(l => (
-                    <Link key={l.href} href={l.href}
-                      onClick={() => setMobileOpen(false)}
-                      className="block px-3 py-2.5 text-sm font-semibold text-ink hover:bg-green/10 rounded-xl transition-colors cursor-pointer mb-2">
-                      {l.label}
-                    </Link>
-                  ))}
-                </div>
+              <div className="px-4 py-4 space-y-5 max-h-[75vh] overflow-y-auto">
+                <Link href="/get-started" onClick={() => setMobileOpen(false)}
+                  className="block px-3 py-2.5 bg-green/10 text-green-bright font-semibold text-sm rounded-xl">
+                  Get Started →
+                </Link>
 
-                {/* Protocols Section */}
-                <div>
-                  <p className="text-xs font-mono uppercase tracking-widest text-muted/60 px-3 mb-2">Protocols</p>
-                  {protocolLinks.map(l => (
-                    <Link key={l.href} href={l.href}
-                      onClick={() => setMobileOpen(false)}
-                      className="flex items-center gap-2 px-3 py-2.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-xl transition-colors cursor-pointer mb-1">
-                      <span className="text-base">{l.icon}</span> {l.label}
-                    </Link>
-                  ))}
-                </div>
+                {NAV_GROUPS.map(group => (
+                  <div key={group.label}>
+                    <p className="text-xs font-mono uppercase tracking-widest text-muted/60 px-3 mb-1">{group.label}</p>
+                    {group.items.map(item => (
+                      <Link key={item.href} href={item.href}
+                        onClick={() => setMobileOpen(false)}
+                        className="flex items-start gap-3 px-3 py-2.5 rounded-xl hover:bg-surface/80 transition-colors cursor-pointer group mb-0.5">
+                        <div>
+                          <p className="text-sm font-medium text-ink group-hover:text-green transition-colors">{item.label}</p>
+                          <p className="text-xs text-muted mt-0.5">{item.desc}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                ))}
 
-                {/* Resources Section */}
-                <div>
-                  <p className="text-xs font-mono uppercase tracking-widest text-muted/60 px-3 mb-2">Resources</p>
-                  {resourceLinks.map(l => (
-                    <Link key={l.href} href={l.href}
-                      onClick={() => setMobileOpen(false)}
-                      className="flex items-center gap-2 px-3 py-2.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-xl transition-colors cursor-pointer mb-1">
-                      <span className="text-sm">{l.icon}</span> {l.label}
-                    </Link>
-                  ))}
-                </div>
-
-                {/* Compare & Tools */}
-                <div>
-                  {compareLinks.map(l => (
-                    <Link key={l.href} href={l.href}
-                      onClick={() => setMobileOpen(false)}
-                      className="block px-3 py-2.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-xl transition-colors cursor-pointer mb-1">
-                      {l.label}
-                    </Link>
-                  ))}
-                  {toolLinks.map(l => (
-                    <Link key={l.href} href={l.href}
-                      onClick={() => setMobileOpen(false)}
-                      className="block px-3 py-2.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-xl transition-colors cursor-pointer">
-                      {l.label}
-                    </Link>
-                  ))}
-                </div>
+                <Link href="/quiz" onClick={() => setMobileOpen(false)}
+                  className="block px-3 py-2.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-xl transition-colors cursor-pointer">
+                  Quiz
+                </Link>
               </div>
             </motion.div>
           )}
