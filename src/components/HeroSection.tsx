@@ -12,8 +12,8 @@ const floatingCards = [
 
 export function HeroSection() {
   const stats = [
-    { icon: Microscope, value: '200+', label: 'Products Tested' },
-    { icon: TrendingUp, value: '50+', label: 'Studies Cited' },
+    { icon: Microscope, value: '100+', label: 'Reviews Published' },
+    { icon: TrendingUp, value: '6K+', label: 'Studies Referenced' },
     { icon: Users, value: '12K+', label: 'Subscribers' },
   ]
 

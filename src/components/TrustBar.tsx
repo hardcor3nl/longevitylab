@@ -2,7 +2,7 @@ import { Shield, BookOpen, Users, Award } from 'lucide-react'
 
 const stats = [
   { icon: Shield, label: 'Independent — no supplement company funding' },
-  { icon: BookOpen, label: '6,000+ studies referenced' },
+  { icon: BookOpen, label: '100+ science-backed reviews' },
   { icon: Users, label: '12,000+ newsletter subscribers' },
   { icon: Award, label: 'Reviewed by MDs & PhDs' },
 ]

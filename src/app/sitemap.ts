@@ -30,7 +30,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/${a.category}/${a.slug}`,
     lastModified: new Date(a.frontmatter.date),
     changeFrequency: 'monthly' as const,
-    priority: 0.7,
+    // Featured articles and those with products get higher priority
+    priority: a.frontmatter.featured ? 0.85 : (a.frontmatter.products?.length ? 0.75 : 0.65),
   }))
 
   const protocolPages = protocols.map(p => ({
