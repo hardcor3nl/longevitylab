@@ -10,9 +10,10 @@ export function ProtocolsTeaser() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="flex items-end justify-between mb-10">
           <div>
-            <p className="font-mono text-xs uppercase tracking-widest text-green-bright mb-2">Expert Protocols</p>
-            <h2 className="font-display text-4xl text-ink">Learn From the Best</h2>
-            <p className="text-muted mt-2 max-w-lg">The complete supplement stacks and protocols from leading longevity researchers, analysed and explained.</p>
+            <div className="section-rule" />
+            <p className="font-mono text-xs uppercase tracking-[0.14em] text-green-bright mb-2">Expert Protocols</p>
+            <h2 className="font-display text-4xl text-ink leading-tight">Learn From the Best</h2>
+            <p className="text-muted mt-2.5 max-w-lg leading-relaxed">The complete supplement stacks and protocols from leading longevity researchers, analysed and explained.</p>
           </div>
           <Link href="/protocols" className="hidden sm:flex items-center gap-1.5 text-sm font-medium text-muted hover:text-ink transition-colors cursor-pointer group shrink-0">
             All protocols <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />

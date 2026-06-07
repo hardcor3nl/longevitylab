@@ -1,7 +1,14 @@
 'use client'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight, Lock, CheckCircle2 } from 'lucide-react'
+
+const perks = [
+  'Weekly evidence summaries',
+  'Protocol deep-dives',
+  'Exclusive subscriber reviews',
+  'Early access to the research DB',
+]
 
 export function EmailCapture() {
   const [email, setEmail] = useState('')
@@ -18,83 +25,133 @@ export function EmailCapture() {
   }
 
   return (
-    <section className="relative overflow-hidden py-24 px-4" style={{ background: 'linear-gradient(135deg, #0a1a0d 0%, #0f2014 50%, #091508 100%)' }}>
-      {/* Subtle dot grid pattern */}
-      <div className="absolute inset-0 opacity-20"
-        style={{ backgroundImage: 'radial-gradient(circle, #2d9e58 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
+    <section className="relative overflow-hidden py-24 px-4"
+      style={{ background: 'linear-gradient(145deg, #061409 0%, #0e2016 40%, #07160b 100%)' }}>
 
-      {/* Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] rounded-full blur-3xl opacity-10"
-        style={{ background: '#2d9e58' }} />
+      {/* Dot grid */}
+      <div className="absolute inset-0 opacity-[0.14]"
+        style={{ backgroundImage: 'radial-gradient(circle, #2d9e58 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
 
-      <div className="relative max-w-2xl mx-auto text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="inline-flex items-center gap-2 border border-green/30 text-green-bright px-3 py-1.5 rounded-full font-mono text-xs uppercase tracking-widest mb-6">
-            <Sparkles className="w-3 h-3" />
-            Weekly Newsletter
-          </div>
+      {/* Floating orbs */}
+      <motion.div
+        className="absolute top-12 left-[10%] w-48 h-48 rounded-full blur-3xl pointer-events-none"
+        style={{ background: 'rgba(45,158,88,0.10)' }}
+        animate={{ y: [0, -20, 0], scale: [1, 1.1, 1] }}
+        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+      />
+      <motion.div
+        className="absolute bottom-12 right-[8%] w-64 h-64 rounded-full blur-3xl pointer-events-none"
+        style={{ background: 'rgba(193,125,42,0.07)' }}
+        animate={{ y: [0, 16, 0], scale: [1, 0.92, 1] }}
+        transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+      />
 
-          <h2 className="font-display text-4xl sm:text-5xl text-white mb-4 leading-tight">
-            Join 12,000+<br />
-            <em>Longevity Optimizers</em>
-          </h2>
-          <p className="text-[#7aad7d] text-lg mb-10 leading-relaxed">
-            Weekly science summaries, protocol deep-dives, and exclusive reviews.<br className="hidden sm:block" />
-            No noise. Unsubscribe anytime.
-          </p>
+      <div className="relative max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-[1fr_420px] gap-12 items-center">
 
-          {submitted ? (
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              className="inline-flex items-center gap-2 text-green-bright font-medium bg-green/10 border border-green/20 px-5 py-3 rounded-xl"
-            >
-              <span className="text-xl">✓</span> You&apos;re in! Check your inbox.
-            </motion.div>
-          ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                placeholder="your@email.com"
-                required
-                className="flex-1 px-4 py-3 rounded-xl bg-white/8 border border-white/15 text-white placeholder-white/35 focus:outline-none focus:border-green-bright/60 text-sm transition-colors"
-              />
-              <button
-                type="submit"
-                disabled={loading}
-                className="flex items-center justify-center gap-2 px-5 py-3 bg-green-bright text-white rounded-xl font-medium text-sm hover:bg-green transition-colors disabled:opacity-60 cursor-pointer whitespace-nowrap"
-              >
-                {loading ? (
-                  <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                ) : (
-                  <>Subscribe <ArrowRight className="w-4 h-4" /></>
-                )}
-              </button>
-            </form>
-          )}
+          {/* Left — Copy */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="inline-flex items-center gap-2 border border-green/30 bg-green/10 text-green-bright px-3 py-1.5 rounded-full font-mono text-xs uppercase tracking-widest mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-green-bright animate-pulse" />
+              Weekly Newsletter
+            </div>
 
-          <div className="mt-5 flex items-center justify-center gap-6 text-xs text-white/30">
-            <span className="flex items-center gap-1.5">
-              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" /></svg>
-              No spam, ever
-            </span>
-            <span className="flex items-center gap-1.5">
-              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" /></svg>
-              Unsubscribe anytime
-            </span>
-            <span className="flex items-center gap-1.5">
-              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-              12,000+ readers
-            </span>
-          </div>
-        </motion.div>
+            <h2 className="font-display text-white leading-tight mb-4"
+              style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', letterSpacing: '-0.02em' }}>
+              Join 12,000+<br />
+              <span style={{
+                background: 'linear-gradient(135deg, #4dc478 0%, #2d9e58 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}>Longevity Optimisers</span>
+            </h2>
+
+            <p className="text-[#6a9c70] text-lg leading-relaxed mb-8 max-w-md">
+              The best longevity research, distilled into a weekly read.
+              No noise. No sponsorships. Unsubscribe anytime.
+            </p>
+
+            <ul className="space-y-2.5">
+              {perks.map(p => (
+                <li key={p} className="flex items-center gap-2.5 text-sm text-white/60">
+                  <div className="w-4 h-4 rounded-full bg-green/25 border border-green/40 flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-2.5 h-2.5 text-green-bright" />
+                  </div>
+                  {p}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Right — Form card */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+          >
+            <div className="bg-white/[0.04] border border-white/10 backdrop-blur-md rounded-2xl p-7"
+              style={{ boxShadow: '0 24px 48px rgba(0,0,0,0.3)' }}>
+
+              <h3 className="font-display text-white text-xl mb-1">Subscribe for free</h3>
+              <p className="text-white/40 text-sm mb-6">Get the weekly digest in your inbox.</p>
+
+              {submitted ? (
+                <motion.div
+                  initial={{ scale: 0.95, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  className="flex flex-col items-center gap-3 py-6 text-center"
+                >
+                  <div className="w-12 h-12 rounded-full bg-green/20 border border-green/30 flex items-center justify-center">
+                    <CheckCircle2 className="w-6 h-6 text-green-bright" />
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold">You&apos;re in!</p>
+                    <p className="text-white/50 text-sm mt-0.5">Check your inbox to confirm.</p>
+                  </div>
+                </motion.div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-3">
+                  <div>
+                    <label htmlFor="email-capture" className="sr-only">Email address</label>
+                    <input
+                      id="email-capture"
+                      type="email"
+                      value={email}
+                      onChange={e => setEmail(e.target.value)}
+                      placeholder="your@email.com"
+                      required
+                      className="w-full px-4 py-3 rounded-xl bg-white/6 border border-white/12 text-white placeholder-white/30 focus:outline-none focus:border-green-bright/50 focus:bg-white/8 text-sm transition-all duration-150"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full flex items-center justify-center gap-2.5 px-5 py-3 bg-green-bright text-white rounded-xl font-semibold text-sm hover:bg-green transition-all duration-200 disabled:opacity-60 cursor-pointer"
+                    style={{ boxShadow: '0 4px 16px rgba(45,158,88,0.30)' }}
+                  >
+                    {loading ? (
+                      <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    ) : (
+                      <>Subscribe — it&apos;s free <ArrowRight className="w-4 h-4" /></>
+                    )}
+                  </button>
+                </form>
+              )}
+
+              <div className="mt-5 flex items-center gap-2 text-xs text-white/25">
+                <Lock className="w-3 h-3 shrink-0" />
+                <span>No spam, ever. Unsubscribe with one click.</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   )

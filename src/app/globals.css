@@ -4,6 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Design Tokens ──────────────────────────────────────────── */
 :root {
   --ink: #0f1410;
   --cream: #f5f2eb;
@@ -15,6 +16,18 @@
   --muted: #5a6b5d;
   --border: #ddd8ce;
   --border-2: #e8e3d8;
+
+  /* Shadow system */
+  --shadow-sm: 0 1px 3px rgba(15,20,16,0.06), 0 1px 2px rgba(15,20,16,0.04);
+  --shadow-md: 0 4px 12px rgba(15,20,16,0.08), 0 2px 4px rgba(15,20,16,0.04);
+  --shadow-lg: 0 8px 28px rgba(15,20,16,0.10), 0 4px 8px rgba(15,20,16,0.05);
+  --shadow-green: 0 4px 24px rgba(45,158,88,0.18);
+
+  /* Transitions */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-base: 220ms;
+  --duration-slow: 400ms;
 }
 
 .dark {
@@ -28,8 +41,14 @@
   --muted: #7a9a7d;
   --border: #1e2d20;
   --border-2: #243325;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.20), 0 1px 2px rgba(0,0,0,0.15);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.30), 0 2px 4px rgba(0,0,0,0.20);
+  --shadow-lg: 0 8px 28px rgba(0,0,0,0.40), 0 4px 8px rgba(0,0,0,0.25);
+  --shadow-green: 0 4px 24px rgba(77,196,120,0.15);
 }
 
+/* ─── Base ───────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -41,68 +60,126 @@ body {
   font-size: 17px;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Scrollbar */
+/* Display headings — tighter tracking */
+.font-display {
+  font-feature-settings: "kern" 1, "liga" 1;
+  letter-spacing: -0.02em;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--cream); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
 
-/* Selection */
+/* ─── Selection ──────────────────────────────────────────────── */
 ::selection { background: var(--green); color: white; }
 
-/* Prose overrides for articles */
+/* ─── Focus rings ────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--green-bright);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ─── Prose — Article Typography ─────────────────────────────── */
 .prose { color: var(--ink); max-width: 680px; }
-.prose h2, .prose h3 { font-family: 'Instrument Serif', serif; color: var(--ink); }
-.prose a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
-.prose code { font-family: 'DM Mono', monospace; font-size: 0.875em; background: var(--surface-2); padding: 2px 6px; border-radius: 4px; }
+.prose a { color: var(--green-bright); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; transition: color var(--duration-fast); }
+.prose a:hover { color: var(--green); }
+.prose code { font-family: 'DM Mono', monospace; font-size: 0.875em; background: var(--surface-2); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border); }
+
+/* Drop cap on first paragraph of article body */
+.prose > p:first-of-type::first-letter {
+  float: left;
+  font-family: 'Instrument Serif', serif;
+  font-size: 4em;
+  line-height: 0.82;
+  margin-right: 0.1em;
+  margin-top: 0.06em;
+  color: var(--green);
+  font-style: normal;
+}
+
 .prose h2 {
   font-family: 'Instrument Serif', serif;
   font-size: 1.75rem;
-  margin-top: 2.5rem;
+  letter-spacing: -0.02em;
+  margin-top: 3rem;
   margin-bottom: 1rem;
   color: var(--ink);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
 }
 .prose h3 {
   font-family: 'Instrument Serif', serif;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
+  letter-spacing: -0.015em;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
   color: var(--ink);
 }
+.prose h4 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+}
 .prose p {
   color: var(--ink);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.35rem;
   font-size: 1.0625rem;
-  line-height: 1.8;
+  line-height: 1.82;
 }
 .prose ul, .prose ol {
   color: var(--ink);
   padding-left: 1.5rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 .prose li {
   margin-bottom: 0.5rem;
   line-height: 1.75;
 }
-.prose strong {
-  color: var(--ink);
-  font-weight: 600;
-}
-.prose blockquote {
-  border-left: 3px solid var(--green);
-  padding: 1rem 1.25rem;
-  color: var(--muted);
-  font-style: italic;
-  margin: 2rem 0;
-  background: var(--surface-2);
-  border-radius: 0 0.75rem 0.75rem 0;
-}
-.prose blockquote p { margin-bottom: 0; }
+/* Custom list markers */
+.prose ul > li::marker { color: var(--green-bright); }
+.prose ol > li::marker { color: var(--muted); font-family: 'DM Mono', monospace; font-size: 0.85em; }
+.prose strong { color: var(--ink); font-weight: 600; }
+.prose em { color: var(--ink); }
 
-/* Table — responsive wrapper */
+/* Pull-quote style blockquote */
+.prose blockquote {
+  position: relative;
+  border-left: 3px solid var(--green-bright);
+  padding: 1.25rem 1.5rem 1.25rem 1.5rem;
+  color: var(--ink);
+  font-style: normal;
+  margin: 2.5rem 0;
+  background: linear-gradient(135deg, var(--surface-2), var(--surface));
+  border-radius: 0 1rem 1rem 0;
+  box-shadow: var(--shadow-sm);
+}
+.prose blockquote::before {
+  content: '"';
+  position: absolute;
+  top: -0.5rem;
+  left: 1rem;
+  font-family: 'Instrument Serif', serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--green-bright);
+  opacity: 0.25;
+}
+.prose blockquote p { margin-bottom: 0; font-size: 1.05rem; font-style: italic; color: var(--ink); }
+
+/* Table */
 .prose table {
   width: 100%;
   border-collapse: collapse;
@@ -111,6 +188,7 @@ body {
   border: 1px solid var(--border);
   border-radius: 0.75rem;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
 .prose th {
   background: var(--surface-2);
@@ -122,7 +200,7 @@ body {
   font-family: 'DM Mono', monospace;
   font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   white-space: nowrap;
 }
 .prose td {
@@ -130,17 +208,17 @@ body {
   border-bottom: 1px solid var(--border);
   color: var(--ink);
   vertical-align: top;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 .prose tr:last-child td { border-bottom: none; }
-.prose tbody tr:hover td { background: var(--surface-2); }
+.prose tbody tr:hover td { background: color-mix(in srgb, var(--surface-2) 60%, transparent); transition: background 120ms; }
 .prose hr {
   border: none;
   border-top: 1px solid var(--border);
-  margin: 2.5rem 0;
+  margin: 3rem 0;
 }
 
-/* Heading anchor hover link */
+/* Heading anchors */
 .prose h2 .anchor, .prose h3 .anchor {
   opacity: 0;
   margin-left: 0.5rem;
@@ -152,15 +230,22 @@ body {
 .prose h2:hover .anchor, .prose h3:hover .anchor { opacity: 0.5; }
 
 /* Scroll margin for anchor targets */
-.prose h2, .prose h3, .prose h4 {
-  scroll-margin-top: 5.5rem;
+.prose h2, .prose h3, .prose h4 { scroll-margin-top: 5.5rem; }
+
+/* ─── Section dividers ───────────────────────────────────────── */
+.section-rule {
+  width: 2.5rem;
+  height: 2px;
+  background: linear-gradient(to right, var(--green-bright), var(--green));
+  border-radius: 2px;
+  margin-bottom: 1rem;
 }
 
-/* Hide scrollbar utility */
+/* ─── Utilities ──────────────────────────────────────────────── */
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 
-/* Grain texture */
+/* ─── Grain texture ──────────────────────────────────────────── */
 .grain::after {
   content: '';
   position: absolute;
@@ -172,3 +257,23 @@ body {
   z-index: 0;
 }
 .dark .grain::after { opacity: 0.045; }
+
+/* ─── Marquee animation ──────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+  will-change: transform;
+}
+.animate-marquee:hover { animation-play-state: paused; }
+
+/* ─── Reduced motion ─────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
