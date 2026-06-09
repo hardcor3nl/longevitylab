@@ -10,6 +10,9 @@ import { TableOfContents } from '@/components/TableOfContents'
 import { parseHeadings } from '@/lib/toc'
 import { RelatedArticles } from '@/components/RelatedArticles'
 import { mdxComponents } from '@/components/MdxComponents'
+import { ReviewedBy, AffiliateDisclosure, AuthorCard } from '@/components/ArticleTrust'
+import { BackToTop } from '@/components/BackToTop'
+import { getAuthorByName } from '@/lib/authors'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Clock, Calendar, User, Tag } from 'lucide-react'
@@ -74,7 +77,12 @@ export default function ArticlePage({ params }: { params: { category: string; sl
         description: frontmatter.description,
         datePublished: frontmatter.date,
         dateModified: frontmatter.date,
-        author: { '@type': 'Person', name: frontmatter.author },
+        author: {
+          '@type': 'Person',
+          name: frontmatter.author,
+          description: getAuthorByName(frontmatter.author).credentials,
+          url: `${siteUrl}/authors`,
+        },
         publisher: {
           '@type': 'Organization',
           name: 'LongevityLab',
@@ -144,6 +152,8 @@ export default function ArticlePage({ params }: { params: { category: string; sl
               <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" />{frontmatter.readTime}</span>
             </div>
 
+            <ReviewedBy authorName={frontmatter.author} />
+
             {frontmatter.tags && frontmatter.tags.length > 0 && (
               <div className="flex flex-wrap gap-2 mt-4">
                 {frontmatter.tags.map(tag => (
@@ -185,6 +195,7 @@ export default function ArticlePage({ params }: { params: { category: string; sl
                 <AnimatedSection delay={0.1}>
                   <div className="my-10 space-y-5">
                     <h2 className="font-display text-2xl text-ink">Top Picks</h2>
+                    <AffiliateDisclosure />
                     {frontmatter.products.map((product, i) => (
                       <ProductCard key={product.name} product={product} index={i} />
                     ))}
@@ -195,6 +206,9 @@ export default function ArticlePage({ params }: { params: { category: string; sl
               <div className="prose prose-lg max-w-none">
                 <MDXRemote source={content} components={mdxComponents} />
               </div>
+
+              {/* Author bio — E-E-A-T anchor */}
+              <AuthorCard authorName={frontmatter.author} />
 
               {/* Related articles */}
               <RelatedArticles
@@ -248,14 +262,14 @@ export default function ArticlePage({ params }: { params: { category: string; sl
                         <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.631L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
                         Tweet
                       </a>
-                      <button
-                        onClick={undefined}
-                        aria-label="Copy link"
-                        className="copy-link-btn flex items-center gap-2 flex-1 justify-center px-3 py-2 rounded-xl border border-border hover:border-green/40 text-muted hover:text-ink transition-colors text-xs font-medium cursor-pointer"
+                      <a
+                        href={`mailto:?subject=${encodeURIComponent(frontmatter.title)}&body=${encodeURIComponent(`https://longevitylab-five.vercel.app/${params.category}/${params.slug}`)}`}
+                        aria-label="Share via email"
+                        className="flex items-center gap-2 flex-1 justify-center px-3 py-2 rounded-xl border border-border hover:border-green/40 text-muted hover:text-ink transition-colors text-xs font-medium cursor-pointer"
                       >
-                        <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-                        Copy
-                      </button>
+                        <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        Email
+                      </a>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -264,6 +278,8 @@ export default function ArticlePage({ params }: { params: { category: string; sl
           </div>
         </div>
       </div>
+
+      <BackToTop />
     </>
   )
 }

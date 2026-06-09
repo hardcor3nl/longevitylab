@@ -3,6 +3,7 @@ import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
+import { SiteJsonLd } from '@/components/SiteJsonLd'
 
 const siteUrl = 'https://longevitylab-five.vercel.app'
 
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
+        <SiteJsonLd />
         <ThemeProvider>
           <Navbar />
           <main>{children}</main>

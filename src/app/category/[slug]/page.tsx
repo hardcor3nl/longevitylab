@@ -22,7 +22,13 @@ export async function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const meta = categoryMeta[params.slug]
   if (!meta) return {}
-  return { title: meta.title, description: meta.description }
+  const url = `https://longevitylab-five.vercel.app/category/${params.slug}`
+  return {
+    title: meta.title,
+    description: meta.description,
+    alternates: { canonical: url },
+    openGraph: { title: meta.title, description: meta.description, url, type: 'website', siteName: 'LongevityLab' },
+  }
 }
 
 export default function CategoryPage({ params }: { params: { slug: string } }) {
