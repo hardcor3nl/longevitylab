@@ -35,11 +35,16 @@ export default function ProtocolsPage() {
                 className="group block bg-surface border border-border rounded-3xl overflow-hidden hover:border-green/30 hover:shadow-xl hover:shadow-black/5 dark:hover:shadow-black/20 transition-all duration-300 cursor-pointer h-full">
                 {/* Hero image */}
                 <div className="relative h-52 overflow-hidden">
-                  <Image src={protocol.image} alt={protocol.expert} fill className="object-cover group-hover:scale-[1.03] transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <div className="absolute bottom-4 left-5 right-5">
-                    <h2 className="font-display text-2xl text-white leading-tight mb-1">{protocol.expert}</h2>
-                    <p className="text-white/60 text-xs font-mono line-clamp-1">{protocol.role}</p>
+                  <Image src={protocol.image} alt="" aria-hidden fill className="object-cover group-hover:scale-[1.03] transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
+                  <div className="absolute bottom-4 left-5 right-5 flex items-end gap-3.5">
+                    <div className="relative w-16 h-16 rounded-2xl overflow-hidden shrink-0 ring-2 ring-white/20 shadow-lg">
+                      <Image src={protocol.expertImage} alt={`Portrait of ${protocol.expert}`} fill sizes="64px" className="object-cover object-top" />
+                    </div>
+                    <div className="min-w-0 pb-0.5">
+                      <h2 className="font-display text-2xl text-white leading-tight mb-0.5">{protocol.expert}</h2>
+                      <p className="text-white/60 text-xs font-mono line-clamp-1">{protocol.role}</p>
+                    </div>
                   </div>
                   <div className="absolute top-4 right-4">
                     <span className={`font-mono text-[10px] uppercase tracking-wider border px-2.5 py-1 rounded-full backdrop-blur-sm ${difficultyColor[protocol.difficulty]}`}>

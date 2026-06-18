@@ -24,9 +24,9 @@ export function ProtocolsTeaser() {
           {protocols.map((p, i) => (
             <AnimatedSection key={p.id} delay={i * 0.08}>
               <Link href={`/protocols/${p.id}`}
-                className="group relative block rounded-2xl overflow-hidden aspect-[3/4] cursor-pointer">
-                <Image src={p.image} alt={p.expert} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                className="group relative block rounded-2xl overflow-hidden aspect-[3/4] cursor-pointer bg-surface-2">
+                <Image src={p.expertImage} alt={`Portrait of ${p.expert}`} fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <p className="font-display text-white text-lg leading-tight">{p.expert}</p>
                   <p className="text-white/50 text-xs font-mono mt-1 line-clamp-1">{p.approach.split('—')[0].trim()}</p>
