@@ -22,7 +22,7 @@ export async function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const meta = categoryMeta[params.slug]
   if (!meta) return {}
-  const url = `https://longevitylab-five.vercel.app/category/${params.slug}`
+  const url = `https://thelongevityintel.com/category/${params.slug}`
   return {
     title: meta.title,
     description: meta.description,

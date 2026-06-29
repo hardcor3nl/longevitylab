@@ -1,4 +1,4 @@
-const siteUrl = 'https://longevitylab-five.vercel.app'
+const siteUrl = 'https://thelongevityintel.com'
 
 const jsonLd = {
   '@context': 'https://schema.org',

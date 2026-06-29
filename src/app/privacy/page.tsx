@@ -107,7 +107,7 @@ Always seek the advice of your physician or qualified healthcare provider with a
           <p className="text-muted leading-relaxed">Last updated: January 2025</p>
           <p className="text-muted leading-relaxed mt-3">
             LongevityLab (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) is committed to protecting your privacy.
-            This policy explains how we collect, use, and safeguard your information when you visit longevitylab-five.vercel.app.
+            This policy explains how we collect, use, and safeguard your information when you visit thelongevityintel.com.
           </p>
         </AnimatedSection>
 

@@ -5,7 +5,7 @@ import { Star, ArrowUpRight, Clock } from 'lucide-react'
 import { AnimatedSection } from '@/components/AnimatedSection'
 import type { Metadata } from 'next'
 
-const url = 'https://longevitylab-five.vercel.app/best'
+const url = 'https://thelongevityintel.com/best'
 
 export const metadata: Metadata = {
   title: 'Best Longevity Products & Protocols — Expert-Ranked Picks',

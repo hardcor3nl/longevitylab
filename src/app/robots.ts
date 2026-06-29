@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://longevitylab-five.vercel.app/sitemap.xml',
+    sitemap: 'https://thelongevityintel.com/sitemap.xml',
   }
 }

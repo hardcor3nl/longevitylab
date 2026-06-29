@@ -4,7 +4,7 @@ import { products } from '@/lib/products'
 import { protocols } from '@/lib/protocols'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://longevitylab-five.vercel.app'
+  const baseUrl = 'https://thelongevityintel.com'
   const articles = getAllArticles()
 
   const staticPages = [

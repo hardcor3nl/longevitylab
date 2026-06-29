@@ -1,6 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server'
-
-const affiliateLinks: Record<string, string> = {
+export const affiliateLinks: Record<string, string> = {
   'prohealth-nmn': 'https://www.amazon.com/dp/B07TNTQ7VV?tag=longevitylab-20',
   'tru-niagen': 'https://www.amazon.com/dp/B07DW75BX3?tag=longevitylab-20',
   'double-wood-nmn': 'https://www.amazon.com/dp/B09BKNHNN8?tag=longevitylab-20',
@@ -20,10 +18,4 @@ const affiliateLinks: Record<string, string> = {
   'theragun-pro-6': 'https://www.therabody.com/?ref=longevitylab',
   'hypervolt-2-pro': 'https://hyperice.com/?ref=longevitylab',
   'renpho-r3': 'https://www.amazon.com/dp/B08CMWND5K?tag=longevitylab-20',
-}
-
-export function GET(request: NextRequest, { params }: { params: { product: string } }) {
-  const url = affiliateLinks[params.product]
-  if (!url) return NextResponse.redirect(new URL('/', request.url))
-  return NextResponse.redirect(url)
 }

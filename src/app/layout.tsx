@@ -5,7 +5,7 @@ import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { SiteJsonLd } from '@/components/SiteJsonLd'
 
-const siteUrl = 'https://longevitylab-five.vercel.app'
+const siteUrl = 'https://thelongevityintel.com'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
