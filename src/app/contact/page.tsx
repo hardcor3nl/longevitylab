@@ -13,9 +13,9 @@ export default function ContactPage() {
   }
 
   const reasons = [
-    { icon: Handshake, title: 'Brand Partnerships', desc: 'Interested in working with LongevityLab? We work with brands that align with our editorial standards.', email: 'partnerships@longevitylab.co' },
-    { icon: FlaskConical, title: 'Product Review Submissions', desc: 'Want your product considered for review? We purchase products independently but welcome submissions for consideration.', email: 'reviews@longevitylab.co' },
-    { icon: MessageSquare, title: 'Editorial & Press', desc: 'Media enquiries, expert commentary, or corrections to published content.', email: 'editorial@longevitylab.co' },
+    { icon: Handshake, title: 'Brand Partnerships', desc: 'Interested in working with Longevity Intel? We work with brands that align with our editorial standards.', email: 'partnerships@thelongevityintel.com' },
+    { icon: FlaskConical, title: 'Product Review Submissions', desc: 'Want your product considered for review? We purchase products independently but welcome submissions for consideration.', email: 'reviews@thelongevityintel.com' },
+    { icon: MessageSquare, title: 'Editorial & Press', desc: 'Media enquiries, expert commentary, or corrections to published content.', email: 'editorial@thelongevityintel.com' },
   ]
 
   return (

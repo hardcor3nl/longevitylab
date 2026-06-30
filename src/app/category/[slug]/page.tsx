@@ -27,7 +27,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     title: meta.title,
     description: meta.description,
     alternates: { canonical: url },
-    openGraph: { title: meta.title, description: meta.description, url, type: 'website', siteName: 'LongevityLab' },
+    openGraph: { title: meta.title, description: meta.description, url, type: 'website', siteName: 'Longevity Intel' },
   }
 }
 

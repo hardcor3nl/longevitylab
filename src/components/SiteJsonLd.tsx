@@ -6,7 +6,7 @@ const jsonLd = {
     {
       '@type': 'Organization',
       '@id': `${siteUrl}/#organization`,
-      name: 'LongevityLab',
+      name: 'Longevity Intel',
       url: siteUrl,
       logo: { '@type': 'ImageObject', url: `${siteUrl}/logo.png` },
       description:
@@ -17,7 +17,7 @@ const jsonLd = {
       '@type': 'WebSite',
       '@id': `${siteUrl}/#website`,
       url: siteUrl,
-      name: 'LongevityLab',
+      name: 'Longevity Intel',
       description: 'Science-backed longevity reviews and protocols.',
       publisher: { '@id': `${siteUrl}/#organization` },
       inLanguage: 'en-US',

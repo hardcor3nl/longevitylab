@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: 'How LongevityLab collects, uses, and protects your personal data.',
+  description: 'How Longevity Intel collects, uses, and protects your personal data.',
 }
 
 export default function PrivacyPage() {
@@ -36,7 +36,7 @@ We do not sell your personal information to third parties.`
     },
     {
       title: 'Affiliate Links & Tracking',
-      content: `LongevityLab participates in affiliate programmes including Amazon Associates and direct brand partnerships. When you click an affiliate link, the merchant may set a cookie to track the referral.
+      content: `Longevity Intel participates in affiliate programmes including Amazon Associates and direct brand partnerships. When you click an affiliate link, the merchant may set a cookie to track the referral.
 
 **What this means for you:**
 - Clicking our affiliate links may result in a tracking cookie being set by the merchant
@@ -48,7 +48,7 @@ We disclose all affiliate relationships clearly on every page that contains them
     },
     {
       title: 'Cookies',
-      content: `We use cookies to improve your experience on LongevityLab.
+      content: `We use cookies to improve your experience on Longevity Intel.
 
 **Types of cookies we use:**
 - **Essential cookies:** Required for the site to function (e.g., theme preference)
@@ -84,11 +84,11 @@ Analytics data is retained in anonymised, aggregated form for up to 24 months.`
 - Object to processing of your data
 - Data portability
 
-To exercise any of these rights, contact us at privacy@longevitylab.co`
+To exercise any of these rights, contact us at privacy@thelongevityintel.com`
     },
     {
       title: 'Medical Disclaimer',
-      content: `The content on LongevityLab is for informational and educational purposes only. It does not constitute medical advice and should not be used as a substitute for professional medical consultation, diagnosis, or treatment.
+      content: `The content on Longevity Intel is for informational and educational purposes only. It does not constitute medical advice and should not be used as a substitute for professional medical consultation, diagnosis, or treatment.
 
 Always seek the advice of your physician or qualified healthcare provider with any questions you may have regarding a medical condition or health supplements.`
     },
@@ -106,7 +106,7 @@ Always seek the advice of your physician or qualified healthcare provider with a
           <h1 className="font-display text-5xl text-ink mb-4">Privacy Policy</h1>
           <p className="text-muted leading-relaxed">Last updated: January 2025</p>
           <p className="text-muted leading-relaxed mt-3">
-            LongevityLab (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) is committed to protecting your privacy.
+            Longevity Intel (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) is committed to protecting your privacy.
             This policy explains how we collect, use, and safeguard your information when you visit thelongevityintel.com.
           </p>
         </AnimatedSection>
@@ -131,8 +131,8 @@ Always seek the advice of your physician or qualified healthcare provider with a
         <AnimatedSection delay={0.4} className="mt-10 bg-amber/5 border border-amber/20 rounded-2xl p-5">
           <p className="text-sm text-muted">
             <strong className="text-ink">Questions?</strong> Contact us at{' '}
-            <a href="mailto:privacy@longevitylab.co" className="text-green-bright hover:text-green transition-colors">
-              privacy@longevitylab.co
+            <a href="mailto:privacy@thelongevityintel.com" className="text-green-bright hover:text-green transition-colors">
+              privacy@thelongevityintel.com
             </a>
           </p>
         </AnimatedSection>

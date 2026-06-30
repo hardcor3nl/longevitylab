@@ -8,7 +8,7 @@ const categories = [
   { href: '/category/supplements', label: 'Supplements',   icon: FlaskConical },
   { href: '/category/wearables',   label: 'Wearables',     icon: Watch        },
   { href: '/category/diagnostics', label: 'Diagnostics',   icon: TestTube2    },
-  { href: '/category/protocols',   label: 'Protocols',     icon: BookOpen     },
+  { href: '/category/protocols',   label: 'Guides',        icon: BookOpen     },
   { href: '/best',                 label: 'Best Picks',    icon: Star         },
   { href: '/database',             label: 'Research DB',   icon: Zap          },
 ]

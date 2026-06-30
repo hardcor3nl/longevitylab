@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: { params: { category: string;
       publishedTime: frontmatter.date,
       authors: [frontmatter.author],
       tags: frontmatter.tags,
-      siteName: 'LongevityLab',
+      siteName: 'Longevity Intel',
     },
     twitter: {
       card: 'summary_large_image',
@@ -85,7 +85,7 @@ export default function ArticlePage({ params }: { params: { category: string; sl
         },
         publisher: {
           '@type': 'Organization',
-          name: 'LongevityLab',
+          name: 'Longevity Intel',
           url: siteUrl,
           logo: { '@type': 'ImageObject', url: `${siteUrl}/logo.png` },
         },

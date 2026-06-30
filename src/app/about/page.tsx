@@ -3,7 +3,7 @@ import { Shield, BookOpen, FlaskConical, Users } from 'lucide-react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About LongevityLab — Editorial Policy & Methodology',
+  title: 'About Longevity Intel — Editorial Policy & Methodology',
   description: 'How we research, test, and score longevity supplements, wearables, and protocols. Our editorial independence policy and team.',
 }
 
@@ -40,7 +40,7 @@ export default function AboutPage() {
             <span className="text-green dark:text-green-bright">Always Independent.</span>
           </h1>
           <p className="text-muted text-xl leading-relaxed max-w-3xl">
-            LongevityLab exists because the longevity space is flooded with pseudoscience,
+            Longevity Intel exists because the longevity space is flooded with pseudoscience,
             marketing disguised as research, and conflicts of interest that compromise editorial integrity.
             We&apos;re building the resource we wish existed.
           </p>
@@ -104,7 +104,7 @@ export default function AboutPage() {
               <div>
                 <h3 className="font-display text-xl text-ink mb-2">Affiliate Disclosure</h3>
                 <p className="text-muted leading-relaxed text-sm">
-                  LongevityLab participates in affiliate programmes (including Amazon Associates and direct brand partnerships).
+                  Longevity Intel participates in affiliate programmes (including Amazon Associates and direct brand partnerships).
                   When you click a link and make a purchase, we may earn a commission at no extra cost to you.
                   <br /><br />
                   This income funds our research and editorial operations. It <strong className="text-ink">never</strong> influences our ratings,

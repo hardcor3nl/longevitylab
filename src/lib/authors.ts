@@ -43,10 +43,10 @@ export const authors: Author[] = [
 ]
 
 const editorialTeam: Author = {
-  name: 'LongevityLab Editors',
+  name: 'Longevity Intel Editors',
   role: 'Editorial Team',
   initials: 'LL',
-  bio: 'Collaborative pieces researched and written by the LongevityLab editorial team, then fact-checked against primary literature and reviewed by our medical reviewer before publication.',
+  bio: 'Collaborative pieces researched and written by the Longevity Intel editorial team, then fact-checked against primary literature and reviewed by our medical reviewer before publication.',
   expertise: ['Longevity Research', 'Evidence Review', 'Product Testing'],
   articles: 0,
   credentials: 'Physician-reviewed editorial collective.',

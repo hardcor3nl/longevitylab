@@ -112,7 +112,7 @@ export const protocols: Protocol[] = [
     difficulty: 'Advanced',
     lastUpdated: '2025-01',
     disclaimer: "Bryan Johnson's protocol is the most extreme documented longevity intervention in existence. Most items require prescriptions (metformin, acarbose, Jardiance, rapamycin, Repatha, Candesartan, thyroid medications, tadalafil, minoxidil). This page is strictly educational. Do not replicate prescription elements without physician oversight. Johnson is testing himself as an experiment of one — not as a clinical trial.",
-    affiliateDisclosure: 'LongevityLab earns a commission on some affiliate links. This never influences our coverage.',
+    affiliateDisclosure: 'Longevity Intel earns a commission on some affiliate links. This never influences our coverage.',
   },
 
   // ─── PETER ATTIA ──────────────────────────────────────────────────────
@@ -183,7 +183,7 @@ export const protocols: Protocol[] = [
     difficulty: 'Advanced',
     lastUpdated: '2025-01',
     disclaimer: "Attia's protocol is personalised to his specific bloodwork, genetics, and health history. Rapamycin, statins/PCSK9 inhibitors, and trazodone require physician prescriptions. His public position on many interventions has evolved — always check his current podcast for updates.",
-    affiliateDisclosure: 'LongevityLab earns a commission on some affiliate links. This never influences our coverage.',
+    affiliateDisclosure: 'Longevity Intel earns a commission on some affiliate links. This never influences our coverage.',
   },
 
   // ─── ANDREW HUBERMAN ──────────────────────────────────────────────────
@@ -257,7 +257,7 @@ export const protocols: Protocol[] = [
     difficulty: 'Intermediate',
     lastUpdated: '2025-01',
     disclaimer: "Huberman's protocol evolves frequently — always check his current podcast episodes for updates. AG1 is a paid sponsorship. Fadogia Agrestis has limited human safety data — Huberman himself recommends cycling and monitoring.",
-    affiliateDisclosure: 'LongevityLab earns a commission on some affiliate links. This never influences our coverage.',
+    affiliateDisclosure: 'Longevity Intel earns a commission on some affiliate links. This never influences our coverage.',
   },
 
   // ─── DAVID SINCLAIR ───────────────────────────────────────────────────
@@ -329,7 +329,7 @@ export const protocols: Protocol[] = [
     difficulty: 'Intermediate',
     lastUpdated: '2025-01',
     disclaimer: "Sinclair's protocol has changed significantly since Lifespan was published in 2019 — always use current interview data, not the book. Rapamycin, statins, and metformin require prescriptions. The scientific community has ongoing debates about several of Sinclair's claims, particularly resveratrol's human efficacy.",
-    affiliateDisclosure: 'LongevityLab earns a commission on some affiliate links.',
+    affiliateDisclosure: 'Longevity Intel earns a commission on some affiliate links.',
   },
 ]
 

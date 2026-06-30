@@ -18,4 +18,9 @@ export const affiliateLinks: Record<string, string> = {
   'theragun-pro-6': 'https://www.therabody.com/?ref=longevitylab',
   'hypervolt-2-pro': 'https://hyperice.com/?ref=longevitylab',
   'renpho-r3': 'https://www.amazon.com/dp/B08CMWND5K?tag=longevitylab-20',
+  'melatonin-timed-release': 'https://www.amazon.com/dp/B0013OUL8C?tag=longevitylab-20',
+  'blublox-glasses': 'https://www.blublox.com/?ref=longevitylab',
+  'citicoline-cognizin': 'https://www.amazon.com/dp/B00E5COPB6?tag=longevitylab-20',
+  'bacopa-monnieri': 'https://www.amazon.com/dp/B01M4PVDE6?tag=longevitylab-20',
+  'seed-ds01': 'https://seed.com/?ref=longevitylab',
 }

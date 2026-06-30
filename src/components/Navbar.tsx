@@ -15,7 +15,7 @@ interface SearchResult {
 
 const NAV_GROUPS = [
   {
-    label: 'Protocols',
+    label: 'Topics',
     items: [
       { href: '/sleep', label: 'Sleep Optimization', desc: 'Circadian rhythm & sleep stack' },
       { href: '/cardio', label: 'Zone 2 & VO₂ Max', desc: 'Cardio training science' },
@@ -31,7 +31,7 @@ const NAV_GROUPS = [
       { href: '/category/wearables', label: 'Wearables', desc: 'WHOOP, Oura, Garmin, CGMs' },
       { href: '/category/recovery', label: 'Recovery Devices', desc: 'Sauna, cold plunge, red light' },
       { href: '/category/diagnostics', label: 'Diagnostics', desc: 'Blood tests, VO₂ max, biomarkers' },
-      { href: '/category/best', label: 'Best Of', desc: 'Top-ranked picks by category' },
+      { href: '/best', label: 'Best Of', desc: 'Top-ranked picks by category' },
     ],
   },
   {
@@ -132,7 +132,7 @@ export function Navbar() {
               <div className="w-7 h-7 rounded-lg bg-green flex items-center justify-center group-hover:bg-green-bright transition-colors">
                 <FlaskConical className="w-3.5 h-3.5 text-white" />
               </div>
-              <span className="font-display text-xl text-ink hidden sm:block">LongevityLab</span>
+              <span className="font-display text-xl text-ink hidden sm:block">Longevity Intel</span>
             </Link>
 
             {/* Desktop nav — mega-menu */}
@@ -141,7 +141,7 @@ export function Navbar() {
               {/* Get Started CTA */}
               <Link href="/get-started"
                 className="px-3 py-1.5 text-sm font-semibold text-green-bright hover:bg-green/10 rounded-lg transition-all duration-150 cursor-pointer">
-                Get Started
+                Build My Plan
               </Link>
 
               <div className="w-px h-4 bg-border/40 mx-1" />
@@ -193,7 +193,7 @@ export function Navbar() {
               {/* Quick links */}
               <Link href="/quiz"
                 className="px-3 py-1.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-lg transition-all duration-150 cursor-pointer">
-                Quiz
+                Bio Age Quiz
               </Link>
             </div>
 
@@ -317,7 +317,7 @@ export function Navbar() {
               <div className="px-4 py-4 space-y-5 max-h-[75vh] overflow-y-auto">
                 <Link href="/get-started" onClick={() => setMobileOpen(false)}
                   className="block px-3 py-2.5 bg-green/10 text-green-bright font-semibold text-sm rounded-xl">
-                  Get Started →
+                  Build My Plan →
                 </Link>
 
                 {NAV_GROUPS.map(group => (

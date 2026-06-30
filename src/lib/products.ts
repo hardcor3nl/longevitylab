@@ -13,6 +13,9 @@ export type ProductCategory =
   | 'Vitamins & Minerals'
   | 'Mitochondrial Support'
   | 'Blood & Diagnostics'
+  | 'Sleep Aids'
+  | 'Nootropics & Cognitive'
+  | 'Gut & Microbiome'
 
 export type Goal =
   | 'Longevity'
@@ -966,6 +969,119 @@ export const products: Product[] = [
     reviewLabel: 'Read Full Blood Test Review',
     image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&q=80',
   },
+
+  // ─── SLEEP AIDS ─────────────────────────────────────────────────────────
+  {
+    id: 'melatonin-timed-release',
+    name: 'Melatonin (Timed-Release)',
+    brand: 'Life Extension',
+    tagline: 'Slow-release dosing matched to natural overnight melatonin curve',
+    category: 'Sleep Aids',
+    goals: ['Sleep', 'Longevity'],
+    evidenceLevel: 'Strong',
+    evidenceScore: 82,
+    safetyScore: 93,
+    popularityScore: 86,
+    price: '$10.99',
+    badge: 'Best Pick',
+    summary: 'Timed-release melatonin avoids the next-morning grogginess of standard formulations by mimicking the body\'s natural overnight melatonin release curve. Strong evidence for reducing sleep-onset latency and improving circadian alignment.',
+    keyBenefits: ['Reduces sleep onset latency', 'Mimics natural melatonin curve', 'Low next-day grogginess', 'Useful for jet lag and shift work'],
+    bestFor: 'Circadian rhythm support and falling asleep faster',
+    affiliateUrl: '/go/melatonin-timed-release',
+    dosage: '0.5–3mg, 30–60 min before bed',
+    timing: 'Evening, 30–60 minutes before sleep',
+    studyCount: 24,
+    image: 'https://images.unsplash.com/photo-1600618528240-fb9fc964b853?w=400&q=80',
+  },
+  {
+    id: 'blue-light-blocking-glasses',
+    name: 'Blue-Light Blocking Glasses',
+    brand: 'BLUblox',
+    tagline: 'Amber-lens glasses for evening circadian protection',
+    category: 'Sleep Aids',
+    goals: ['Sleep'],
+    evidenceLevel: 'Moderate',
+    evidenceScore: 71,
+    safetyScore: 99,
+    popularityScore: 75,
+    price: '$89',
+    summary: 'Blocks blue-wavelength light in the evening to prevent suppression of natural melatonin release from screens and indoor lighting. RCTs show modest improvements in sleep quality and onset when worn consistently 2+ hours before bed.',
+    keyBenefits: ['Blocks 99%+ blue light', 'No supplements or chemicals', 'Pairs well with melatonin protocols', 'One-time purchase'],
+    bestFor: 'Screen-heavy evenings and delayed sleep phase',
+    affiliateUrl: '/go/blublox-glasses',
+    timing: 'Worn 2+ hours before bed',
+    studyCount: 9,
+    image: 'https://images.unsplash.com/photo-1633621412960-6df85eff8c85?w=400&q=80',
+  },
+
+  // ─── NOOTROPICS & COGNITIVE ──────────────────────────────────────────────
+  {
+    id: 'citicoline-cognizin',
+    name: 'Citicoline (Cognizin)',
+    brand: 'Double Wood',
+    tagline: 'Clinically dosed choline source for focus and memory',
+    category: 'Nootropics & Cognitive',
+    goals: ['Cognitive', 'Longevity'],
+    evidenceLevel: 'Strong',
+    evidenceScore: 84,
+    safetyScore: 96,
+    popularityScore: 78,
+    price: '$24.99',
+    badge: 'Best Pick',
+    summary: 'Citicoline increases acetylcholine and phosphatidylcholine synthesis, supporting attention, working memory, and brain energy metabolism. The patented Cognizin form has the strongest clinical backing of any choline source.',
+    keyBenefits: ['Boosts acetylcholine synthesis', 'Multiple RCTs in attention/memory', 'Supports brain phospholipid membranes', 'Well-tolerated long-term'],
+    bestFor: 'Focus, working memory, and brain energy metabolism',
+    affiliateUrl: '/go/citicoline-cognizin',
+    dosage: '250–500mg daily',
+    timing: 'Morning, with or without food',
+    studyCount: 15,
+    image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400&q=80',
+  },
+  {
+    id: 'bacopa-monnieri',
+    name: 'Bacopa Monnieri',
+    brand: 'Himalaya',
+    tagline: 'Ayurvedic herb with the deepest memory-formation evidence base',
+    category: 'Nootropics & Cognitive',
+    goals: ['Cognitive', 'Longevity'],
+    evidenceLevel: 'Strong',
+    evidenceScore: 80,
+    safetyScore: 92,
+    popularityScore: 70,
+    price: '$19.99',
+    summary: 'Bacopa Monnieri has the largest body of RCT evidence of any nootropic herb, consistently showing improved memory acquisition and retention after 8-12 weeks of consistent use. Effects build gradually rather than acutely.',
+    keyBenefits: ['Largest RCT base of any nootropic herb', 'Improves memory consolidation', 'Antioxidant and adaptogenic effects', 'Well-studied safety profile'],
+    bestFor: 'Long-term memory support — requires 8-12 weeks for full effect',
+    affiliateUrl: '/go/bacopa-monnieri',
+    dosage: '300mg standardized extract (50% bacosides)',
+    timing: 'With food, consistent daily use',
+    studyCount: 12,
+    image: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=400&q=80',
+  },
+
+  // ─── GUT & MICROBIOME ────────────────────────────────────────────────────
+  {
+    id: 'seed-ds01',
+    name: 'Seed DS-01 Daily Synbiotic',
+    brand: 'Seed',
+    tagline: '24-strain probiotic with prebiotic capsule-in-capsule delivery',
+    category: 'Gut & Microbiome',
+    goals: ['Longevity', 'Inflammation', 'Metabolic Health'],
+    evidenceLevel: 'Strong',
+    evidenceScore: 83,
+    safetyScore: 97,
+    popularityScore: 82,
+    price: '$49.99/month',
+    badge: "Editor's Choice",
+    summary: 'Seed\'s 24-strain formulation is backed by a published clinical trial and uses a capsule-in-capsule design to survive stomach acid. Gut microbiome diversity is increasingly linked to inflammation, metabolic health, and healthy aging.',
+    keyBenefits: ['24 clinically studied strains', 'Published RCT on gut barrier integrity', 'Survives stomach acid via 2-capsule design', 'Includes prebiotic for strain support'],
+    bestFor: 'Gut barrier integrity and microbiome diversity',
+    affiliateUrl: '/go/seed-ds01',
+    dosage: '2 capsules daily',
+    timing: 'Empty stomach, before bed or first thing in morning',
+    studyCount: 7,
+    image: 'https://images.unsplash.com/photo-1543362906-acfc16c67564?w=400&q=80',
+  },
 ]
 
 // ─── Helper functions ──────────────────────────────────────────────────────
@@ -995,12 +1111,17 @@ export const allCategories: ProductCategory[] = [
   'Vitamins & Minerals',
   'Mitochondrial Support',
   'Blood & Diagnostics',
+  'Sleep Aids',
+  'Nootropics & Cognitive',
+  'Gut & Microbiome',
 ]
 
 export const categoryGroups: { label: string; categories: ProductCategory[] }[] = [
   { label: 'Recovery Devices', categories: ['Red Light Therapy', 'Infrared Saunas', 'Cold Plunge & Ice Baths', 'Massage & Recovery'] },
   { label: 'Wearables & Tracking', categories: ['Fitness Trackers & HRV', 'Continuous Glucose Monitors', 'Blood & Diagnostics'] },
   { label: 'Supplements', categories: ['NAD+ Precursors', 'Antioxidants & Senolytics', 'Adaptogens', 'Omega Fatty Acids', 'Vitamins & Minerals', 'Mitochondrial Support'] },
+  { label: 'Sleep & Cognitive', categories: ['Sleep Aids', 'Nootropics & Cognitive'] },
+  { label: 'Gut Health', categories: ['Gut & Microbiome'] },
 ]
 
 export const evidenceBadgeColors: Record<EvidenceLevel, string> = {

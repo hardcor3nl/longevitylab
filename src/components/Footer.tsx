@@ -50,7 +50,7 @@ export function Footer() {
               <div className="w-8 h-8 rounded-xl bg-green flex items-center justify-center group-hover:bg-green-bright transition-colors duration-200">
                 <FlaskConical className="w-4 h-4 text-white" />
               </div>
-              <span className="font-display text-xl text-ink tracking-tight">LongevityLab</span>
+              <span className="font-display text-xl text-ink tracking-tight">Longevity Intel</span>
             </Link>
             <p className="text-muted text-sm leading-relaxed mb-5 max-w-[260px]">
               Independent, science-backed longevity reviews. Physician-reviewed.
@@ -109,7 +109,7 @@ export function Footer() {
         <div className="border-t border-border pt-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="flex flex-wrap gap-x-5 gap-y-1 text-xs text-muted font-mono">
-              <span>© {year} LongevityLab</span>
+              <span>© {year} Longevity Intel</span>
               <Link href="/privacy"           className="hover:text-ink transition-colors duration-150">Privacy</Link>
               <Link href="/terms"             className="hover:text-ink transition-colors duration-150">Terms</Link>
               <Link href="/about#affiliate"   className="hover:text-ink transition-colors duration-150">Affiliate Disclosure</Link>

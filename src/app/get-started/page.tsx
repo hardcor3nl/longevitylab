@@ -158,14 +158,14 @@ export default function GetStarted() {
               <div className="w-16 h-16 rounded-full bg-green/10 border border-green/25 flex items-center justify-center mx-auto mb-6">
                 <Zap className="w-8 h-8 text-green-bright" />
               </div>
-              <h1 className="font-display text-5xl text-ink mb-4">Find Your Longevity Path</h1>
+              <h1 className="font-display text-5xl text-ink mb-4">Build Your Plan</h1>
               <p className="text-muted text-lg max-w-xl mx-auto leading-relaxed mb-8">
                 In 3 minutes, we&apos;ll help you discover the personalized protocols that matter most for your longevity journey.
               </p>
               <button
                 onClick={handleStart}
                 className="px-8 py-4 bg-green text-white rounded-xl font-semibold text-lg hover:bg-green-bright transition-colors cursor-pointer inline-flex items-center gap-2">
-                Start Quiz <ArrowRight className="w-5 h-5" />
+                Build My Plan <ArrowRight className="w-5 h-5" />
               </button>
             </div>
 
@@ -320,7 +320,7 @@ export default function GetStarted() {
               <button
                 onClick={reset}
                 className="px-6 py-3 border border-border rounded-lg font-semibold text-ink hover:border-green/30 transition-colors cursor-pointer">
-                Retake Quiz
+                Start Over
               </button>
               <Link
                 href="/database"

@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Our Editorial Team',
-  description: "Meet the physicians, researchers, and scientists behind LongevityLab's independent reviews.",
+  description: "Meet the physicians, researchers, and scientists behind Longevity Intel's independent reviews.",
 }
 
 export default function AuthorsPage() {
@@ -17,7 +17,7 @@ export default function AuthorsPage() {
           <p className="font-mono text-xs uppercase tracking-widest text-green-bright mb-3">The Team</p>
           <h1 className="font-display text-5xl text-ink mb-4">Our Editorial Team</h1>
           <p className="text-muted text-lg max-w-2xl leading-relaxed">
-            Every article on LongevityLab is written or reviewed by a qualified expert.
+            Every article on Longevity Intel is written or reviewed by a qualified expert.
             Our team is contractually prohibited from owning equity in supplement or device companies.
           </p>
         </AnimatedSection>

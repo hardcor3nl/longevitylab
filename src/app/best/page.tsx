@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: 'Top-ranked longevity picks, curated and scored by our research team.',
     url,
     type: 'website',
-    siteName: 'LongevityLab',
+    siteName: 'Longevity Intel',
   },
 }
 
