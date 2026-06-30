@@ -98,6 +98,14 @@ export const protocols: Protocol[] = [
         ],
       },
       {
+        title: 'Brain Protection — 2026 Additions',
+        description: 'Johnson updated his stack significantly in early 2026: he dropped rapamycin entirely after concluding the immunosuppression tradeoff wasn\'t justified by his biomarkers, cut NMN/NR from daily to 6 days a week, and added two new compounds focused specifically on neuroprotection.',
+        items: [
+          { name: 'Lithium Orotate', dose: 'Microdose (sub-clinical, well below bipolar treatment range)', timing: 'Included in Blueprint Essential Capsules', purpose: 'Neuroprotection — trace lithium is associated with lower dementia rates in population studies of municipal water supplies', evidenceNote: 'Not the high-dose lithium carbonate used for bipolar disorder. Epidemiological data (not RCTs) links higher trace lithium in drinking water to reduced all-cause and dementia mortality. Consult a physician before supplementing — lithium has a narrow safety margin and requires blood monitoring at any meaningful dose.', supplementId: 'lithium-orotate' },
+          { name: 'NDGA (Nordihydroguaiaretic Acid)', dose: '50mg', timing: 'Daily', purpose: 'One of only a handful of compounds with replicated lifespan extension in the NIA Interventions Testing Program (ITP) — extended median lifespan in male mice', evidenceNote: 'ITP data is the gold standard for mouse longevity compounds (multi-site, genetically diverse mice). Human data is essentially nonexistent — Johnson is testing this entirely on ITP mouse evidence plus his own biomarker tracking.', supplementId: 'ndga' },
+        ],
+      },
+      {
         title: 'Sleep & Evening Protocol',
         description: 'Johnson treats sleep as the highest-priority health intervention. His evening protocol is as rigid as his morning one.',
         items: [
@@ -110,8 +118,8 @@ export const protocols: Protocol[] = [
     totalSupplements: 100,
     estimatedCost: '$1,000–2,000/month (supplements only). Full protocol ~$2M/year with physician team.',
     difficulty: 'Advanced',
-    lastUpdated: '2025-01',
-    disclaimer: "Bryan Johnson's protocol is the most extreme documented longevity intervention in existence. Most items require prescriptions (metformin, acarbose, Jardiance, rapamycin, Repatha, Candesartan, thyroid medications, tadalafil, minoxidil). This page is strictly educational. Do not replicate prescription elements without physician oversight. Johnson is testing himself as an experiment of one — not as a clinical trial.",
+    lastUpdated: '2026-06',
+    disclaimer: "Bryan Johnson's protocol is the most extreme documented longevity intervention in existence. Most items require prescriptions (metformin, acarbose, Jardiance, Repatha, Candesartan, thyroid medications, tadalafil, minoxidil). Note: Johnson discontinued rapamycin in 2024 after concluding the immunosuppression tradeoff wasn't justified by his biomarkers — it is no longer part of his protocol despite frequent claims otherwise. This page is strictly educational. Do not replicate prescription or lithium elements without physician oversight and blood monitoring. Johnson is testing himself as an experiment of one — not as a clinical trial.",
     affiliateDisclosure: 'Longevity Intel earns a commission on some affiliate links. This never influences our coverage.',
   },
 

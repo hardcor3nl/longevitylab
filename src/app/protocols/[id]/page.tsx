@@ -178,6 +178,27 @@ export default function ProtocolPage({ params }: { params: { id: string } }) {
                 </div>
               </AnimatedSection>
 
+              {/* Related reading */}
+              {protocol.id === 'bryan-johnson' && (
+                <AnimatedSection delay={0.15}>
+                  <div className="bg-surface border border-border rounded-2xl p-5">
+                    <h3 className="font-mono text-xs uppercase tracking-widest text-muted mb-4">Related Reading</h3>
+                    <div className="space-y-3">
+                      <Link href="/supplements/lithium-orotate-ndga-2026"
+                        className="flex items-start justify-between gap-2 group cursor-pointer">
+                        <span className="text-sm text-ink group-hover:text-green transition-colors leading-snug">Lithium Orotate &amp; NDGA: the 2026 additions, reviewed</span>
+                        <ArrowUpRight className="w-3.5 h-3.5 text-muted group-hover:text-green transition-colors shrink-0 mt-0.5" />
+                      </Link>
+                      <Link href="/protocols/dont-die-movement-explained"
+                        className="flex items-start justify-between gap-2 group cursor-pointer">
+                        <span className="text-sm text-ink group-hover:text-green transition-colors leading-snug">The &quot;Don&apos;t Die&quot; movement, explained</span>
+                        <ArrowUpRight className="w-3.5 h-3.5 text-muted group-hover:text-green transition-colors shrink-0 mt-0.5" />
+                      </Link>
+                    </div>
+                  </div>
+                </AnimatedSection>
+              )}
+
               {/* Other protocols */}
               <AnimatedSection delay={0.2}>
                 <div className="bg-surface border border-border rounded-2xl p-5">
