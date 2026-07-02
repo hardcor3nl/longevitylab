@@ -37,7 +37,7 @@ export const affiliateLinks: Record<string, string> = {
   'lithium-orotate': 'https://www.amazon.com/dp/B0015AOUWY?tag=michaelregeer-20',
   'joovv-solo-3': 'https://joovv.com/?ref=longevitylab',
   'biomax-300': 'https://www.amazon.com/dp/B07PLTNJ5V?tag=michaelregeer-20',
-  'sunlighten-mpulse': 'https://sunlighten.com/?ref=longevitylab',
+  'sunlighten-mpulse': 'https://share.sunlighten.com/MichaelRegeer',
   'clearlight-sanctuary': 'https://infraredsauna.com/?ref=longevitylab',
   'serenelife-sauna': 'https://www.amazon.com/dp/B07WPDL75Z?tag=michaelregeer-20',
   'the-plunge-pro': 'https://www.coldplunge.com/?ref=longevitylab',
