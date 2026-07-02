@@ -161,12 +161,12 @@ export default function SleepProtocol() {
 
                 <div className="space-y-4">
                   {[
-                    { name: 'Magnesium Glycinate', dose: '200–400 mg', timing: '19:00–20:00 (2–3 hrs before bed)', why: 'Calms nervous system, improves sleep quality. Glycinate form doesn\'t cause loose stools.' },
-                    { name: 'Melatonin', dose: '0.5–3 mg', timing: '21:00–21:30 (1 hr before bed)', why: 'Signals circadian rhythm if shifting schedule or jet lag. Less needed if circadian-aligned.' },
-                    { name: 'L-Theanine', dose: '100–200 mg', timing: '20:00–21:00', why: 'Promotes relaxation via GABA. Stacks well with magnesium.' },
-                    { name: 'Apigenin (from chamomile)', dose: '50–100 mg', timing: '19:30–20:30', why: 'Mild anxiolytic; doesn\'t reduce alertness next day.' },
-                    { name: 'Glycine', dose: '3–5 g', timing: '20:30–21:00', why: 'Lowers core body temperature; improves deep sleep efficiency.' },
-                    { name: 'Magnesium Threonate', dose: '2 g', timing: '20:00 (with magnesium glycinate)', why: 'Crosses blood-brain barrier; may enhance REM quality.' },
+                    { name: 'Magnesium Glycinate', databaseId: 'magnesium', dose: '200–400 mg', timing: '19:00–20:00 (2–3 hrs before bed)', why: 'Calms nervous system, improves sleep quality. Glycinate form doesn\'t cause loose stools.' },
+                    { name: 'Melatonin', go: 'melatonin-timed-release', dose: '0.5–3 mg', timing: '21:00–21:30 (1 hr before bed)', why: 'Signals circadian rhythm if shifting schedule or jet lag. Less needed if circadian-aligned.' },
+                    { name: 'L-Theanine', go: 'now-l-theanine', dose: '100–200 mg', timing: '20:00–21:00', why: 'Promotes relaxation via GABA. Stacks well with magnesium.' },
+                    { name: 'Apigenin (from chamomile)', go: 'dw-apigenin', dose: '50–100 mg', timing: '19:30–20:30', why: 'Mild anxiolytic; doesn\'t reduce alertness next day.' },
+                    { name: 'Glycine', go: 'bulk-glycine', dose: '3–5 g', timing: '20:30–21:00', why: 'Lowers core body temperature; improves deep sleep efficiency.' },
+                    { name: 'Magnesium Threonate', go: 'magtein', dose: '2 g', timing: '20:00 (with magnesium glycinate)', why: 'Crosses blood-brain barrier; may enhance REM quality.' },
                   ].map((item, i) => (
                     <div key={i} className="bg-surface border border-border rounded-lg p-5">
                       <div className="flex items-start justify-between gap-4 mb-2">
@@ -176,7 +176,10 @@ export default function SleepProtocol() {
                       <div className="flex items-center gap-3 text-sm text-muted mb-2">
                         <Clock className="w-3.5 h-3.5" /> {item.timing}
                       </div>
-                      <p className="text-muted text-sm">{item.why}</p>
+                      <p className="text-muted text-sm mb-3">{item.why}</p>
+                      <Link href={item.databaseId ? `/database/${item.databaseId}` : `/go/${item.go}`} className="text-xs font-medium text-green-bright hover:text-green transition-colors cursor-pointer inline-flex items-center gap-1">
+                        View product →
+                      </Link>
                     </div>
                   ))}
                 </div>
@@ -228,16 +231,19 @@ export default function SleepProtocol() {
 
                 <div className="grid gap-4">
                   {[
-                    { device: 'WHOOP Band 4.0', metrics: 'Sleep need, REM, deep sleep, HRV', score: 93 },
-                    { device: 'Oura Ring Gen 3', metrics: 'Sleep phases, temperature deviation, resting HR', score: 91 },
-                    { device: 'Garmin Fenix 7/Epix', metrics: 'Sleep stages, body battery, sleep score', score: 88 },
+                    { device: 'WHOOP Band 4.0', go: 'whoop-4', metrics: 'Sleep need, REM, deep sleep, HRV', score: 93 },
+                    { device: 'Oura Ring Gen 3', go: 'oura-gen3', metrics: 'Sleep phases, temperature deviation, resting HR', score: 91 },
+                    { device: 'Garmin Fenix 7/Epix', go: 'garmin-fenix7', metrics: 'Sleep stages, body battery, sleep score', score: 88 },
                   ].map((item, i) => (
                     <div key={i} className="bg-surface border border-border rounded-lg p-4">
                       <div className="flex items-start justify-between gap-4 mb-2">
                         <h3 className="font-display text-ink">{item.device}</h3>
                         <span className="font-mono text-xs bg-green/10 border border-green/25 text-green-bright px-2 py-1 rounded">{item.score}/100</span>
                       </div>
-                      <p className="text-muted text-sm">{item.metrics}</p>
+                      <p className="text-muted text-sm mb-3">{item.metrics}</p>
+                      <Link href={`/go/${item.go}`} className="text-xs font-medium text-green-bright hover:text-green transition-colors cursor-pointer inline-flex items-center gap-1">
+                        View product →
+                      </Link>
                     </div>
                   ))}
                 </div>

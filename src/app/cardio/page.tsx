@@ -312,11 +312,11 @@ export default function CardioProtocol() {
 
                 <div className="space-y-4">
                   {[
-                    { name: 'Beta-Alanine', dose: '3–5 g/day', timing: 'Any time', why: 'Buffers lactate; may improve Zone 4 performance. Takes 4+ weeks to work.' },
-                    { name: 'Beetroot Juice', dose: '500 ml (~5–9 mmol nitrate)', timing: '2–3 hrs before', why: 'NO booster; improves oxygen efficiency and time to exhaustion.' },
-                    { name: 'Sodium Bicarbonate', dose: '0.3 g/kg BW', timing: '60 min before', why: 'Buffers lactate; helps high-intensity only (not Zone 2).' },
-                    { name: 'Creatine Monohydrate', dose: '5 g/day', timing: 'Any time', why: 'Improves ATP resynthesis; better for strength but helps recovery.' },
-                    { name: 'Tart Cherry Extract', dose: '500–1000 mg', timing: 'Post-exercise', why: 'Reduces inflammation, speeds recovery, improves sleep.' },
+                    { name: 'Beta-Alanine', go: 'now-beta-alanine', dose: '3–5 g/day', timing: 'Any time', why: 'Buffers lactate; may improve Zone 4 performance. Takes 4+ weeks to work.' },
+                    { name: 'Beetroot Juice', go: 'superbeets', dose: '500 ml (~5–9 mmol nitrate)', timing: '2–3 hrs before', why: 'NO booster; improves oxygen efficiency and time to exhaustion.' },
+                    { name: 'Sodium Bicarbonate', go: 'now-sodium-bicarbonate', dose: '0.3 g/kg BW', timing: '60 min before', why: 'Buffers lactate; helps high-intensity only (not Zone 2).' },
+                    { name: 'Creatine Monohydrate', go: null, databaseId: 'creatine', dose: '5 g/day', timing: 'Any time', why: 'Improves ATP resynthesis; better for strength but helps recovery.' },
+                    { name: 'Tart Cherry Extract', go: 'now-tart-cherry', dose: '500–1000 mg', timing: 'Post-exercise', why: 'Reduces inflammation, speeds recovery, improves sleep.' },
                   ].map((item, i) => (
                     <div key={i} className="bg-surface border border-border rounded-lg p-4">
                       <div className="flex items-start justify-between gap-4 mb-2">
@@ -324,7 +324,10 @@ export default function CardioProtocol() {
                         <span className="font-mono text-xs text-green-bright bg-green/5 px-2 py-1 rounded">{item.dose}</span>
                       </div>
                       <p className="text-muted text-sm mb-1"><strong>Timing:</strong> {item.timing}</p>
-                      <p className="text-muted text-sm">{item.why}</p>
+                      <p className="text-muted text-sm mb-3">{item.why}</p>
+                      <Link href={item.databaseId ? `/database/${item.databaseId}` : `/go/${item.go}`} className="text-xs font-medium text-green-bright hover:text-green transition-colors cursor-pointer inline-flex items-center gap-1">
+                        View product →
+                      </Link>
                     </div>
                   ))}
                 </div>

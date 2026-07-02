@@ -143,18 +143,23 @@ export default function NutritionProtocol() {
 
                 <div className="space-y-4">
                   {[
-                    { stack: 'Morning Glucose Control', items: ['Berberine 500 mg', 'Chromium 200 mcg', 'Cinnamon 1 g'], timing: 'With breakfast', why: 'All target insulin sensitivity. Synergistic effect on glucose response.' },
-                    { stack: 'Metabolic Flexibility', items: ['Acetyl-L-carnitine 2 g', 'R-ALA 300 mg', 'PQQ 20 mg'], timing: 'Pre-fasted cardio', why: 'Enhances fat oxidation and mitochondrial efficiency.' },
-                    { stack: 'Nutrient Absorption', items: ['Curcumin 500 mg + black pepper 5 mg', 'Vitamin D3 2000 IU + K2 100 mcg', 'Fish oil + vitamin E'], timing: 'With meals', why: 'Fat-soluble; black pepper increases curcumin bioavailability 2000%.' },
+                    { stack: 'Morning Glucose Control', items: [{ label: 'Berberine 500 mg', go: 'thorne-berberine' }, { label: 'Chromium 200 mcg', go: 'now-chromium' }, { label: 'Cinnamon 1 g', go: 'now-cinnamon' }], timing: 'With breakfast', why: 'All target insulin sensitivity. Synergistic effect on glucose response.' },
+                    { stack: 'Metabolic Flexibility', items: [{ label: 'Acetyl-L-carnitine 2 g', go: 'now-alcar' }, { label: 'R-ALA 300 mg', go: 'jarrow-r-ala' }, { label: 'PQQ 20 mg', go: 'jarrow-pqq' }], timing: 'Pre-fasted cardio', why: 'Enhances fat oxidation and mitochondrial efficiency.' },
+                    { stack: 'Nutrient Absorption', items: [{ label: 'Curcumin 500 mg + black pepper 5 mg', go: 'thorne-meriva-curcumin' }, { label: 'Vitamin D3 2000 IU + K2 100 mcg', go: 'thorne-dk2' }, { label: 'Fish oil + vitamin E', go: 'nordic-omega3' }], timing: 'With meals', why: 'Fat-soluble; black pepper increases curcumin bioavailability 2000%.' },
                   ].map((item, i) => (
                     <div key={i} className="bg-surface border border-border rounded-lg p-5">
                       <h3 className="font-display text-lg text-ink mb-3">{item.stack}</h3>
                       <div className="grid sm:grid-cols-2 gap-4 mb-3">
                         <div>
                           <p className="text-xs text-muted uppercase tracking-wide mb-2">Supplements</p>
-                          <ul className="space-y-1">
+                          <ul className="space-y-1.5">
                             {item.items.map((s, j) => (
-                              <li key={j} className="text-sm text-ink">• {s}</li>
+                              <li key={j} className="text-sm text-ink flex items-center justify-between gap-2">
+                                <span>• {s.label}</span>
+                                <Link href={`/go/${s.go}`} className="text-xs font-medium text-green-bright hover:text-green transition-colors cursor-pointer shrink-0">
+                                  Shop →
+                                </Link>
+                              </li>
                             ))}
                           </ul>
                         </div>

@@ -118,22 +118,25 @@ export default function StressResilienceProtocol() {
 
                 <div className="space-y-4">
                   {[
-                    { adapt: 'Ashwagandha', dose: '300–600 mg/day (standardized to 5% withanolides)', timing: 'Morning with meal', why: 'Reduces cortisol 20–30%, anxiety, improves sleep quality. Best for chronic stress.', caution: 'Not with thyroid meds (can inhibit iodine uptake)' },
-                    { adapt: 'Rhodiola Rosea', dose: '400–600 mg/day', timing: 'Morning', why: 'Improves mood, mental clarity, fatigue resistance. ↑Dopamine, ↓Cortisol.', caution: 'Can be stimulating; avoid if anxious' },
-                    { adapt: 'Lion\'s Mane', dose: '500–1000 mg/day (fruiting body)', timing: 'Morning', why: 'NGF stimulation → neuroplasticity, mood, cognitive resilience. Mild anxiolytic.', caution: 'Generally very safe' },
-                    { adapt: 'Reishi Mushroom', dose: '1–2 g dried or 300–500 mg extract/day', timing: 'Evening', why: 'GABA-like activity, immune modulation (β-glucans). Sleep-promoting.', caution: 'Can be sedating; test first' },
-                    { adapt: 'Cordyceps', dose: '500–1000 mg/day', timing: 'Morning pre-exercise', why: 'Energy, stamina, cortisol buffering during endurance. Not sleep-promoting.', caution: 'Stimulating; avoid near bedtime' },
+                    { adapt: 'Ashwagandha', go: 'ksm66-ashwagandha', dose: '300–600 mg/day (standardized to 5% withanolides)', timing: 'Morning with meal', why: 'Reduces cortisol 20–30%, anxiety, improves sleep quality. Best for chronic stress.', caution: 'Not with thyroid meds (can inhibit iodine uptake)' },
+                    { adapt: 'Rhodiola Rosea', go: 'gaia-rhodiola', dose: '400–600 mg/day', timing: 'Morning', why: 'Improves mood, mental clarity, fatigue resistance. ↑Dopamine, ↓Cortisol.', caution: 'Can be stimulating; avoid if anxious' },
+                    { adapt: 'Lion\'s Mane', go: 'hostdefense-lionsmane', dose: '500–1000 mg/day (fruiting body)', timing: 'Morning', why: 'NGF stimulation → neuroplasticity, mood, cognitive resilience. Mild anxiolytic.', caution: 'Generally very safe' },
+                    { adapt: 'Reishi Mushroom', go: 'real-mushrooms-reishi', dose: '1–2 g dried or 300–500 mg extract/day', timing: 'Evening', why: 'GABA-like activity, immune modulation (β-glucans). Sleep-promoting.', caution: 'Can be sedating; test first' },
+                    { adapt: 'Cordyceps', go: 'real-mushrooms-cordyceps', dose: '500–1000 mg/day', timing: 'Morning pre-exercise', why: 'Energy, stamina, cortisol buffering during endurance. Not sleep-promoting.', caution: 'Stimulating; avoid near bedtime' },
                   ].map((item, i) => (
                     <div key={i} className="bg-surface border border-border rounded-lg p-5">
                       <div className="flex items-start justify-between gap-4 mb-2">
                         <h3 className="font-display text-ink">{item.adapt}</h3>
                         <span className="font-mono text-xs text-purple-400 bg-purple-500/5 px-2 py-1 rounded">{item.dose}</span>
                       </div>
-                      <div className="space-y-1 text-sm text-muted">
+                      <div className="space-y-1 text-sm text-muted mb-3">
                         <p><strong>Timing:</strong> {item.timing}</p>
                         <p><strong>Why:</strong> {item.why}</p>
                         <p className="text-amber"><strong>⚠️ Note:</strong> {item.caution}</p>
                       </div>
+                      <Link href={`/go/${item.go}`} className="text-xs font-medium text-green-bright hover:text-green transition-colors cursor-pointer inline-flex items-center gap-1">
+                        View product →
+                      </Link>
                     </div>
                   ))}
                 </div>
