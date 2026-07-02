@@ -58,4 +58,5 @@ export const affiliateLinks: Record<string, string> = {
   'almost-heaven-barrel': 'https://www.amazon.com/dp/B08L5NXQXW?tag=michaelregeer-20',
   'harvia-heater-kit': 'https://www.amazon.com/dp/B0813WQXQF?tag=michaelregeer-20',
   'newtowne-hyperbaric': 'https://www.newtownehyperbarics.com/?ref=longevitylab',
+  'amazon-mild-hyperbaric-chamber': 'https://www.amazon.com/s?k=portable+mild+hyperbaric+oxygen+chamber&tag=michaelregeer-20',
 }

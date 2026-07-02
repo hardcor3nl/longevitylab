@@ -274,6 +274,28 @@ export const products: Product[] = [
     dosage: '1.3 ATA, 60–90 min sessions',
     image: 'https://images.unsplash.com/photo-1581091918484-24ad5261a37a?w=400&q=80',
   },
+  {
+    id: 'amazon-mild-hyperbaric-chamber',
+    name: 'Portable Mild Hyperbaric Chamber',
+    brand: 'Various (Amazon marketplace)',
+    tagline: 'Entry-level soft-shell chambers at a fraction of the premium-brand price',
+    category: 'Hyperbaric Oxygen Therapy',
+    goals: ['Longevity', 'Recovery'],
+    evidenceLevel: 'Moderate',
+    evidenceScore: 56,
+    safetyScore: 78,
+    popularityScore: 38,
+    price: '$2,500–4,000',
+    badge: 'Budget',
+    summary: 'Amazon carries a range of entry-level soft-shell mild hyperbaric chambers, typically operating at 1.3 ATA, at a fraction of the cost of FDA-registered brands like Newtowne or OxyHealth. Build quality, seam durability, and safety certification vary significantly between listings — read seller documentation and verified reviews carefully before buying, and confirm FDA registration status if that matters to you.',
+    keyBenefits: ['Meaningfully lower upfront cost than premium brands', '1.3 ATA — same pressure class as premium soft chambers', 'Easier to trial the format before a larger investment'],
+    bestFor: 'Budget-conscious buyers wanting to trial mild HBOT before committing to a premium chamber',
+    affiliateUrl: '/go/amazon-mild-hyperbaric-chamber',
+    reviewSlug: 'recovery/hyperbaric-oxygen-therapy',
+    reviewLabel: 'Read Full HBOT Evidence Review',
+    dosage: '1.3 ATA, 60–90 min sessions',
+    image: 'https://images.unsplash.com/photo-1581091918484-24ad5261a37a?w=400&q=80',
+  },
 
   // ─── COLD PLUNGE ──────────────────────────────────────────────────────
   {
