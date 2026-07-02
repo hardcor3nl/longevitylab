@@ -55,4 +55,7 @@ export const affiliateLinks: Record<string, string> = {
   'now-curcubrain': 'https://www.amazon.com/dp/B01N4CH8ZF?tag=michaelregeer-20',
   'mitopure-timeline': 'https://www.timelinenutrition.com/?ref=longevitylab',
   'urolithin-a-doublewood': 'https://www.amazon.com/dp/B09TPCXQZC?tag=michaelregeer-20',
+  'almost-heaven-barrel': 'https://www.amazon.com/dp/B08L5NXQXW?tag=michaelregeer-20',
+  'harvia-heater-kit': 'https://www.amazon.com/dp/B0813WQXQF?tag=michaelregeer-20',
+  'newtowne-hyperbaric': 'https://www.newtownehyperbarics.com/?ref=longevitylab',
 }

@@ -16,6 +16,8 @@ export type ProductCategory =
   | 'Sleep Aids'
   | 'Nootropics & Cognitive'
   | 'Gut & Microbiome'
+  | 'Traditional Saunas'
+  | 'Hyperbaric Oxygen Therapy'
 
 export type Goal =
   | 'Longevity'
@@ -204,6 +206,73 @@ export const products: Product[] = [
     reviewSlug: 'recovery/best-home-saunas-infrared-2024',
     reviewLabel: 'Read Full Sauna Review',
     image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80',
+  },
+
+  // ─── TRADITIONAL SAUNAS ───────────────────────────────────────────────
+  {
+    id: 'almost-heaven-barrel',
+    name: 'Independence 4-Person Barrel Sauna',
+    brand: 'Almost Heaven Saunas',
+    tagline: 'The traditional Finnish sauna type behind the KIHD mortality data',
+    category: 'Traditional Saunas',
+    goals: ['Cardiovascular', 'Recovery', 'Longevity'],
+    evidenceLevel: 'Strong',
+    evidenceScore: 89,
+    safetyScore: 94,
+    popularityScore: 76,
+    price: '$4,895',
+    badge: 'Best Pick',
+    summary: 'The landmark KIHD cohort study linking sauna use to a 40% reduction in cardiovascular mortality was conducted on traditional Finnish saunas — high heat (170–195°F), low humidity with optional steam from water on hot rocks — not infrared. This is the closest home replication of that exact exposure. Western red cedar construction, wood or electric heater options.',
+    keyBenefits: ['Matches the sauna type used in the KIHD mortality study', 'Higher achievable temperature than infrared (up to 195°F)', 'Optional löyly (steam) from water on rocks', 'Western red cedar — naturally rot and insect resistant', 'No installation plumbing required'],
+    bestFor: 'Those specifically wanting to replicate the traditional Finnish sauna protocol behind the strongest cardiovascular mortality data',
+    affiliateUrl: '/go/almost-heaven-barrel',
+    reviewSlug: 'recovery/best-home-saunas-infrared-2024',
+    reviewLabel: 'Read Sauna Type Comparison',
+    image: 'https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=400&q=80',
+  },
+  {
+    id: 'harvia-electric-heater-kit',
+    name: 'Harvia KIP Electric Sauna Heater Kit',
+    brand: 'Harvia',
+    tagline: 'Finnish-made electric heater for DIY traditional sauna builds',
+    category: 'Traditional Saunas',
+    goals: ['Cardiovascular', 'Recovery'],
+    evidenceLevel: 'Strong',
+    evidenceScore: 85,
+    safetyScore: 92,
+    popularityScore: 62,
+    price: '$899–1,400',
+    badge: 'Budget',
+    summary: 'For those converting an existing room or building a custom sauna, Harvia is the Finnish industry-standard heater brand — the same heater type used in most commercial and home saunas throughout Scandinavia. Requires 240V electrical connection; pairs with any properly ventilated cedar or spruce-lined room.',
+    keyBenefits: ['Industry-standard Finnish heater brand', 'Significantly cheaper than a pre-built cabin', 'Reaches full 170–195°F traditional sauna range', 'Digital controller with precise temperature control'],
+    bestFor: 'DIY builders converting an existing space into a traditional sauna',
+    affiliateUrl: '/go/harvia-heater-kit',
+    dosage: 'Requires 240V dedicated circuit — check local electrical code before purchase',
+    image: 'https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=400&q=80',
+  },
+
+  // ─── HYPERBARIC OXYGEN THERAPY ────────────────────────────────────────
+  {
+    id: 'newtowne-hyperbaric-chamber',
+    name: 'Vitaeris 320 Mild Hyperbaric Chamber',
+    brand: 'Newtowne Hyperbarics',
+    tagline: 'The most accessible mild HBOT chamber for home use (1.3 ATA)',
+    category: 'Hyperbaric Oxygen Therapy',
+    goals: ['Longevity', 'Recovery', 'Cognitive'],
+    evidenceLevel: 'Moderate',
+    evidenceScore: 66,
+    safetyScore: 89,
+    popularityScore: 44,
+    price: '$18,500',
+    badge: 'Best Pick',
+    summary: 'Important context before buying: the landmark Tel Aviv telomere-lengthening study used clinical HBOT at 2.0 ATA with 100% oxygen — a pressure level only achievable in hard-shell chambers with a physician-administered oxygen concentrator, not soft home chambers. Mild hyperbaric chambers like this one operate at 1.3 ATA on ambient air, which has far less direct longevity evidence but is the realistic option for home use. Read our full HBOT evidence breakdown before purchasing.',
+    keyBenefits: ['FDA-registered mild hyperbaric chamber', '1.3 ATA — the standard pressure for soft-shell home use', 'Large enough for comfortable multi-person or extended sessions', 'No physician administration required at this pressure level'],
+    bestFor: 'Those who have read the evidence and understand mild HBOT is a different intervention than clinical 2.0 ATA protocols',
+    affiliateUrl: '/go/newtowne-hyperbaric',
+    reviewSlug: 'recovery/hyperbaric-oxygen-therapy',
+    reviewLabel: 'Read Full HBOT Evidence Review',
+    dosage: '1.3 ATA, 60–90 min sessions',
+    image: 'https://images.unsplash.com/photo-1581091918484-24ad5261a37a?w=400&q=80',
   },
 
   // ─── COLD PLUNGE ──────────────────────────────────────────────────────
@@ -1201,10 +1270,12 @@ export const allCategories: ProductCategory[] = [
   'Sleep Aids',
   'Nootropics & Cognitive',
   'Gut & Microbiome',
+  'Traditional Saunas',
+  'Hyperbaric Oxygen Therapy',
 ]
 
 export const categoryGroups: { label: string; categories: ProductCategory[] }[] = [
-  { label: 'Recovery Devices', categories: ['Red Light Therapy', 'Infrared Saunas', 'Cold Plunge & Ice Baths', 'Massage & Recovery'] },
+  { label: 'Recovery Devices', categories: ['Red Light Therapy', 'Infrared Saunas', 'Traditional Saunas', 'Cold Plunge & Ice Baths', 'Massage & Recovery', 'Hyperbaric Oxygen Therapy'] },
   { label: 'Wearables & Tracking', categories: ['Fitness Trackers & HRV', 'Continuous Glucose Monitors', 'Blood & Diagnostics'] },
   { label: 'Supplements', categories: ['NAD+ Precursors', 'Antioxidants & Senolytics', 'Adaptogens', 'Omega Fatty Acids', 'Vitamins & Minerals', 'Mitochondrial Support'] },
   { label: 'Sleep & Cognitive', categories: ['Sleep Aids', 'Nootropics & Cognitive'] },
