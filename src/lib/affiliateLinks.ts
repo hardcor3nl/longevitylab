@@ -51,4 +51,8 @@ export const affiliateLinks: Record<string, string> = {
   'citicoline-cognizin': 'https://www.amazon.com/dp/B00E5COPB6?tag=michaelregeer-20',
   'bacopa-monnieri': 'https://www.amazon.com/dp/B01M4PVDE6?tag=michaelregeer-20',
   'seed-ds01': 'https://seed.com/?ref=longevitylab',
+  'thorne-meriva-curcumin': 'https://www.thorne.com/?ref=longevitylab',
+  'now-curcubrain': 'https://www.amazon.com/dp/B01N4CH8ZF?tag=michaelregeer-20',
+  'mitopure-timeline': 'https://www.timelinenutrition.com/?ref=longevitylab',
+  'urolithin-a-doublewood': 'https://www.amazon.com/dp/B09TPCXQZC?tag=michaelregeer-20',
 }

@@ -106,6 +106,26 @@ export const protocols: Protocol[] = [
         ],
       },
       {
+        title: 'Exercise Protocol (6 Hours/Week)',
+        description: 'Johnson trains 60–90 minutes every single morning, combining strength, cardio, flexibility, and balance work — treating the daily session as a non-negotiable habit rather than a decision made fresh each day.',
+        items: [
+          { name: 'Daily Combined Session', dose: '60–90 minutes', timing: '6:00–7:30 AM, every day', purpose: 'Strength, cardio, flexibility, and balance combined into a single session to remove decision fatigue around "what workout today"', evidenceNote: 'Weekly target is 6 hours total: 3 strength sessions, 3 cardio sessions. Johnson\'s stated principle is "do it every day, no matter what" — automating exercise as identity rather than choice.' },
+          { name: 'Zone 2 Cardio', dose: '150 min/week moderate intensity', timing: 'Within daily sessions', purpose: 'Conversation-maintainable aerobic base — mitochondrial density, metabolic flexibility, cardiovascular longevity', evidenceNote: 'Matches the Zone 2 volume most longevity physicians (including Attia) recommend as a baseline aerobic foundation.' },
+          { name: 'HIIT / Vigorous Cardio', dose: '75 min/week vigorous intensity', timing: 'Within daily sessions', purpose: 'VO₂ max development — the cardio metric with the single strongest association with all-cause mortality reduction in observational data', evidenceNote: 'Vigorous = unable to hold a conversation. Combined with Zone 2 volume, matches current exercise-longevity literature recommending both zones rather than either alone.' },
+          { name: 'Micro-Movement Breaks', dose: '2–3 minutes', timing: 'Every 30 minutes throughout the day', purpose: 'Counters the metabolic and vascular harm of prolonged sitting independent of total exercise volume', evidenceNote: 'Light movement (walking, stretching, bodyweight exercises) every 30 minutes — plus 5–10 minutes of activity after each meal to blunt post-meal glucose spikes.' },
+        ],
+      },
+      {
+        title: 'Advanced Recovery — Sauna, HBOT & Shockwave',
+        description: 'Johnson\'s morning routine includes a stack of recovery therapies most people never encounter outside elite sports medicine. The measured before/after biomarker data from these sessions is unusually well documented for a self-experimenter.',
+        items: [
+          { name: 'Dry Sauna', dose: '175°F (93°C), 20 minutes', timing: '7:30 AM, daily', purpose: 'Cardiovascular conditioning, heat shock protein activation, toxin clearance', evidenceNote: 'After 15–23 sessions, Johnson documented undetectable levels of several urinary toxins (MEP, MEHP, perchlorate all reduced to zero) plus a 12.6% reduction in central blood pressure. Uses ice pack on groin for testicular protection — critical detail: 15 sessions WITHOUT ice protection caused a 54–57% decline in his sperm motility and concentration, which recovered with ice protection over subsequent sessions.', isRx: false },
+          { name: 'Red & Near-Infrared Light Therapy', dose: '6 minutes', timing: '8:00 AM and evening, 2x daily', purpose: 'Photobiomodulation — mitochondrial ATP production, skin and hair follicle stimulation' },
+          { name: 'Hyperbaric Oxygen Therapy (HBOT)', dose: '60–90 minutes at 2 atmospheres, 100% oxygen', timing: '9:00 AM, most weekdays (alternates with IHHT)', purpose: 'Increases tissue oxygenation, stimulates angiogenesis and stem cell mobilisation', evidenceNote: 'After 60 sessions, Johnson documented a 2.6% increase in telomere length and telomerase activity consistent with a 12-year-younger biological age by that specific marker, plus a 300% increase in VEGF (vascular growth factor) and a 28.6% reduction in pTAU217, a blood biomarker associated with dementia risk. These are self-reported single-subject results, not a controlled trial — read as hypothesis-generating, not proof.', isRx: false },
+          { name: 'Shockwave Therapy', dose: '4,500 shocks per session, intensity level 14', timing: '8:15 AM, 3x per week', purpose: 'Applied to spine, shoulders, hips, knees and other joints — stimulates blood vessel formation and tissue regeneration in tendons and connective tissue' },
+        ],
+      },
+      {
         title: 'Sleep & Evening Protocol',
         description: 'Johnson treats sleep as the highest-priority health intervention. His evening protocol is as rigid as his morning one.',
         items: [
