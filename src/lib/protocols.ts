@@ -78,9 +78,9 @@ export const protocols: Protocol[] = [
         title: 'Prescription Medications (Noon)',
         description: 'Johnson takes all prescription medications at noon with his final calorie intake of the day. Several are among the most investigated longevity drugs in science.',
         items: [
-          { name: 'Metformin', dose: '500mg (6-week on/off cycles)', timing: 'Noon with food', purpose: 'AMPK activation, glucose regulation, longevity signalling via AMPK pathway', evidenceNote: 'Rx only. Johnson cycles metformin 6 weeks on, 6 weeks off to prevent adaptation. Unlike Attia, he has not abandoned metformin.', isRx: true },
+          { name: 'Metformin', dose: '500mg (6-week on/off cycles)', timing: 'Noon with food', purpose: 'AMPK activation, glucose regulation, longevity signalling via AMPK pathway', evidenceNote: 'Rx only. Johnson cycles metformin 6 weeks on, 6 weeks off to prevent adaptation, unlike some longevity physicians who have abandoned metformin over exercise-adaptation concerns.', isRx: true },
           { name: 'Acarbose', dose: '200mg', timing: 'With meals', purpose: 'Blunts post-meal glucose spikes by inhibiting alpha-glucosidase enzyme. Extended ITP mouse lifespan.', evidenceNote: 'Rx only. One of only 3 drugs to extend lifespan in the Interventions Testing Program (ITP). Johnson wears a CGM and tracks glucose responses in real time.', isRx: true },
-          { name: 'Jardiance (Empagliflozin)', dose: '10mg', timing: 'Morning', purpose: 'SGLT2 inhibitor — reduces cardiovascular mortality, renal protection, metabolic benefits', evidenceNote: 'Rx only. Originally a diabetes drug with extraordinary cardiovascular mortality data (EMPA-REG trial: 38% reduction in CV death). Attia also uses SGLT2i for high-risk patients.', isRx: true },
+          { name: 'Jardiance (Empagliflozin)', dose: '10mg', timing: 'Morning', purpose: 'SGLT2 inhibitor — reduces cardiovascular mortality, renal protection, metabolic benefits', evidenceNote: 'Rx only. Originally a diabetes drug with extraordinary cardiovascular mortality data (EMPA-REG trial: 38% reduction in CV death). Several longevity physicians also use SGLT2i for high-risk patients.', isRx: true },
           { name: 'Candesartan', dose: '8mg', timing: 'Daily', purpose: 'ARB blood pressure agent with emerging neuroprotective and longevity data', evidenceNote: 'Rx only. ARBs (angiotensin receptor blockers) have epidemiological associations with reduced dementia risk beyond blood pressure effects.', isRx: true },
           { name: 'Repatha (Evolocumab)', dose: '140mg injection every 2 weeks', timing: 'Biweekly injection', purpose: 'PCSK9 inhibitor — aggressively lowers LDL-C and ApoB to near-zero cardiovascular risk range', evidenceNote: 'Rx only. Johnson targets ApoB under 60 mg/dL — the most aggressive cardiovascular prevention stance available outside clinical trials.', isRx: true },
           { name: 'Armour Thyroid + Levothyroxine', dose: '60mg + 100mcg', timing: 'Daily', purpose: 'Thyroid hormone replacement and optimisation', evidenceNote: 'Rx only. Johnson discovered suboptimal thyroid function via comprehensive testing. Many people have subclinical thyroid dysfunction that goes undetected.', isRx: true },
@@ -110,7 +110,7 @@ export const protocols: Protocol[] = [
         description: 'Johnson trains 60–90 minutes every single morning, combining strength, cardio, flexibility, and balance work — treating the daily session as a non-negotiable habit rather than a decision made fresh each day.',
         items: [
           { name: 'Daily Combined Session', dose: '60–90 minutes', timing: '6:00–7:30 AM, every day', purpose: 'Strength, cardio, flexibility, and balance combined into a single session to remove decision fatigue around "what workout today"', evidenceNote: 'Weekly target is 6 hours total: 3 strength sessions, 3 cardio sessions. Johnson\'s stated principle is "do it every day, no matter what" — automating exercise as identity rather than choice.' },
-          { name: 'Zone 2 Cardio', dose: '150 min/week moderate intensity', timing: 'Within daily sessions', purpose: 'Conversation-maintainable aerobic base — mitochondrial density, metabolic flexibility, cardiovascular longevity', evidenceNote: 'Matches the Zone 2 volume most longevity physicians (including Attia) recommend as a baseline aerobic foundation.' },
+          { name: 'Zone 2 Cardio', dose: '150 min/week moderate intensity', timing: 'Within daily sessions', purpose: 'Conversation-maintainable aerobic base — mitochondrial density, metabolic flexibility, cardiovascular longevity', evidenceNote: 'Matches the Zone 2 volume most longevity physicians recommend as a baseline aerobic foundation.' },
           { name: 'HIIT / Vigorous Cardio', dose: '75 min/week vigorous intensity', timing: 'Within daily sessions', purpose: 'VO₂ max development — the cardio metric with the single strongest association with all-cause mortality reduction in observational data', evidenceNote: 'Vigorous = unable to hold a conversation. Combined with Zone 2 volume, matches current exercise-longevity literature recommending both zones rather than either alone.' },
           { name: 'Micro-Movement Breaks', dose: '2–3 minutes', timing: 'Every 30 minutes throughout the day', purpose: 'Counters the metabolic and vascular harm of prolonged sitting independent of total exercise volume', evidenceNote: 'Light movement (walking, stretching, bodyweight exercises) every 30 minutes — plus 5–10 minutes of activity after each meal to blunt post-meal glucose spikes.' },
         ],
@@ -140,77 +140,6 @@ export const protocols: Protocol[] = [
     difficulty: 'Advanced',
     lastUpdated: '2026-06',
     disclaimer: "Bryan Johnson's protocol is the most extreme documented longevity intervention in existence. Most items require prescriptions (metformin, acarbose, Jardiance, Repatha, Candesartan, thyroid medications, tadalafil, minoxidil). Note: Johnson discontinued rapamycin in 2024 after concluding the immunosuppression tradeoff wasn't justified by his biomarkers — it is no longer part of his protocol despite frequent claims otherwise. This page is strictly educational. Do not replicate prescription or lithium elements without physician oversight and blood monitoring. Johnson is testing himself as an experiment of one — not as a clinical trial.",
-    affiliateDisclosure: 'Longevity Intel earns a commission on some affiliate links. This never influences our coverage.',
-  },
-
-  // ─── PETER ATTIA ──────────────────────────────────────────────────────
-  {
-    id: 'peter-attia',
-    expert: 'Peter Attia, MD',
-    title: "Dr. Peter Attia's Longevity Protocol (2025)",
-    slug: 'peter-attia-longevity-protocol',
-    description: "The complete Medicine 3.0 longevity framework — exercise as the primary drug, aggressive lipid management, and targeted supplementation from one of the world's leading longevity physicians.",
-    longDescription: "Dr. Peter Attia is a physician who trained at Johns Hopkins and Stanford. His podcast The Drive and book Outlive have made him the most influential voice in preventive longevity medicine. His framework, Medicine 3.0, advocates for proactive health optimisation decades before disease onset — the opposite of conventional medicine's reactive model. Attia has publicly updated his protocol significantly: he dropped metformin after concluding it blunts exercise adaptation, doubled down on rapamycin, and increasingly emphasises exercise above all supplements.",
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=85',
-    expertImage: '/experts/peter-attia.jpg',
-    role: 'Physician (MD, Johns Hopkins/Stanford), host of The Drive podcast, author of Outlive',
-    website: 'peterattiamd.com',
-    approach: 'Medicine 3.0 — proactive, personalised health optimisation. Exercise is the most potent longevity drug.',
-    keyPhilosophy: [
-      'Exercise is the single most potent longevity intervention — VO2 max and muscle mass are the strongest predictors of lifespan',
-      'The four horsemen: cardiovascular disease, cancer, neurodegeneration, metabolic dysfunction — address all proactively before symptoms',
-      '"Outlive" thinking: optimise not just for lifespan but for healthspan — functioning at 85 like most 65-year-olds',
-      'Dropped metformin: publicly concluded exercise benefits outweigh metformin benefits for non-diabetics',
-      'Bloodwork every 6 months minimum, targets ApoB under 60 mg/dL — the most aggressive lipid target in clinical practice',
-      'Emotional health is the sixth pillar of longevity — often the most neglected and most impactful',
-    ],
-    sections: [
-      {
-        title: 'Exercise: The Primary Drug',
-        description: 'Attia considers exercise his most important longevity intervention — more impactful than any supplement or drug. He targets specific performance benchmarks for his age.',
-        items: [
-          { name: 'Zone 2 Cardio', dose: '4+ hours per week', timing: 'Distributed across week, never back-to-back days', purpose: 'Mitochondrial biogenesis, metabolic flexibility, cardiovascular efficiency. Attia targets lactate under 2 mmol/L — true Zone 2.', evidenceNote: 'Attia uses a Wahoo trainer with lactate meter to confirm true Zone 2. He considers this the foundation of all other training.' },
-          { name: 'VO2 Max Intervals', dose: '2 sessions per week, 4x4 Norwegian protocol', timing: 'Separate from Zone 2 days', purpose: 'VO2 max is the single strongest predictor of longevity. Each 1 MET improvement reduces all-cause mortality ~13%.', evidenceNote: 'Attia targets top 2% VO2 max for his age — approximately 55+ ml/kg/min at 50. He considers moving from low to above-average VO2 max more impactful than quitting smoking.' },
-          { name: 'Strength Training', dose: '3 sessions per week', timing: 'Non-consecutive days', purpose: 'Anti-sarcopenic intervention. Muscle mass is independently predictive of longevity. Attia targets 1g protein per lb bodyweight daily.', evidenceNote: 'Focuses on dead hangs, farmer carries, and functional movements that preserve independence into old age.' },
-          { name: 'Stability and Mobility', dose: 'Daily, 15–30 min', timing: 'Morning or pre-workout', purpose: 'Injury prevention, fall prevention — falls are a leading cause of death in the elderly. Attia works with ATC (Attia Training Company) protocols.', evidenceNote: 'Attia integrates DNS (Dynamic Neuromuscular Stabilisation) and specific stability work around every training session.' },
-        ],
-      },
-      {
-        title: 'Foundation Supplements',
-        description: "Supplements Attia takes daily regardless of biomarker status — his nutritional insurance policy.",
-        items: [
-          { name: 'Omega-3 (EPA/DHA)', dose: '2–4g EPA+DHA', timing: 'With meals', purpose: 'Cardiovascular risk reduction, anti-inflammatory, cognitive protection. Attia considers this one of his highest-confidence supplements.', supplementId: 'omega3' },
-          { name: 'Vitamin D3 + K2', dose: '5,000 IU D3 + 180mcg MK-7 K2', timing: 'Morning with fat', purpose: 'Immune function, bone health, cardiovascular. Tests 25-OH-D quarterly, targets 40–60 ng/mL.' },
-          { name: 'Magnesium L-Threonate', dose: '2g (144mg elemental Mg)', timing: 'Evening', purpose: 'Sleep quality, cognitive function, cardiovascular. L-Threonate crosses the blood-brain barrier more effectively than other forms.' },
-          { name: 'Creatine Monohydrate', dose: '5g/day', timing: 'Anytime — consistency over timing', purpose: 'Muscle, cognitive neuroprotection. Attia calls it one of his highest-confidence supplements alongside omega-3.', supplementId: 'creatine' },
-          { name: 'Zinc', dose: '25–45mg', timing: 'With dinner', purpose: 'Immune function, testosterone support, protein synthesis. Higher end during training blocks.', evidenceNote: 'Attia tests zinc status — supplementation only if borderline deficient.' },
-          { name: 'Glycine', dose: '3g', timing: 'Before bed', purpose: 'Sleep quality, core body temperature reduction, collagen synthesis, anti-aging via methylation support', evidenceNote: 'Low safety risk, modest evidence for sleep quality improvement. Attia considers it a reasonable add-on.' },
-        ],
-      },
-      {
-        title: 'Metabolic & Longevity Interventions',
-        description: "Attia's most discussed longevity pharmacology — including his public decisions to drop metformin and add rapamycin.",
-        items: [
-          { name: 'Rapamycin', dose: '8mg/week (takes breaks for mouth sores)', timing: 'Once weekly', purpose: 'mTOR inhibition — the most evidence-backed longevity drug in animal models. Extends lifespan in every species tested.', evidenceNote: 'Rx only. Attia considers this the most compelling pharmacological longevity intervention. Takes breaks when mouth sores (common side effect) occur. Not for everyone — requires physician monitoring.', isRx: true },
-          { name: 'Berberine', dose: '500mg 2x/day with meals', timing: 'With meals', purpose: 'AMPK activator — replaced metformin for training days. Improves insulin sensitivity without blunting exercise adaptation.', evidenceNote: 'Attia publicly dropped metformin after the MILES trial showed blunted muscle adaptation with exercise. Berberine provides similar AMPK activation without this effect.', supplementId: 'berberine' },
-          { name: 'PCSK9 Inhibitor or Statin', dose: 'Individualised to Rx', timing: 'As prescribed', purpose: 'Attia targets ApoB under 60 mg/dL — one of the most aggressive cardiovascular prevention stances in mainstream medicine', evidenceNote: 'Rx only. Attia is explicit: he considers ApoB the most important modifiable longevity biomarker. Most people need pharmacological support to reach under 60 mg/dL.', isRx: true },
-        ],
-      },
-      {
-        title: 'Sleep Optimisation',
-        description: 'Attia calls sleep "the single most powerful anti-aging tool we have that does not require a prescription."',
-        items: [
-          { name: 'Sleep Tracking', dose: 'WHOOP or Oura nightly', timing: 'Continuous', purpose: 'HRV, sleep staging, respiratory rate — data to guide recovery decisions. Attia tracks sleep data alongside bloodwork to understand cumulative load.', evidenceNote: 'Attia is explicit that sleep quality is more important than most supplements combined. He targets 7–9 hours consistently.' },
-          { name: 'Ashwagandha KSM-66', dose: '600mg', timing: 'Evening during high-stress periods', purpose: 'Cortisol reduction, sleep quality support during high-stress periods', supplementId: 'ashwagandha' },
-          { name: 'Trazodone (situational)', dose: '50–100mg', timing: 'As needed', purpose: 'Sleep continuity during travel or high-stress periods', evidenceNote: 'Rx only. Attia uses this sparingly — sleep hygiene and behavioural interventions are the foundation. Medication is a last resort.', isRx: true },
-        ],
-      },
-    ],
-    totalSupplements: 12,
-    estimatedCost: '$150–300/month (excluding Rx)',
-    difficulty: 'Advanced',
-    lastUpdated: '2025-01',
-    disclaimer: "Attia's protocol is personalised to his specific bloodwork, genetics, and health history. Rapamycin, statins/PCSK9 inhibitors, and trazodone require physician prescriptions. His public position on many interventions has evolved — always check his current podcast for updates.",
     affiliateDisclosure: 'Longevity Intel earns a commission on some affiliate links. This never influences our coverage.',
   },
 
@@ -336,10 +265,10 @@ export const protocols: Protocol[] = [
         title: 'Prescription & Quarterly Interventions',
         description: "Sinclair's pharmacological longevity interventions — some quarterly pulsed, some daily.",
         items: [
-          { name: 'Rapamycin', dose: '~6mg quarterly (pulsed)', timing: 'Every 3 months', purpose: 'mTOR inhibition — Sinclair uses a quarterly pulsed protocol rather than Attia\'s weekly continuous approach', evidenceNote: 'Rx only. Sinclair argues that intermittent rapamycin may capture mTOR inhibition benefits while minimising immunosuppression. This is a contentious area — the optimal dosing frequency is genuinely unknown.', isRx: true },
+          { name: 'Rapamycin', dose: '~6mg quarterly (pulsed)', timing: 'Every 3 months', purpose: 'mTOR inhibition — Sinclair uses a quarterly pulsed protocol rather than a weekly continuous approach', evidenceNote: 'Rx only. Sinclair argues that intermittent rapamycin may capture mTOR inhibition benefits while minimising immunosuppression. This is a contentious area — the optimal dosing frequency is genuinely unknown.', isRx: true },
           { name: 'Low-dose Aspirin', dose: '81mg', timing: 'Daily', purpose: 'Anti-inflammatory, cardiovascular protection — Sinclair continues despite updated cardiology guidance against routine aspirin in healthy adults', evidenceNote: 'Rx-free but contested. Updated AHA/ACC guidelines (2022) no longer recommend aspirin for primary prevention in most adults. Sinclair continues based on his personal risk assessment.' },
           { name: 'Statin', dose: '80mg (high-intensity)', timing: 'Evening', purpose: 'Aggressive ApoB/LDL-C lowering for cardiovascular risk reduction', evidenceNote: 'Rx only. Sinclair is explicit about treating cholesterol aggressively. He views cardiovascular disease as the most preventable of the "four horsemen" of aging.', isRx: true },
-          { name: 'Metformin (occasional)', dose: '1g when taken', timing: 'Evening', purpose: 'AMPK activation — Sinclair reduced metformin use due to GI side effects but has not entirely eliminated it', evidenceNote: 'Rx only. Unlike Attia, Sinclair has not publicly abandoned metformin — he uses it more sporadically than previously. The berberine switch is largely pragmatic (GI tolerance) rather than philosophical.', isRx: true },
+          { name: 'Metformin (occasional)', dose: '1g when taken', timing: 'Evening', purpose: 'AMPK activation — Sinclair reduced metformin use due to GI side effects but has not entirely eliminated it', evidenceNote: 'Rx only. Sinclair has not publicly abandoned metformin — he uses it more sporadically than previously. The berberine switch is largely pragmatic (GI tolerance) rather than philosophical.', isRx: true },
         ],
       },
       {
@@ -348,7 +277,7 @@ export const protocols: Protocol[] = [
         items: [
           { name: 'Intermittent Fasting (skip breakfast)', dose: 'First meal at 1–2 PM, last meal 8–9 PM', timing: 'Daily', purpose: 'AMPK activation, sirtuin activation, autophagy induction, IGF-1 reduction. Sinclair has skipped breakfast for a decade.', evidenceNote: 'Sinclair\'s IGF-1 is reported at 40% below population average — consistent with reduced mTOR/IGF-1 signalling that animal longevity models associate with extended lifespan.' },
           { name: 'Cold Exposure', dose: '2–3x/week cold shower or brief outdoor cold', timing: 'Post-exercise or morning', purpose: 'Xenohormesis — mild stress activates survival pathways. Norepinephrine release, mitochondrial biogenesis.', evidenceNote: 'Sinclair frames cold exposure as a form of xenohormesis — the same concept as plant polyphenols activating human survival pathways.' },
-          { name: 'Plant-heavy, Low Red Meat Diet', dose: 'Predominantly plants, minimal red meat', timing: 'Daily', purpose: 'Reduce IGF-1 signalling (mTOR inhibition via lower amino acid load), increase polyphenol intake, gut microbiome diversity', evidenceNote: 'Sinclair\'s dietary approach conflicts with Attia\'s high-protein strategy. The core tension: Attia prioritises anti-sarcopenic protein intake; Sinclair prioritises mTOR inhibition. Both have valid mechanistic cases.' },
+          { name: 'Plant-heavy, Low Red Meat Diet', dose: 'Predominantly plants, minimal red meat', timing: 'Daily', purpose: 'Reduce IGF-1 signalling (mTOR inhibition via lower amino acid load), increase polyphenol intake, gut microbiome diversity', evidenceNote: 'Sinclair\'s dietary approach conflicts with high-protein strategies favoured by some other longevity physicians. The core tension: anti-sarcopenic protein intake versus mTOR inhibition. Both have valid mechanistic cases.' },
         ],
       },
     ],

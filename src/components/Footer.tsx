@@ -20,8 +20,8 @@ const links = {
     ['All Best Lists',       '/best'],
     ['Top Supplements',      '/best/best-longevity-supplements'],
     ['Complete Stack Guide', '/best/complete-longevity-stack'],
-    ['Peter Attia Protocol', '/protocols/peter-attia'],
     ['Bryan Johnson Stack',  '/protocols/bryan-johnson'],
+    ['Andrew Huberman Stack','/protocols/andrew-huberman'],
   ],
   Company: [
     ['About',                '/about'],

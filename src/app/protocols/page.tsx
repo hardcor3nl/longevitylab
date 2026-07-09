@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Expert Longevity Protocols',
-  description: "The complete supplement stacks and lifestyle protocols from the world's leading longevity experts — Peter Attia, Andrew Huberman, Bryan Johnson, and David Sinclair.",
+  description: "The complete supplement stacks and lifestyle protocols from the world's leading longevity experts — Andrew Huberman, Bryan Johnson, and David Sinclair.",
 }
 
 const difficultyColor = {

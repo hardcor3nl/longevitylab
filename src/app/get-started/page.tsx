@@ -104,7 +104,7 @@ export default function GetStarted() {
       if (experienceLevel === 'advanced') {
         recs.push({
           title: 'Expert Protocols',
-          description: 'See how Peter Attia, Bryan Johnson, Huberman, and Sinclair stack supplements.',
+          description: 'See how Bryan Johnson, Huberman, and Sinclair stack supplements.',
           href: '/protocols',
           icon: '🔬',
           color: 'bg-emerald-500/10 border-emerald-500/25',
@@ -137,7 +137,7 @@ export default function GetStarted() {
         },
         {
           title: 'Expert Protocols',
-          description: 'Learn from Peter Attia, Bryan Johnson, and others.',
+          description: 'Learn from Bryan Johnson, Huberman, Sinclair, and others.',
           href: '/protocols',
           icon: '🔬',
           color: 'bg-emerald-500/10 border-emerald-500/25',

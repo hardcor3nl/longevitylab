@@ -37,7 +37,7 @@ const NAV_GROUPS = [
   {
     label: 'Learn',
     items: [
-      { href: '/protocols', label: 'Expert Protocols', desc: 'Attia, Huberman, Sinclair & more' },
+      { href: '/protocols', label: 'Expert Protocols', desc: 'Huberman, Sinclair, Bryan Johnson & more' },
       { href: '/compare', label: 'Comparisons', desc: 'Head-to-head product breakdowns' },
       { href: '/database', label: 'Supplement Database', desc: 'Evidence scores for 100+ compounds' },
       { href: '/glossary', label: 'Glossary', desc: 'Longevity terms explained' },

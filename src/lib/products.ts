@@ -972,7 +972,7 @@ export const products: Product[] = [
     popularityScore: 88,
     price: '$18.99',
     badge: 'Best Pick',
-    summary: 'Zinc picolinate has the highest absorption rate of all zinc forms. Zinc deficiency (common in athletes and the elderly) directly suppresses testosterone and immune function. Huberman and Attia both include zinc in their stacks.',
+    summary: 'Zinc picolinate has the highest absorption rate of all zinc forms. Zinc deficiency (common in athletes and the elderly) directly suppresses testosterone and immune function. Several longevity-focused physicians include zinc in their stacks.',
     keyBenefits: ['Highest absorption form (picolinate chelate)', 'Testosterone synthesis cofactor', 'Immune function essential', 'DNA synthesis and repair', 'Taste and smell receptor function'],
     bestFor: 'Athletes, elderly, and anyone with high zinc losses through sweat',
     affiliateUrl: '/go/thorne-zinc',

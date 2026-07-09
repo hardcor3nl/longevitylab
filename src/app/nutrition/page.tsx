@@ -97,7 +97,7 @@ export default function NutritionProtocol() {
 
                 <div className="bg-amber/5 border border-amber/20 rounded-lg p-4">
                   <p className="text-sm text-ink">
-                    <strong>Why 2 meals?</strong> Longer fasting periods trigger autophagy, improve insulin sensitivity, and simplify adherence. Most longevity experts (Attia, Huberman, Sinclair) use 2–3 meals max.
+                    <strong>Why 2 meals?</strong> Longer fasting periods trigger autophagy, improve insulin sensitivity, and simplify adherence. Most longevity experts (Huberman, Sinclair) use 2–3 meals max.
                   </p>
                 </div>
               </div>
