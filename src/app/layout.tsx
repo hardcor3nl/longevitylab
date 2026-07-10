@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   publisher: 'Longevity Intel',
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } },
   alternates: { canonical: siteUrl },
+  manifest: '/manifest.json',
   openGraph: {
     type: 'website',
     siteName: 'Longevity Intel',
