@@ -34,6 +34,8 @@ export interface Protocol {
   lastUpdated: string
   disclaimer: string
   affiliateDisclosure: string
+  resultsStats?: { label: string; value: string }[]
+  faq?: { question: string; answer: string }[]
 }
 
 export const protocols: Protocol[] = [
@@ -134,6 +136,16 @@ export const protocols: Protocol[] = [
           { name: 'Blueprint Skin Protocol', dose: 'Cleanser + Serum + Moisturiser + Tretinoin 0.025%', timing: '8:00 PM', purpose: 'Skin biological age reduction — Johnson has documented facial age reversal via VISIA skin analysis', evidenceNote: 'Tretinoin is the only topical ingredient with RCT evidence for reversing photoaging. Prescription only. Johnson\'s skin biological age is documented as significantly younger than chronological age.' },
         ],
       },
+      {
+        title: 'Measured Results — Biological Age Data',
+        description: 'Unlike most self-experimenters, Johnson publishes his actual biomarker results rather than just his protocol. Here is what the data shows, measured through epigenetic clocks and organ-specific biomarker panels rather than self-report.',
+        items: [
+          { name: 'DunedinPACE (Pace of Aging)', dose: 'Score: 0.69', timing: 'Measured periodically via blood draw', purpose: 'DunedinPACE estimates how fast a person is aging year-to-year based on 173 DNA methylation markers, calibrated against 20 years of longitudinal organ-function decline in the Dunedin birth cohort study. A score of 1.0 represents the population-average pace of aging.', evidenceNote: 'A 0.69 score means Johnson\'s body is aging at roughly 69% of the average rate — for every 12 months that pass, his body accumulates the biological wear of about 8.3 months. This is one of the more scientifically credible aging-pace metrics in use, since DunedinPACE was validated against real decades-long health outcome data rather than just correlated with chronological age.' },
+          { name: 'Epigenetic Age Testing (TruAge, GrimAge)', dose: 'Multiple clocks tracked in parallel', timing: 'Periodic blood draws, analysed via TruDiagnostic', purpose: 'DNA methylation-based "epigenetic clocks" estimate biological age from chemical modifications to DNA that accumulate predictably with age. Johnson uses TruDiagnostic\'s TruAge panel, which analyses 900,000+ methylation markers across the genome plus organ-specific sub-scores.', evidenceNote: 'Reported results show several organ-specific ages below chronological age, including notably younger readings for select organ systems in his published panels. Important context: epigenetic clocks are an active, evolving research area — different clocks (Horvath, GrimAge, PhenoAge, DunedinPACE) can disagree with each other on the same blood sample, and none has been validated as a clinical-grade predictor of actual remaining lifespan. Treat these as promising research tools, not medical certainty.' },
+          { name: 'Blueprint Biomarker Testing Platform', dose: '$365/year, 2 panels annually', timing: 'Launched 2026', purpose: 'Johnson opened up a consumer version of his own testing methodology — 100+ biomarkers across two annual panels, positioned as a lower-cost way for the public to track the same categories of data he uses internally.', evidenceNote: 'This is a commercial product from Johnson\'s own company, not an independent third party — read results and marketing claims with that in mind. It sits in the same competitive space as Function Health and InsideTracker, both independently reviewed on this site.' },
+          { name: 'Cost vs. Benefit Reality Check', dose: 'Full protocol ~$2M/year; foundational habits <$100/month', timing: 'Ongoing', purpose: 'Johnson himself has acknowledged that the bulk of his measurable health improvement likely comes from the foundational basics — sleep consistency, the noon eating cutoff, daily exercise, and core supplementation — not the six-figure experimental therapies (HBOT, shockwave, stem cell injections) that generate the most headlines.', evidenceNote: 'This is a useful honesty check for readers: the diet, sleep, and exercise fundamentals covered earlier on this page are freely replicable and represent the highest-confidence portion of the protocol. The experimental therapies are the part with the least individual causal attribution.' },
+        ],
+      },
     ],
     totalSupplements: 100,
     estimatedCost: '$1,000–2,000/month (supplements only). Full protocol ~$2M/year with physician team.',
@@ -141,6 +153,18 @@ export const protocols: Protocol[] = [
     lastUpdated: '2026-06',
     disclaimer: "Bryan Johnson's protocol is the most extreme documented longevity intervention in existence. Most items require prescriptions (metformin, acarbose, Jardiance, Repatha, Candesartan, thyroid medications, tadalafil, minoxidil). Note: Johnson discontinued rapamycin in 2024 after concluding the immunosuppression tradeoff wasn't justified by his biomarkers — it is no longer part of his protocol despite frequent claims otherwise. This page is strictly educational. Do not replicate prescription or lithium elements without physician oversight and blood monitoring. Johnson is testing himself as an experiment of one — not as a clinical trial.",
     affiliateDisclosure: 'Longevity Intel earns a commission on some affiliate links. This never influences our coverage.',
+    resultsStats: [
+      { label: 'DunedinPACE score', value: '0.69' },
+      { label: 'Aging pace vs. average', value: '~31% slower' },
+      { label: 'Annual protocol cost', value: '~$2M (full); <$100/mo core)' },
+      { label: 'Biomarkers tracked', value: '100+' },
+    ],
+    faq: [
+      { question: 'How much does Bryan Johnson spend on his Blueprint protocol?', answer: 'Johnson has stated the full protocol — including his physician team, quarterly imaging, HBOT, and experimental therapies — costs around $2 million per year. However, he has acknowledged the foundational elements (diet, sleep timing, core supplements, daily exercise) cost under $100/month and likely account for the majority of the measurable health benefit.' },
+      { question: 'Does Bryan Johnson still take rapamycin?', answer: 'No. Johnson discontinued rapamycin in 2024 after concluding the immunosuppression tradeoff was not justified by his own biomarker data. This is a common point of confusion since many articles still list it as part of his current stack.' },
+      { question: "What is Bryan Johnson's biological age?", answer: 'Johnson tracks biological age through multiple methods, including a DunedinPACE score of approximately 0.69 (meaning his body is aging at roughly 69% of the average population rate) and TruDiagnostic epigenetic panel testing showing several organ-specific ages below his chronological age. These are self-reported research-grade measurements, not clinically validated predictions of remaining lifespan.' },
+      { question: "What supplements does Bryan Johnson take?", answer: "Johnson's Blueprint stack includes roughly 100 compounds, though the core daily list is closer to 8-13 items: a proprietary Longevity Mix, creatine, collagen peptides, extra virgin olive oil, NMN or NR (alternating), EPA/DHA omega-3, ashwagandha and rhodiola, plus 2026 additions of low-dose lithium orotate and NDGA. The full breakdown with doses and timing is on this page." },
+    ],
   },
 
   // ─── ANDREW HUBERMAN ──────────────────────────────────────────────────

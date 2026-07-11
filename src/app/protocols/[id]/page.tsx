@@ -28,8 +28,21 @@ export default function ProtocolPage({ params }: { params: { id: string } }) {
 
   const otherProtocols = protocols.filter(p => p.id !== protocol.id)
 
+  const faqJsonLd = protocol.faq ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: protocol.faq.map(f => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  } : null
+
   return (
     <div className="pt-24 pb-24">
+      {faqJsonLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      )}
       {/* Hero */}
       <div className="relative h-[420px] mb-12 overflow-hidden">
         <Image src={protocol.image} alt={protocol.expert} fill className="object-cover" priority />
@@ -135,6 +148,21 @@ export default function ProtocolPage({ params }: { params: { id: string } }) {
                 </div>
               ))}
 
+              {/* FAQ */}
+              {protocol.faq && (
+                <div className="mb-12">
+                  <h2 className="font-display text-2xl text-ink mb-6">Frequently Asked Questions</h2>
+                  <div className="space-y-4">
+                    {protocol.faq.map((f) => (
+                      <div key={f.question} className="bg-surface border border-border rounded-2xl p-5">
+                        <h3 className="font-display text-lg text-ink mb-2">{f.question}</h3>
+                        <p className="text-sm text-muted leading-relaxed">{f.answer}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Disclaimer */}
               <div className="bg-amber/5 border border-amber/20 rounded-2xl p-5 mb-8">
                 <div className="flex items-start gap-3">
@@ -178,12 +206,34 @@ export default function ProtocolPage({ params }: { params: { id: string } }) {
                 </div>
               </AnimatedSection>
 
+              {/* Measured results stats */}
+              {protocol.resultsStats && (
+                <AnimatedSection delay={0.12}>
+                  <div className="bg-surface border border-border rounded-2xl p-5">
+                    <h3 className="font-mono text-xs uppercase tracking-widest text-muted mb-4">Measured Results</h3>
+                    <div className="space-y-3">
+                      {protocol.resultsStats.map(stat => (
+                        <div key={stat.label} className="flex items-center justify-between gap-3">
+                          <span className="text-sm text-muted">{stat.label}</span>
+                          <span className="font-mono text-sm text-ink font-medium text-right">{stat.value}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </AnimatedSection>
+              )}
+
               {/* Related reading */}
               {protocol.id === 'bryan-johnson' && (
                 <AnimatedSection delay={0.15}>
                   <div className="bg-surface border border-border rounded-2xl p-5">
                     <h3 className="font-mono text-xs uppercase tracking-widest text-muted mb-4">Related Reading</h3>
                     <div className="space-y-3">
+                      <Link href="/protocols/bryan-johnson-biological-age-explained"
+                        className="flex items-start justify-between gap-2 group cursor-pointer">
+                        <span className="text-sm text-ink group-hover:text-green transition-colors leading-snug">His biological age results, explained (DunedinPACE, TruAge)</span>
+                        <ArrowUpRight className="w-3.5 h-3.5 text-muted group-hover:text-green transition-colors shrink-0 mt-0.5" />
+                      </Link>
                       <Link href="/supplements/lithium-orotate-ndga-2026"
                         className="flex items-start justify-between gap-2 group cursor-pointer">
                         <span className="text-sm text-ink group-hover:text-green transition-colors leading-snug">Lithium Orotate &amp; NDGA: the 2026 additions, reviewed</span>
