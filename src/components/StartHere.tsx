@@ -64,20 +64,23 @@ export function StartHere() {
         {steps.map(({ icon: Icon, step, title, desc, href }, i) => (
           <AnimatedSection key={step} delay={i * 0.07}>
             <Link href={href}
-              className="group relative flex flex-col h-full bg-surface border border-border rounded-2xl p-5 hover:border-green/35 transition-all duration-200 cursor-pointer overflow-hidden"
+              className="group relative flex flex-col h-full bg-surface border border-border rounded-2xl p-5 pt-6 hover:border-green/35 transition-all duration-200 cursor-pointer overflow-hidden"
               style={{ boxShadow: 'var(--shadow-sm)' }}>
-              {/* Giant step number */}
-              <span className="absolute -top-2 -right-1 font-display text-[64px] leading-none text-ink/[0.05] dark:text-white/[0.04] select-none pointer-events-none group-hover:text-green/10 transition-colors duration-300">
+              {/* Giant step number watermark */}
+              <span
+                className="absolute top-1 right-2 font-display text-[56px] leading-none select-none pointer-events-none transition-colors duration-300"
+                style={{ color: 'var(--ink)', opacity: 0.05 }}
+                aria-hidden="true">
                 {step}
               </span>
 
-              <div className="w-9 h-9 rounded-xl bg-green/10 border border-green/20 flex items-center justify-center mb-4">
+              <div className="relative w-9 h-9 rounded-xl bg-green/10 border border-green/20 flex items-center justify-center mb-4">
                 <Icon className="w-4 h-4 text-green-bright" />
               </div>
-              <p className="font-mono text-[10px] uppercase tracking-widest text-green-bright mb-1.5">Step {step}</p>
-              <h3 className="font-display text-lg text-ink group-hover:text-green-bright transition-colors duration-150 leading-tight mb-2">{title}</h3>
-              <p className="text-xs text-muted leading-relaxed flex-1">{desc}</p>
-              <div className="mt-4 flex items-center gap-1 text-xs font-semibold text-muted group-hover:text-green-bright transition-colors duration-150">
+              <p className="relative font-mono text-[10px] uppercase tracking-widest text-green-bright mb-1.5">Step {step}</p>
+              <h3 className="relative font-display text-lg text-ink group-hover:text-green-bright transition-colors duration-150 leading-tight mb-2">{title}</h3>
+              <p className="relative text-xs text-muted leading-relaxed flex-1">{desc}</p>
+              <div className="relative mt-4 flex items-center gap-1 text-xs font-semibold text-muted group-hover:text-green-bright transition-colors duration-150">
                 Read the guide <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform duration-150" />
               </div>
             </Link>

@@ -273,7 +273,7 @@ export const products: Product[] = [
     reviewSlug: 'recovery/hyperbaric-oxygen-therapy',
     reviewLabel: 'Read Full HBOT Evidence Review',
     dosage: '1.3 ATA, 60–90 min sessions',
-    image: 'https://images.unsplash.com/photo-1581091918484-24ad5261a37a?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1639772823849-6efbd173043c?w=400&q=80',
   },
   {
     id: 'amazon-mild-hyperbaric-chamber',
@@ -295,7 +295,7 @@ export const products: Product[] = [
     reviewSlug: 'recovery/hyperbaric-oxygen-therapy',
     reviewLabel: 'Read Full HBOT Evidence Review',
     dosage: '1.3 ATA, 60–90 min sessions',
-    image: 'https://images.unsplash.com/photo-1581091918484-24ad5261a37a?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1639772823849-6efbd173043c?w=400&q=80',
   },
 
   // ─── COLD PLUNGE ──────────────────────────────────────────────────────
@@ -498,7 +498,7 @@ export const products: Product[] = [
     timing: 'Morning',
     stacksWith: ['tmg', 'resveratrol', 'coq10'],
     studyCount: 42,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'nr-tru-niagen',
@@ -522,7 +522,7 @@ export const products: Product[] = [
     dosage: '300–600mg/day',
     timing: 'Morning',
     studyCount: 38,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'omega3-carlson',
@@ -546,7 +546,7 @@ export const products: Product[] = [
     dosage: '2–4g EPA+DHA daily',
     timing: 'With meals',
     studyCount: 843,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'creatine-mono',
@@ -568,7 +568,7 @@ export const products: Product[] = [
     dosage: '3–5g/day',
     timing: 'Anytime — consistency matters',
     studyCount: 500,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'magnesium-glycinate',
@@ -590,7 +590,7 @@ export const products: Product[] = [
     dosage: '200–400mg elemental',
     timing: 'Evening, 1 hour before bed',
     studyCount: 289,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'vitamin-d3-k2',
@@ -612,7 +612,7 @@ export const products: Product[] = [
     dosage: '2,000–5,000 IU D3 daily',
     timing: 'Morning with a fatty meal',
     studyCount: 612,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'coq10-ubiquinol',
@@ -634,7 +634,7 @@ export const products: Product[] = [
     dosage: '100–300mg/day',
     timing: 'With a fatty meal',
     studyCount: 156,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'ashwagandha-ksm66',
@@ -656,7 +656,7 @@ export const products: Product[] = [
     dosage: '300–600mg KSM-66',
     timing: 'Evening (or split AM/PM)',
     studyCount: 67,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'berberine-hcl',
@@ -678,7 +678,7 @@ export const products: Product[] = [
     dosage: '500mg 2–3x/day with meals',
     timing: 'With meals',
     studyCount: 89,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
 
   // ─── ANTIOXIDANTS & SENOLYTICS ────────────────────────────────────────
@@ -745,7 +745,7 @@ export const products: Product[] = [
     dosage: '100–500mg/day or pulsed 1g for 2 days monthly',
     timing: 'With a fatty meal',
     studyCount: 24,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'quercetin',
@@ -767,7 +767,7 @@ export const products: Product[] = [
     timing: 'With food during pulse days',
     stacksWith: ['fisetin'],
     studyCount: 34,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'resveratrol',
@@ -789,7 +789,7 @@ export const products: Product[] = [
     timing: 'Morning with olive oil or yoghurt (fat required)',
     stacksWith: ['nmn', 'tmg'],
     studyCount: 127,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
 
   // ─── ADAPTOGENS (additional) ──────────────────────────────────────────
@@ -853,7 +853,7 @@ export const products: Product[] = [
     timing: 'Morning (may disrupt sleep if taken late)',
     stacksWith: ['ashwagandha-ksm66', 'l-theanine'],
     studyCount: 36,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'lions-mane',
@@ -874,7 +874,7 @@ export const products: Product[] = [
     dosage: '500–1000mg extract (30% beta-glucans)',
     timing: 'Morning with food',
     studyCount: 18,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
 
   // ─── VITAMINS & MINERALS (additional) ────────────────────────────────
@@ -896,7 +896,7 @@ export const products: Product[] = [
     affiliateUrl: '/go/now-chromium',
     dosage: '200mcg',
     timing: 'With breakfast',
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'ceylon-cinnamon',
@@ -916,7 +916,7 @@ export const products: Product[] = [
     affiliateUrl: '/go/now-cinnamon',
     dosage: '1g',
     timing: 'With breakfast',
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'vitamin-e-mixed-tocopherols',
@@ -936,7 +936,7 @@ export const products: Product[] = [
     affiliateUrl: '/go/thorne-vitamin-e',
     dosage: '200IU mixed tocopherols',
     timing: 'With a fat-containing meal',
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'vitamin-c',
@@ -957,7 +957,7 @@ export const products: Product[] = [
     dosage: '1–4g/day in divided doses',
     timing: 'Morning and afternoon',
     studyCount: 612,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'zinc-picolinate',
@@ -979,7 +979,7 @@ export const products: Product[] = [
     dosage: '15–30mg elemental zinc',
     timing: 'Evening with food (zinc can cause nausea on empty stomach)',
     studyCount: 245,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'nac',
@@ -1000,7 +1000,7 @@ export const products: Product[] = [
     dosage: '600–1800mg/day in divided doses',
     timing: 'Away from meals (better absorption)',
     studyCount: 189,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'tmg',
@@ -1022,7 +1022,7 @@ export const products: Product[] = [
     timing: 'Morning with NMN/NR',
     stacksWith: ['nmn', 'nr-tru-niagen'],
     studyCount: 28,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
 
   // ─── MITOCHONDRIAL SUPPORT (additional) ──────────────────────────────
@@ -1045,7 +1045,7 @@ export const products: Product[] = [
     dosage: '1–2g',
     timing: 'Morning or pre-exercise',
     stacksWith: ['alpha-lipoic-acid', 'pqq'],
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'urolithin-a-mitopure',
@@ -1067,7 +1067,7 @@ export const products: Product[] = [
     dosage: '500–1,000mg/day',
     timing: 'With food',
     studyCount: 4,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'pqq',
@@ -1089,7 +1089,7 @@ export const products: Product[] = [
     timing: 'Morning with food',
     stacksWith: ['coq10-ubiquinol'],
     studyCount: 22,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'alpha-lipoic-acid',
@@ -1111,7 +1111,7 @@ export const products: Product[] = [
     timing: 'With meals',
     stacksWith: ['coq10-ubiquinol', 'nac'],
     studyCount: 78,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'taurine',
@@ -1133,7 +1133,7 @@ export const products: Product[] = [
     dosage: '1–3g/day',
     timing: 'Morning or pre-workout',
     studyCount: 45,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
   {
     id: 'spermidine',
@@ -1154,7 +1154,7 @@ export const products: Product[] = [
     dosage: '1–2mg/day',
     timing: 'Morning away from food',
     studyCount: 31,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
 
   // ─── OMEGA FATTY ACIDS (additional) ──────────────────────────────────
@@ -1178,7 +1178,7 @@ export const products: Product[] = [
     dosage: '2–4g EPA+DHA daily',
     timing: 'With meals',
     studyCount: 843,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
 
   // ─── NAD+ PRECURSORS (additional) ────────────────────────────────────
@@ -1201,7 +1201,7 @@ export const products: Product[] = [
     dosage: '1–2g/day',
     timing: 'Morning',
     studyCount: 12,
-    image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1583088580009-2d947c3e90a6?w=400&q=80',
   },
 
   // ─── BLOOD DIAGNOSTICS ────────────────────────────────────────────────
