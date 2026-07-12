@@ -104,12 +104,16 @@ export default function AboutPage() {
               <div>
                 <h3 className="font-display text-xl text-ink mb-2">Affiliate Disclosure</h3>
                 <p className="text-muted leading-relaxed text-sm">
-                  Longevity Intel participates in affiliate programmes (including Amazon Associates and direct brand partnerships).
-                  When you click a link and make a purchase, we may earn a commission at no extra cost to you.
+                  <strong className="text-ink">As an Amazon Associate, Longevity Intel earns from qualifying purchases.</strong> We also
+                  participate in affiliate programmes with direct brand partners. When you click a link and make a purchase, we may earn
+                  a commission at no extra cost to you.
                   <br /><br />
                   This income funds our research and editorial operations. It <strong className="text-ink">never</strong> influences our ratings,
                   recommendations, or editorial positions. Products we recommend are ones we would recommend regardless of commission structure.
                   Sponsored content, when it exists, is clearly labelled.
+                  <br /><br />
+                  Prices, availability, and product details shown on this site are estimates and may not reflect current pricing —
+                  always confirm the live price on the retailer&apos;s site before purchasing.
                 </p>
               </div>
             </div>

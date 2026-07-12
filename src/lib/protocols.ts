@@ -5,6 +5,7 @@ export interface ProtocolSupplement {
   purpose: string
   evidenceNote?: string
   supplementId?: string
+  productSlug?: string
   isRx?: boolean
 }
 
@@ -103,8 +104,8 @@ export const protocols: Protocol[] = [
         title: 'Brain Protection — 2026 Additions',
         description: 'Johnson updated his stack significantly in early 2026: he dropped rapamycin entirely after concluding the immunosuppression tradeoff wasn\'t justified by his biomarkers, cut NMN/NR from daily to 6 days a week, and added two new compounds focused specifically on neuroprotection.',
         items: [
-          { name: 'Lithium Orotate', dose: 'Microdose (sub-clinical, well below bipolar treatment range)', timing: 'Included in Blueprint Essential Capsules', purpose: 'Neuroprotection — trace lithium is associated with lower dementia rates in population studies of municipal water supplies', evidenceNote: 'Not the high-dose lithium carbonate used for bipolar disorder. Epidemiological data (not RCTs) links higher trace lithium in drinking water to reduced all-cause and dementia mortality. Consult a physician before supplementing — lithium has a narrow safety margin and requires blood monitoring at any meaningful dose.', supplementId: 'lithium-orotate' },
-          { name: 'NDGA (Nordihydroguaiaretic Acid)', dose: '50mg', timing: 'Daily', purpose: 'One of only a handful of compounds with replicated lifespan extension in the NIA Interventions Testing Program (ITP) — extended median lifespan in male mice', evidenceNote: 'ITP data is the gold standard for mouse longevity compounds (multi-site, genetically diverse mice). Human data is essentially nonexistent — Johnson is testing this entirely on ITP mouse evidence plus his own biomarker tracking.', supplementId: 'ndga' },
+          { name: 'Lithium Orotate', dose: 'Microdose (sub-clinical, well below bipolar treatment range)', timing: 'Included in Blueprint Essential Capsules', purpose: 'Neuroprotection — trace lithium is associated with lower dementia rates in population studies of municipal water supplies', evidenceNote: 'Not the high-dose lithium carbonate used for bipolar disorder. Epidemiological data (not RCTs) links higher trace lithium in drinking water to reduced all-cause and dementia mortality. Consult a physician before supplementing — lithium has a narrow safety margin and requires blood monitoring at any meaningful dose.', productSlug: 'lithium-orotate' },
+          { name: 'NDGA (Nordihydroguaiaretic Acid)', dose: '50mg', timing: 'Daily', purpose: 'One of only a handful of compounds with replicated lifespan extension in the NIA Interventions Testing Program (ITP) — extended median lifespan in male mice', evidenceNote: 'ITP data is the gold standard for mouse longevity compounds (multi-site, genetically diverse mice). Human data is essentially nonexistent — Johnson is testing this entirely on ITP mouse evidence plus his own biomarker tracking.', productSlug: 'ndga' },
         ],
       },
       {
@@ -132,7 +133,7 @@ export const protocols: Protocol[] = [
         description: 'Johnson treats sleep as the highest-priority health intervention. His evening protocol is as rigid as his morning one.',
         items: [
           { name: 'Sleep Timing', dose: '8:30 PM bedtime, 5:00 AM wake', timing: 'Every night without exception', purpose: '8.5 hours in bed. Johnson tracks sleep with Oura Ring and nightly EEG headband. Deep sleep percentage is a primary optimisation target.', evidenceNote: 'No food after noon, no liquids after 4 PM — reduces nocturnal digestion and bathroom interruptions. Johnson\'s deep sleep is documented at levels significantly above population average.' },
-          { name: 'Melatonin', dose: '0.25–0.5mg (very low dose)', timing: '30 min before 8:30 PM bedtime', purpose: 'Circadian signal — Johnson uses pharmacologically accurate dose, not the 5–10mg commonly sold OTC', evidenceNote: 'Research shows 0.3mg is the dose that matches endogenous melatonin levels. Most OTC doses (5–10mg) are 10–30x higher than needed — causing receptor downregulation over time.' },
+          { name: 'Melatonin', dose: '0.25–0.5mg (very low dose)', timing: '30 min before 8:30 PM bedtime', purpose: 'Circadian signal — Johnson uses pharmacologically accurate dose, not the 5–10mg commonly sold OTC', evidenceNote: 'Research shows 0.3mg is the dose that matches endogenous melatonin levels. Most OTC doses (5–10mg) are 10–30x higher than needed — causing receptor downregulation over time.', productSlug: 'melatonin-timed-release' },
           { name: 'Blueprint Skin Protocol', dose: 'Cleanser + Serum + Moisturiser + Tretinoin 0.025%', timing: '8:00 PM', purpose: 'Skin biological age reduction — Johnson has documented facial age reversal via VISIA skin analysis', evidenceNote: 'Tretinoin is the only topical ingredient with RCT evidence for reversing photoaging. Prescription only. Johnson\'s skin biological age is documented as significantly younger than chronological age.' },
         ],
       },
@@ -152,7 +153,7 @@ export const protocols: Protocol[] = [
     difficulty: 'Advanced',
     lastUpdated: '2026-06',
     disclaimer: "Bryan Johnson's protocol is the most extreme documented longevity intervention in existence. Most items require prescriptions (metformin, acarbose, Jardiance, Repatha, Candesartan, thyroid medications, tadalafil, minoxidil). Note: Johnson discontinued rapamycin in 2024 after concluding the immunosuppression tradeoff wasn't justified by his biomarkers — it is no longer part of his protocol despite frequent claims otherwise. This page is strictly educational. Do not replicate prescription or lithium elements without physician oversight and blood monitoring. Johnson is testing himself as an experiment of one — not as a clinical trial.",
-    affiliateDisclosure: 'Longevity Intel earns a commission on some affiliate links. This never influences our coverage.',
+    affiliateDisclosure: 'As an Amazon Associate, Longevity Intel earns from qualifying purchases. We also earn a commission on some other affiliate links. This never influences our coverage.',
     resultsStats: [
       { label: 'DunedinPACE score', value: '0.69' },
       { label: 'Aging pace vs. average', value: '~31% slower' },
@@ -195,7 +196,7 @@ export const protocols: Protocol[] = [
         items: [
           { name: 'AG1 (Athletic Greens)', dose: '1 scoop in water', timing: 'Morning, fasted before eating', purpose: 'Comprehensive micronutrient foundation — greens, probiotics, adaptogens, enzymes. Huberman has been a paid partner since 2021.', evidenceNote: 'AG1 is a disclosed sponsorship. Independently: useful as a micronutrient insurance policy, particularly for those with inconsistent vegetable intake. Not a substitute for whole food nutrition.' },
           { name: 'Omega-3 (EPA/DHA)', dose: '2,000mg EPA/DHA', timing: 'With food', purpose: 'Mood, cognition, cardiovascular health, anti-inflammation. Huberman calls this the supplement he would take if he could only take one.', supplementId: 'omega3' },
-          { name: 'Vitamin D3', dose: '5,000–10,000 IU', timing: 'Morning with fat', purpose: 'Immune function, mood, testosterone support, bone health. Huberman tests his levels and adjusts dose to maintain 50–70 ng/mL.' },
+          { name: 'Vitamin D3', dose: '5,000–10,000 IU', timing: 'Morning with fat', purpose: 'Immune function, mood, testosterone support, bone health. Huberman tests his levels and adjusts dose to maintain 50–70 ng/mL.', productSlug: 'thorne-d3k2' },
           { name: 'Creatine Monohydrate', dose: '5g/day', timing: 'Anytime — consistency matters', purpose: 'Muscle performance, cognitive function, brain protection. Huberman added creatine to his daily stack in 2023 after reviewing the cognitive evidence.', supplementId: 'creatine' },
           { name: 'Grape Seed Extract', dose: '400–800mg', timing: 'With food', purpose: 'Vascular function — OPCs in grape seed extract support endothelial health and nitric oxide production', evidenceNote: 'Huberman added this in 2024. Moderately evidenced for blood pressure and vascular function.' },
           { name: 'Opti-Men Multivitamin', dose: '2–3 tablets', timing: 'With food', purpose: 'Micronutrient insurance — covers gaps in B vitamins, minerals, and trace elements', evidenceNote: 'Huberman uses a high-potency multivitamin on days when AG1 is not available, or in combination.' },
@@ -205,10 +206,10 @@ export const protocols: Protocol[] = [
         title: 'Sleep Stack',
         description: "Huberman's most requested protocol — the sleep stack he takes nightly. Emphasis: these supplements improve sleep onset and quality, not quantity. Sleep hygiene comes first.",
         items: [
-          { name: 'Magnesium L-Threonate or Bisglycinate', dose: '300–400mg', timing: '30–60 min before bed', purpose: 'GABA modulation, sleep onset, cognitive protection. L-Threonate crosses the blood-brain barrier; bisglycinate provides better GI tolerance.' },
-          { name: 'Apigenin', dose: '50mg', timing: '30–60 min before bed', purpose: 'Mild anxiolytic — binds GABA-A receptors. Found naturally in chamomile. Reduces anxiety without sedation.', evidenceNote: 'Huberman considers this a "subtle but real" sleep-onset aid. Modest clinical evidence but very safe. Not recommended if prone to vivid dreams.' },
-          { name: 'L-Theanine', dose: '100–200mg', timing: '30–60 min before bed', purpose: 'Alpha wave induction — calming without sedation. Synergistic with magnesium for sleep onset.', evidenceNote: 'Huberman cautions: do NOT take L-Theanine if prone to vivid or intense dreams — it significantly amplifies dream vividness in some people. Start at 100mg to test.' },
-          { name: 'Glycine', dose: '2–3g', timing: '30 min before bed', purpose: 'Core body temperature reduction, sleep quality, collagen synthesis', evidenceNote: 'Occasional addition for Huberman — not every night. Glycine lowers core body temperature which facilitates sleep onset. Safe, low cost.' },
+          { name: 'Magnesium L-Threonate or Bisglycinate', dose: '300–400mg', timing: '30–60 min before bed', purpose: 'GABA modulation, sleep onset, cognitive protection. L-Threonate crosses the blood-brain barrier; bisglycinate provides better GI tolerance.', productSlug: 'magtein' },
+          { name: 'Apigenin', dose: '50mg', timing: '30–60 min before bed', purpose: 'Mild anxiolytic — binds GABA-A receptors. Found naturally in chamomile. Reduces anxiety without sedation.', evidenceNote: 'Huberman considers this a "subtle but real" sleep-onset aid. Modest clinical evidence but very safe. Not recommended if prone to vivid dreams.', productSlug: 'dw-apigenin' },
+          { name: 'L-Theanine', dose: '100–200mg', timing: '30–60 min before bed', purpose: 'Alpha wave induction — calming without sedation. Synergistic with magnesium for sleep onset.', evidenceNote: 'Huberman cautions: do NOT take L-Theanine if prone to vivid or intense dreams — it significantly amplifies dream vividness in some people. Start at 100mg to test.', productSlug: 'now-l-theanine' },
+          { name: 'Glycine', dose: '2–3g', timing: '30 min before bed', purpose: 'Core body temperature reduction, sleep quality, collagen synthesis', evidenceNote: 'Occasional addition for Huberman — not every night. Glycine lowers core body temperature which facilitates sleep onset. Safe, low cost.', productSlug: 'bulk-glycine' },
           { name: 'GABA (occasional)', dose: '100mg', timing: 'Before bed when stressed', purpose: 'GABAergic calming — Huberman uses rarely, primarily during high-stress periods', evidenceNote: 'Huberman is cautious about GABA supplementation becoming habitual. Uses situationally.' },
         ],
       },
@@ -218,7 +219,7 @@ export const protocols: Protocol[] = [
         items: [
           { name: 'Tongkat Ali (Longjack)', dose: '400mg', timing: 'Morning', purpose: 'Stimulates LH (luteinising hormone) release → increases endogenous testosterone production. Reduces SHBG.', evidenceNote: 'Huberman considers this the most evidence-backed natural testosterone support supplement. 3+ human RCTs showing meaningful T increases in deficient men.' },
           { name: 'Fadogia Agrestis', dose: '600mg', timing: 'Morning', purpose: 'LH stimulation through different mechanism than Tongkat Ali — potentially additive effect', evidenceNote: 'Huberman cycles: 8 weeks on, 2 weeks off. Fewer human studies than Tongkat Ali. Huberman advocates cycling to prevent LH receptor desensitisation.' },
-          { name: 'Zinc', dose: '15–25mg', timing: 'Evening with food', purpose: 'Essential cofactor for testosterone synthesis and immune function. Deficiency directly suppresses testosterone.', evidenceNote: 'Huberman recommends testing zinc status. Only supplement if deficient or borderline. Essential during high training loads when zinc losses increase via sweat.' },
+          { name: 'Zinc', dose: '15–25mg', timing: 'Evening with food', purpose: 'Essential cofactor for testosterone synthesis and immune function. Deficiency directly suppresses testosterone.', evidenceNote: 'Huberman recommends testing zinc status. Only supplement if deficient or borderline. Essential during high training loads when zinc losses increase via sweat.', productSlug: 'thorne-zinc' },
           { name: 'Boron', dose: '2–4mg', timing: 'Daily with food', purpose: 'Reduces SHBG, increases free testosterone, supports bone density and joint health', evidenceNote: 'Added to Huberman\'s protocol in 2024. Small human studies show boron supplementation reduces SHBG by 20–25%, meaningfully increasing free testosterone.' },
         ],
       },
@@ -238,7 +239,7 @@ export const protocols: Protocol[] = [
     difficulty: 'Intermediate',
     lastUpdated: '2025-01',
     disclaimer: "Huberman's protocol evolves frequently — always check his current podcast episodes for updates. AG1 is a paid sponsorship. Fadogia Agrestis has limited human safety data — Huberman himself recommends cycling and monitoring.",
-    affiliateDisclosure: 'Longevity Intel earns a commission on some affiliate links. This never influences our coverage.',
+    affiliateDisclosure: 'As an Amazon Associate, Longevity Intel earns from qualifying purchases. We also earn a commission on some other affiliate links. This never influences our coverage.',
   },
 
   // ─── DAVID SINCLAIR ───────────────────────────────────────────────────
@@ -268,20 +269,20 @@ export const protocols: Protocol[] = [
         description: "Sinclair's primary daily supplements — unchanged for years at their core, though doses and additions have evolved.",
         items: [
           { name: 'NMN', dose: '1g', timing: 'Morning with yogurt (fat improves absorption)', purpose: 'NAD+ restoration — Sinclair was instrumental in popularising NMN as the primary NAD+ precursor', evidenceNote: 'Sinclair takes 1g — twice to four times higher than typical clinical trial doses (250–500mg). He argues higher doses are warranted given the steep NAD+ decline with age.', supplementId: 'nmn' },
-          { name: 'Resveratrol', dose: '1g', timing: 'Morning with olive oil or yogurt — fat required for absorption', purpose: 'SIRT1 activator — core of Sinclair\'s sirtuin activation strategy. Synergistic with NMN.', evidenceNote: 'Resveratrol\'s human evidence is more contested than Sinclair\'s own enthusiasm suggests. He acknowledges the human RCT data is mixed — but continues based on mechanistic plausibility and his own biomarkers.' },
+          { name: 'Resveratrol', dose: '1g', timing: 'Morning with olive oil or yogurt — fat required for absorption', purpose: 'SIRT1 activator — core of Sinclair\'s sirtuin activation strategy. Synergistic with NMN.', evidenceNote: 'Resveratrol\'s human evidence is more contested than Sinclair\'s own enthusiasm suggests. He acknowledges the human RCT data is mixed — but continues based on mechanistic plausibility and his own biomarkers.', productSlug: 'thorne-resveratrol' },
           { name: 'Berberine', dose: '1g/day', timing: 'With food', purpose: 'AMPK activator — largely replaced metformin. Similar mechanism, better GI tolerance, no prescription required.', evidenceNote: 'Sinclair switched from metformin primarily due to GI side effects. Berberine activates AMPK through a slightly different mechanism (mitochondrial complex I inhibition vs. metformin\'s direct AMPK activation).', supplementId: 'berberine' },
-          { name: 'Vitamin D3 + K2', dose: '5,000 IU D3', timing: 'Morning', purpose: 'Immune function, bone health, cancer risk reduction — Sinclair considers vitamin D deficiency a significant longevity risk' },
+          { name: 'Vitamin D3 + K2', dose: '5,000 IU D3', timing: 'Morning', purpose: 'Immune function, bone health, cancer risk reduction — Sinclair considers vitamin D deficiency a significant longevity risk', productSlug: 'thorne-d3k2' },
           { name: 'Omega-3', dose: 'Daily (dose not publicly specified)', timing: 'With food', purpose: 'Cardiovascular protection, anti-inflammatory, brain health', supplementId: 'omega3' },
-          { name: 'Alpha-Lipoic Acid', dose: '500mg', timing: 'Morning', purpose: 'Mitochondrial antioxidant, glucose disposal, heavy metal chelation', evidenceNote: 'Part of Sinclair\'s antioxidant stack. R-ALA form is significantly better absorbed than racemic ALA.' },
-          { name: 'CoQ10', dose: 'Daily (dose not specified)', timing: 'With fat', purpose: 'Mitochondrial electron transport, lipid-soluble antioxidant' },
+          { name: 'Alpha-Lipoic Acid', dose: '500mg', timing: 'Morning', purpose: 'Mitochondrial antioxidant, glucose disposal, heavy metal chelation', evidenceNote: 'Part of Sinclair\'s antioxidant stack. R-ALA form is significantly better absorbed than racemic ALA.', productSlug: 'jarrow-rala' },
+          { name: 'CoQ10', dose: 'Daily (dose not specified)', timing: 'With fat', purpose: 'Mitochondrial electron transport, lipid-soluble antioxidant', productSlug: 'jarrow-ubiquinol' },
         ],
       },
       {
         title: 'Senolytics & Autophagy',
         description: "Sinclair's updated senolytic protocol — quercetin dropped in 2023, fisetin retained, spermidine added for autophagy.",
         items: [
-          { name: 'Fisetin', dose: '500mg daily', timing: 'With fat', purpose: 'Senolytic — clears senescent cells. Retained after dropping quercetin in 2023. More potent senolytic than quercetin in mouse studies.', evidenceNote: 'Sinclair dropped quercetin in 2023 after research suggested possible SIRT6 and NRF2 pathway interference. Fisetin does not have this concern and shows stronger senolytic activity in animal models.' },
-          { name: 'Spermidine', dose: '1–2mg', timing: 'Morning', purpose: 'Autophagy inducer — triggers cellular self-cleaning. Found in aged cheese, wheat germ, mushrooms.', evidenceNote: 'Sinclair added spermidine after 2022 human studies showed cognitive protection and cardiovascular benefits. The mechanistic case (autophagy induction) is strong; long-term human RCTs are emerging.' },
+          { name: 'Fisetin', dose: '500mg daily', timing: 'With fat', purpose: 'Senolytic — clears senescent cells. Retained after dropping quercetin in 2023. More potent senolytic than quercetin in mouse studies.', evidenceNote: 'Sinclair dropped quercetin in 2023 after research suggested possible SIRT6 and NRF2 pathway interference. Fisetin does not have this concern and shows stronger senolytic activity in animal models.', productSlug: 'fisetin-lifeext' },
+          { name: 'Spermidine', dose: '1–2mg', timing: 'Morning', purpose: 'Autophagy inducer — triggers cellular self-cleaning. Found in aged cheese, wheat germ, mushrooms.', evidenceNote: 'Sinclair added spermidine after 2022 human studies showed cognitive protection and cardiovascular benefits. The mechanistic case (autophagy induction) is strong; long-term human RCTs are emerging.', productSlug: 'primeadine-spermidine' },
           { name: 'Nattokinase', dose: 'Daily (standard dose)', timing: 'Away from food (best absorbed on empty stomach)', purpose: 'Fibrinolytic enzyme from fermented soybeans — reduces fibrin and clot formation. Emerging cardiovascular data.', evidenceNote: 'Sinclair added nattokinase in 2023. Mechanistically interesting for cardiovascular risk. Human trial data growing but not yet conclusive.' },
         ],
       },
@@ -310,7 +311,7 @@ export const protocols: Protocol[] = [
     difficulty: 'Intermediate',
     lastUpdated: '2025-01',
     disclaimer: "Sinclair's protocol has changed significantly since Lifespan was published in 2019 — always use current interview data, not the book. Rapamycin, statins, and metformin require prescriptions. The scientific community has ongoing debates about several of Sinclair's claims, particularly resveratrol's human efficacy.",
-    affiliateDisclosure: 'Longevity Intel earns a commission on some affiliate links.',
+    affiliateDisclosure: 'As an Amazon Associate, Longevity Intel earns from qualifying purchases. We also earn a commission on some other affiliate links.',
   },
 ]
 

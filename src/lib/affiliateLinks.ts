@@ -31,6 +31,7 @@ export const affiliateLinks: Record<string, string> = {
   'thorne-d3k2': 'https://www.thorne.com/?ref=longevitylab',
   'thorne-quercetin': 'https://www.thorne.com/?ref=longevitylab',
   'thorne-resveratrol': 'https://www.thorne.com/?ref=longevitylab',
+  'resveratrol': 'https://www.thorne.com/?ref=longevitylab',
   'thorne-zinc': 'https://www.thorne.com/?ref=longevitylab',
   'hostdefense-lionsmane': 'https://www.amazon.com/dp/B00MMNUFTU?tag=michaelregeer-20',
   'ndga': 'https://www.amazon.com/dp/B07T3MXKZ8?tag=michaelregeer-20',

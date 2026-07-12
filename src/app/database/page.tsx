@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Search, ArrowUpRight, SlidersHorizontal, X, BookOpen, FlaskConical } from 'lucide-react'
 import Fuse from 'fuse.js'
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { AffiliateDisclosure } from '@/components/ArticleTrust'
 
 function ProductCard({ p, index }: { p: Product; index: number }) {
   return (
@@ -139,6 +140,10 @@ export default function DatabasePage() {
               </div>
             ))}
           </div>
+        </AnimatedSection>
+
+        <AnimatedSection delay={0.05} className="mt-6">
+          <AffiliateDisclosure />
         </AnimatedSection>
 
         {/* Search bar */}

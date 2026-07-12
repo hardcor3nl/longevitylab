@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { AffiliateDisclosure } from '@/components/ArticleTrust'
 import { ArrowLeft, ArrowUpRight, Check, ExternalLink, AlertTriangle, Clock, FlaskConical } from 'lucide-react'
 import type { Metadata } from 'next'
 
@@ -84,6 +85,8 @@ export default function ProtocolPage({ params }: { params: { id: string } }) {
                 </div>
               </div>
 
+              <AffiliateDisclosure />
+
               {/* Long description */}
               <p className="text-muted text-lg leading-relaxed mb-8">{protocol.longDescription}</p>
 
@@ -125,6 +128,12 @@ export default function ProtocolPage({ params }: { params: { id: string } }) {
                                 <Link href={`/database/${item.supplementId}`}
                                   className="font-mono text-[9px] uppercase tracking-wider text-green-bright border border-green/25 px-2 py-0.5 rounded-full hover:bg-green/5 transition-colors cursor-pointer">
                                   View in Database
+                                </Link>
+                              )}
+                              {item.productSlug && (
+                                <Link href={`/go/${item.productSlug}`}
+                                  className="font-mono text-[9px] uppercase tracking-wider text-green-bright border border-green/25 px-2 py-0.5 rounded-full hover:bg-green/5 transition-colors cursor-pointer">
+                                  Where to Buy
                                 </Link>
                               )}
                             </div>

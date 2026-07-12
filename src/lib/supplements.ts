@@ -121,6 +121,7 @@ export const supplements: Supplement[] = [
     stacksWith: ['vitamin-k2', 'omega3', 'magnesium'],
     avoid: [],
     studyCount: 612,
+    affiliateUrl: '/go/thorne-d3k2',
   },
   {
     id: 'magnesium',
@@ -139,6 +140,7 @@ export const supplements: Supplement[] = [
     stacksWith: ['vitamin-d', 'zinc', 'taurine'],
     avoid: [],
     studyCount: 289,
+    affiliateUrl: '/go/pure-mag-glycinate',
   },
   {
     id: 'coq10',
@@ -157,6 +159,7 @@ export const supplements: Supplement[] = [
     stacksWith: ['nmn', 'pqq', 'alpha-lipoic-acid'],
     avoid: [],
     studyCount: 156,
+    affiliateUrl: '/go/jarrow-ubiquinol',
   },
   {
     id: 'ashwagandha',
@@ -175,6 +178,7 @@ export const supplements: Supplement[] = [
     stacksWith: ['magnesium', 'l-theanine'],
     avoid: ['thyroid-medication'],
     studyCount: 67,
+    affiliateUrl: '/go/ksm66-ashwagandha',
   },
   {
     id: 'creatine',
@@ -193,6 +197,7 @@ export const supplements: Supplement[] = [
     stacksWith: ['vitamin-d', 'omega3'],
     avoid: [],
     studyCount: 500,
+    affiliateUrl: '/go/thorne-creatine',
   },
   {
     id: 'berberine',
@@ -211,6 +216,7 @@ export const supplements: Supplement[] = [
     stacksWith: ['nmn', 'resveratrol'],
     avoid: ['metformin', 'blood-sugar-medications'],
     studyCount: 89,
+    affiliateUrl: '/go/thorne-berberine',
   },
   {
     id: 'quercetin',
@@ -229,6 +235,7 @@ export const supplements: Supplement[] = [
     stacksWith: ['fisetin', 'resveratrol'],
     avoid: [],
     studyCount: 34,
+    affiliateUrl: '/go/thorne-quercetin',
   },
   {
     id: 'tmg',
@@ -247,6 +254,7 @@ export const supplements: Supplement[] = [
     stacksWith: ['nmn', 'nr'],
     avoid: [],
     studyCount: 28,
+    affiliateUrl: '/go/jarrow-tmg',
   },
 ]
 
