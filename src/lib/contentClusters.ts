@@ -2,8 +2,8 @@
  * SEO internal-link map: topic hubs ↔ best lists ↔ database ↔ deep guides.
  * Used by ContentCluster + RelatedArticles to surface high-value paths.
  *
- * Priority clusters target commercial + informational money keywords:
- * NMN/NAD+, sauna, cold plunge, sleep, longevity stack.
+ * Priority clusters: NMN/NAD+, sauna, cold, sleep, stack, cardio, nutrition,
+ * red light, wearables, creatine, magnesium, omega-3, vitamin D.
  */
 
 export type ClusterLink = {
@@ -374,6 +374,304 @@ export const contentClusters: ContentCluster[] = [
         label: 'Beginner Path',
         desc: 'Nutrition is step 4 in the plan',
         kind: 'hub',
+      },
+    ],
+  },
+  {
+    id: 'red-light',
+    name: 'Red Light Therapy',
+    match: [
+      'red light',
+      'photobiomodulation',
+      'pbm',
+      'joovv',
+      'mito red',
+      'biomax',
+      'near infrared',
+    ],
+    slugs: [
+      'best-red-light-therapy-panels-2024',
+      'joovv-solo-3-review',
+      'mito-red-light-mitopro-1500-review',
+      'platinumled-biomax-300-review',
+      'light-therapy-circadian-protocol',
+    ],
+    links: [
+      {
+        href: '/recovery/best-red-light-therapy-panels-2024',
+        label: 'Best Red Light Panels 2026',
+        desc: 'Irradiance, wavelengths, and value ranked',
+        kind: 'best',
+      },
+      {
+        href: '/recovery/mito-red-light-mitopro-1500-review',
+        label: 'MitoPRO 1500 Review',
+        desc: 'Our top value full-body panel',
+        kind: 'guide',
+      },
+      {
+        href: '/recovery/joovv-solo-3-review',
+        label: 'Joovv Solo 3.0 Review',
+        desc: 'Premium ecosystem trade-offs',
+        kind: 'guide',
+      },
+      {
+        href: '/database/mito-red-1500',
+        label: 'MitoPRO Database Card',
+        desc: 'Evidence score and specs',
+        kind: 'database',
+      },
+      {
+        href: '/protocols/light-therapy-circadian-protocol',
+        label: 'Circadian Light Protocol',
+        desc: 'Morning sun vs evening red/NIR',
+        kind: 'protocol',
+      },
+      {
+        href: '/category/recovery',
+        label: 'Recovery Devices Hub',
+        desc: 'Red light, sauna, cold, and more',
+        kind: 'hub',
+      },
+    ],
+  },
+  {
+    id: 'wearables',
+    name: 'Longevity Wearables',
+    match: [
+      'whoop',
+      'oura',
+      'wearable',
+      'hrv',
+      'garmin',
+      'cgm',
+      'sleep tracking',
+      'recovery tracker',
+    ],
+    slugs: [
+      'best-wearables-longevity-2024',
+      'whoop-4-review',
+      'oura-ring-gen3-review',
+      'whoop-vs-oura-comparison',
+      'garmin-fenix-7-review',
+      'garmin-vs-whoop-comparison',
+      'dexcom-stelo-review',
+      'best-fitness-trackers-longevity',
+      'best-continuous-glucose-monitors',
+      'hrv-guide',
+    ],
+    links: [
+      {
+        href: '/best/best-wearables-longevity-2024',
+        label: 'Best Longevity Wearables 2026',
+        desc: 'WHOOP, Oura, Garmin, CGM ranked',
+        kind: 'best',
+      },
+      {
+        href: '/wearables/whoop-vs-oura-comparison',
+        label: 'WHOOP vs Oura',
+        desc: '6-month head-to-head for longevity',
+        kind: 'compare',
+      },
+      {
+        href: '/wearables/whoop-4-review',
+        label: 'WHOOP 4.0 Review',
+        desc: 'HRV and recovery deep dive',
+        kind: 'guide',
+      },
+      {
+        href: '/wearables/oura-ring-gen3-review',
+        label: 'Oura Ring Gen 3 Review',
+        desc: 'Best consumer sleep staging',
+        kind: 'guide',
+      },
+      {
+        href: '/diagnostics/hrv-guide',
+        label: 'HRV Guide',
+        desc: 'What the number actually means',
+        kind: 'guide',
+      },
+      {
+        href: '/category/wearables',
+        label: 'Wearables Hub',
+        desc: 'All tracker and CGM reviews',
+        kind: 'hub',
+      },
+    ],
+  },
+  {
+    id: 'creatine',
+    name: 'Creatine',
+    match: ['creatine', 'monohydrate', 'muscle preservation', 'sarcopenia'],
+    slugs: ['best-creatine-supplements', 'creatine-vs-hmb', 'strength-training-longevity'],
+    links: [
+      {
+        href: '/supplements/best-creatine-supplements',
+        label: 'Best Creatine for Longevity',
+        desc: 'Forms, dose, brain + muscle evidence',
+        kind: 'best',
+      },
+      {
+        href: '/compare/creatine-vs-hmb',
+        label: 'Creatine vs HMB',
+        desc: 'When each compound makes sense',
+        kind: 'compare',
+      },
+      {
+        href: '/database/creatine-mono',
+        label: 'Creatine Database Card',
+        desc: 'Evidence score and stack partners',
+        kind: 'database',
+      },
+      {
+        href: '/protocols/strength-training-longevity',
+        label: 'Strength Training Protocol',
+        desc: 'Creatine only works with training stimulus',
+        kind: 'protocol',
+      },
+      {
+        href: '/best/complete-longevity-stack',
+        label: 'Complete Longevity Stack',
+        desc: 'Creatine sits in Tier 1 universals',
+        kind: 'best',
+      },
+      {
+        href: '/best/best-longevity-supplements',
+        label: 'Best Longevity Supplements',
+        desc: 'Where creatine ranks overall',
+        kind: 'best',
+      },
+    ],
+  },
+  {
+    id: 'magnesium',
+    name: 'Magnesium',
+    match: ['magnesium', 'glycinate', 'threonate', 'magtein', 'malate'],
+    slugs: ['best-magnesium-supplements', 'magnesium-forms', 'sleep-hygiene-protocol'],
+    links: [
+      {
+        href: '/supplements/best-magnesium-supplements',
+        label: 'Best Magnesium Supplements',
+        desc: 'Glycinate vs threonate vs malate',
+        kind: 'best',
+      },
+      {
+        href: '/compare/magnesium-forms',
+        label: 'Magnesium Forms Compared',
+        desc: 'Pick the right form for your goal',
+        kind: 'compare',
+      },
+      {
+        href: '/database/magnesium-glycinate',
+        label: 'Glycinate Database Card',
+        desc: 'Our default sleep-friendly form',
+        kind: 'database',
+      },
+      {
+        href: '/protocols/sleep-hygiene-protocol',
+        label: 'Sleep Hygiene Protocol',
+        desc: 'Magnesium is support, not the foundation',
+        kind: 'protocol',
+      },
+      {
+        href: '/supplements/best-vitamin-d3-k2',
+        label: 'Vitamin D3 + K2',
+        desc: 'Mg is required for D activation',
+        kind: 'guide',
+      },
+      {
+        href: '/best/complete-longevity-stack',
+        label: 'Complete Longevity Stack',
+        desc: 'Tier 1 dosing and timing',
+        kind: 'best',
+      },
+    ],
+  },
+  {
+    id: 'omega3',
+    name: 'Omega-3',
+    match: ['omega-3', 'omega 3', 'fish oil', 'epa', 'dha', 'triglyceride'],
+    slugs: ['best-omega-3-fish-oil'],
+    links: [
+      {
+        href: '/supplements/best-omega-3-fish-oil',
+        label: 'Best Omega-3 Fish Oil',
+        desc: 'Purity, potency, and IFOS picks',
+        kind: 'best',
+      },
+      {
+        href: '/database/omega3-carlson',
+        label: 'Carlson Omega-3 Card',
+        desc: 'Top pick evidence profile',
+        kind: 'database',
+      },
+      {
+        href: '/best/complete-longevity-stack',
+        label: 'Complete Longevity Stack',
+        desc: 'EPA+DHA dose in Tier 1',
+        kind: 'best',
+      },
+      {
+        href: '/diagnostics/longevity-biomarkers-guide',
+        label: 'Biomarker Guide',
+        desc: 'Omega-3 index testing',
+        kind: 'guide',
+      },
+      {
+        href: '/best/best-longevity-supplements',
+        label: 'Best Longevity Supplements',
+        desc: 'Where omega-3 ranks overall',
+        kind: 'best',
+      },
+      {
+        href: '/category/supplements',
+        label: 'Supplement Reviews Hub',
+        desc: 'Full evidence library',
+        kind: 'hub',
+      },
+    ],
+  },
+  {
+    id: 'vitamin-d',
+    name: 'Vitamin D + K2',
+    match: ['vitamin d', 'vitamin d3', 'k2', 'mk-7', '25-oh', '25(oh)d'],
+    slugs: ['best-vitamin-d3-k2'],
+    links: [
+      {
+        href: '/supplements/best-vitamin-d3-k2',
+        label: 'Best Vitamin D3 + K2',
+        desc: 'Dose, forms, and testing targets',
+        kind: 'best',
+      },
+      {
+        href: '/database/vitamin-d3-k2',
+        label: 'D3+K2 Database Card',
+        desc: 'Evidence score and stack partners',
+        kind: 'database',
+      },
+      {
+        href: '/supplements/best-magnesium-supplements',
+        label: 'Best Magnesium',
+        desc: 'Required cofactor for D metabolism',
+        kind: 'guide',
+      },
+      {
+        href: '/best/best-longevity-labs',
+        label: 'Best Longevity Labs',
+        desc: 'Test 25-OH D before high dosing',
+        kind: 'best',
+      },
+      {
+        href: '/best/complete-longevity-stack',
+        label: 'Complete Longevity Stack',
+        desc: 'Tier 1 placement and timing',
+        kind: 'best',
+      },
+      {
+        href: '/best/best-longevity-supplements',
+        label: 'Best Longevity Supplements',
+        desc: 'Overall ranking context',
+        kind: 'best',
       },
     ],
   },
