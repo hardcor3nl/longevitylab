@@ -1,4 +1,5 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { HubClusterStrip } from '@/components/ContentCluster'
 import { ArrowLeft, Apple, AlertTriangle, TrendingUp } from 'lucide-react'
 import Link from 'next/link'
 
@@ -25,6 +26,7 @@ export default function NutritionProtocol() {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <HubClusterStrip clusterId="nutrition" title="Priority nutrition guides" />
         <div className="grid lg:grid-cols-[1fr_340px] gap-12">
           {/* Main Content */}
           <div>

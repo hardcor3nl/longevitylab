@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { HubClusterStrip } from '@/components/ContentCluster'
 import { ArrowLeft, Heart, AlertTriangle, Check } from 'lucide-react'
 import Link from 'next/link'
 
@@ -35,6 +36,7 @@ export default function CardioProtocol() {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <HubClusterStrip clusterId="cardio" title="Priority cardio guides" />
         <div className="grid lg:grid-cols-[1fr_340px] gap-12">
           {/* Main Content */}
           <div>

@@ -1,12 +1,7 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { HubClusterStrip } from '@/components/ContentCluster'
 import { ArrowLeft, Moon, Clock, AlertTriangle, Check } from 'lucide-react'
 import Link from 'next/link'
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Sleep Protocol: Complete Circadian Optimization Guide',
-  description: 'Deep sleep science, architecture optimization, circadian biohacking, supplement timing, and environmental tweaks for 8+ hour quality sleep.',
-}
 
 export default function SleepProtocol() {
   return (
@@ -31,6 +26,7 @@ export default function SleepProtocol() {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <HubClusterStrip clusterId="sleep" title="Priority sleep guides" />
         <div className="grid lg:grid-cols-[1fr_340px] gap-12">
           {/* Main Content */}
           <div>

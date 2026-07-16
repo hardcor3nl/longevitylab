@@ -12,12 +12,13 @@ import { RelatedArticles } from '@/components/RelatedArticles'
 import { mdxComponents } from '@/components/MdxComponents'
 import { ReviewedBy, AffiliateDisclosure, AuthorCard } from '@/components/ArticleTrust'
 import { BackToTop } from '@/components/BackToTop'
+import { ContentCluster } from '@/components/ContentCluster'
 import { getAuthorByName } from '@/lib/authors'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Clock, Calendar, User, Tag } from 'lucide-react'
-
 import { SITE } from '@/lib/site'
+
 const siteUrl = SITE.url
 
 export const revalidate = 86400
@@ -211,6 +212,15 @@ export default function ArticlePage({ params }: { params: { category: string; sl
               {/* Author bio — E-E-A-T anchor */}
               <AuthorCard authorName={frontmatter.author} />
 
+              {/* SEO cluster: hub ↔ best ↔ database ↔ protocols */}
+              <ContentCluster
+                slug={article.slug}
+                category={article.category}
+                tags={frontmatter.tags}
+                title={frontmatter.title}
+                path={`/${params.category}/${params.slug}`}
+              />
+
               {/* Related articles */}
               <RelatedArticles
                 current={{ slug: article.slug, category: article.category, tags: frontmatter.tags }}
@@ -240,6 +250,19 @@ export default function ArticlePage({ params }: { params: { category: string; sl
                     </div>
                   </AnimatedSection>
                 )}
+
+                {/* Cluster quick links */}
+                <AnimatedSection delay={0.32}>
+                  <ContentCluster
+                    slug={article.slug}
+                    category={article.category}
+                    tags={frontmatter.tags}
+                    title={frontmatter.title}
+                    path={`/${params.category}/${params.slug}`}
+                    variant="sidebar"
+                    limit={4}
+                  />
+                </AnimatedSection>
 
                 {/* Table of contents */}
                 {headings.length >= 2 && (
