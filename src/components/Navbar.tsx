@@ -41,6 +41,8 @@ const NAV_GROUPS = [
       { href: '/compare', label: 'Comparisons', desc: 'Head-to-head product breakdowns' },
       { href: '/database', label: 'Supplement Database', desc: 'Evidence scores for 100+ compounds' },
       { href: '/glossary', label: 'Glossary', desc: 'Longevity terms explained' },
+      { href: '/authors', label: 'Our Experts', desc: 'Physicians and researchers behind the reviews' },
+      { href: '/get-started', label: 'Beginner Path', desc: '5-step plan for new optimisers' },
     ],
   },
 ]
@@ -59,8 +61,12 @@ export function Navbar() {
   const menuTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
-    fetch('/api/search-index')
-      .then(r => r.json())
+    // Static export: use prebuilt public/search-index.json (API routes unavailable on CF Pages)
+    fetch('/search-index.json')
+      .then(r => {
+        if (!r.ok) throw new Error('search index missing')
+        return r.json()
+      })
       .then((data: SearchResult[]) => {
         fuseRef.current = new Fuse(data, {
           keys: ['title', 'description', 'category'],
@@ -338,7 +344,7 @@ export function Navbar() {
 
                 <Link href="/quiz" onClick={() => setMobileOpen(false)}
                   className="block px-3 py-2.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-xl transition-colors cursor-pointer">
-                  Quiz
+                  Bio Age Quiz
                 </Link>
               </div>
             </motion.div>

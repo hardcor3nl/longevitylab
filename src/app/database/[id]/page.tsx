@@ -5,6 +5,7 @@ import { AnimatedSection } from '@/components/AnimatedSection'
 import { ScoreBar } from '@/components/ScoreBar'
 import { ArrowUpRight, ArrowLeft, Clock, Layers, Zap } from 'lucide-react'
 import type { Metadata } from 'next'
+import { absoluteUrl, SITE } from '@/lib/site'
 
 export function generateStaticParams() {
   return supplements.map(s => ({ id: s.id }))
@@ -13,7 +14,19 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { id: string } }): Metadata {
   const s = getSupplementById(params.id)
   if (!s) return {}
-  return { title: `${s.name} — Evidence Review`, description: s.summary }
+  const url = absoluteUrl(`/database/${params.id}`)
+  return {
+    title: `${s.name} — Evidence Review`,
+    description: s.summary,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${s.name} — Evidence Review`,
+      description: s.summary,
+      url,
+      type: 'article',
+      siteName: SITE.name,
+    },
+  }
 }
 
 const evidenceBadgeColors: Record<string, string> = {

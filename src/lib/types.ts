@@ -1,4 +1,10 @@
-export type Category = 'supplements' | 'wearables' | 'diagnostics' | 'protocols' | 'best'
+export type Category =
+  | 'supplements'
+  | 'wearables'
+  | 'recovery'
+  | 'diagnostics'
+  | 'protocols'
+  | 'best'
 
 export interface ArticleFrontmatter {
   title: string

@@ -9,8 +9,14 @@ import { QuizTeaser } from '@/components/QuizTeaser'
 import { ProtocolsTeaser } from '@/components/ProtocolsTeaser'
 import { TrustBar } from '@/components/TrustBar'
 import { StartHere } from '@/components/StartHere'
+import type { Metadata } from 'next'
+import { SITE } from '@/lib/site'
 
 export const revalidate = 86400
+
+export const metadata: Metadata = {
+  alternates: { canonical: SITE.url },
+}
 
 export default function HomePage() {
   const allArticles = getAllArticles()

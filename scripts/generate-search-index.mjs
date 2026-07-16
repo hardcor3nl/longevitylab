@@ -15,10 +15,18 @@ if (fs.existsSync(CONTENT_DIR)) {
     for (const file of fs.readdirSync(categoryDir).filter(f => f.endsWith('.mdx'))) {
       const slug = file.replace('.mdx', '')
       const { data } = matter(fs.readFileSync(path.join(categoryDir, file), 'utf-8'))
-      articles.push({ slug, category, title: data.title, description: data.description })
+      articles.push({
+        slug,
+        category,
+        title: data.title ?? slug,
+        description: data.description ?? '',
+      })
     }
   }
 }
+
+// Stable sort for reproducible builds
+articles.sort((a, b) => a.slug.localeCompare(b.slug))
 
 fs.writeFileSync(OUT, JSON.stringify(articles))
 console.log(`search-index.json: ${articles.length} articles`)

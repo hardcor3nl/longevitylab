@@ -1,3 +1,8 @@
+/**
+ * Canonical affiliate destinations keyed by product slug.
+ * Product cards and MDX should link to `/go/{slug}` — never paste raw affiliate URLs in content.
+ * Edge redirects (`public/_redirects`) are generated from this map at build time.
+ */
 export const affiliateLinks: Record<string, string> = {
   'prohealth-nmn': 'https://www.amazon.com/s?k=NMN+Longevity+Supplement&tag=michaelregeer-20',
   'tru-niagen': 'https://www.amazon.com/s?k=ChromaDex+Tru+Niagen&tag=michaelregeer-20',
@@ -43,7 +48,8 @@ export const affiliateLinks: Record<string, string> = {
   'serenelife-sauna': 'https://www.amazon.com/s?k=SereneLife+Portable+Infrared+Sauna&tag=michaelregeer-20',
   'the-plunge-pro': 'https://www.coldplunge.com/?ref=longevitylab',
   'morozko-forge': 'https://morozkoforge.com/?ref=longevitylab',
-  'chest-freezer-guide': 'https://longevitylab.com/guides/chest-freezer-cold-plunge',
+  // Internal guide — no external affiliate for DIY chest-freezer builds
+  'chest-freezer-guide': 'https://thelongevityintel.com/recovery/cold-plunge-ice-bath-review',
   'theragun-pro-6': 'https://www.therabody.com/?ref=longevitylab',
   'hypervolt-2-pro': 'https://www.awin1.com/cread.php?awinmid=25761&awinaffid=2967749&ued=https%3A%2F%2Fhyperice.com%2F',
   'renpho-r3': 'https://www.amazon.com/s?k=RENPHO+R3+massage+gun&tag=michaelregeer-20',
@@ -150,4 +156,14 @@ export const affiliateLinks: Record<string, string> = {
   'superbeets': 'https://www.humann.com/?ref=longevitylab',
   'now-sodium-bicarbonate': 'https://amzn.to/4p9EIAo',
   'now-tart-cherry': 'https://amzn.to/4aVExCT',
+}
+
+/** In-app hop path used everywhere (cards, MDX, protocols). */
+export function goPath(productSlug: string): string {
+  return `/go/${productSlug}`
+}
+
+/** Resolve a product slug to its external affiliate destination (for redirects). */
+export function getAffiliateDestination(productSlug: string): string | null {
+  return affiliateLinks[productSlug] ?? null
 }

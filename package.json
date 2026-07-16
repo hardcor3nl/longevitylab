@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/generate-search-index.mjs && node scripts/generate-redirects.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate:search": "node scripts/generate-search-index.mjs",
+    "generate:redirects": "node scripts/generate-redirects.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",

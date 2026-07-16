@@ -4,8 +4,9 @@ import Image from 'next/image'
 import { Star, ArrowUpRight, Clock } from 'lucide-react'
 import { AnimatedSection } from '@/components/AnimatedSection'
 import type { Metadata } from 'next'
+import { SITE, absoluteUrl } from '@/lib/site'
 
-const url = 'https://thelongevityintel.com/best'
+const url = absoluteUrl('/best')
 
 export const metadata: Metadata = {
   title: 'Best Longevity Products & Protocols — Expert-Ranked Picks',
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     description: 'Top-ranked longevity picks, curated and scored by our research team.',
     url,
     type: 'website',
-    siteName: 'Longevity Intel',
+    siteName: SITE.name,
   },
 }
 

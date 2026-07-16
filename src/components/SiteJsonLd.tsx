@@ -1,26 +1,38 @@
-const siteUrl = 'https://thelongevityintel.com'
+import { SITE, absoluteUrl } from '@/lib/site'
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
       '@type': 'Organization',
-      '@id': `${siteUrl}/#organization`,
-      name: 'Longevity Intel',
-      url: siteUrl,
-      logo: { '@type': 'ImageObject', url: `${siteUrl}/logo.png` },
-      description:
-        'Independent, physician-reviewed longevity reviews and guides covering supplements, wearables, diagnostics, and protocols.',
-      sameAs: ['https://github.com/hardcor3nl/longevitylab'],
+      '@id': `${SITE.url}/#organization`,
+      name: SITE.name,
+      url: SITE.url,
+      logo: {
+        '@type': 'ImageObject',
+        url: absoluteUrl(SITE.logo),
+        width: 512,
+        height: 512,
+      },
+      description: SITE.description,
+      sameAs: [SITE.github].filter(Boolean),
     },
     {
       '@type': 'WebSite',
-      '@id': `${siteUrl}/#website`,
-      url: siteUrl,
-      name: 'Longevity Intel',
-      description: 'Science-backed longevity reviews and protocols.',
-      publisher: { '@id': `${siteUrl}/#organization` },
-      inLanguage: 'en-US',
+      '@id': `${SITE.url}/#website`,
+      url: SITE.url,
+      name: SITE.name,
+      description: SITE.shortDescription,
+      publisher: { '@id': `${SITE.url}/#organization` },
+      inLanguage: SITE.language,
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: `${SITE.url}/best?q={search_term_string}`,
+        },
+        'query-input': 'required name=search_term_string',
+      },
     },
   ],
 }

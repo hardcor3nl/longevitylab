@@ -100,15 +100,19 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
         </div>
       </div>
 
-      {/* CTA */}
+      {/* CTA — always route via /go/ so disclosures + tracking stay consistent */}
       <div className="px-5 pb-5">
         <Link
           href={product.affiliateUrl}
+          rel="nofollow sponsored noopener"
           className="group flex items-center justify-center gap-2 w-full py-3 bg-green text-white rounded-xl font-medium text-sm hover:bg-green-bright transition-colors cursor-pointer"
         >
           View Best Price
           <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
         </Link>
+        <p className="text-[10px] text-muted text-center mt-2 font-mono">
+          Affiliate link · we may earn a commission
+        </p>
       </div>
     </motion.div>
   )

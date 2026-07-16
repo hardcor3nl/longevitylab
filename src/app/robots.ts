@@ -1,12 +1,15 @@
 import { MetadataRoute } from 'next'
+import { SITE } from '@/lib/site'
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/'],
+      // /go/ is affiliate hop pages — noindex via page metadata; disallow reduces crawl waste
+      disallow: ['/api/', '/go/'],
     },
-    sitemap: 'https://thelongevityintel.com/sitemap.xml',
+    sitemap: `${SITE.url}/sitemap.xml`,
+    host: SITE.url,
   }
 }

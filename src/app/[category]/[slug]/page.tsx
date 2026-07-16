@@ -17,7 +17,8 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Clock, Calendar, User, Tag } from 'lucide-react'
 
-const siteUrl = 'https://thelongevityintel.com'
+import { SITE } from '@/lib/site'
+const siteUrl = SITE.url
 
 export const revalidate = 86400
 
@@ -253,7 +254,7 @@ export default function ArticlePage({ params }: { params: { category: string; sl
                     <h3 className="font-mono text-xs uppercase tracking-widest text-muted mb-3">Share</h3>
                     <div className="flex gap-2">
                       <a
-                        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(frontmatter.title)}&url=${encodeURIComponent(`https://thelongevityintel.com/${params.category}/${params.slug}`)}`}
+                        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(frontmatter.title)}&url=${encodeURIComponent(`${siteUrl}/${params.category}/${params.slug}`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 flex-1 justify-center px-3 py-2 rounded-xl border border-border hover:border-green/40 text-muted hover:text-ink transition-colors text-xs font-medium cursor-pointer"
@@ -263,7 +264,7 @@ export default function ArticlePage({ params }: { params: { category: string; sl
                         Tweet
                       </a>
                       <a
-                        href={`mailto:?subject=${encodeURIComponent(frontmatter.title)}&body=${encodeURIComponent(`https://thelongevityintel.com/${params.category}/${params.slug}`)}`}
+                        href={`mailto:?subject=${encodeURIComponent(frontmatter.title)}&body=${encodeURIComponent(`${siteUrl}/${params.category}/${params.slug}`)}`}
                         aria-label="Share via email"
                         className="flex items-center gap-2 flex-1 justify-center px-3 py-2 rounded-xl border border-border hover:border-green/40 text-muted hover:text-ink transition-colors text-xs font-medium cursor-pointer"
                       >

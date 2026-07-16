@@ -6,6 +6,7 @@ import { AnimatedSection } from '@/components/AnimatedSection'
 import { AffiliateDisclosure } from '@/components/ArticleTrust'
 import { ArrowLeft, ArrowUpRight, Check, ExternalLink, AlertTriangle, Clock, FlaskConical } from 'lucide-react'
 import type { Metadata } from 'next'
+import { absoluteUrl, SITE } from '@/lib/site'
 
 export function generateStaticParams() {
   return protocols.map(p => ({ id: p.id }))
@@ -14,7 +15,19 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { id: string } }): Metadata {
   const p = getProtocolById(params.id)
   if (!p) return {}
-  return { title: p.title, description: p.description }
+  const url = absoluteUrl(`/protocols/${params.id}`)
+  return {
+    title: p.title,
+    description: p.description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: p.title,
+      description: p.description,
+      url,
+      type: 'article',
+      siteName: SITE.name,
+    },
+  }
 }
 
 const difficultyColor = {

@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { Clock, ArrowUpRight, FlaskConical, Watch, TestTube2, BookOpen, Star, Zap } from 'lucide-react'
 import { AnimatedSection } from '@/components/AnimatedSection'
 import type { Metadata } from 'next'
+import { SITE, absoluteUrl } from '@/lib/site'
 
 const categoryMeta: Record<string, { title: string; description: string; icon: React.ElementType; color: string }> = {
   supplements: { title: 'Supplement Reviews', description: 'Evidence-based reviews of longevity supplements, tested and ranked by our research team.', icon: FlaskConical, color: 'text-green-bright' },
@@ -22,12 +23,18 @@ export async function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const meta = categoryMeta[params.slug]
   if (!meta) return {}
-  const url = `https://thelongevityintel.com/category/${params.slug}`
+  const url = absoluteUrl(`/category/${params.slug}`)
   return {
     title: meta.title,
     description: meta.description,
     alternates: { canonical: url },
-    openGraph: { title: meta.title, description: meta.description, url, type: 'website', siteName: 'Longevity Intel' },
+    openGraph: {
+      title: meta.title,
+      description: meta.description,
+      url,
+      type: 'website',
+      siteName: SITE.name,
+    },
   }
 }
 
