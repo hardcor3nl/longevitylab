@@ -5,6 +5,11 @@ import { Check, X, ExternalLink, Award } from 'lucide-react'
 import Link from 'next/link'
 import { useRef } from 'react'
 
+/* Amazon Associates policy requires a date/time-stamped "subject to change"
+   notice anywhere price/availability is shown. Bump this when product.price
+   values in src/lib/products.ts are re-checked. */
+const PRICE_LAST_VERIFIED = 'July 2026'
+
 const badgeStyles: Record<string, string> = {
   'Best Pick': 'bg-green/10 text-green-bright border-green/25',
   'Runner-Up': 'bg-amber/10 text-amber border-amber/25',
@@ -37,6 +42,9 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
             )}
             <h3 className="font-display text-xl text-ink leading-tight">{product.name}</h3>
             <p className="text-muted text-sm mt-0.5">{product.brand} · {product.price}</p>
+            <p className="text-muted/70 text-[10px] mt-0.5">
+              Price accurate as of {PRICE_LAST_VERIFIED} — see retailer for current price &amp; availability.
+            </p>
           </div>
           {/* Circular score */}
           <div className="relative shrink-0 w-14 h-14">
