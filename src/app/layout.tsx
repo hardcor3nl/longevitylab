@@ -56,11 +56,22 @@ export const metadata: Metadata = {
     description: 'Expert reviews on supplements, wearables, and longevity protocols.',
     images: [SITE.ogImage],
   },
+  // Impact.com site verification (dashboard may show `value=`; HTML standard is `content=`)
+  other: {
+    'impact-site-verification': '5c36e911-416e-4424-8ebf-3cc92f0fef1d',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Impact.com site verification (token from Impact dashboard) */}
+        <meta
+          name="impact-site-verification"
+          content="5c36e911-416e-4424-8ebf-3cc92f0fef1d"
+        />
+      </head>
       <body>
         <a
           href="#main-content"
