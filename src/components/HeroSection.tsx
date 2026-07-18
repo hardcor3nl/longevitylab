@@ -71,18 +71,18 @@ export function HeroSection() {
               backed by peer-reviewed research, tested by our physician team.
             </motion.p>
 
-            {/* CTAs */}
+            {/* CTAs — beginner path first, then commercial discovery */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.28 }}
               className="flex flex-wrap gap-3 mb-14"
             >
-              <Link href="/category/supplements"
+              <Link href="/get-started"
                 className="group flex items-center gap-2 px-6 py-3 bg-green text-white rounded-xl font-semibold text-sm hover:bg-green-bright transition-all duration-200 cursor-pointer"
                 style={{ boxShadow: 'var(--shadow-green)' }}
               >
-                Explore Reviews
+                Build My Plan
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-150" />
               </Link>
               <Link href="/best"
@@ -90,6 +90,11 @@ export function HeroSection() {
                 style={{ boxShadow: 'var(--shadow-sm)' }}
               >
                 Best Picks
+              </Link>
+              <Link href="/database"
+                className="flex items-center gap-2 px-6 py-3 text-muted hover:text-ink text-sm font-medium transition-colors cursor-pointer"
+              >
+                Evidence DB
               </Link>
             </motion.div>
 
@@ -148,7 +153,7 @@ export function HeroSection() {
               <div className="absolute bottom-4 left-4 right-4">
                 <div className="bg-black/60 backdrop-blur-md border border-white/10 rounded-xl px-4 py-3">
                   <p className="font-mono text-[10px] uppercase tracking-widest text-white/50 mb-0.5">Featured Review</p>
-                  <p className="text-white text-sm font-semibold leading-snug">Best NMN Supplements of 2025: Expert-Tested &amp; Ranked</p>
+                  <p className="text-white text-sm font-semibold leading-snug">Best NMN Supplements of 2026: Expert-Tested &amp; Ranked</p>
                 </div>
               </div>
             </div>

@@ -14,7 +14,8 @@ const jsonLd = {
         width: 512,
         height: 512,
       },
-      description: SITE.description,
+      description:
+        'Independent longevity hub: physician-reviewed rankings, protocols, and an evidence database for supplements, wearables, and recovery tools.',
       sameAs: [SITE.github].filter(Boolean),
     },
     {

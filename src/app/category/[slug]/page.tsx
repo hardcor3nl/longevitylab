@@ -2,10 +2,11 @@ import { getArticlesByCategory } from '@/lib/content'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Clock, ArrowUpRight, FlaskConical, Watch, TestTube2, BookOpen, Star, Zap } from 'lucide-react'
+import { Clock, ArrowUpRight, ArrowRight, FlaskConical, Watch, TestTube2, BookOpen, Star, Zap } from 'lucide-react'
 import { AnimatedSection } from '@/components/AnimatedSection'
 import type { Metadata } from 'next'
 import { SITE, absoluteUrl } from '@/lib/site'
+import { categoryHubLinks } from '@/lib/categoryHubLinks'
 
 const categoryMeta: Record<string, { title: string; description: string; icon: React.ElementType; color: string }> = {
   supplements: { title: 'Supplement Reviews', description: 'Evidence-based reviews of longevity supplements, tested and ranked by our research team.', icon: FlaskConical, color: 'text-green-bright' },
@@ -131,6 +132,30 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                   </AnimatedSection>
                 ))}
               </div>
+            )}
+
+            {/* Hub-style related tools — keeps readers inside the decision graph */}
+            {categoryHubLinks[params.slug] && (
+              <AnimatedSection className="mt-14 pt-10 border-t border-border">
+                <p className="font-mono text-xs uppercase tracking-widest text-green-bright mb-2">
+                  {categoryHubLinks[params.slug].title}
+                </p>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-4">
+                  {categoryHubLinks[params.slug].links.map(l => (
+                    <Link
+                      key={l.href}
+                      href={l.href}
+                      className="group flex flex-col gap-1 p-4 rounded-2xl border border-border bg-surface hover:border-green/30 transition-all"
+                    >
+                      <span className="font-display text-base text-ink group-hover:text-green transition-colors flex items-center gap-1.5">
+                        {l.label}
+                        <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </span>
+                      <span className="text-xs text-muted">{l.desc}</span>
+                    </Link>
+                  ))}
+                </div>
+              </AnimatedSection>
             )}
           </div>
         )}

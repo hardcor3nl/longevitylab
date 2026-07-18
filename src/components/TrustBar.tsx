@@ -1,12 +1,12 @@
 import { Shield, BookOpen, Users, Award, Microscope, HeartPulse } from 'lucide-react'
 
 const items = [
-  { icon: Shield,      label: 'No supplement company funding' },
-  { icon: BookOpen,    label: '100+ science-backed reviews'    },
-  { icon: Microscope,  label: '6,000+ studies referenced'     },
-  { icon: Users,       label: '12,000+ subscribers'           },
-  { icon: Award,       label: 'Reviewed by MDs & PhDs'        },
-  { icon: HeartPulse,  label: 'Updated with new research'     },
+  { icon: Shield,      label: 'Independent — no brand-funded scores' },
+  { icon: BookOpen,    label: '100+ science-backed reviews' },
+  { icon: Microscope,  label: '6,000+ studies referenced' },
+  { icon: Users,       label: '12,000+ longevity optimisers' },
+  { icon: Award,       label: 'Physician-reviewed editorial process' },
+  { icon: HeartPulse,  label: 'Evidence hierarchy: sleep → train → stack' },
 ]
 
 // Duplicate for seamless loop

@@ -25,9 +25,9 @@ export function BentoGrid({ articles }: { articles: Article[] }) {
           <p className="font-mono text-xs uppercase tracking-[0.14em] text-green-bright mb-2">Latest</p>
           <h2 className="font-display text-4xl text-ink leading-tight">Recent Reviews</h2>
         </div>
-        <Link href="/category/supplements"
+        <Link href="/best"
           className="flex items-center gap-1.5 text-sm font-medium text-muted hover:text-ink transition-colors cursor-pointer group">
-          View all
+          Best lists
           <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
         </Link>
       </div>
