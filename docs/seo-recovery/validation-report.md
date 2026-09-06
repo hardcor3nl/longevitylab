@@ -83,7 +83,7 @@
 - content/supplements/urolithin-a-mitopure-guide.mdx: claim signals 4 require evidence/credential verification
 - content/wearables/apple-watch-health-features.mdx: claim signals 2|3|4 require evidence/credential verification
 - content/wearables/best-continuous-glucose-monitors.mdx: claim signals 1 require evidence/credential verification
-- content/wearables/best-fitness-trackers-longevity.mdx: claim signals 1|2|4 require evidence/credential verification
+- content/wearables/best-fitness-trackers-longevity.mdx: claim signals 2|3|4 require evidence/credential verification
 - content/wearables/dexcom-stelo-review.mdx: claim signals 1|3|4 require evidence/credential verification
 - content/wearables/garmin-fenix-7-review.mdx: claim signals 1|2|4 require evidence/credential verification
 - content/wearables/garmin-vs-whoop-comparison.mdx: claim signals 2|4 require evidence/credential verification
