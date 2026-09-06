@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     absolute: `${SITE.name} — Science-Backed Longevity Reviews & Protocols`,
   },
   description:
-    'The independent longevity hub: physician-reviewed supplement rankings, wearables, sauna and cold plunge guides, protocols, and an evidence database — organised so you act in the right order.',
+    'Evidence-focused supplement comparisons, wearable and recovery guides, protocols, and a research database — organised so you can weigh sources, limitations, and trade-offs.',
 }
 
 const itemListJsonLd = {

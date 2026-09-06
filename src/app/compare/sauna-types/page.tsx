@@ -1,8 +1,19 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
+import { FaqSection } from '@/components/FaqSection'
+import { getCompareFaqs } from '@/lib/faqs'
+import type { Metadata } from 'next'
+import { absoluteUrl } from '@/lib/site'
 
+
+export const metadata: Metadata = {
+  title: "Infrared vs Traditional Sauna: Full Comparison",
+  description: "Compare infrared and traditional sauna approaches, including temperature, comfort, cost, and practical trade-offs.",
+  alternates: { canonical: absoluteUrl('/compare/sauna-types') },
+}
 export default function SaunaComparison() {
+  const faqs = getCompareFaqs('sauna-types')
   return (
     <div className="pt-24 pb-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -193,6 +204,7 @@ export default function SaunaComparison() {
           <Link href="/compare" className="inline-flex items-center gap-2 text-green-bright hover:text-green font-semibold text-sm transition-colors cursor-pointer">
             ← Back to All Comparisons
           </Link>
+          <FaqSection faqs={faqs} title="Sauna types FAQ" />
         </AnimatedSection>
       </div>
     </div>

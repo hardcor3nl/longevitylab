@@ -1,23 +1,19 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
-import { Shield, BookOpen, FlaskConical, Users } from 'lucide-react'
+import { Shield, BookOpen, FlaskConical, ClipboardCheck } from 'lucide-react'
 import type { Metadata } from 'next'
+import { absoluteUrl } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'About Longevity Intel — Editorial Policy & Methodology',
-  description: 'How we research, test, and score longevity supplements, wearables, and protocols. Our editorial independence policy and team.',
+  description: 'How Longevity Intel researches, compares, and maintains guides on supplements, wearables, and longevity protocols.',
+  alternates: { canonical: absoluteUrl('/about') },
 }
 
-const team = [
-  { name: 'Dr. Sarah Chen', role: 'Chief Medical Reviewer', background: 'MD, Internal Medicine. 12 years in preventive medicine. Former researcher at UCSF.', initials: 'SC' },
-  { name: 'Marcus Webb', role: 'Senior Tech & Recovery Editor', background: 'MSc Exercise Physiology. 10 years covering health tech and recovery science.', initials: 'MW' },
-  { name: 'Dr. James Okafor', role: 'Research Scientist', background: 'PhD Molecular Biology. Specialises in NAD+ metabolism and mitochondrial health.', initials: 'JO' },
-]
-
 const methodology = [
-  { icon: FlaskConical, title: 'Independent Testing', description: 'We purchase all reviewed products independently. No free samples accepted for products under review.' },
-  { icon: BookOpen, title: 'Peer-Reviewed Sources', description: 'All health claims are referenced to published, peer-reviewed research. We link every major claim to PubMed.' },
-  { icon: Shield, title: 'No Conflicts of Interest', description: 'Our team is contractually prohibited from owning equity in supplement or wearable companies.' },
-  { icon: Users, title: 'Expert Review', description: 'All medical content is reviewed by at least one MD or PhD before publication.' },
+  { icon: BookOpen, title: 'Visible Sources', description: 'Research claims should link to the underlying publication or official source, with study design and limitations stated where relevant.' },
+  { icon: FlaskConical, title: 'Testing Status', description: 'Hands-on testing is claimed only when the page documents what was tested and how. Otherwise, the page is presented as research-based analysis.' },
+  { icon: Shield, title: 'Commercial Transparency', description: 'Affiliate relationships are disclosed. A commission does not establish product quality or clinical benefit.' },
+  { icon: ClipboardCheck, title: 'Recorded Review', description: 'Medical review is displayed only when a named reviewer, review date, credentials, and permission are documented for that article.' },
 ]
 
 const scoringCriteria = [
@@ -65,7 +61,7 @@ export default function AboutPage() {
         {/* Scoring methodology */}
         <AnimatedSection className="mb-16" delay={0.15}>
           <h2 className="font-display text-3xl text-ink mb-3">Our Scoring System</h2>
-          <p className="text-muted mb-6">Every supplement, device, or protocol we review receives an overall score from 0–100, weighted across four criteria:</p>
+          <p className="text-muted mb-6">When a page uses an overall score, it is an editorial comparison from 0–100—not a clinical measurement—and uses these four criteria:</p>
           <div className="bg-surface border border-border rounded-2xl overflow-hidden">
             {scoringCriteria.map((c, i) => (
               <div key={c.label} className={`p-5 flex items-start gap-4 ${i < scoringCriteria.length - 1 ? 'border-b border-border' : ''}`}>
@@ -79,20 +75,16 @@ export default function AboutPage() {
           </div>
         </AnimatedSection>
 
-        {/* Team */}
+        {/* Editorial attribution */}
         <AnimatedSection className="mb-16" delay={0.2}>
-          <h2 className="font-display text-3xl text-ink mb-6">Our Team</h2>
-          <div className="grid sm:grid-cols-3 gap-4">
-            {team.map(member => (
-              <div key={member.name} className="bg-surface border border-border rounded-2xl p-5">
-                <div className="w-12 h-12 rounded-2xl bg-green/10 border border-green/20 flex items-center justify-center mb-4">
-                  <span className="font-mono text-sm font-medium text-green-bright">{member.initials}</span>
-                </div>
-                <h3 className="font-display text-lg text-ink mb-0.5">{member.name}</h3>
-                <p className="font-mono text-xs text-green-bright uppercase tracking-wide mb-2">{member.role}</p>
-                <p className="text-muted text-sm leading-relaxed">{member.background}</p>
-              </div>
-            ))}
+          <h2 className="font-display text-3xl text-ink mb-6">Editorial Attribution</h2>
+          <div className="bg-surface border border-border rounded-2xl p-6">
+            <h3 className="font-display text-xl text-ink mb-2">Longevity Intel Editorial Team</h3>
+            <p className="text-muted text-sm leading-relaxed">
+              Legacy articles are attributed to the editorial team while contributor identities,
+              credentials, testing records, and review records are being verified. Named medical
+              or specialist attribution will appear only after that documentation is complete.
+            </p>
           </div>
         </AnimatedSection>
 
@@ -108,9 +100,9 @@ export default function AboutPage() {
                   participate in affiliate programmes with direct brand partners. When you click a link and make a purchase, we may earn
                   a commission at no extra cost to you.
                   <br /><br />
-                  This income funds our research and editorial operations. It <strong className="text-ink">never</strong> influences our ratings,
-                  recommendations, or editorial positions. Products we recommend are ones we would recommend regardless of commission structure.
-                  Sponsored content, when it exists, is clearly labelled.
+                  This income funds site operations. Rankings are not sold, and sponsored content,
+                  when it exists, is clearly labelled. Readers should still compare the cited
+                  evidence, limitations, and current product information.
                   <br /><br />
                   Prices, availability, and product details shown on this site are estimates and may not reflect current pricing —
                   always confirm the live price on the retailer&apos;s site before purchasing.

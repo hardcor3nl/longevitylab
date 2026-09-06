@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, Microscope, TrendingUp, Users, Shield, Brain, Activity } from 'lucide-react'
+import { ArrowRight, BookOpen, Scale, Shield, Brain, Activity } from 'lucide-react'
 
 const floatingCards = [
   { icon: Shield,   label: 'NAD+ Level',     value: '+34%',   color: 'text-green-bright', bg: 'bg-green/10 border-green/20',         delay: 0   },
@@ -11,9 +11,8 @@ const floatingCards = [
 ]
 
 const stats = [
-  { icon: Microscope,  value: '100+', label: 'Reviews Published'   },
-  { icon: TrendingUp,  value: '6K+',  label: 'Studies Referenced'  },
-  { icon: Users,       value: '12K+', label: 'Subscribers'         },
+  { icon: BookOpen, value: 'Sources', label: 'Linked in articles' },
+  { icon: Scale, value: 'Limits', label: 'Reported clearly' },
 ]
 
 export function HeroSection() {
@@ -39,7 +38,7 @@ export function HeroSection() {
                 <span className="flex h-5 w-5 items-center justify-center rounded-full bg-green/15 border border-green/25">
                   <span className="w-1.5 h-1.5 rounded-full bg-green-bright animate-pulse" />
                 </span>
-                <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-green-bright">Evidence-Based · Physician-Reviewed</span>
+                <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-green-bright">Evidence-focused · Transparent sourcing</span>
               </div>
             </motion.div>
 
@@ -67,8 +66,8 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.18 }}
               className="text-muted text-lg leading-relaxed mb-10 max-w-lg"
             >
-              Expert reviews on supplements, wearables, diagnostics and protocols —
-              backed by peer-reviewed research, tested by our physician team.
+              Research guides on supplements, wearables, diagnostics and protocols —
+              with sources, uncertainty and practical trade-offs made visible.
             </motion.p>
 
             {/* CTAs — beginner path first, then commercial discovery */}
@@ -153,7 +152,7 @@ export function HeroSection() {
               <div className="absolute bottom-4 left-4 right-4">
                 <div className="bg-black/60 backdrop-blur-md border border-white/10 rounded-xl px-4 py-3">
                   <p className="font-mono text-[10px] uppercase tracking-widest text-white/50 mb-0.5">Featured Review</p>
-                  <p className="text-white text-sm font-semibold leading-snug">Best NMN Supplements of 2026: Expert-Tested &amp; Ranked</p>
+                  <p className="text-white text-sm font-semibold leading-snug">Best NMN Supplements of 2026: Evidence &amp; Trade-offs</p>
                 </div>
               </div>
             </div>

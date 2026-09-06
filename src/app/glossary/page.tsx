@@ -2,10 +2,12 @@ import { AnimatedSection } from '@/components/AnimatedSection'
 import Link from 'next/link'
 import { BookOpen, ArrowUpRight } from 'lucide-react'
 import type { Metadata } from 'next'
+import { absoluteUrl } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Biomarker Glossary — Longevity Terms Explained',
   description: 'Plain-English explanations of the biomarkers, tests, and scientific terms used in longevity medicine — HRV, ApoB, NAD+, VO2 max, and more.',
+  alternates: { canonical: absoluteUrl('/glossary') },
 }
 
 interface BiomarkerEntry {

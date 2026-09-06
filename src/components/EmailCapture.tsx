@@ -63,7 +63,7 @@ export function EmailCapture() {
 
             <h2 className="font-display text-white leading-tight mb-4"
               style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', letterSpacing: '-0.02em' }}>
-              Join 12,000+<br />
+              Join the<br />
               <span style={{
                 background: 'linear-gradient(135deg, #4dc478 0%, #2d9e58 100%)',
                 WebkitBackgroundClip: 'text',
@@ -74,7 +74,7 @@ export function EmailCapture() {
 
             <p className="text-[#6a9c70] text-lg leading-relaxed mb-8 max-w-md">
               The best longevity research, distilled into a weekly read.
-              No noise. No sponsorships. Unsubscribe anytime.
+              No noise. Affiliate relationships are disclosed. Unsubscribe anytime.
             </p>
 
             <ul className="space-y-2.5">

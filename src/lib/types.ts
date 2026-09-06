@@ -11,7 +11,10 @@ export interface ArticleFrontmatter {
   description: string
   category: Category
   date: string
+  modified?: string
   author: string
+  reviewer?: string
+  reviewedAt?: string
   readTime?: string
   image: string
   featured?: boolean

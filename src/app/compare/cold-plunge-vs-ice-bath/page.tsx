@@ -1,14 +1,19 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
 import Link from 'next/link'
 import { ArrowLeft, Check, ArrowRight } from 'lucide-react'
+import { FaqSection } from '@/components/FaqSection'
+import { getCompareFaqs } from '@/lib/faqs'
 import type { Metadata } from 'next'
+import { absoluteUrl } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Cold Plunge vs DIY Ice Bath: Is a $5,000 Tub Worth It? (2026)',
   description: 'A complete cost and performance comparison of dedicated cold plunge tubs versus a DIY chest freezer ice bath. Temperature control, filtration, maintenance, and our verdict.',
+  alternates: { canonical: absoluteUrl('/compare/cold-plunge-vs-ice-bath') },
 }
 
 export default function ColdPlungeVsIceBathPage() {
+  const faqs = getCompareFaqs('cold-plunge-vs-ice-bath')
   return (
     <div className="pt-28 pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -117,6 +122,7 @@ export default function ColdPlungeVsIceBathPage() {
               Browse Cold Plunge Products
             </Link>
           </div>
+          <FaqSection faqs={faqs} title="Cold plunge FAQ" />
         </AnimatedSection>
       </div>
     </div>

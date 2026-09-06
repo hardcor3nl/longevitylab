@@ -27,7 +27,7 @@ const links = {
   ],
   Company: [
     ['About', '/about'],
-    ['Our Experts', '/authors'],
+    ['Editorial Team', '/authors'],
     ['Contact', '/contact'],
     ['Affiliate Disclosure', '/about#affiliate'],
     ['Privacy Policy', '/privacy'],
@@ -57,8 +57,7 @@ export function Footer() {
               <span className="font-display text-xl text-ink tracking-tight">{SITE.name}</span>
             </Link>
             <p className="text-muted text-sm leading-relaxed mb-5 max-w-[260px]">
-              Independent, science-backed longevity reviews. Physician-reviewed. Never sponsored by
-              supplement companies.
+              Evidence-focused longevity guides with visible sources, limitations, and affiliate disclosures.
             </p>
 
             <div className="flex items-center gap-2 mb-6">
@@ -76,7 +75,7 @@ export function Footer() {
             </div>
 
             <div className="flex flex-col gap-2">
-              {['Independent — no brand funding', 'Physician-reviewed content'].map(t => (
+              {['Rankings are not sold', 'Medical review shown only when recorded'].map(t => (
                 <div key={t} className="flex items-center gap-1.5 text-xs text-muted">
                   <div className="w-3 h-3 rounded-full bg-green/20 border border-green/30 flex items-center justify-center shrink-0">
                     <div className="w-1 h-1 rounded-full bg-green-bright" />

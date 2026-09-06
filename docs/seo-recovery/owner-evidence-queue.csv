@@ -1,0 +1,7 @@
+priority,item,required_evidence,current_action
+P0,Named legacy authors and medical reviewer,Identity credentials permission and article attribution records,Collapsed to editorial-team attribution
+P0,Article-specific medical review,Reviewer identity credentials permission review date and reviewed version,Badge hidden unless explicit verified fields exist
+P0,First-person product tests,Purchase or access record test protocol raw observations dates and conflicts,Remain flagged by claims audit; do not market as tested
+P1,Subscriber and study counters,Auditable subscriber export and reproducible citation count,Removed from shared visible copy
+P1,Affiliate independence claims,Commercial agreements and editorial controls,Narrowed to disclosure and no sold rankings
+P1,GSC baseline,16-month and complete 28-day query-page-country-device exports,Metrics left blank

@@ -112,7 +112,7 @@ export const contentClusters: ContentCluster[] = [
         kind: 'guide',
       },
       {
-        href: '/database/sunlighten-mpulse',
+        href: '/recovery/sunlighten-mpulse-sauna-review',
         label: 'mPulse Database Entry',
         desc: 'Evidence score and product specs',
         kind: 'database',
@@ -163,7 +163,7 @@ export const contentClusters: ContentCluster[] = [
         kind: 'protocol',
       },
       {
-        href: '/database/the-plunge-pro',
+        href: '/recovery/the-plunge-pro-review',
         label: 'The Plunge Pro Card',
         desc: 'Our top commercial plunge pick',
         kind: 'database',
@@ -416,7 +416,7 @@ export const contentClusters: ContentCluster[] = [
         kind: 'guide',
       },
       {
-        href: '/database/mito-red-1500',
+        href: '/recovery/mito-red-light-mitopro-1500-review',
         label: 'MitoPRO Database Card',
         desc: 'Evidence score and specs',
         kind: 'database',
@@ -518,7 +518,7 @@ export const contentClusters: ContentCluster[] = [
         kind: 'compare',
       },
       {
-        href: '/database/creatine-mono',
+        href: '/database/creatine',
         label: 'Creatine Database Card',
         desc: 'Evidence score and stack partners',
         kind: 'database',
@@ -562,7 +562,7 @@ export const contentClusters: ContentCluster[] = [
         kind: 'compare',
       },
       {
-        href: '/database/magnesium-glycinate',
+        href: '/database/magnesium',
         label: 'Glycinate Database Card',
         desc: 'Our default sleep-friendly form',
         kind: 'database',
@@ -600,7 +600,7 @@ export const contentClusters: ContentCluster[] = [
         kind: 'best',
       },
       {
-        href: '/database/omega3-carlson',
+        href: '/database/omega3',
         label: 'Carlson Omega-3 Card',
         desc: 'Top pick evidence profile',
         kind: 'database',
@@ -644,7 +644,7 @@ export const contentClusters: ContentCluster[] = [
         kind: 'best',
       },
       {
-        href: '/database/vitamin-d3-k2',
+        href: '/database/vitamin-d',
         label: 'D3+K2 Database Card',
         desc: 'Evidence score and stack partners',
         kind: 'database',

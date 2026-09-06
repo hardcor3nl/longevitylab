@@ -13,9 +13,12 @@ import { mdxComponents } from '@/components/MdxComponents'
 import { ReviewedBy, AffiliateDisclosure, AuthorCard } from '@/components/ArticleTrust'
 import { BackToTop } from '@/components/BackToTop'
 import { ContentCluster } from '@/components/ContentCluster'
+import { FaqSection } from '@/components/FaqSection'
 import { getAuthorByName } from '@/lib/authors'
+import { getArticleFaqs } from '@/lib/faqs'
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Clock, Calendar, User, Tag } from 'lucide-react'
 import { SITE } from '@/lib/site'
 
@@ -31,6 +34,7 @@ export async function generateMetadata({ params }: { params: { category: string;
   const article = getArticleBySlug(params.category, params.slug)
   if (!article) return {}
   const { frontmatter } = article
+  const author = getAuthorByName(frontmatter.author)
   const url = `${siteUrl}/${params.category}/${params.slug}`
   const ogImage = frontmatter.image
     ? [{ url: frontmatter.image, width: 1200, height: 630, alt: frontmatter.title }]
@@ -40,7 +44,7 @@ export async function generateMetadata({ params }: { params: { category: string;
     title: frontmatter.title,
     description: frontmatter.description,
     alternates: { canonical: url },
-    authors: [{ name: frontmatter.author }],
+    authors: [{ name: author.name }],
     openGraph: {
       type: 'article',
       url,
@@ -48,7 +52,8 @@ export async function generateMetadata({ params }: { params: { category: string;
       description: frontmatter.description,
       images: ogImage,
       publishedTime: frontmatter.date,
-      authors: [frontmatter.author],
+      modifiedTime: frontmatter.modified,
+      authors: [author.name],
       tags: frontmatter.tags,
       siteName: 'Longevity Intel',
     },
@@ -67,6 +72,8 @@ export default function ArticlePage({ params }: { params: { category: string; sl
   const { frontmatter, content } = article
   const allArticles = getAllArticles()
   const headings = parseHeadings(content)
+  const author = getAuthorByName(frontmatter.author)
+  const faqs = getArticleFaqs(params.slug)
 
   // JSON-LD structured data
   const jsonLd = {
@@ -78,12 +85,13 @@ export default function ArticlePage({ params }: { params: { category: string; sl
         headline: frontmatter.title,
         description: frontmatter.description,
         datePublished: frontmatter.date,
-        dateModified: frontmatter.date,
+        dateModified: frontmatter.modified ?? frontmatter.date,
         author: {
-          '@type': 'Person',
-          name: frontmatter.author,
-          description: getAuthorByName(frontmatter.author).credentials,
-          url: `${siteUrl}/authors`,
+          '@type': 'Organization',
+          name: author.name,
+          description: author.credentials,
+          jobTitle: author.role,
+          url: `${siteUrl}/authors/${author.slug}`,
         },
         publisher: {
           '@type': 'Organization',
@@ -144,7 +152,9 @@ export default function ArticlePage({ params }: { params: { category: string; sl
             <p className="text-muted text-lg mb-6 max-w-2xl leading-relaxed">{frontmatter.description}</p>
 
             <div className="flex flex-wrap items-center gap-5 text-sm text-muted pb-6 border-b border-border">
-              <span className="flex items-center gap-1.5"><User className="w-3.5 h-3.5" />{frontmatter.author}</span>
+              <Link href={`/authors/${author.slug}`} className="flex items-center gap-1.5 hover:text-green-bright transition-colors">
+                <User className="w-3.5 h-3.5" />{author.name}
+              </Link>
               <span className="flex items-center gap-1.5">
                 <Calendar className="w-3.5 h-3.5" />
                 <time dateTime={frontmatter.date}>
@@ -154,7 +164,7 @@ export default function ArticlePage({ params }: { params: { category: string; sl
               <span className="flex items-center gap-1.5"><Clock className="w-3.5 h-3.5" />{frontmatter.readTime}</span>
             </div>
 
-            <ReviewedBy authorName={frontmatter.author} />
+            <ReviewedBy reviewerName={frontmatter.reviewer} reviewedAt={frontmatter.reviewedAt} />
 
             {frontmatter.tags && frontmatter.tags.length > 0 && (
               <div className="flex flex-wrap gap-2 mt-4">
@@ -208,6 +218,9 @@ export default function ArticlePage({ params }: { params: { category: string; sl
               <div className="prose prose-lg max-w-none">
                 <MDXRemote source={content} components={mdxComponents} />
               </div>
+
+              {/* FAQ rich results for money pages */}
+              <FaqSection faqs={faqs} />
 
               {/* Author bio — E-E-A-T anchor */}
               <AuthorCard authorName={frontmatter.author} />

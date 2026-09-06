@@ -1,11 +1,9 @@
-import { Shield, BookOpen, Users, Award, Microscope, HeartPulse } from 'lucide-react'
+import { Shield, BookOpen, Scale, HeartPulse } from 'lucide-react'
 
 const items = [
   { icon: Shield,      label: 'Independent — no brand-funded scores' },
-  { icon: BookOpen,    label: '100+ science-backed reviews' },
-  { icon: Microscope,  label: '6,000+ studies referenced' },
-  { icon: Users,       label: '12,000+ longevity optimisers' },
-  { icon: Award,       label: 'Physician-reviewed editorial process' },
+  { icon: BookOpen,    label: 'Sources and limitations shown' },
+  { icon: Scale,       label: 'Human evidence separated from animal research' },
   { icon: HeartPulse,  label: 'Evidence hierarchy: sleep → train → stack' },
 ]
 

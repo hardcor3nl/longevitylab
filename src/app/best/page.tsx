@@ -11,7 +11,7 @@ const url = absoluteUrl('/best')
 export const metadata: Metadata = {
   title: 'Best Longevity Products & Protocols — Expert-Ranked Picks',
   description:
-    'Our top-ranked longevity supplements, wearables, recovery devices, and protocols — curated and scored by our physician-reviewed research team.',
+    'Longevity supplement, wearable, recovery-device, and protocol comparisons with sources, selection criteria, and limitations.',
   alternates: { canonical: url },
   openGraph: {
     title: 'Best Longevity Products & Protocols — Expert-Ranked Picks',

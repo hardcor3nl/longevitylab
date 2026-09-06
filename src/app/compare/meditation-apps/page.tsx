@@ -1,7 +1,15 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+import { absoluteUrl } from '@/lib/site'
 
+
+export const metadata: Metadata = {
+  title: "Meditation Apps: Honest Comparison",
+  description: "Compare meditation apps by approach, evidence, cost, and use cases so you can choose a practical fit.",
+  alternates: { canonical: absoluteUrl('/compare/meditation-apps') },
+}
 export default function MeditationAppComparison() {
   return (
     <div className="pt-24 pb-24">

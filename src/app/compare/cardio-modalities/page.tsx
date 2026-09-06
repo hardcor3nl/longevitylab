@@ -1,7 +1,15 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { ArrowLeft, TrendingUp } from 'lucide-react'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+import { absoluteUrl } from '@/lib/site'
 
+
+export const metadata: Metadata = {
+  title: "Cardio Modalities Compared for Longevity",
+  description: "Compare Zone 2 cardio modalities by accessibility, injury risk, fitness effect, and practical longevity trade-offs.",
+  alternates: { canonical: absoluteUrl('/compare/cardio-modalities') },
+}
 export default function CardioModalitiesComparison() {
   return (
     <div className="pt-24 pb-24">

@@ -1,14 +1,19 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
 import Link from 'next/link'
 import { ArrowLeft, Check, ArrowRight } from 'lucide-react'
+import { FaqSection } from '@/components/FaqSection'
+import { getCompareFaqs } from '@/lib/faqs'
 import type { Metadata } from 'next'
+import { absoluteUrl } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Creatine vs HMB: Which Anti-Sarcopenic Supplement Wins? (2026)',
   description: 'A complete evidence-based comparison of creatine monohydrate and HMB for preserving muscle mass with age. Study counts, mechanisms, pricing, and our verdict.',
+  alternates: { canonical: absoluteUrl('/compare/creatine-vs-hmb') },
 }
 
 export default function CreatineVsHMBPage() {
+  const faqs = getCompareFaqs('creatine-vs-hmb')
   return (
     <div className="pt-28 pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,6 +126,7 @@ export default function CreatineVsHMBPage() {
               Browse Supplement Database
             </Link>
           </div>
+          <FaqSection faqs={faqs} title="Creatine vs HMB FAQ" />
         </AnimatedSection>
       </div>
     </div>

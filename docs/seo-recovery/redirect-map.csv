@@ -1,0 +1,5 @@
+Source,Destination,Status,Reason,Verification
+/database,/database/,301,Canonical slash normalization,Verify on production
+/protocols,/protocols/,301,Canonical slash normalization,Verify on production
+/authors,/authors/,301,Canonical slash normalization,Verify on production
+Unknown routes,(none),404,Do not convert missing health pages into a 200 fallback,Validated by local audit

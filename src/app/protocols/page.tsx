@@ -4,10 +4,12 @@ import Image from 'next/image'
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { ArrowUpRight, FlaskConical, DollarSign } from 'lucide-react'
 import type { Metadata } from 'next'
+import { absoluteUrl } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Expert Longevity Protocols',
   description: "The complete supplement stacks and lifestyle protocols from the world's leading longevity experts — Andrew Huberman, Bryan Johnson, and David Sinclair.",
+  alternates: { canonical: absoluteUrl('/protocols') },
 }
 
 const difficultyColor = {

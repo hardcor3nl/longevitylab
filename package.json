@@ -6,6 +6,7 @@
     "dev": "next dev",
     "prebuild": "node scripts/generate-search-index.mjs && node scripts/generate-redirects.mjs",
     "build": "next build",
+    "seo:audit": "node scripts/seo-recovery-audit.mjs",
     "start": "next start",
     "lint": "next lint",
     "generate:search": "node scripts/generate-search-index.mjs",

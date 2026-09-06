@@ -20,8 +20,8 @@ const promises = [
   },
   {
     icon: BadgeCheck,
-    title: 'Physician-reviewed process',
-    body: 'Medical review is part of the editorial pipeline — not a decorative badge.',
+    title: 'Review status shown honestly',
+    body: 'A medical-review label appears only when a named reviewer and review date are recorded.',
   },
 ]
 

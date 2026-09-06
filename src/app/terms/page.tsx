@@ -1,9 +1,11 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
 import type { Metadata } from 'next'
+import { absoluteUrl } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description: 'Terms of service for using Longevity Intel.',
+  alternates: { canonical: absoluteUrl('/terms') },
 }
 
 export default function TermsPage() {

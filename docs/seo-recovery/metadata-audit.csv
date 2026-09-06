@@ -1,0 +1,6 @@
+URL,Raw title,Meta description,Raw canonical,H1,Decision,Notes
+/about/,Present,Present,Verified by local audit,Present,Improve,Verify organization identity and ownership language before publication
+/authors/,Present,Present,Verified by local audit,Present,Needs Human Verification,Verify every displayed author identity and credential
+/database/,Present,Present,Verified by local audit,Present,Improve,Route-specific canonical added; review medical claims and citations
+/protocols/,Present,Present,Verified by local audit,Present,Needs Human Verification,Review health claims, dates, sources, and clinician-review language
+All sitemap routes,See url-inventory.csv,See url-inventory.csv,See url-inventory.csv,See url-inventory.csv,Needs Human Verification,Route-level values are recorded in the URL inventory; YMYL evidence remains a publication gate

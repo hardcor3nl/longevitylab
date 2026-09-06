@@ -1,14 +1,19 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
 import Link from 'next/link'
 import { ArrowLeft, Check, ArrowRight } from 'lucide-react'
+import { FaqSection } from '@/components/FaqSection'
+import { getCompareFaqs } from '@/lib/faqs'
 import type { Metadata } from 'next'
+import { absoluteUrl } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'WHOOP 4.0 vs Oura Ring Gen 3: Which Wearable Wins? (2026)',
   description: 'A complete head-to-head comparison of WHOOP 4.0 and Oura Ring Gen 3 for longevity tracking — HRV accuracy, sleep staging, form factor, and pricing after 6 months wearing both simultaneously.',
+  alternates: { canonical: absoluteUrl('/compare/whoop-vs-oura') },
 }
 
 export default function WhoopVsOuraPage() {
+  const faqs = getCompareFaqs('whoop-vs-oura')
   return (
     <div className="pt-28 pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -126,6 +131,7 @@ export default function WhoopVsOuraPage() {
               Read Full Oura Review
             </Link>
           </div>
+          <FaqSection faqs={faqs} title="WHOOP vs Oura FAQ" />
         </AnimatedSection>
       </div>
     </div>

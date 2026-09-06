@@ -1,14 +1,19 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
 import Link from 'next/link'
 import { ArrowLeft, Check, ArrowRight } from 'lucide-react'
+import { FaqSection } from '@/components/FaqSection'
+import { getCompareFaqs } from '@/lib/faqs'
 import type { Metadata } from 'next'
+import { absoluteUrl } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Magnesium Glycinate vs L-Threonate vs Malate: Which Form Wins? (2026)',
   description: 'The form of magnesium matters enormously for absorption and effect. Full evidence-based comparison of glycinate, L-threonate, and malate — which one for sleep, which for cognition, which for energy.',
+  alternates: { canonical: absoluteUrl('/compare/magnesium-forms') },
 }
 
 export default function MagnesiumFormsPage() {
+  const faqs = getCompareFaqs('magnesium-forms')
   return (
     <div className="pt-28 pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -131,6 +136,7 @@ export default function MagnesiumFormsPage() {
               Browse Supplement Database
             </Link>
           </div>
+          <FaqSection faqs={faqs} title="Magnesium forms FAQ" />
         </AnimatedSection>
       </div>
     </div>

@@ -47,3 +47,9 @@ export function getArticlesByCategory(category: string): Article[] {
 export function getFeaturedArticles(): Article[] {
   return getAllArticles().filter(a => a.frontmatter.featured)
 }
+
+export function getArticlesByAuthor(authorName: string): Article[] {
+  if (authorName === 'Longevity Intel Editors') return getAllArticles()
+  const name = authorName.toLowerCase()
+  return getAllArticles().filter(a => (a.frontmatter.author || '').toLowerCase() === name)
+}

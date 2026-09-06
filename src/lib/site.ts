@@ -7,7 +7,7 @@ export const SITE = {
   shortName: 'Longevity Intel',
   url: 'https://thelongevityintel.com',
   description:
-    'Expert reviews and science-backed guides on supplements, wearables, diagnostics, and protocols for living longer and better. Independent, physician-reviewed.',
+    'Evidence-focused guides on supplements, wearables, diagnostics, and longevity protocols, with sources and limitations made visible.',
   shortDescription: 'Science-backed longevity reviews and protocols.',
   locale: 'en_US',
   language: 'en-US',

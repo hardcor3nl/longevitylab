@@ -1,0 +1,7 @@
+source_or_pattern,final_url_or_action,classification,final_status,selected_canonical_evidence,decision,verification
+https://thelongevityintel.com/get-started/,https://thelongevityintel.com/get-started,expected normalization,200,Production canonical matched final URL,Keep 308 normalization,Audit crawl 2026-09-05
+https://thelongevityintel.com/database/,https://thelongevityintel.com/database,expected normalization,200,Production canonical was missing,Keep 308 normalization; local canonical added,Production recheck required after deploy
+https://thelongevityintel.com/protocols/,https://thelongevityintel.com/protocols,expected normalization,200,Production canonical was missing,Keep 308 normalization; local canonical added,Production recheck required after deploy
+https://thelongevityintel.com/compare/,https://thelongevityintel.com/compare,expected normalization,200,Production canonical was missing,Keep 308 normalization; local canonical added,Production recheck required after deploy
+64 product-ID database URLs,Removed from sitemap and replaced in known editorial links,unresolved or non-canonical product records,404 before repair,No selected-canonical evidence supplied,Do not create thin pages or blanket redirects; map only verified equivalents,Local link/export audit
+www host variants,Apex same-path destination,cleanup candidate,200 in production,Apex canonical observed,Add host redirect only after deep-path test and deployment authorization,Not implemented

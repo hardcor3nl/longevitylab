@@ -7,52 +7,40 @@ export interface Author {
   articles: number
   credentials: string
   slug: string
+  verifiedReviewer?: boolean
 }
-
-export const authors: Author[] = [
-  {
-    name: 'Dr. Sarah Chen',
-    role: 'Chief Medical Reviewer',
-    initials: 'SC',
-    bio: 'MD with 12 years in preventive medicine and longevity research. Former researcher at UCSF. Specialises in metabolic health, diagnostics, and evidence-based supplementation.',
-    expertise: ['Diagnostics', 'Metabolic Health', 'Supplements', 'Preventive Medicine'],
-    articles: 8,
-    credentials: 'MD, Internal Medicine. Board-certified. Former UCSF researcher.',
-    slug: 'sarah-chen',
-  },
-  {
-    name: 'Marcus Webb',
-    role: 'Senior Recovery & Tech Editor',
-    initials: 'MW',
-    bio: 'MSc Exercise Physiology. 10 years covering health technology, recovery science, and wearable devices. Tests every device personally with lab-grade instruments.',
-    expertise: ['Wearables', 'Recovery Devices', 'Red Light Therapy', 'Exercise Science'],
-    articles: 15,
-    credentials: 'MSc Exercise Physiology. ACSM Certified.',
-    slug: 'marcus-webb',
-  },
-  {
-    name: 'Dr. James Okafor',
-    role: 'Research Scientist',
-    initials: 'JO',
-    bio: 'PhD Molecular Biology. Specialises in NAD+ metabolism, mitochondrial health, and cellular longevity mechanisms. Reviews all supplement mechanistic claims.',
-    expertise: ['NAD+ & Mitochondria', 'Molecular Biology', 'Supplement Science', 'Protocols'],
-    articles: 6,
-    credentials: 'PhD Molecular Biology. Published researcher in NAD+ metabolism.',
-    slug: 'james-okafor',
-  },
-]
 
 const editorialTeam: Author = {
   name: 'Longevity Intel Editors',
   role: 'Editorial Team',
   initials: 'LL',
-  bio: 'Collaborative pieces researched and written by the Longevity Intel editorial team, then fact-checked against primary literature and reviewed by our medical reviewer before publication.',
-  expertise: ['Longevity Research', 'Evidence Review', 'Product Testing'],
+  bio: 'Collaborative articles researched and maintained by the Longevity Intel editorial team. Medical review is shown only when a named reviewer and review date are recorded for the article.',
+  expertise: ['Research summaries', 'Product comparisons', 'Editorial maintenance'],
   articles: 0,
-  credentials: 'Physician-reviewed editorial collective.',
+  credentials: 'Editorial attribution; no medical credential claimed.',
   slug: 'editorial-team',
 }
+
+// Add a contributor only after identity, credentials, permission, and the work
+// attributed to them have been documented. Reviewers must also opt in here.
+export const authors: Author[] = [editorialTeam]
 
 export function getAuthorByName(name: string): Author {
   return authors.find(a => a.name === name) ?? editorialTeam
 }
+
+export function getVerifiedReviewerByName(name?: string): Author | undefined {
+  if (!name) return undefined
+  return authors.find(a => a.name === name && a.verifiedReviewer)
+}
+
+export function getAuthorBySlug(slug: string): Author | undefined {
+  if (slug === editorialTeam.slug) return editorialTeam
+  return authors.find(a => a.slug === slug)
+}
+
+export function getAllAuthors(): Author[] {
+  return authors
+}
+
+export { editorialTeam }

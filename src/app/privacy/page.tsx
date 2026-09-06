@@ -1,9 +1,11 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
 import type { Metadata } from 'next'
+import { absoluteUrl } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'How Longevity Intel collects, uses, and protects your personal data.',
+  alternates: { canonical: absoluteUrl('/privacy') },
 }
 
 export default function PrivacyPage() {
