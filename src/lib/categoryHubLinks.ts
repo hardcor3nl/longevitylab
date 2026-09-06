@@ -16,7 +16,7 @@ export const categoryHubLinks: Record<
     title: 'Related tools for wearables',
     links: [
       { href: '/best/best-wearables-longevity-2024', label: 'Best wearables 2026', desc: 'Ranked by use case' },
-      { href: '/wearables/whoop-vs-oura-comparison', label: 'WHOOP vs Oura', desc: '6-month head-to-head' },
+      { href: '/wearables/whoop-vs-oura-comparison', label: 'WHOOP vs Oura', desc: 'Source-checked comparison' },
       { href: '/diagnostics/hrv-guide', label: 'HRV guide', desc: 'Interpret recovery scores' },
       { href: '/protocols/sleep-hygiene-protocol', label: 'Sleep protocol', desc: 'Data needs behaviour' },
     ],

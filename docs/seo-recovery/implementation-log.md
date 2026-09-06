@@ -16,6 +16,7 @@
 - Refreshed `/compare/nmn-vs-nr` and `/diagnostics/hrv-guide` as the first controlled evidence pilot.
 - Added real article modified-date support; sitemap entries no longer claim every build is a content update.
 - Added provisional baseline, redirect decisions, competitor gaps, content decisions, and owner evidence queue.
+- Updated the WHOOP-versus-Oura comparison from retired hardware and an undocumented first-person test to current 2026 products, official pricing/specifications, generation-labeled validation studies, funding disclosures, and explicit non-diagnostic limits.
 
 ## Deployment gate
 
