@@ -18,6 +18,7 @@
 - Added provisional baseline, redirect decisions, competitor gaps, content decisions, and owner evidence queue.
 - Updated the WHOOP-versus-Oura comparison from retired hardware and an undocumented first-person test to current 2026 products, official pricing/specifications, generation-labeled validation studies, funding disclosures, and explicit non-diagnostic limits.
 - Rebuilt the fitness-tracker roundup around current WHOOP, Oura, Garmin, and Fitbit products; removed invented participant, measurement, correlation, purchase, and independence claims; and added a dated source record plus consumer-wearable limitations.
+- Rebuilt the legacy WHOOP review around WHOOP 5 and MG documentation; removed the unverified 12-month test and fabricated comparison results, labeled validation by device generation, and retained the canonical URL.
 
 ## Deployment gate
 

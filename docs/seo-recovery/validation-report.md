@@ -88,7 +88,7 @@
 - content/wearables/garmin-fenix-7-review.mdx: claim signals 1|2|4 require evidence/credential verification
 - content/wearables/garmin-vs-whoop-comparison.mdx: claim signals 2|4 require evidence/credential verification
 - content/wearables/oura-ring-gen3-review.mdx: claim signals 1|2|3|4 require evidence/credential verification
-- content/wearables/whoop-4-review.mdx: claim signals 2|4 require evidence/credential verification
+- content/wearables/whoop-4-review.mdx: claim signals 2 require evidence/credential verification
 - content/wearables/whoop-vs-oura-comparison.mdx: claim signals 2 require evidence/credential verification
 
 Warnings are deployment gates for YMYL/review pages until the underlying evidence, credentials, dates, and testing disclosures are verified.
