@@ -19,6 +19,8 @@
 - Updated the WHOOP-versus-Oura comparison from retired hardware and an undocumented first-person test to current 2026 products, official pricing/specifications, generation-labeled validation studies, funding disclosures, and explicit non-diagnostic limits.
 - Rebuilt the fitness-tracker roundup around current WHOOP, Oura, Garmin, and Fitbit products; removed invented participant, measurement, correlation, purchase, and independence claims; and added a dated source record plus consumer-wearable limitations.
 - Rebuilt the legacy WHOOP review around WHOOP 5 and MG documentation; removed the unverified 12-month test and fabricated comparison results, labeled validation by device generation, and retained the canonical URL.
+- Replaced the NMN product ranking with a documentation-led evidence and buyer checklist; removed unverified testing, prices, scores, product winners, purity claims, and dosing advice.
+- Rebuilt the rapamycin page as a clinical evidence ledger; corrected sirolimus approved uses, separated mouse from human findings, removed the off-label dosing protocol and prescriber promotion, and centered current label warnings.
 
 ## Deployment gate
 

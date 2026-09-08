@@ -2,7 +2,7 @@
 
 - Exported sitemap URLs checked: 145
 - Technical failures: 0
-- Evidence/credential warnings: 80
+- Evidence/credential warnings: 81
 
 ## Technical failures
 
@@ -67,6 +67,7 @@
 - content/supplements/best-coq10-ubiquinol.mdx: claim signals 3|4 require evidence/credential verification
 - content/supplements/best-creatine-supplements.mdx: claim signals 3|4 require evidence/credential verification
 - content/supplements/best-magnesium-supplements.mdx: claim signals 3|4 require evidence/credential verification
+- content/supplements/best-nmn-supplements-2024.mdx: claim signals 2|4 require evidence/credential verification
 - content/supplements/best-rapamycin-guide.mdx: claim signals 2|3|4 require evidence/credential verification
 - content/supplements/best-resveratrol-pterostilbene.mdx: claim signals 4 require evidence/credential verification
 - content/supplements/best-taurine-supplements.mdx: claim signals 3 require evidence/credential verification
@@ -78,7 +79,7 @@
 - content/supplements/metformin-longevity-guide.mdx: claim signals 3|4 require evidence/credential verification
 - content/supplements/peptides-longevity-guide.mdx: claim signals 3|4 require evidence/credential verification
 - content/supplements/quercetin-fisetin-senolytics.mdx: claim signals 3|4 require evidence/credential verification
-- content/supplements/rapamycin-longevity-guide.mdx: claim signals 3|4 require evidence/credential verification
+- content/supplements/rapamycin-longevity-guide.mdx: claim signals 2 require evidence/credential verification
 - content/supplements/spermidine-longevity.mdx: claim signals 4 require evidence/credential verification
 - content/supplements/urolithin-a-mitopure-guide.mdx: claim signals 4 require evidence/credential verification
 - content/wearables/apple-watch-health-features.mdx: claim signals 2|3|4 require evidence/credential verification
