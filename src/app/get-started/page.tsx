@@ -96,7 +96,7 @@ export default function GetStarted() {
     if (goal === 'supplements') {
       recs.push({
         title: 'Supplement Database',
-        description: 'Curated supplements with evidence scores and protocol recommendations.',
+        description: 'Curated supplements with evidence levels and protocol recommendations.',
         href: '/database',
         icon: '💊',
         color: 'bg-green-500/10 border-green-500/25',

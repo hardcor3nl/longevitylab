@@ -5,9 +5,9 @@ import Image from 'next/image'
 import { ArrowRight, BookOpen, Scale, Shield, Brain, Activity } from 'lucide-react'
 
 const floatingCards = [
-  { icon: Shield,   label: 'NAD+ Level',     value: '+34%',   color: 'text-green-bright', bg: 'bg-green/10 border-green/20',         delay: 0   },
-  { icon: Activity, label: 'Recovery Score', value: '94/100', color: 'text-amber',         bg: 'bg-amber/10 border-amber/20',         delay: 0.5 },
-  { icon: Brain,    label: 'HRV Trend',      value: '↑ 12ms', color: 'text-blue-400',      bg: 'bg-blue-500/10 border-blue-500/20',  delay: 1   },
+  { icon: Shield,   label: 'NAD+ Level',     value: 'Evidence-led',   color: 'text-green-bright', bg: 'bg-green/10 border-green/20',         delay: 0   },
+  { icon: Activity, label: 'Recovery', value: 'Protocols', color: 'text-amber',         bg: 'bg-amber/10 border-amber/20',         delay: 0.5 },
+  { icon: Brain,    label: 'HRV Trend',      value: 'Explained', color: 'text-blue-400',      bg: 'bg-blue-500/10 border-blue-500/20',  delay: 1   },
 ]
 
 const stats = [

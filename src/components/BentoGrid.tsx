@@ -54,14 +54,6 @@ export function BentoGrid({ articles }: { articles: Article[] }) {
                     </div>
                   </div>
                   <div className="p-7 flex flex-col justify-center">
-                    {articles[0].frontmatter.score && (
-                      <div className="flex items-center gap-2 mb-3">
-                        <div className="h-1 w-16 bg-border rounded-full overflow-hidden">
-                          <div className="h-full bg-green-bright rounded-full" style={{ width: `${articles[0].frontmatter.score}%` }} />
-                        </div>
-                        <span className="font-mono text-xs text-green-bright">{articles[0].frontmatter.score}/100</span>
-                      </div>
-                    )}
                     <h2 className="font-display text-3xl text-ink group-hover:text-green transition-colors leading-tight mb-3">{articles[0].frontmatter.title}</h2>
                     <p className="text-muted leading-relaxed mb-4 line-clamp-3">{articles[0].frontmatter.description}</p>
                     <div className="flex items-center justify-between text-xs text-muted">
@@ -86,9 +78,6 @@ export function BentoGrid({ articles }: { articles: Article[] }) {
               <Link href={`/${article.category}/${article.slug}`} className="block flex-1 flex flex-col">
                 <div className="relative h-48 overflow-hidden bg-surface-2 shrink-0">
                   <Image src={article.frontmatter.image} alt={article.frontmatter.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-[1.03] transition-transform duration-500" />
-                  {article.frontmatter.score && (
-                    <div className="absolute top-3 right-3 bg-surface/90 backdrop-blur-sm border border-border text-ink font-mono text-xs font-medium px-2 py-1 rounded-full">{article.frontmatter.score}/100</div>
-                  )}
                   <div className="absolute top-3 left-3">
                     <span className="font-mono text-[10px] uppercase tracking-widest bg-ink/80 backdrop-blur-sm text-white px-2.5 py-1 rounded-full">{article.category}</span>
                   </div>
@@ -117,9 +106,6 @@ export function BentoGrid({ articles }: { articles: Article[] }) {
                   <div className="absolute top-2 left-2">
                     <span className="font-mono text-[10px] uppercase tracking-widest bg-ink/80 backdrop-blur-sm text-white px-2 py-0.5 rounded-full">{article.category}</span>
                   </div>
-                  {article.frontmatter.score && (
-                    <div className="absolute top-2 right-2 bg-surface/90 backdrop-blur-sm border border-border font-mono text-[10px] px-2 py-0.5 rounded-full">{article.frontmatter.score}/100</div>
-                  )}
                 </div>
                 <div className="p-4 flex flex-col flex-1">
                   <h2 className="font-display text-lg text-ink group-hover:text-green transition-colors leading-tight mb-1.5">{article.frontmatter.title}</h2>

@@ -11,16 +11,16 @@ export const metadata: Metadata = {
 
 const methodology = [
   { icon: BookOpen, title: 'Visible Sources', description: 'Research claims should link to the underlying publication or official source, with study design and limitations stated where relevant.' },
-  { icon: FlaskConical, title: 'Testing Status', description: 'Hands-on testing is claimed only when the page documents what was tested and how. Otherwise, the page is presented as research-based analysis.' },
+  { icon: FlaskConical, title: 'Testing Status', description: 'We do not run hands-on product tests. Pages are research-based analysis of published studies, manufacturer specifications and guidelines, and say so.' },
   { icon: Shield, title: 'Commercial Transparency', description: 'Affiliate relationships are disclosed. A commission does not establish product quality or clinical benefit.' },
   { icon: ClipboardCheck, title: 'Recorded Review', description: 'Medical review is displayed only when a named reviewer, review date, credentials, and permission are documented for that article.' },
 ]
 
 const scoringCriteria = [
-  { label: 'Evidence Quality', weight: '35%', description: 'Human RCT data, meta-analyses, effect sizes, and study quality' },
-  { label: 'Safety Profile', weight: '25%', description: 'Long-term safety data, contraindications, and adverse event reports' },
-  { label: 'Mechanistic Plausibility', weight: '20%', description: 'Does the biology make sense? Is the mechanism well-understood?' },
-  { label: 'Value & Accessibility', weight: '20%', description: 'Price per effective dose, quality control, and sourcing standards' },
+  { label: 'Evidence quality', description: 'Human RCT data, meta-analyses, effect sizes, and study quality' },
+  { label: 'Safety profile', description: 'Long-term safety data, contraindications, and adverse event reports' },
+  { label: 'Mechanistic plausibility', description: 'Does the biology make sense? Is the mechanism well-understood?' },
+  { label: 'Value and accessibility', description: 'Price per effective dose, quality control, and sourcing standards' },
 ]
 
 export default function AboutPage() {
@@ -60,12 +60,11 @@ export default function AboutPage() {
 
         {/* Scoring methodology */}
         <AnimatedSection className="mb-16" delay={0.15}>
-          <h2 className="font-display text-3xl text-ink mb-3">Our Scoring System</h2>
-          <p className="text-muted mb-6">When a page uses an overall score, it is an editorial comparison from 0–100—not a clinical measurement—and uses these four criteria:</p>
+          <h2 className="font-display text-3xl text-ink mb-3">How we weigh the evidence</h2>
+          <p className="text-muted mb-6">We do not publish numeric scores. When we compare products or interventions we consider these four things:</p>
           <div className="bg-surface border border-border rounded-2xl overflow-hidden">
             {scoringCriteria.map((c, i) => (
               <div key={c.label} className={`p-5 flex items-start gap-4 ${i < scoringCriteria.length - 1 ? 'border-b border-border' : ''}`}>
-                <div className="font-mono text-sm font-medium text-green-bright bg-green/10 border border-green/20 px-2.5 py-1 rounded-lg shrink-0 mt-0.5">{c.weight}</div>
                 <div>
                   <p className="font-semibold text-ink mb-0.5">{c.label}</p>
                   <p className="text-muted text-sm">{c.description}</p>
@@ -96,8 +95,7 @@ export default function AboutPage() {
               <div>
                 <h3 className="font-display text-xl text-ink mb-2">Affiliate Disclosure</h3>
                 <p className="text-muted leading-relaxed text-sm">
-                  <strong className="text-ink">As an Amazon Associate, Longevity Intel earns from qualifying purchases.</strong> We also
-                  participate in affiliate programmes with direct brand partners. When you click a link and make a purchase, we may earn
+                  <strong className="text-ink">As an Amazon Associate, Longevity Intel earns from qualifying purchases.</strong> Some links to other retailers may also be affiliate links; links to brand sites without a partnership are plain links. When you click an affiliate link and make a purchase, we may earn
                   a commission at no extra cost to you.
                   <br /><br />
                   This income funds site operations. Rankings are not sold, and sponsored content,

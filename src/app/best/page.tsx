@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   alternates: { canonical: url },
   openGraph: {
     title: 'Best Longevity Products & Protocols — Expert-Ranked Picks',
-    description: 'Top-ranked longevity picks, curated and scored by our research team.',
+    description: 'Longevity picks compiled from published studies and product specifications.',
     url,
     type: 'website',
     siteName: SITE.name,
@@ -42,7 +42,7 @@ export default function BestPage() {
             <h1 className="font-display text-4xl sm:text-5xl text-ink mb-3 leading-tight">The Best in Longevity</h1>
             <p className="text-muted text-lg max-w-2xl leading-relaxed">
               Top-ranked products, protocols, and tools for every longevity goal —
-              independently tested and scored by our research team.
+              researched from published studies and product specifications.
             </p>
           </AnimatedSection>
         </div>
@@ -64,11 +64,6 @@ export default function BestPage() {
                       <Star className="w-2.5 h-2.5 fill-white" /> Best Of
                     </span>
                   </div>
-                  {article.frontmatter.score && (
-                    <div className="absolute top-3 right-3 bg-surface/90 backdrop-blur-sm border border-border font-mono text-xs px-2 py-1 rounded-full text-ink">
-                      {article.frontmatter.score}/100
-                    </div>
-                  )}
                 </div>
                 <div className="p-5 flex flex-col flex-1">
                   <h2 className="font-display text-xl text-ink group-hover:text-amber transition-colors leading-tight mb-2">{article.frontmatter.title}</h2>

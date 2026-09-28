@@ -39,7 +39,7 @@ const NAV_GROUPS = [
     items: [
       { href: '/protocols', label: 'Expert Protocols', desc: 'Huberman, Sinclair, Bryan Johnson & more' },
       { href: '/compare', label: 'Comparisons', desc: 'Head-to-head product breakdowns' },
-      { href: '/database', label: 'Supplement Database', desc: 'Evidence scores for 100+ compounds' },
+      { href: '/database', label: 'Supplement Database', desc: 'Evidence levels for 100+ compounds' },
       { href: '/glossary', label: 'Glossary', desc: 'Longevity terms explained' },
       { href: '/authors', label: 'Our Experts', desc: 'Physicians and researchers behind the reviews' },
       { href: '/get-started', label: 'Beginner Path', desc: '5-step plan for new optimisers' },

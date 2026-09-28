@@ -54,7 +54,7 @@ const pillars = [
   },
   {
     title: 'Evidence DB',
-    desc: '68+ compounds scored by evidence, safety, and plausibility.',
+    desc: '68+ compounds rated by evidence level and safety.',
     icon: Database,
     href: '/database',
     cta: 'Open database',

@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { ProductCard } from '@/components/ProductCard'
 import { QuickVerdict } from '@/components/QuickVerdict'
-import { ScoreBar } from '@/components/ScoreBar'
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { Breadcrumb } from '@/components/Breadcrumb'
 import { TableOfContents } from '@/components/TableOfContents'
@@ -201,7 +200,7 @@ export default function ArticlePage({ params }: { params: { category: string; sl
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-14">
             {/* Main content */}
             <div>
-              {frontmatter.verdict && <QuickVerdict verdict={frontmatter.verdict} score={frontmatter.score} />}
+              {frontmatter.verdict && <QuickVerdict verdict={frontmatter.verdict} />}
 
               {frontmatter.products && frontmatter.products.length > 0 && (
                 <AnimatedSection delay={0.1}>
@@ -244,16 +243,6 @@ export default function ArticlePage({ params }: { params: { category: string; sl
             {/* Sidebar */}
             <aside className="hidden lg:block">
               <div className="sticky top-28 space-y-5">
-                {/* Evidence score */}
-                {frontmatter.score && (
-                  <AnimatedSection delay={0.2}>
-                    <div className="bg-surface border border-border rounded-2xl p-5">
-                      <h3 className="font-mono text-xs uppercase tracking-widest text-muted mb-4">Evidence Score</h3>
-                      <ScoreBar score={frontmatter.score} label="Overall" />
-                    </div>
-                  </AnimatedSection>
-                )}
-
                 {/* Verdict */}
                 {frontmatter.verdict && (
                   <AnimatedSection delay={0.3}>

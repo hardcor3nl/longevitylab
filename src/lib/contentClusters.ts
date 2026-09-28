@@ -90,7 +90,7 @@ export const contentClusters: ContentCluster[] = [
       {
         href: '/recovery/best-home-saunas-infrared-2024',
         label: 'Best Home Saunas 2026',
-        desc: 'Infrared vs traditional — tested and ranked',
+        desc: 'Infrared vs traditional — researched and compared',
         kind: 'best',
       },
       {
@@ -114,7 +114,7 @@ export const contentClusters: ContentCluster[] = [
       {
         href: '/recovery/sunlighten-mpulse-sauna-review',
         label: 'mPulse Database Entry',
-        desc: 'Evidence score and product specs',
+        desc: 'Evidence summary and product specs',
         kind: 'database',
       },
       {
@@ -267,7 +267,7 @@ export const contentClusters: ContentCluster[] = [
       {
         href: '/database',
         label: 'Research Database',
-        desc: '68+ compounds scored by evidence',
+        desc: '68+ compounds by evidence level',
         kind: 'database',
       },
       {
@@ -418,7 +418,7 @@ export const contentClusters: ContentCluster[] = [
       {
         href: '/recovery/mito-red-light-mitopro-1500-review',
         label: 'MitoPRO Database Card',
-        desc: 'Evidence score and specs',
+        desc: 'Evidence summary and specs',
         kind: 'database',
       },
       {
@@ -520,7 +520,7 @@ export const contentClusters: ContentCluster[] = [
       {
         href: '/database/creatine',
         label: 'Creatine Database Card',
-        desc: 'Evidence score and stack partners',
+        desc: 'Evidence summary and stack partners',
         kind: 'database',
       },
       {
@@ -646,7 +646,7 @@ export const contentClusters: ContentCluster[] = [
       {
         href: '/database/vitamin-d',
         label: 'D3+K2 Database Card',
-        desc: 'Evidence score and stack partners',
+        desc: 'Evidence summary and stack partners',
         kind: 'database',
       },
       {

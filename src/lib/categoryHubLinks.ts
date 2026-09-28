@@ -7,7 +7,7 @@ export const categoryHubLinks: Record<
     title: 'Related tools for supplements',
     links: [
       { href: '/best/complete-longevity-stack', label: 'Complete stack', desc: 'Tiered dosing framework' },
-      { href: '/database', label: 'Evidence database', desc: '68+ compounds scored' },
+      { href: '/database', label: 'Evidence database', desc: '68+ compounds by evidence level' },
       { href: '/compare/nmn-vs-nr', label: 'NMN vs NR', desc: 'NAD+ precursor matchup' },
       { href: '/best/best-longevity-supplements', label: 'Top 10 overall', desc: 'Evidence-ranked list' },
     ],

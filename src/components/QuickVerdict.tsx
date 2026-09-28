@@ -1,8 +1,8 @@
 'use client'
 import { motion } from 'framer-motion'
-import { CheckCircle2, Star } from 'lucide-react'
+import { CheckCircle2 } from 'lucide-react'
 
-export function QuickVerdict({ verdict, score }: { verdict: string; score?: number }) {
+export function QuickVerdict({ verdict }: { verdict: string }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 12 }}
@@ -21,12 +21,6 @@ export function QuickVerdict({ verdict, score }: { verdict: string; score?: numb
         <div className="flex-1">
           <div className="flex items-center justify-between mb-2">
             <h3 className="font-mono text-[10px] uppercase tracking-widest text-green-bright">Quick Verdict</h3>
-            {score && (
-              <div className="flex items-center gap-1.5 bg-green/10 border border-green/20 px-2.5 py-1 rounded-full">
-                <Star className="w-3 h-3 text-amber fill-amber" />
-                <span className="font-mono text-xs text-ink font-medium">{score}/100</span>
-              </div>
-            )}
           </div>
           <p className="text-ink leading-relaxed">{verdict}</p>
         </div>

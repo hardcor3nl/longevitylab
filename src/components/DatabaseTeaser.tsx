@@ -10,13 +10,6 @@ const evidenceBadge: Record<string, { color: string; bg: string; border: string 
   Weak:     { color: 'text-red-400',       bg: 'bg-red-500/10',  border: 'border-red-500/20'   },
 }
 
-const scoreGradient: Record<string, string> = {
-  Strong:   'from-green/80 to-green-bright',
-  Moderate: 'from-amber/70 to-amber',
-  Emerging: 'from-blue-500/60 to-blue-400',
-  Weak:     'from-red-500/60 to-red-400',
-}
-
 export function DatabaseTeaser() {
   const top = [...products].sort((a, b) => b.evidenceScore - a.evidenceScore).slice(0, 4)
 
@@ -47,7 +40,6 @@ export function DatabaseTeaser() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {top.map((p, i) => {
             const badge = evidenceBadge[p.evidenceLevel] ?? evidenceBadge.Weak
-            const grad  = scoreGradient[p.evidenceLevel]  ?? scoreGradient.Weak
             return (
               <AnimatedSection key={p.id} delay={i * 0.07}>
                 <Link href="/database"
@@ -65,7 +57,7 @@ export function DatabaseTeaser() {
                         <FlaskConical className="w-4 h-4 text-green-bright" />
                       </div>
                     </div>
-                    <span className="font-display text-2xl text-ink leading-none">{p.evidenceScore}</span>
+                    
                   </div>
 
                   {/* Name + badge */}
@@ -73,12 +65,6 @@ export function DatabaseTeaser() {
                   <span className={`inline-flex items-center font-mono text-[10px] uppercase tracking-wider border px-2 py-0.5 rounded-full mb-3 ${badge.color} ${badge.bg} ${badge.border}`}>
                     {p.evidenceLevel}
                   </span>
-
-                  {/* Score bar */}
-                  <div className="h-1.5 bg-border rounded-full overflow-hidden mb-3">
-                    <div className={`h-full bg-gradient-to-r ${grad} rounded-full transition-all duration-700`}
-                      style={{ width: `${p.evidenceScore}%` }} />
-                  </div>
 
                   <p className="text-sm text-muted line-clamp-2 leading-relaxed">{p.summary}</p>
 

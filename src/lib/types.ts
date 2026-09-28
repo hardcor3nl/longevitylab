@@ -19,7 +19,6 @@ export interface ArticleFrontmatter {
   image: string
   featured?: boolean
   verdict?: string
-  score?: number
   products?: Product[]
   affiliateLinks?: AffiliateLink[]
   tags?: string[]
@@ -28,7 +27,6 @@ export interface ArticleFrontmatter {
 export interface Product {
   name: string
   brand: string
-  rating: number // 0–100
   price: string
   badge?: 'Best Pick' | 'Runner-Up' | 'Budget'
   pros: string[]

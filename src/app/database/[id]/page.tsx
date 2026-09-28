@@ -2,7 +2,6 @@ import { supplements, getSupplementById } from '@/lib/supplements'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { AnimatedSection } from '@/components/AnimatedSection'
-import { ScoreBar } from '@/components/ScoreBar'
 import { ArrowUpRight, ArrowLeft, Clock, Layers, Zap } from 'lucide-react'
 import type { Metadata } from 'next'
 import { absoluteUrl, SITE } from '@/lib/site'
@@ -137,10 +136,8 @@ export default function SupplementPage({ params }: { params: { id: string } }) {
             {/* Sidebar */}
             <div className="space-y-5">
               <div className="bg-surface border border-border rounded-2xl p-5 space-y-5 sticky top-28">
-                <h3 className="font-mono text-xs uppercase tracking-widest text-muted">Evidence Scores</h3>
-                <ScoreBar score={s.evidenceScore} label="Evidence Quality" />
-                <ScoreBar score={s.safetyScore} label="Safety Profile" />
-                <ScoreBar score={s.popularityScore} label="Popularity" />
+                <h3 className="font-mono text-xs uppercase tracking-widest text-muted">Evidence level</h3>
+                <p className="text-sm text-ink">{s.evidenceLevel}</p>
                 <div className="pt-2 border-t border-border">
                   <p className="font-mono text-[10px] uppercase tracking-widest text-muted mb-2">Goals</p>
                   <div className="flex flex-wrap gap-1.5">

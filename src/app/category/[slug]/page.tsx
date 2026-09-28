@@ -9,7 +9,7 @@ import { SITE, absoluteUrl } from '@/lib/site'
 import { categoryHubLinks } from '@/lib/categoryHubLinks'
 
 const categoryMeta: Record<string, { title: string; description: string; icon: React.ElementType; color: string }> = {
-  supplements: { title: 'Supplement Reviews', description: 'Evidence-based reviews of longevity supplements, tested and ranked by our research team.', icon: FlaskConical, color: 'text-green-bright' },
+  supplements: { title: 'Supplement Reviews', description: 'Evidence-based reviews of longevity supplements, researched from published studies.', icon: FlaskConical, color: 'text-green-bright' },
   wearables: { title: 'Wearable Tech Reviews', description: 'In-depth reviews of health tracking wearables, CGMs, and diagnostic devices.', icon: Watch, color: 'text-blue-400' },
   diagnostics: { title: 'Diagnostic Tests', description: 'Reviews of at-home and lab diagnostic panels for longevity optimisation.', icon: TestTube2, color: 'text-purple-400' },
   protocols: { title: 'Longevity Protocols', description: 'Science-backed protocols for sleep, exercise, nutrition, and stress management.', icon: BookOpen, color: 'text-amber' },
@@ -86,9 +86,6 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                       <div className="absolute top-3 left-3 flex gap-2">
                         <span className="font-mono text-[10px] uppercase tracking-widest bg-green/90 text-white px-2.5 py-1 rounded-full">Featured</span>
                       </div>
-                      {featured.frontmatter.score && (
-                        <div className="absolute top-3 right-3 bg-surface/90 backdrop-blur-sm border border-border font-mono text-xs px-2 py-1 rounded-full">{featured.frontmatter.score}/100</div>
-                      )}
                     </div>
                     <div className="p-7 flex flex-col justify-center">
                       <h2 className="font-display text-3xl text-ink group-hover:text-green transition-colors leading-tight mb-3">{featured.frontmatter.title}</h2>
@@ -115,9 +112,6 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                       <Link href={`/${article.category}/${article.slug}`} className="flex flex-col flex-1">
                         <div className="relative h-48 overflow-hidden bg-surface-2">
                           <Image src={article.frontmatter.image} alt={article.frontmatter.title} fill className="object-cover group-hover:scale-[1.03] transition-transform duration-500" sizes="(max-width: 640px) 100vw, 33vw" />
-                          {article.frontmatter.score && (
-                            <div className="absolute top-3 right-3 bg-surface/90 backdrop-blur-sm border border-border font-mono text-xs px-2 py-1 rounded-full">{article.frontmatter.score}/100</div>
-                          )}
                         </div>
                         <div className="p-5 flex flex-col flex-1">
                           <h2 className="font-display text-xl text-ink group-hover:text-green transition-colors leading-tight mb-2 flex-1">{article.frontmatter.title}</h2>

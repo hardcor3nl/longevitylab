@@ -4,6 +4,7 @@ import { Product } from '@/lib/types'
 import { Check, X, ExternalLink, Award } from 'lucide-react'
 import Link from 'next/link'
 import { useRef } from 'react'
+import { isAffiliateDestination } from '@/lib/affiliateLinks'
 
 /* Amazon Associates policy requires a date/time-stamped "subject to change"
    notice anywhere price/availability is shown. Bump this when product.price
@@ -19,7 +20,8 @@ const badgeStyles: Record<string, string> = {
 export function ProductCard({ product, index = 0 }: { product: Product; index?: number }) {
   const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once: true, margin: '-60px' })
-  const scoreColor = product.rating >= 85 ? 'var(--green-bright)' : product.rating >= 70 ? 'var(--amber)' : '#e05a3a'
+  const slug = product.affiliateUrl.startsWith('/go/') ? product.affiliateUrl.slice(4) : ''
+  const monetised = slug ? isAffiliateDestination(slug) : false
 
   return (
     <motion.div
@@ -46,39 +48,6 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
               Price accurate as of {PRICE_LAST_VERIFIED} — see retailer for current price &amp; availability.
             </p>
           </div>
-          {/* Circular score */}
-          <div className="relative shrink-0 w-14 h-14">
-            <svg className="w-14 h-14 -rotate-90" viewBox="0 0 56 56">
-              <circle cx="28" cy="28" r="24" fill="none" stroke="var(--border)" strokeWidth="4" />
-              <motion.circle
-                cx="28" cy="28" r="24"
-                fill="none"
-                stroke={scoreColor}
-                strokeWidth="4"
-                strokeLinecap="round"
-                strokeDasharray={`${2 * Math.PI * 24}`}
-                initial={{ strokeDashoffset: 2 * Math.PI * 24 }}
-                animate={inView ? { strokeDashoffset: 2 * Math.PI * 24 * (1 - product.rating / 100) } : {}}
-                transition={{ duration: 1.2, delay: index * 0.1 + 0.3, ease: [0.16, 1, 0.3, 1] }}
-              />
-            </svg>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-mono text-xs font-medium text-ink">{product.rating}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Score bar */}
-      <div className="px-5 pb-4">
-        <div className="h-1 bg-border rounded-full overflow-hidden">
-          <motion.div
-            className="h-full rounded-full"
-            style={{ backgroundColor: scoreColor }}
-            initial={{ width: 0 }}
-            animate={inView ? { width: `${product.rating}%` } : {}}
-            transition={{ duration: 1, delay: index * 0.1 + 0.2, ease: [0.16, 1, 0.3, 1] }}
-          />
         </div>
       </div>
 
@@ -112,15 +81,17 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
       <div className="px-5 pb-5">
         <Link
           href={product.affiliateUrl}
-          rel="nofollow sponsored noopener"
+          rel={monetised ? 'nofollow sponsored noopener' : 'noopener'}
           className="group flex items-center justify-center gap-2 w-full py-3 bg-green text-white rounded-xl font-medium text-sm hover:bg-green-bright transition-colors cursor-pointer"
         >
-          View Best Price
+          View product
           <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
         </Link>
-        <p className="text-[10px] text-muted text-center mt-2 font-mono">
-          Affiliate link · we may earn a commission
-        </p>
+        {monetised && (
+          <p className="text-[10px] text-muted text-center mt-2 font-mono">
+            Affiliate link · we may earn a commission
+          </p>
+        )}
       </div>
     </motion.div>
   )

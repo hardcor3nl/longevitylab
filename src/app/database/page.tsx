@@ -33,15 +33,9 @@ function ProductCard({ p, index }: { p: Product; index: number }) {
             <p className="text-muted text-xs mt-0.5 italic line-clamp-1">{p.tagline}</p>
           </div>
           <div className="text-right shrink-0">
-            <div className="font-display text-2xl text-ink leading-none">{p.evidenceScore}</div>
-            <div className="font-mono text-[9px] text-muted">/100</div>
+            <div className="font-mono text-[10px] uppercase tracking-wider text-muted">{p.evidenceLevel}</div>
+            <div className="font-mono text-[9px] text-muted">evidence</div>
           </div>
-        </div>
-
-        {/* Evidence bar */}
-        <div className="h-1 bg-border rounded-full mb-3 overflow-hidden">
-          <div className="h-full rounded-full transition-all duration-700"
-            style={{ width: `${p.evidenceScore}%`, backgroundColor: p.evidenceScore >= 85 ? 'var(--green-bright)' : p.evidenceScore >= 70 ? 'var(--amber)' : '#e05a3a' }} />
         </div>
 
         <p className="text-sm text-muted line-clamp-2 mb-3 leading-relaxed">{p.summary}</p>

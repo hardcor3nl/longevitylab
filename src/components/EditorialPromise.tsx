@@ -6,7 +6,7 @@ const promises = [
   {
     icon: Shield,
     title: 'No brand funding of scores',
-    body: 'Rankings are not sold. Affiliate commissions never change evidence scores or pick order.',
+    body: 'Rankings are not sold. Affiliate commissions never change how we describe the evidence or the order of picks.',
   },
   {
     icon: Microscope,

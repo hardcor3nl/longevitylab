@@ -227,14 +227,13 @@ export default function SleepProtocol() {
 
                 <div className="grid gap-4">
                   {[
-                    { device: 'WHOOP Band 4.0', go: 'whoop-4', metrics: 'Sleep need, REM, deep sleep, HRV', score: 93 },
-                    { device: 'Oura Ring Gen 3', go: 'oura-gen3', metrics: 'Sleep phases, temperature deviation, resting HR', score: 91 },
-                    { device: 'Garmin Fenix 7/Epix', go: 'garmin-fenix7', metrics: 'Sleep stages, body battery, sleep score', score: 88 },
+                    { device: 'WHOOP Band 4.0', go: 'whoop-4', metrics: 'Sleep need, REM, deep sleep, HRV' },
+                    { device: 'Oura Ring Gen 3', go: 'oura-gen3', metrics: 'Sleep phases, temperature deviation, resting HR' },
+                    { device: 'Garmin Fenix 7/Epix', go: 'garmin-fenix7', metrics: 'Sleep stages, body battery, sleep score' },
                   ].map((item, i) => (
                     <div key={i} className="bg-surface border border-border rounded-lg p-4">
                       <div className="flex items-start justify-between gap-4 mb-2">
                         <h3 className="font-display text-ink">{item.device}</h3>
-                        <span className="font-mono text-xs bg-green/10 border border-green/25 text-green-bright px-2 py-1 rounded">{item.score}/100</span>
                       </div>
                       <p className="text-muted text-sm mb-3">{item.metrics}</p>
                       <Link href={`/go/${item.go}`} className="text-xs font-medium text-green-bright hover:text-green transition-colors cursor-pointer inline-flex items-center gap-1">
