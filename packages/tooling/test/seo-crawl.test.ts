@@ -28,7 +28,7 @@ it("gone helpers", () => {
   expect(parseGone("# c\n/a/\n/a/ # dup\n\n/b/")).toEqual(["/a/", "/b/"]);
   expect(isGone("/a", ["/a/"])).toBe(true); expect(isGone("/x/", ["/a/"])).toBe(false);
   expect(goneResponse().status).toBe(410);
-  expect(routesJson(["/a/"]).include).toEqual(["/go/*", "/a/"]);
+  expect(routesJson(["/a/"]).include).toEqual(["/go/*", "/a", "/a/"]);
   expect(() => routesJson(Array.from({ length: 101 }, (_, i) => `/${i}/`))).toThrow();
 });
 it("passes a clean site", () => {

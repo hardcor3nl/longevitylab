@@ -5,6 +5,7 @@
  * Body text is the old strings. Mechanical transforms only: link normalisation, MDX escaping, removal of
  * numeric-score sentences, word substitutions for banned phrases (each counted and logged).
  */
+import { withTwins } from "../redirect-twins.ts";
 import { execFileSync } from "node:child_process";
 import { copyFileSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
@@ -273,7 +274,7 @@ async function main() {
 
   const head = ["url", "decision", "target_query", "reason", "redirect_target", "date", "status", "word_count", "needs_sources", "kind", "legacy_last_updated", "published", "target_query_source"];
   writeFileSync(join(root, "content-ledger.csv"), [head, ...ledger].map((r) => r.map(csvCell).join(",")).join("\n") + "\n");
-  copyFileSync(join(repo, "public/_redirects"), join(root, "public/_redirects"));
+  writeFileSync(join(root, "public/_redirects"), withTwins(readFileSync(join(repo, "public/_redirects"), "utf8")));
   writeFileSync(join(root, "thin-list.txt"), thin.join("\n") + "\n");
   console.log(JSON.stringify({ ...stats, routed: routed.length, unrouted: unrouted.length, ledger: ledger.length, subs }, null, 1));
 }

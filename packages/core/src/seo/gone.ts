@@ -21,9 +21,16 @@ export function goneResponse(): Response {
   );
 }
 
+/** `_routes.json` and `_redirects` match literally, so a gone path must be routed in both slash forms (/x and /x/). Files and wildcards stay as they are. */
+export const routeForms = (g: string): string[] => {
+  if (g.includes("*") || g === "/" || /\.[a-z0-9]+$/i.test(g.split("/").pop() ?? "")) return [g];
+  const bare = g.replace(/\/+$/, "");
+  return [bare, bare + "/"];
+};
+
 /** `_routes.json` content: Functions run only for these routes. Cloudflare allows at most 100 include/exclude rules. */
 export function routesJson(gone: string[], extraInclude: string[] = ["/go/*"]) {
-  const include = [...extraInclude, ...gone];
-  if (include.length > 100) throw new Error(`_routes.json limit is 100 rules, got ${include.length}: group gone paths with wildcards`);
+  const include = [...new Set([...extraInclude, ...gone.flatMap(routeForms)])];
+  if (include.length > 100) throw new Error(`_routes.json limit is 100 rules, got ${include.length}: group gone paths with wildcards (each path takes two rules, one per slash form)`);
   return { version: 1, include, exclude: [] as string[] };
 }

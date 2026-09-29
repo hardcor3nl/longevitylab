@@ -1,7 +1,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { type Check, type Page, type SiteConfig, check, hubPairs, isRealPage } from "./dist.ts";
-import { parseGone } from "../../../core/src/seo/gone.ts";
+import { parseGone, routeForms } from "../../../core/src/seo/gone.ts";
 import { normalizeHref } from "./linkgraph.ts";
 import { htmlToText } from "../util.ts";
 
@@ -53,7 +53,7 @@ export function checkCrawl(dist: string, siteDir: string, cfg: SiteConfig, pages
   if (JSON.stringify(gone) !== JSON.stringify(generated)) issues.push("functions/gone-paths.json out of sync with gone.txt (run pnpm seo:gone <site>)");
   const routes = read(join(siteDir, "public", "_routes.json"));
   if (!routes) issues.push("public/_routes.json missing (run pnpm seo:gone <site>)");
-  else { const inc: string[] = JSON.parse(routes).include ?? []; for (const g of gone) if (!inc.includes(g)) issues.push(`_routes.json does not route ${g} to the Function`); }
+  else { const inc: string[] = JSON.parse(routes).include ?? []; for (const g of gone) for (const form of routeForms(g)) if (!inc.includes(form)) issues.push(`_routes.json does not route ${form} to the Function`); }
   const sitemapText = ["sitemap-index.xml", ...real.length ? [] : []].map((f) => read(join(dist, f))).join("");
   for (const g of gone) {
     if (built.has(g)) issues.push(`gone path is still built: ${g}`);

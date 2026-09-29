@@ -4,6 +4,7 @@
  * Emits MDX (guides, reviews), data JSON, and content-ledger.csv. Never retypes content:
  * body text is the old strings, with mechanical link normalisation only.
  */
+import { withTwins } from "../redirect-twins.ts";
 import { execFileSync } from "node:child_process";
 import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
@@ -216,7 +217,7 @@ async function main() {
   const head = ["url", "decision", "target_query", "reason", "redirect_target", "date", "status", "word_count", "needs_sources", "kind", "legacy_last_updated", "published", "target_query_source"];
   writeFileSync(join(root, "content-ledger.csv"), [head, ...ledger].map((r) => r.map(csvCell).join(",")).join("\n") + "\n");
   const redirectLines = ledger.filter((r) => r[1] !== "keep" && r[4]).map((r) => `${r[0]} ${r[4]} 301`).sort();
-  writeFileSync(join(root, "public/_redirects"), `# generated from content-ledger.csv by packages/tooling/src/migrate/vibe.ts; do not edit\n${redirectLines.join("\n")}\n`);
+  writeFileSync(join(root, "public/_redirects"), withTwins(`# generated from content-ledger.csv by packages/tooling/src/migrate/vibe.ts; do not edit\n# every source is emitted in both slash forms: Pages matches sources literally\n${redirectLines.join("\n")}\n`));
   const by = (k: string) => ledger.filter((r) => r[1] === k).length;
   console.log(JSON.stringify({ ...stats, ledger: ledger.length, keep: by("keep"), merge: by("merge"), cut: by("cut") }));
 }

@@ -5,6 +5,7 @@
  * Body text is the old strings; only mechanical normalisation is applied (link form, /go/ rewrite, year stripped from titles,
  * over-long titles and descriptions shortened at a word boundary). Nothing is retyped by hand.
  */
+import { withTwins } from "../redirect-twins.ts";
 import { execFileSync } from "node:child_process";
 import { mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
@@ -342,7 +343,7 @@ async function main() {
   const head = ["url", "decision", "target_query", "reason", "redirect_target", "date", "status", "word_count", "needs_sources", "kind", "legacy_last_updated", "published", "target_query_source"];
   writeFileSync(join(root, "content-ledger.csv"), [head, ...ledger].map((r) => r.map(csvCell).join(",")).join("\n") + "\n");
   const redirectLines = ledger.filter((r) => r[1] !== "keep" && r[4]).map((r) => `${r[0]} ${r[4]} 301`).sort();
-  writeFileSync(join(root, "public/_redirects"), `# generated from content-ledger.csv by packages/tooling/src/migrate/storecartel.ts; do not edit\n${redirectLines.join("\n")}\n# old flat sitemap URL (submitted in Search Console)\n/sitemap.xml /sitemap-index.xml 301\n`);
+  writeFileSync(join(root, "public/_redirects"), withTwins(`# generated from content-ledger.csv by packages/tooling/src/migrate/storecartel.ts; do not edit\n${redirectLines.join("\n")}\n# old flat sitemap URL (submitted in Search Console)\n/sitemap.xml /sitemap-index.xml 301\n`));
   const by = (k: string) => ledger.filter((r) => r[1] === k).length;
   console.log(JSON.stringify({ ...stats, droppedShopifyCtas, ledger: ledger.length, keep: by("keep"), merge: by("merge"), cut: by("cut") }));
 }

@@ -7,6 +7,7 @@ import { checkFeeds } from "./feeds-check.ts";
 import { checkCrawl } from "./crawl-check.ts";
 import { checkLinkGraph } from "./linkgraph.ts";
 import { checkIndexNow } from "./indexnow.ts";
+import { checkRedirectsBothForms } from "./redirects-check.ts";
 
 export interface RunOptions { siteDir: string; distDir?: string; only?: string[] }
 export interface Scorecard { site: string; checks: Check[]; failed: number; warned: number }
@@ -29,6 +30,7 @@ export function runSeoChecks(o: RunOptions): Scorecard {
     ["linkgraph", () => checkLinkGraph(pages, cfg)],
     ["feeds", () => checkFeeds(dist, cfg, pages)],
     ["crawl", () => checkCrawl(dist, o.siteDir, cfg, pages)],
+    ["redirects", () => checkRedirectsBothForms(dist, o.siteDir, cfg, pages)],
     ["indexnow", () => checkIndexNow(dist, cfg)],
   ];
   const checks = all.filter(([id]) => !o.only || o.only.includes(id)).map(([, f]) => f());

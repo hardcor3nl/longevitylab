@@ -11,7 +11,7 @@
     "check:content": "node --experimental-strip-types ../../packages/schema/src/cli.ts --site ./site.config.json",
     "cf:dev": "wrangler pages dev dist --d1=DB",
     "build:draft": "astro build",
-    "seo:gate": "node --experimental-strip-types ../../packages/tooling/src/seo/cli.ts . --only crawl,linkgraph,duplicates,head,sitemaps,structured-data,og"
+    "seo:gate": "node --experimental-strip-types ../../packages/tooling/src/seo/cli.ts . --only redirects,crawl,linkgraph,duplicates,head,sitemaps,structured-data,og"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.3.1",

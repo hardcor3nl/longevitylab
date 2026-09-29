@@ -6,6 +6,7 @@
  *
  *   node --experimental-strip-types src/migrate/gta.ts
  */
+import { withTwins } from "../redirect-twins.ts";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -362,6 +363,6 @@ console.log({ nNews, nPages, routes: manifest.length });
     rows.push([key + "/", "keep", "", q("existing 301 preserved verbatim"), to, "2026-09-29", "proposed", 0, false, "", "redirect"].join(","));
   }
   fs.writeFileSync(path.join(site, "content-ledger.csv"), rows.join("\n") + "\n");
-  fs.copyFileSync(path.join(site, "migrate/old_redirects.txt"), path.join(site, "public/_redirects"));
+  fs.writeFileSync(path.join(site, "public/_redirects"), withTwins(fs.readFileSync(path.join(site, "migrate/old_redirects.txt"), "utf8")));
   console.log("ledger rows", rows.length - 1);
 }

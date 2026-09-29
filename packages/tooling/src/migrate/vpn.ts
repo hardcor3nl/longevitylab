@@ -4,6 +4,7 @@
  * Emits blog + review MDX, src/data/{register,gaps,affiliates}.json, content-ledger.csv, public/_redirects.
  * Blog body text is the old strings (mechanical link normalisation only). Reviews are built on the audit register.
  */
+import { withTwins } from "../redirect-twins.ts";
 import { execFileSync } from "node:child_process";
 import { build } from "esbuild";
 import { copyFileSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
@@ -179,7 +180,7 @@ async function main() {
 
   // ---- redirects: keep the 30 live 301s verbatim
   const oldRedirects = readFileSync(join(repo, "public/_redirects"), "utf8").split(/\r?\n/).filter((l) => /^\/.*\s301$/.test(l));
-  writeFileSync(join(site, "public/_redirects"), "# 301s carried over from the old site (kept verbatim; each slug in both forms)\n" + oldRedirects.join("\n") + "\n");
+  writeFileSync(join(site, "public/_redirects"), withTwins("# old flat sitemap URL (submitted in Search Console)\n/sitemap.xml /sitemap-index.xml 301\n\n# 301s carried over from the old site (each source in both slash forms)\n" + oldRedirects.join("\n") + "\n"));
   for (const l of oldRedirects.filter((x) => x.split(/\s+/)[0].endsWith("/"))) {
     const [from, to] = l.split(/\s+/);
     ledger.push([from, "redirect", "", "301 carried over from the old site", to, TODAY, "approved", "", "", "redirect", "", "", ""]);
