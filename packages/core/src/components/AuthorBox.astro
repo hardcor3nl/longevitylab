@@ -1,0 +1,8 @@
+---
+interface Props { name: string; aboutHref: string; blurb?: string }
+const { name, aboutHref, blurb = "An independent research publication. Pages are compiled from official docs and public sources." } = Astro.props;
+---
+<aside class="author-box" aria-label="About the publisher">
+  <strong>{name}</strong>
+  <p>{blurb} <a href={aboutHref}>How we research</a></p>
+</aside>

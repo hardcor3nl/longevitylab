@@ -1,0 +1,16 @@
+---
+import Base from "../layouts/Base.astro";
+import { ArrowRight } from "@lucide/astro";
+---
+<Base title="Page not found | Longevity Intel" description="That page does not exist. Try the evidence database or the beginner path." path="/404" noindex>
+  <section class="pt-40 pb-32 max-w-3xl mx-auto px-4 text-center">
+    <p class="font-mono text-xs uppercase tracking-[.14em] text-green-bright mb-4">404</p>
+    <h1 class="font-display text-5xl md:text-6xl text-ink mb-5">That page is not in the record.</h1>
+    <p class="text-muted text-lg mb-10">It may have moved. Search from the top bar, or start from one of these.</p>
+    <div class="flex flex-wrap gap-3 justify-center">
+      <a href="/get-started" class="inline-flex items-center gap-2 px-6 py-3 bg-green text-white rounded-xl font-semibold text-sm hover:bg-green-bright transition-colors">Build My Plan<ArrowRight class="w-4 h-4" aria-hidden="true" /></a>
+      <a href="/database" class="inline-flex items-center gap-2 px-6 py-3 bg-surface border border-border rounded-xl font-semibold text-sm hover:border-green/40 transition-colors">Evidence database</a>
+      <a href="/best" class="inline-flex items-center gap-2 px-6 py-3 bg-surface border border-border rounded-xl font-semibold text-sm hover:border-green/40 transition-colors">Best picks</a>
+    </div>
+  </section>
+</Base>

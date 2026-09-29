@@ -1,0 +1,40 @@
+{
+  "name": "@portfolio/tooling",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "parity": "node --experimental-strip-types src/parity.ts",
+    "rendered-text": "node --experimental-strip-types src/rendered-text.ts",
+    "redirects": "node --experimental-strip-types src/redirects.ts",
+    "migrate:vibe": "node --experimental-strip-types src/migrate/vibe.ts",
+    "migrate:smartbike": "node --experimental-strip-types src/migrate/smartbike.ts",
+    "migrate:vpn": "node --experimental-strip-types src/migrate/vpn.ts",
+    "migrate:aihunter": "node --experimental-strip-types src/migrate/aihunter.ts",
+    "migrate:storecartel": "node --experimental-strip-types src/migrate/storecartel.ts",
+    "migrate:longevity": "node --experimental-strip-types src/migrate/longevity.ts"
+  },
+  "dependencies": {
+    "@portfolio/schema": "workspace:*",
+    "yaml": "^2.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/turndown": "^5.0.6",
+    "axe-core": "^4.13.0",
+    "cheerio": "^1.2.0",
+    "esbuild": "^0.28.2",
+    "lighthouse": "^13.5.0",
+    "playwright": "~1.60.0",
+    "sharp": "^0.35.5",
+    "tslib": "^2.8.1",
+    "turndown": "^7.2.4",
+    "turndown-plugin-gfm": "^1.0.2",
+    "typescript": "^5.9.0",
+    "vitest": "^5.0.2"
+  }
+}

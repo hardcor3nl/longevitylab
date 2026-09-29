@@ -1,0 +1,23 @@
+---
+import { ArrowRight, CheckCircle2, Lock } from "@lucide/astro";
+const points = ["Every correction is logged on the page it changes", "Study links and dates are shown, not hidden", "No brand pays for a grade or a ranking"];
+---
+<section class="relative overflow-hidden py-24 px-4" style="background:linear-gradient(145deg,#061409 0%,#0e2016 40%,#07160b 100%)" aria-labelledby="corr-h">
+  <div class="absolute inset-0 opacity-[.14]" style="background-image:radial-gradient(circle,#2d9e58 1px,transparent 1px);background-size:30px 30px" aria-hidden="true"></div>
+  <div class="absolute top-12 left-[10%] w-48 h-48 rounded-full blur-3xl pointer-events-none drift" style="background:rgba(45,158,88,.10)" aria-hidden="true"></div>
+  <div class="absolute bottom-12 right-[8%] w-64 h-64 rounded-full blur-3xl pointer-events-none drift" style="background:rgba(193,125,42,.07);--d:2s" aria-hidden="true"></div>
+  <div class="relative max-w-5xl mx-auto grid lg:grid-cols-[1fr_400px] gap-12 items-center">
+    <div class="reveal">
+      <div class="inline-flex items-center gap-2 border border-white/15 bg-white/5 text-[#7fd9a0] px-3 py-1.5 rounded-full font-mono text-xs uppercase tracking-widest mb-6"><span class="w-1.5 h-1.5 rounded-full bg-[#4dc478] animate-pulse"></span>Corrections welcome</div>
+      <h2 id="corr-h" class="font-display text-white leading-tight mb-4" style="font-size:clamp(2rem,4vw,3rem);letter-spacing:-.02em">Read something<br /><span style="background:linear-gradient(135deg,#4dc478,#2d9e58);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">that looks wrong?</span></h2>
+      <p class="text-[#9fc9a6] text-lg leading-relaxed mb-8 max-w-md">Longevity research moves fast. If you spot an outdated claim or a newer study, tell us and we will check it against the source.</p>
+      <ul class="space-y-2.5">{points.map((p) => <li class="flex items-center gap-2.5 text-sm text-white/75"><span class="w-4 h-4 rounded-full bg-green/25 border border-green/40 flex items-center justify-center shrink-0"><CheckCircle2 class="w-2.5 h-2.5 text-[#4dc478]" aria-hidden="true" /></span>{p}</li>)}</ul>
+    </div>
+    <div class="reveal bg-white/[.05] border border-white/10 backdrop-blur-md rounded-2xl p-7" style="box-shadow:0 24px 48px rgba(0,0,0,.3)">
+      <h3 class="font-display text-white text-2xl mb-1">Send a correction</h3>
+      <p class="text-white/70 text-sm mb-6">Include the page and, if you can, a link to the study.</p>
+      <a href="/contact" class="group w-full flex items-center justify-center gap-2.5 px-5 py-3 bg-[#4dc478] text-[#03150a] rounded-xl font-semibold text-sm hover:bg-[#7fd9a0] transition-colors" style="box-shadow:0 4px 16px rgba(45,158,88,.3)">Contact the editors<ArrowRight class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" aria-hidden="true" /></a>
+      <p class="mt-5 flex items-center gap-2 text-xs text-white/60"><Lock class="w-3 h-3 shrink-0" aria-hidden="true" />We only use your message to reply. See the privacy policy.</p>
+    </div>
+  </div>
+</section>

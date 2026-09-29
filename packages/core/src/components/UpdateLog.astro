@@ -1,0 +1,12 @@
+---
+import { formatDate } from "../util.ts";
+interface Props { entries: { date: string; change: string }[] }
+const { entries } = Astro.props;
+const sorted = [...entries].sort((a, b) => b.date.localeCompare(a.date));
+---
+{sorted.length > 0 && (
+  <section class="update-log" aria-labelledby="updates-h">
+    <h2 id="updates-h">Update log</h2>
+    <ol>{sorted.map((e) => <li><time datetime={e.date}>{formatDate(e.date)}</time> {e.change}</li>)}</ol>
+  </section>
+)}

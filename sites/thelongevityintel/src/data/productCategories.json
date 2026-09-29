@@ -1,0 +1,69 @@
+{
+  "allCategories": [
+    "Red Light Therapy",
+    "Infrared Saunas",
+    "Cold Plunge & Ice Baths",
+    "Fitness Trackers & HRV",
+    "Continuous Glucose Monitors",
+    "Massage & Recovery",
+    "NAD+ Precursors",
+    "Antioxidants & Senolytics",
+    "Adaptogens",
+    "Omega Fatty Acids",
+    "Vitamins & Minerals",
+    "Mitochondrial Support",
+    "Blood & Diagnostics",
+    "Sleep Aids",
+    "Nootropics & Cognitive",
+    "Gut & Microbiome",
+    "Traditional Saunas",
+    "Hyperbaric Oxygen Therapy",
+    "Sports Performance"
+  ],
+  "categoryGroups": [
+    {
+      "label": "Recovery Devices",
+      "categories": [
+        "Red Light Therapy",
+        "Infrared Saunas",
+        "Traditional Saunas",
+        "Cold Plunge & Ice Baths",
+        "Massage & Recovery",
+        "Hyperbaric Oxygen Therapy"
+      ]
+    },
+    {
+      "label": "Wearables & Tracking",
+      "categories": [
+        "Fitness Trackers & HRV",
+        "Continuous Glucose Monitors",
+        "Blood & Diagnostics"
+      ]
+    },
+    {
+      "label": "Supplements",
+      "categories": [
+        "NAD+ Precursors",
+        "Antioxidants & Senolytics",
+        "Adaptogens",
+        "Omega Fatty Acids",
+        "Vitamins & Minerals",
+        "Mitochondrial Support",
+        "Sports Performance"
+      ]
+    },
+    {
+      "label": "Sleep & Cognitive",
+      "categories": [
+        "Sleep Aids",
+        "Nootropics & Cognitive"
+      ]
+    },
+    {
+      "label": "Gut Health",
+      "categories": [
+        "Gut & Microbiome"
+      ]
+    }
+  ]
+}

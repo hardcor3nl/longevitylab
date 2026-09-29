@@ -1,0 +1,8 @@
+---
+import { itemList, jsonLdScript } from "../jsonld.ts";
+/** Emit ItemList JSON-LD for a hub. Render only for items that are also visible as links on the page. */
+interface Props { items: { name: string; href: string }[]; name?: string }
+const { items, name } = Astro.props;
+const ld = Astro.site && items.length ? itemList(items.map((i) => ({ name: i.name, url: new URL(i.href, Astro.site).toString() })), name) : null;
+---
+{ld && <script type="application/ld+json" set:html={jsonLdScript(ld)} />}

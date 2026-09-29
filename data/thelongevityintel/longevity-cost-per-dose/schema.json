@@ -1,0 +1,167 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "longevity-cost-per-dose record (one per compound)",
+ "type": "array",
+ "items": {
+  "type": "object",
+  "required": [
+   "compound",
+   "studyDoses",
+   "products",
+   "checked"
+  ],
+  "properties": {
+   "compound": {
+    "type": "string"
+   },
+   "studyDoses": {
+    "type": "array",
+    "minItems": 1,
+    "maxItems": 3,
+    "items": {
+     "type": "object",
+     "required": [
+      "study",
+      "year",
+      "doseText",
+      "doseAmount",
+      "doseUnit",
+      "sourceUrl"
+     ],
+     "properties": {
+      "study": {
+       "type": "string"
+      },
+      "year": {
+       "type": "integer"
+      },
+      "design": {
+       "type": "string"
+      },
+      "doseText": {
+       "type": "string",
+       "description": "Phrase 'dose used in <study>'; never a recommendation"
+      },
+      "doseAmount": {
+       "type": [
+        "number",
+        "null"
+       ]
+      },
+      "doseUnit": {
+       "type": "string"
+      },
+      "sourceUrl": {
+       "type": "string",
+       "format": "uri",
+       "description": "PubMed or DOI link"
+      },
+      "doi": {
+       "type": [
+        "string",
+        "null"
+       ]
+      }
+     }
+    }
+   },
+   "products": {
+    "type": "array",
+    "minItems": 1,
+    "maxItems": 5,
+    "items": {
+     "type": "object",
+     "required": [
+      "brand",
+      "product",
+      "priceSourceUrl"
+     ],
+     "properties": {
+      "brand": {
+       "type": "string"
+      },
+      "product": {
+       "type": "string"
+      },
+      "price": {
+       "type": [
+        "number",
+        "null"
+       ]
+      },
+      "currency": {
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "servings": {
+       "type": [
+        "integer",
+        "null"
+       ]
+      },
+      "activePerServing": {
+       "type": [
+        "number",
+        "null"
+       ]
+      },
+      "activeUnit": {
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "thirdPartyTesting": {
+       "type": [
+        "string",
+        "null"
+       ],
+       "description": "NSF/Informed Sport/USP/other, or 'none stated'"
+      },
+      "thirdPartyTestingSource": {
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "priceSourceUrl": {
+       "type": "string",
+       "format": "uri"
+      },
+      "costPerStudyDosePerMonth": {
+       "type": [
+        "number",
+        "null"
+       ],
+       "description": "derived; see METHOD.md"
+      },
+      "servingUnit": {
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "note": {
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "costBasisDose": {
+       "type": [
+        "string",
+        "null"
+       ]
+      }
+     }
+    }
+   },
+   "checked": {
+    "type": "string",
+    "format": "date"
+   }
+  }
+ }
+}

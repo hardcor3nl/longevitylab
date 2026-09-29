@@ -1,0 +1,80 @@
+---
+import { ArrowRight, BookOpen, Scale, ShieldCheck } from "@lucide/astro";
+import Hero from "./Hero.astro";
+import { supplements } from "../legacy/lib/supplements";
+import { products } from "../legacy/lib/products";
+import { gradeClass, gradeBars } from "../lib/rubric";
+interface Props { guides: number }
+const { guides } = Astro.props;
+const ledger = ["creatine", "omega3", "nmn", "resveratrol"].map((id) => supplements.find((s) => s.id === id)!).filter(Boolean);
+const stats = [
+  { icon: BookOpen, value: `${guides}`, label: "Guides with sources" },
+  { icon: Scale, value: `${products.length + supplements.length}`, label: "Products and compounds graded" },
+];
+---
+<section class="grain relative min-h-[92vh] flex items-center overflow-hidden bg-cream pt-24 pb-12" data-hero data-motion-slot="hero">
+  <!-- static-first: every layer below is plain markup; the motion/3D pass can mount on [data-motion-slot] without touching it -->
+  <div class="absolute top-0 right-0 w-[900px] h-[900px] pointer-events-none" style="background:radial-gradient(ellipse at top right,rgba(45,158,88,.10),transparent 60%)" aria-hidden="true"></div>
+  <div class="absolute bottom-0 left-0 w-[700px] h-[480px] pointer-events-none" style="background:radial-gradient(ellipse at bottom left,rgba(193,125,42,.07),transparent 60%)" aria-hidden="true"></div>
+  <div class="absolute inset-0 opacity-[.05] pointer-events-none" style="background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at 30% 40%,#000,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at 30% 40%,#000,transparent 75%)" aria-hidden="true"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div class="grid lg:grid-cols-[1.05fr_.95fr] gap-12 xl:gap-20 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2.5 mb-7 fade-up">
+          <span class="flex h-5 w-5 items-center justify-center rounded-full bg-green/15 border border-green/25"><span class="w-1.5 h-1.5 rounded-full bg-green-bright animate-pulse"></span></span>
+          <span class="font-mono text-[11px] uppercase tracking-[.14em] text-green-bright">Evidence-focused · Transparent sourcing</span>
+        </div>
+        <h1 class="font-display text-ink leading-[1.02] mb-6 fade-up" style="--d:.05s;font-size:clamp(44px,6vw,80px)">
+          Science-Backed<br />Longevity,
+          <em class="not-italic" style="background:linear-gradient(135deg,var(--green-glow) 0%,var(--green) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent"> Explained.</em>
+        </h1>
+        <p class="text-muted text-lg md:text-xl leading-relaxed mb-10 max-w-xl fade-up" style="--d:.12s">Research guides on supplements, wearables, diagnostics and protocols, with sources, uncertainty and practical trade-offs made visible.</p>
+        <div class="flex flex-wrap gap-3 mb-12 fade-up" style="--d:.2s">
+          <a href="/get-started" class="group flex items-center gap-2 px-6 py-3 bg-green text-white rounded-xl font-semibold text-sm hover:bg-green-bright transition-all duration-200" style="box-shadow:var(--shadow-green)">Build My Plan<ArrowRight class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" aria-hidden="true" /></a>
+          <a href="/best" class="flex items-center gap-2 px-6 py-3 bg-surface border border-border text-ink rounded-xl font-semibold text-sm hover:border-green/40 hover:text-green-bright transition-all duration-200" style="box-shadow:var(--shadow-sm)">Best Picks</a>
+          <a href="/database" class="flex items-center gap-2 px-6 py-3 text-muted hover:text-ink text-sm font-medium transition-colors">Evidence DB</a>
+        </div>
+        <div class="flex items-center gap-6 fade-up" style="--d:.3s">
+          {stats.map(({ icon: Icon, value, label }, i) => (
+            <div class="flex items-center gap-3">
+              {i > 0 && <div class="w-px h-9 bg-border" aria-hidden="true"></div>}
+              <div class="w-9 h-9 rounded-lg bg-surface border border-border flex items-center justify-center shrink-0"><Icon class="w-4 h-4 text-green" aria-hidden="true" /></div>
+              <div><div class="font-display text-2xl text-ink leading-none">{value}</div><div class="font-mono text-[10px] uppercase tracking-widest text-muted mt-1">{label}</div></div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="relative lg:h-[560px] fade-up" style="--d:.15s" data-motion-slot="hero-visual">
+        <!-- photo plate: large screens only -->
+        <div class="hidden lg:block absolute inset-x-4 top-2 bottom-16 rounded-[1.75rem] overflow-hidden border border-border bg-surface-2" style="box-shadow:0 30px 70px -20px rgba(15,20,16,.35),0 8px 20px rgba(15,20,16,.10)">
+          <Hero id="photo-1532187863486-abf9dbad1b69" alt="" eager sizes="(min-width:1024px) 560px, 1px" />
+          <div class="absolute inset-0 bg-linear-to-tr from-black/60 via-black/10 to-transparent"></div>
+          <div class="scan-line" aria-hidden="true"></div>
+          <a href="/supplements/best-nmn-supplements-2024" class="absolute top-4 left-4 right-4 block bg-black/55 backdrop-blur-md border border-white/10 rounded-xl px-4 py-3 group">
+            <p class="font-mono text-[10px] uppercase tracking-widest text-white/70 mb-0.5">Featured guide</p>
+            <p class="text-white text-sm font-semibold leading-snug group-hover:underline underline-offset-2">Best NMN Supplements: evidence and trade-offs</p>
+          </a>
+        </div>
+
+        <!-- evidence ledger: real grades from the database, rubric linked -->
+        <aside class="relative lg:absolute lg:left-0 lg:bottom-0 lg:w-[19.5rem] rounded-2xl border border-border bg-surface/95 backdrop-blur-md p-4 drift" style="--d:.4s;box-shadow:var(--shadow-lg)" aria-label="Evidence grades">
+          <div class="flex items-center justify-between mb-3">
+            <p class="font-mono text-[10px] uppercase tracking-widest text-muted flex items-center gap-1.5"><ShieldCheck class="w-3 h-3 text-green-bright" aria-hidden="true" />Evidence grades</p>
+            <a href="/database#rubric" class="font-mono text-[10px] uppercase tracking-widest text-green-bright hover:underline underline-offset-2">Rubric</a>
+          </div>
+          <ul class="space-y-2.5">
+            {ledger.map((s) => (
+              <li><a href={`/database/${s.id}`} class="flex items-center justify-between gap-3 group">
+                <span class="text-sm text-ink group-hover:text-green transition-colors">{s.name}</span>
+                <span class="flex items-center gap-2"><span class="grade-bars" aria-hidden="true">{[1, 2, 3, 4].map((n) => <i class={n <= gradeBars(s.evidenceLevel) ? "on" : ""}></i>)}</span><span class={gradeClass(s.evidenceLevel)}>{s.evidenceLevel}</span></span>
+              </a></li>
+            ))}
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-0 left-0 right-0 h-28 pointer-events-none" style="background:linear-gradient(to bottom,transparent,var(--cream))" aria-hidden="true"></div>
+</section>

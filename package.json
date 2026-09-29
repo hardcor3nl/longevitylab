@@ -1,42 +1,14 @@
 {
-  "name": "longevitylab",
-  "version": "0.1.0",
+  "name": "thelongevityintel-site",
   "private": true,
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
-    "dev": "next dev",
-    "prebuild": "node scripts/generate-search-index.mjs && node scripts/generate-redirects.mjs",
-    "build": "next build",
-    "seo:audit": "node scripts/seo-recovery-audit.mjs",
-    "start": "next start",
-    "lint": "next lint",
-    "generate:search": "node scripts/generate-search-index.mjs",
-    "generate:redirects": "node scripts/generate-redirects.mjs"
+    "build": "node build.mjs"
   },
   "dependencies": {
-    "@mdx-js/loader": "^3.1.1",
-    "@mdx-js/react": "^3.1.1",
-    "framer-motion": "^12.40.0",
-    "fuse.js": "^7.3.0",
-    "gray-matter": "^4.0.3",
-    "lucide-react": "^1.17.0",
-    "next": "14.2.35",
-    "next-mdx-remote": "^6.0.0",
-    "react": "^18",
-    "react-dom": "^18",
-    "reading-time": "^1.5.0"
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.19",
-    "@types/mdx": "^2.0.13",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.35",
-    "postcss": "^8",
-    "sharp": "^0.35.3",
-    "tailwindcss": "^3.4.1",
-    "to-ico": "^1.1.5",
-    "typescript": "^5"
+    "@portfolio/core": "workspace:*"
   }
 }

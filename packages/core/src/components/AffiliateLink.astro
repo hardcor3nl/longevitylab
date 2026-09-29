@@ -1,0 +1,8 @@
+---
+interface Props { id: string; live: boolean; fallbackUrl: string; page?: string }
+const { id, live, fallbackUrl } = Astro.props;
+// Only registry status "live" renders as a tracked, sponsored link. Everything else is a plain vendor link.
+const href = live ? `/go/${id}/` : fallbackUrl;
+const rel = live ? "sponsored nofollow noopener" : "noopener";
+---
+<a href={href} rel={rel} data-affiliate={live ? id : undefined}><slot /></a>

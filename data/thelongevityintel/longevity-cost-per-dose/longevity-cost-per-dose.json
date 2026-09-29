@@ -1,0 +1,829 @@
+[
+ {
+  "compound": "Creatine monohydrate",
+  "studyDoses": [
+   {
+    "study": "Burke et al., Int J Sport Nutr Exerc Metab",
+    "year": 2003,
+    "design": "RCT, 18 men",
+    "doseText": "Dose used in Burke 2003: 5 g/day maintenance after a 5-day 20 g/day loading phase",
+    "doseAmount": 5,
+    "doseUnit": "g/day",
+    "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/12660409/",
+    "doi": "https://doi.org/10.1123/ijsnem.13.1.97"
+   },
+   {
+    "study": "Prokopidis et al., Nutr Rev",
+    "year": 2023,
+    "design": "Systematic review and meta-analysis of RCTs (memory)",
+    "doseText": "Doses used in the trials pooled by Prokopidis 2023 ranged from about 2.2 to 20 g/day",
+    "doseAmount": null,
+    "doseUnit": "g/day (range 2.2-20)",
+    "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/35984306/",
+    "doi": "https://doi.org/10.1093/nutrit/nuac064"
+   }
+  ],
+  "products": [
+   {
+    "brand": "Thorne",
+    "product": "Creatine - 90 Servings",
+    "price": 44,
+    "currency": "USD",
+    "servings": 90,
+    "servingUnit": "scoop",
+    "activePerServing": 5,
+    "activeUnit": "g",
+    "thirdPartyTesting": "NSF Certified for Sport (stated on product page)",
+    "thirdPartyTestingSource": "https://www.thorne.com/products/dp/creatine",
+    "priceSourceUrl": "https://www.thorne.com/products/dp/creatine",
+    "note": null,
+    "costPerStudyDosePerMonth": 14.67,
+    "costBasisDose": "5 g/day (Burke et al. 2003)"
+   },
+   {
+    "brand": "Momentous",
+    "product": "Creatine Monohydrate, 60 servings",
+    "price": 34.99,
+    "currency": "USD",
+    "servings": 60,
+    "servingUnit": "serving",
+    "activePerServing": null,
+    "activeUnit": null,
+    "thirdPartyTesting": "NSF Certified for Sport (stated on product page)",
+    "thirdPartyTestingSource": "https://livemomentous.com/products/creatine-monohydrate-60-servings-flavors",
+    "priceSourceUrl": "https://livemomentous.com/products/creatine-monohydrate-60-servings-flavors",
+    "note": "Grams of creatine per serving not readable from page text (supplement facts load in a pop-up). Some variants (flavours/sizes) may be out of stock; check the page.",
+    "costPerStudyDosePerMonth": null,
+    "costBasisDose": null
+   },
+   {
+    "brand": "Nutricost",
+    "product": "Creatine Monohydrate Powder, 500 g",
+    "price": 23.97,
+    "currency": "USD",
+    "servings": 100,
+    "servingUnit": "5 g scoop",
+    "activePerServing": 5,
+    "activeUnit": "g",
+    "thirdPartyTesting": "none stated",
+    "thirdPartyTestingSource": null,
+    "priceSourceUrl": "https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams",
+    "note": "Servings derived: 500 g / 5 g per serving (both stated on page). Unflavored 500 G variant price. Page carries a generic 'third-party tested' statement but names no certifier.",
+    "costPerStudyDosePerMonth": 7.19,
+    "costBasisDose": "5 g/day (Burke et al. 2003)"
+   }
+  ],
+  "checked": "2026-09-28"
+ },
+ {
+  "compound": "Omega-3 (EPA+DHA)",
+  "studyDoses": [
+   {
+    "study": "Manson et al. (VITAL), N Engl J Med",
+    "year": 2019,
+    "design": "RCT, 25,871 adults, 2x2 factorial",
+    "doseText": "Dose used in VITAL: 1 g/day Omacor fish-oil capsule containing 840 mg of n-3 fatty acids (460 mg EPA + 380 mg DHA), per the trial's published principal-results paper (PMC7089819); the PubMed abstract itself states only 1 g/day marine n-3",
+    "doseAmount": 840,
+    "doseUnit": "mg/day EPA+DHA (460 mg EPA + 380 mg DHA, in a 1 g capsule)",
+    "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/30415637/",
+    "doi": "https://doi.org/10.1056/NEJMoa1811403",
+    "additionalSourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7089819/"
+   }
+  ],
+  "products": [
+   {
+    "brand": "Thorne",
+    "product": "Super EPA (NSF Certified for Sport)",
+    "price": 45,
+    "currency": "USD",
+    "servings": 90,
+    "servingUnit": "gelcap",
+    "activePerServing": 695,
+    "activeUnit": "mg EPA+DHA (425 EPA + 270 DHA)",
+    "thirdPartyTesting": "NSF Certified for Sport (stated on product page)",
+    "thirdPartyTestingSource": "https://www.thorne.com/products/dp/super-epa",
+    "priceSourceUrl": "https://www.thorne.com/products/dp/super-epa",
+    "note": "Cost uses EPA+DHA per serving from the label (not total oil weight).",
+    "costPerStudyDosePerMonth": 18.13,
+    "costBasisDose": "840 mg/day EPA+DHA (Manson et al. (VITAL) 2019, 1 g Omacor capsule = 460 EPA + 380 DHA)"
+   },
+   {
+    "brand": "Momentous",
+    "product": "Omega-3",
+    "price": 39.99,
+    "currency": "USD",
+    "servings": 30,
+    "servingUnit": "serving",
+    "activePerServing": 1600,
+    "activeUnit": "mg EPA+DHA",
+    "thirdPartyTesting": "NSF Certified for Sport, IFOS Certified (stated on product page)",
+    "thirdPartyTestingSource": "https://livemomentous.com/products/omega-3",
+    "priceSourceUrl": "https://livemomentous.com/products/omega-3",
+    "note": "Cost uses EPA+DHA per serving from the label (not total oil weight). Some variants (flavours/sizes) may be out of stock; check the page.",
+    "costPerStudyDosePerMonth": 20.99,
+    "costBasisDose": "840 mg/day EPA+DHA (Manson et al. (VITAL) 2019, 1 g Omacor capsule = 460 EPA + 380 DHA)"
+   },
+   {
+    "brand": "Transparent Labs",
+    "product": "Omega 3",
+    "price": 39.99,
+    "currency": "USD",
+    "servings": 30,
+    "servingUnit": "serving",
+    "activePerServing": null,
+    "activeUnit": null,
+    "thirdPartyTesting": "Own batch test results and COA published (self-published, no external certifier seen)",
+    "thirdPartyTestingSource": "https://transparentlabs.com/products/omega-3",
+    "priceSourceUrl": "https://transparentlabs.com/products/omega-3",
+    "note": "EPA+DHA per serving not shown in the page text on the checked date; cost left null.",
+    "costPerStudyDosePerMonth": null,
+    "costBasisDose": null
+   }
+  ],
+  "checked": "2026-09-28"
+ },
+ {
+  "compound": "Vitamin D3",
+  "studyDoses": [
+   {
+    "study": "Manson et al. (VITAL), N Engl J Med",
+    "year": 2019,
+    "design": "RCT, 25,871 adults, 2x2 factorial",
+    "doseText": "Dose used in VITAL: vitamin D3 2000 IU/day",
+    "doseAmount": 2000,
+    "doseUnit": "IU/day",
+    "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/30415629/",
+    "doi": "https://doi.org/10.1056/NEJMoa1809944"
+   }
+  ],
+  "products": [
+   {
+    "brand": "Thorne",
+    "product": "Vitamin D-5,000 (NSF Certified for Sport)",
+    "price": 20,
+    "currency": "USD",
+    "servings": 60,
+    "servingUnit": "capsule",
+    "activePerServing": 5000,
+    "activeUnit": "IU",
+    "thirdPartyTesting": "NSF Certified for Sport (stated on product page)",
+    "thirdPartyTestingSource": "https://www.thorne.com/products/dp/vitamin-d-5000",
+    "priceSourceUrl": "https://www.thorne.com/products/dp/vitamin-d-5000",
+    "note": null,
+    "costPerStudyDosePerMonth": 4.0,
+    "costBasisDose": "2000 IU/day (Manson et al. (VITAL) 2019)"
+   },
+   {
+    "brand": "Momentous",
+    "product": "Vitamin D3 2000 IU",
+    "price": 19.99,
+    "currency": "USD",
+    "servings": 60,
+    "servingUnit": "serving",
+    "activePerServing": 2000,
+    "activeUnit": "IU",
+    "thirdPartyTesting": "NSF Certified for Sport (stated on product page)",
+    "thirdPartyTestingSource": "https://livemomentous.com/products/vitamin-d3-2000-iu",
+    "priceSourceUrl": "https://livemomentous.com/products/vitamin-d3-2000-iu",
+    "note": "Some variants (flavours/sizes) may be out of stock; check the page.",
+    "costPerStudyDosePerMonth": 9.99,
+    "costBasisDose": "2000 IU/day (Manson et al. (VITAL) 2019)"
+   },
+   {
+    "brand": "Nutricost",
+    "product": "Vegan Vitamin D3 5,000 IU",
+    "price": 11.97,
+    "currency": "USD",
+    "servings": 60,
+    "servingUnit": "capsule",
+    "activePerServing": 5000,
+    "activeUnit": "IU",
+    "thirdPartyTesting": "none stated",
+    "thirdPartyTestingSource": null,
+    "priceSourceUrl": "https://nutricost.com/products/nutricost-vegan-vitamin-d3",
+    "note": "Page says made in an NSF Certified facility; that is not a product certification.",
+    "costPerStudyDosePerMonth": 2.39,
+    "costBasisDose": "2000 IU/day (Manson et al. (VITAL) 2019)"
+   }
+  ],
+  "checked": "2026-09-28"
+ },
+ {
+  "compound": "Vitamin K2 (MK-7)",
+  "studyDoses": [
+   {
+    "study": "Knapen et al., Thromb Haemost",
+    "year": 2015,
+    "design": "RCT, 244 postmenopausal women, 3 years",
+    "doseText": "Dose used in Knapen 2015: MK-7 180 mcg/day",
+    "doseAmount": 180,
+    "doseUnit": "mcg/day",
+    "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/25694037/",
+    "doi": "https://doi.org/10.1160/TH14-08-0675"
+   }
+  ],
+  "products": [
+   {
+    "brand": "Nutricost",
+    "product": "Vitamin K2 MK-7 Softgels (120 ct)",
+    "price": 15.97,
+    "currency": "USD",
+    "servings": 120,
+    "servingUnit": "softgel",
+    "activePerServing": 100,
+    "activeUnit": "mcg",
+    "thirdPartyTesting": "none stated",
+    "thirdPartyTestingSource": null,
+    "priceSourceUrl": "https://nutricost.com/products/nutricost-vitamin-k2-mk-7",
+    "note": null,
+    "costPerStudyDosePerMonth": 7.19,
+    "costBasisDose": "180 mcg/day (Knapen et al. 2015)"
+   },
+   {
+    "brand": "Jarrow Formulas",
+    "product": "MK-7 180 mcg, 30 softgels",
+    "price": 21.99,
+    "currency": "USD",
+    "servings": 30,
+    "servingUnit": "softgel",
+    "activePerServing": 180,
+    "activeUnit": "mcg",
+    "thirdPartyTesting": "none stated",
+    "thirdPartyTestingSource": null,
+    "priceSourceUrl": "https://www.jarrow.com/products/mk-7-180-mcg-30-softgels",
+    "note": "Page cites a ConsumerLab user survey, which is not a product test.",
+    "costPerStudyDosePerMonth": 21.99,
+    "costBasisDose": "180 mcg/day (Knapen et al. 2015)"
+   },
+   {
+    "brand": "Jarrow Formulas",
+    "product": "MK-7 90 mcg, 60 softgels",
+    "price": 22.99,
+    "currency": "USD",
+    "servings": 60,
+    "servingUnit": "softgel",
+    "activePerServing": 90,
+    "activeUnit": "mcg",
+    "thirdPartyTesting": "none stated",
+    "thirdPartyTestingSource": null,
+    "priceSourceUrl": "https://www.jarrow.com/products/mk-7-90-mcg-softgels",
+    "note": "Amount per softgel from product name; 60ct variant price.",
+    "costPerStudyDosePerMonth": 22.99,
+    "costBasisDose": "180 mcg/day (Knapen et al. 2015)"
+   }
+  ],
+  "checked": "2026-09-28"
+ },
+ {
+  "compound": "Magnesium (glycinate / threonate)",
+  "studyDoses": [
+   {
+    "study": "Zhang et al., Hypertension",
+    "year": 2016,
+    "design": "Meta-analysis of 34 RCTs (blood pressure)",
+    "doseText": "Median dose across trials in Zhang 2016: 368 mg/day elemental magnesium for a median of 3 months",
+    "doseAmount": 368,
+    "doseUnit": "mg/day elemental Mg",
+    "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/27402922/",
+    "doi": "https://doi.org/10.1161/HYPERTENSIONAHA.116.07664"
+   },
+   {
+    "study": "Zhang et al., Nutrients (Magtein)",
+    "year": 2022,
+    "design": "RCT, healthy adults",
+    "doseText": "Dose used in Zhang 2022: Magtein PS (magnesium L-threonate formula) 2 g/day",
+    "doseAmount": 2000,
+    "doseUnit": "mg/day of the threonate formula (elemental Mg not in abstract)",
+    "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/36558392/",
+    "doi": "https://doi.org/10.3390/nu14245235"
+   }
+  ],
+  "products": [
+   {
+    "brand": "Thorne",
+    "product": "Magnesium Glycinate, 90 servings",
+    "price": 26,
+    "currency": "USD",
+    "servings": 90,
+    "servingUnit": "capsule",
+    "activePerServing": 120,
+    "activeUnit": "mg Mg (as glycinate)",
+    "thirdPartyTesting": "none stated",
+    "thirdPartyTestingSource": null,
+    "priceSourceUrl": "https://www.thorne.com/products/dp/magnesium-glycinate",
+    "note": null,
+    "costPerStudyDosePerMonth": 26.58,
+    "costBasisDose": "368 mg/day elemental Mg (Zhang et al. 2016)"
+   },
+   {
+    "brand": "Thorne",
+    "product": "Magnesium Bisglycinate powder",
+    "price": 52,
+    "currency": "USD",
+    "servings": 60,
+    "servingUnit": "scoop",
+    "activePerServing": 200,
+    "activeUnit": "mg Mg (as bisglycinate)",
+    "thirdPartyTesting": "NSF Certified for Sport (stated on product page)",
+    "thirdPartyTestingSource": "https://www.thorne.com/products/dp/magnesium-bisglycinate",
+    "priceSourceUrl": "https://www.thorne.com/products/dp/magnesium-bisglycinate",
+    "note": null,
+    "costPerStudyDosePerMonth": 47.84,
+    "costBasisDose": "368 mg/day elemental Mg (Zhang et al. 2016)"
+   },
+   {
+    "brand": "Nutricost",
+    "product": "Magnesium Glycinate Powder, 250 g",
+    "price": 21.97,
+    "currency": "USD",
+    "servings": 135,
+    "servingUnit": "scoop",
+    "activePerServing": 210,
+    "activeUnit": "mg Mg",
+    "thirdPartyTesting": "none stated",
+    "thirdPartyTestingSource": null,
+    "priceSourceUrl": "https://nutricost.com/products/nutricost-magnesium-glycinate-powder-250-grams",
+    "note": null,
+    "costPerStudyDosePerMonth": 8.56,
+    "costBasisDose": "368 mg/day elemental Mg (Zhang et al. 2016)"
+   },
+   {
+    "brand": "Momentous",
+    "product": "Magnesium L-Threonate (Magtein)",
+    "price": 49.99,
+    "currency": "USD",
+    "servings": 30,
+    "servingUnit": "3 capsules",
+    "activePerServing": null,
+    "activeUnit": null,
+    "thirdPartyTesting": "NSF Certified for Sport (stated on product page)",
+    "thirdPartyTestingSource": "https://livemomentous.com/products/magnesium-threonate",
+    "priceSourceUrl": "https://livemomentous.com/products/magnesium-threonate",
+    "note": "Elemental Mg / threonate mg per serving not readable from page text. Some variants (flavours/sizes) may be out of stock; check the page.",
+    "costPerStudyDosePerMonth": null,
+    "costBasisDose": null
+   }
+  ],
+  "checked": "2026-09-28"
+ },
+ {
+  "compound": "NMN",
+  "studyDoses": [
+   {
+    "study": "Igarashi et al., npj Aging",
+    "year": 2022,
+    "design": "RCT, older men, 6-12 weeks",
+    "doseText": "Dose used in Igarashi 2022: NMN 250 mg/day",
+    "doseAmount": 250,
+    "doseUnit": "mg/day",
+    "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/35927255/",
+    "doi": "https://doi.org/10.1038/s41514-022-00084-z"
+   },
+   {
+    "study": "Yi et al., GeroScience",
+    "year": 2023,
+    "design": "RCT, 80 middle-aged adults, 60 days",
+    "doseText": "Doses used in Yi 2023: NMN 300, 600 or 900 mg/day (three arms)",
+    "doseAmount": 300,
+    "doseUnit": "mg/day (lowest arm; 600 and 900 also tested)",
+    "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/36482258/",
+    "doi": "https://doi.org/10.1007/s11357-022-00705-1"
+   }
+  ],
+  "products": [
+   {
+    "brand": "Double Wood",
+    "product": "NMN Supplement",
+    "price": 48.95,
+    "currency": "USD",
+    "servings": null,
+    "servingUnit": "serving",
+    "activePerServing": 250,
+    "activeUnit": "mg",
+    "thirdPartyTesting": "Third-party tests by ISO/IEC 17025 labs with COAs (self-stated; no named certifier)",
+    "thirdPartyTestingSource": "https://www.doublewoodsupplements.com/products/nicotinamide-mononucleotide",
+    "priceSourceUrl": "https://www.doublewoodsupplements.com/products/nicotinamide-mononucleotide",
+    "note": "Bottle count not read from page.",
+    "costPerStudyDosePerMonth": null,
+    "costBasisDose": null
+   },
+   {
+    "brand": "Jarrow Formulas",
+    "product": "NMN 300 mg, 30 tablets",
+    "price": 49.99,
+    "currency": "USD",
+    "servings": 30,
+    "servingUnit": "tablet",
+    "activePerServing": 300,
+    "activeUnit": "mg",
+    "thirdPartyTesting": "none stated",
+    "thirdPartyTestingSource": null,
+    "priceSourceUrl": "https://www.jarrow.com/products/nmn-300mg",
+    "note": null,
+    "costPerStudyDosePerMonth": 41.66,
+    "costBasisDose": "250 mg/day (Igarashi et al. 2022)"
+   },
+   {
+    "brand": "Renue By Science",
+    "product": "SLC Enteric NMN 250 mg, 200 ct",
+    "price": 58.95,
+    "currency": "USD",
+    "servings": 200,
+    "servingUnit": "capsule",
+    "activePerServing": 250,
+    "activeUnit": "mg (from product name)",
+    "thirdPartyTesting": "Page states third-party tested (self-stated, certifier not named; certification files linked on page)",
+    "thirdPartyTestingSource": "https://renuebyscience.com/products/slc-enteric-nmn-nicotinamide-mononucleotide-delayed-release-250mg-200ct",
+    "priceSourceUrl": "https://renuebyscience.com/products/slc-enteric-nmn-nicotinamide-mononucleotide-delayed-release-250mg-200ct",
+    "note": "Blend also contains TMG, zinc, sodium bicarbonate. Product page showed Sold out on 2026-09-29 (audit date).",
+    "costPerStudyDosePerMonth": 8.84,
+    "costBasisDose": "250 mg/day (Igarashi et al. 2022)"
+   }
+  ],
+  "checked": "2026-09-28"
+ },
+ {
+  "compound": "NR (nicotinamide riboside)",
+  "studyDoses": [
+   {
+    "study": "Dollerup et al., J Clin Endocrinol Metab",
+    "year": 2019,
+    "design": "RCT, 40 men with obesity, 12 weeks",
+    "doseText": "Dose used in Dollerup 2019: NR 1000 mg twice daily (2000 mg/day)",
+    "doseAmount": 2000,
+    "doseUnit": "mg/day",
+    "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/31390002/",
+    "doi": "https://doi.org/10.1210/jc.2019-01081"
+   },
+   {
+    "study": "Nielsen et al. (NR + pterostilbene), JCI Insight",
+    "year": 2022,
+    "design": "RCT, 32 older adults",
+    "doseText": "Dose used in this trial: NR 1,000 mg + pterostilbene 200 mg daily (combination product)",
+    "doseAmount": 1000,
+    "doseUnit": "mg/day NR (with 200 mg pterostilbene)",
+    "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/35998039/",
+    "doi": "https://doi.org/10.1172/jci.insight.158314"
+   }
+  ],
+  "products": [
+   {
+    "brand": "Tru Niagen (ChromaDex)",
+    "product": "Tru Niagen 300 mg",
+    "price": 49,
+    "currency": "USD",
+    "servings": 30,
+    "servingUnit": "serving",
+    "activePerServing": 300,
+    "activeUnit": "mg",
+    "thirdPartyTesting": "Alkemist Labs third-party testing, results published (stated on product page)",
+    "thirdPartyTestingSource": "https://www.truniagen.com/products/tru-niagen-300mg",
+    "priceSourceUrl": "https://www.truniagen.com/products/tru-niagen-300mg",
+    "note": "Servings taken from the 30-count variant label; serving size field on page did not render.",
+    "costPerStudyDosePerMonth": 326.67,
+    "costBasisDose": "2000 mg/day (Dollerup et al. 2019)"
+   },
+   {
+    "brand": "Nutricost",
+    "product": "Nicotinamide Riboside + Resveratrol",
+    "price": 26.97,
+    "currency": "USD",
+    "servings": 60,
+    "servingUnit": "2 capsules",
+    "activePerServing": null,
+    "activeUnit": null,
+    "thirdPartyTesting": "none stated",
+    "thirdPartyTestingSource": null,
+    "priceSourceUrl": "https://nutricost.com/products/nutricost-nicotinamide-riboside-resveratrol",
+    "note": "NR mg per serving not extracted; page says 60 servings of 2 capsules.",
+    "costPerStudyDosePerMonth": null,
+    "costBasisDose": null
+   },
+   {
+    "brand": "Elysium Health",
+    "product": "Basis (NR + pterostilbene)",
+    "price": 65,
+    "currency": "USD",
+    "servings": null,
+    "servingUnit": "2 capsules",
+    "activePerServing": null,
+    "activeUnit": null,
+    "thirdPartyTesting": "NSF Certified for Sport (page text; asks user to confirm per lot)",
+    "thirdPartyTestingSource": "https://www.elysiumhealth.com/products/basis",
+    "priceSourceUrl": "https://www.elysiumhealth.com/products/basis",
+    "note": "Servings and NR amount not extracted.",
+    "costPerStudyDosePerMonth": null,
+    "costBasisDose": null
+   }
+  ],
+  "checked": "2026-09-28"
+ },
+ {
+  "compound": "Urolithin A",
+  "studyDoses": [
+   {
+    "study": "Singh et al., JAMA Netw Open",
+    "year": 2022,
+    "design": "RCT, older adults, 4 months",
+    "doseText": "Dose used in Singh 2022: urolithin A 1000 mg/day",
+    "doseAmount": 1000,
+    "doseUnit": "mg/day",
+    "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/35050355/",
+    "doi": "https://doi.org/10.1001/jamanetworkopen.2021.44279"
+   }
+  ],
+  "products": [
+   {
+    "brand": "Timeline",
+    "product": "Mitopure Softgels (vegan)",
+    "price": 89,
+    "currency": "USD",
+    "servings": 30,
+    "servingUnit": "2 softgels",
+    "activePerServing": 500,
+    "activeUnit": "mg Mitopure (urolithin A)",
+    "thirdPartyTesting": "NSF Certified for Sport (stated on product page)",
+    "thirdPartyTestingSource": "https://timeline.com/products/mitopure-softgels-vegan",
+    "priceSourceUrl": "https://timeline.com/products/mitopure-softgels-vegan",
+    "note": "60 softgels/month, 2 per serving, 500 mg per serving per page.",
+    "costPerStudyDosePerMonth": 178.0,
+    "costBasisDose": "1000 mg/day (Singh et al. 2022)"
+   },
+   {
+    "brand": "Timeline",
+    "product": "Mitopure Powder",
+    "price": 89,
+    "currency": "USD",
+    "servings": null,
+    "servingUnit": "sachet",
+    "activePerServing": null,
+    "activeUnit": null,
+    "thirdPartyTesting": null,
+    "thirdPartyTestingSource": null,
+    "priceSourceUrl": "https://timeline.com/products/mitopure-powder",
+    "note": "Only price read from structured data; servings/testing not extracted.",
+    "costPerStudyDosePerMonth": null,
+    "costBasisDose": null
+   }
+  ],
+  "checked": "2026-09-28"
+ },
+ {
+  "compound": "Glycine",
+  "studyDoses": [
+   {
+    "study": "Bannai et al., Front Neurol",
+    "year": 2012,
+    "design": "Crossover RCT, sleep-restricted volunteers",
+    "doseText": "Dose used in Bannai 2012: glycine 3 g before bedtime",
+    "doseAmount": 3,
+    "doseUnit": "g/dose",
+    "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/22529837/",
+    "doi": "https://doi.org/10.3389/fneur.2012.00061"
+   }
+  ],
+  "products": [
+   {
+    "brand": "Thorne",
+    "product": "Glycine",
+    "price": 31,
+    "currency": "USD",
+    "servings": null,
+    "servingUnit": "2 capsules",
+    "activePerServing": 1,
+    "activeUnit": "g",
+    "thirdPartyTesting": "none stated",
+    "thirdPartyTestingSource": null,
+    "priceSourceUrl": "https://www.thorne.com/products/dp/glycine",
+    "note": "Page lists 250 capsules ($31 /250 Capsule(s)) but also 'Servings Per Container: 250' with a 2-capsule serving; conflict, so servings left null. Capsule-based cost computed: 6 caps for 3 g.",
+    "costPerStudyDosePerMonth": 22.32,
+    "costBasisDose": "3 g/day = 6 capsules/day at 0.5 g each (1 g per 2 capsules) (Bannai 2012); cost = $31/250 caps x 6 x 30"
+   },
+   {
+    "brand": "Double Wood",
+    "product": "Glycine Supplement",
+    "price": 19.95,
+    "currency": "USD",
+    "servings": null,
+    "servingUnit": "serving",
+    "activePerServing": 1,
+    "activeUnit": "g",
+    "thirdPartyTesting": "Third-party tested with COA (self-stated; no named certifier)",
+    "thirdPartyTestingSource": "https://www.doublewoodsupplements.com/products/glycine",
+    "priceSourceUrl": "https://www.doublewoodsupplements.com/products/glycine",
+    "note": "Bottle count not extracted.",
+    "costPerStudyDosePerMonth": null,
+    "costBasisDose": null
+   },
+   {
+    "brand": "Bulk Supplements",
+    "product": "Glycine Powder, 500 g",
+    "price": 25.97,
+    "currency": "USD",
+    "servings": null,
+    "servingUnit": "serving",
+    "activePerServing": null,
+    "activeUnit": null,
+    "thirdPartyTesting": "none stated",
+    "thirdPartyTestingSource": null,
+    "priceSourceUrl": "https://www.bulksupplements.com/products/glycine-pure-powder",
+    "note": "Serving size not extracted; site warns serving sizes are occasionally adjusted.",
+    "costPerStudyDosePerMonth": null,
+    "costBasisDose": null
+   }
+  ],
+  "checked": "2026-09-28"
+ },
+ {
+  "compound": "Taurine",
+  "studyDoses": [
+   {
+    "study": "Meta-analysis of RCTs, Nutr Rev (oral taurine, cardiometabolic risk factors)",
+    "year": 2026,
+    "design": "Systematic review and meta-analysis",
+    "doseText": "Dose range reported in the review's subgroup analysis: 1.5-3.0 g/day of oral taurine (cost basis here uses the 1.5 g lower bound)",
+    "doseAmount": 1.5,
+    "doseUnit": "g/day (lower bound of 1.5-3.0 range)",
+    "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/41275513/",
+    "doi": "https://doi.org/10.1093/nutrit/nuaf220"
+   }
+  ],
+  "products": [
+   {
+    "brand": "Nutricost",
+    "product": "Taurine Capsules 1000 mg, 400 ct",
+    "price": 21.97,
+    "currency": "USD",
+    "servings": 400,
+    "servingUnit": "capsule",
+    "activePerServing": 1000,
+    "activeUnit": "mg",
+    "thirdPartyTesting": "Page states 'Third-Party Tested' (generic; certifier not named in extracted text)",
+    "thirdPartyTestingSource": "https://nutricost.com/products/nutricost-taurine-1000mg-400-capsules",
+    "priceSourceUrl": "https://nutricost.com/products/nutricost-taurine-1000mg-400-capsules",
+    "note": "1 serving = 1 capsule per page (stated for the 240-count).",
+    "costPerStudyDosePerMonth": 2.47,
+    "costBasisDose": "1.5 g/day (lower bound of 1.5-3.0 range) (Meta-analysis of RCTs 2026)"
+   },
+   {
+    "brand": "Double Wood",
+    "product": "L-Taurine 1,000 mg",
+    "price": 19.95,
+    "currency": "USD",
+    "servings": 90,
+    "servingUnit": "2 capsules",
+    "activePerServing": 1000,
+    "activeUnit": "mg",
+    "thirdPartyTesting": "Third-party tested (self-stated; no named certifier)",
+    "thirdPartyTestingSource": "https://www.doublewoodsupplements.com/products/l-taurine-capsules-1-000mg",
+    "priceSourceUrl": "https://www.doublewoodsupplements.com/products/l-taurine-capsules-1-000mg",
+    "note": null,
+    "costPerStudyDosePerMonth": 9.97,
+    "costBasisDose": "1.5 g/day (lower bound of 1.5-3.0 range) (Meta-analysis of RCTs 2026)"
+   },
+   {
+    "brand": "Bulk Supplements",
+    "product": "Taurine Powder, 500 g",
+    "price": 24.97,
+    "currency": "USD",
+    "servings": null,
+    "servingUnit": "serving",
+    "activePerServing": null,
+    "activeUnit": null,
+    "thirdPartyTesting": "none stated",
+    "thirdPartyTestingSource": null,
+    "priceSourceUrl": "https://www.bulksupplements.com/products/taurine",
+    "note": "Serving size not extracted.",
+    "costPerStudyDosePerMonth": null,
+    "costBasisDose": null
+   }
+  ],
+  "checked": "2026-09-28"
+ },
+ {
+  "compound": "CoQ10",
+  "studyDoses": [
+   {
+    "study": "Mortensen et al. (Q-SYMBIO), JACC Heart Fail",
+    "year": 2014,
+    "design": "RCT, heart-failure patients, 2 years",
+    "doseText": "Dose used in Q-SYMBIO: CoQ10 100 mg three times daily (300 mg/day) on top of standard therapy; patients had chronic heart failure",
+    "doseAmount": 300,
+    "doseUnit": "mg/day",
+    "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/25282031/",
+    "doi": "https://doi.org/10.1016/j.jchf.2014.06.008"
+   },
+   {
+    "study": "Meta-analysis, J Clin Endocrinol Metab (CoQ10 and lipids)",
+    "year": 2022,
+    "design": "Meta-analysis of RCTs",
+    "doseText": "Dose-response analysis in this review found the largest total-cholesterol reduction at 400-500 mg/day",
+    "doseAmount": 400,
+    "doseUnit": "mg/day (lower bound of 400-500)",
+    "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/36337001/",
+    "doi": "https://doi.org/10.1210/clinem/dgac585"
+   }
+  ],
+  "products": [
+   {
+    "brand": "Thorne",
+    "product": "Ubiquinol (Kaneka)",
+    "price": 78,
+    "currency": "USD",
+    "servings": 60,
+    "servingUnit": "gelcap",
+    "activePerServing": 100,
+    "activeUnit": "mg ubiquinol",
+    "thirdPartyTesting": "none stated",
+    "thirdPartyTestingSource": null,
+    "priceSourceUrl": "https://www.thorne.com/products/dp/ubiquinol",
+    "note": "Q-SYMBIO used ubiquinone (standard CoQ10); ubiquinol is a different form.",
+    "costPerStudyDosePerMonth": 117.0,
+    "costBasisDose": "300 mg/day (Mortensen et al. (Q-SYMBIO) 2014)"
+   },
+   {
+    "brand": "Double Wood",
+    "product": "Liposomal CoQ10",
+    "price": 19.95,
+    "currency": "USD",
+    "servings": 60,
+    "servingUnit": "serving",
+    "activePerServing": 100,
+    "activeUnit": "mg",
+    "thirdPartyTesting": "Third-party tested (self-stated; no named certifier)",
+    "thirdPartyTestingSource": "https://www.doublewoodsupplements.com/products/liposomal-coq10-supplement",
+    "priceSourceUrl": "https://www.doublewoodsupplements.com/products/liposomal-coq10-supplement",
+    "note": null,
+    "costPerStudyDosePerMonth": 29.92,
+    "costBasisDose": "300 mg/day (Mortensen et al. (Q-SYMBIO) 2014)"
+   },
+   {
+    "brand": "Momentous",
+    "product": "Ubiquinol CoQ10 100 mg",
+    "price": 34.99,
+    "currency": "USD",
+    "servings": null,
+    "servingUnit": "softgel",
+    "activePerServing": 100,
+    "activeUnit": "mg ubiquinol",
+    "thirdPartyTesting": "NSF Certified for Sport (stated on product page)",
+    "thirdPartyTestingSource": "https://livemomentous.com/products/ubiquinol",
+    "priceSourceUrl": "https://livemomentous.com/products/ubiquinol",
+    "note": "Softgel count not shown in extracted text. Some variants (flavours/sizes) may be out of stock; check the page.",
+    "costPerStudyDosePerMonth": null,
+    "costBasisDose": null
+   }
+  ],
+  "checked": "2026-09-28"
+ },
+ {
+  "compound": "Spermidine",
+  "studyDoses": [
+   {
+    "study": "Schwarz et al. (SmartAge), JAMA Netw Open",
+    "year": 2022,
+    "design": "RCT, 100 older adults with subjective cognitive decline, 12 months",
+    "doseText": "Dose used in SmartAge: wheat-germ extract supplement providing 0.9 mg spermidine/day",
+    "doseAmount": 0.9,
+    "doseUnit": "mg/day",
+    "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/35616942/",
+    "doi": "https://doi.org/10.1001/jamanetworkopen.2022.13875"
+   }
+  ],
+  "products": [
+   {
+    "brand": "Double Wood",
+    "product": "Spermidine Supplement",
+    "price": 39.95,
+    "currency": "USD",
+    "servings": null,
+    "servingUnit": "capsule",
+    "activePerServing": 5,
+    "activeUnit": "mg spermidine trihydrochloride (salt weight; free spermidine lower)",
+    "thirdPartyTesting": "Third-party lab testing with COAs (self-stated; no named certifier)",
+    "thirdPartyTestingSource": "https://www.doublewoodsupplements.com/products/spermidine",
+    "priceSourceUrl": "https://www.doublewoodsupplements.com/products/spermidine",
+    "note": "Capsule count not extracted. Page showed backordered on the audit day (2026-09-29).",
+    "costPerStudyDosePerMonth": null,
+    "costBasisDose": null
+   },
+   {
+    "brand": "Renue By Science",
+    "product": "Lipo Spermidine",
+    "price": 49.95,
+    "currency": "USD",
+    "servings": 45,
+    "servingUnit": "2 capsules",
+    "activePerServing": null,
+    "activeUnit": null,
+    "thirdPartyTesting": "Batch COA linked on page (self-published)",
+    "thirdPartyTestingSource": "https://renuebyscience.com/products/lipo-spermidine-656165996902",
+    "priceSourceUrl": "https://renuebyscience.com/products/lipo-spermidine-656165996902",
+    "note": "90 capsules, 2-capsule serving; spermidine mg not extracted.",
+    "costPerStudyDosePerMonth": null,
+    "costBasisDose": null
+   }
+  ],
+  "checked": "2026-09-28"
+ }
+]

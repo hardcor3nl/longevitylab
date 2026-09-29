@@ -1,2 +1,7 @@
-allowBuilds:
-  unrs-resolver: true
+packages:
+  - packages/*
+  - sites/*
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
+  - workerd

@@ -1,0 +1,91 @@
+---
+import Base from "../layouts/Base.astro";
+import Breadcrumbs from "@portfolio/core/components/Breadcrumbs.astro";
+import { ShieldAlert } from "@lucide/astro";
+import { dataset as datasetLd, canonicalUrl } from "@portfolio/core";
+import { orgInfo } from "../lib/seo";
+import { cpdRecords, cpdDoc, cpdRows, cpdModified } from "../lib/cpd";
+import site from "../../site.config.json";
+
+/** Cost per study dose: audited dataset at data/thelongevityintel/longevity-cost-per-dose/. Wording is always "dose used in <study>", never a recommendation. */
+const rows = cpdRows();
+const method = cpdDoc("METHOD"), changelog = cpdDoc("CHANGELOG"), gaps = cpdDoc("GAPS");
+const money = (n: number | null | undefined) => (n == null ? "not calculable" : `$${n.toFixed(2)}`);
+const url = canonicalUrl(site.origin, "/cost-per-dose", "never");
+const modified = cpdModified();
+const costed = rows.filter((r) => r.costPerStudyDosePerMonth != null).length;
+const ld = datasetLd({
+  name: "Longevity supplement cost per study dose",
+  description: `Monthly price of ${rows.length} supplement products across ${cpdRecords.length} compounds, calculated at the dose used in a cited human study (${costed} with a computed cost), with each brand's stated third-party testing, the price source and a PubMed link for every study. Compiled from brand product pages and PubMed records; context for comparing prices, not dosing advice.`,
+  url, license: "https://creativecommons.org/licenses/by/4.0/", dateModified: modified, datePublished: "2026-09-28",
+  keywords: ["supplement cost per dose", "supplement price comparison", "longevity supplements cost", "third-party tested supplements"],
+  distribution: [{ contentUrl: site.origin + "/data/longevity-cost-per-dose.csv", encodingFormat: "text/csv" }, { contentUrl: site.origin + "/data/longevity-cost-per-dose.json", encodingFormat: "application/json" }],
+  variableMeasured: ["price", "servings", "study dose", "cost per month at study dose", "third-party testing"],
+}, { ...orgInfo, name: site.name });
+---
+<Base title="Supplement Cost per Study Dose | Longevity Intel" description="What 12 longevity supplements cost per month at the dose used in a human study, per brand, with the third-party testing each brand states and a PubMed link." path="/cost-per-dose" jsonLd={[ld]} modified={modified}>
+  <div class="pt-28 pb-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Cost per study dose" }]} />
+    <p class="font-mono text-xs uppercase tracking-[.14em] text-green-bright mt-6 mb-2">Dataset</p>
+    <h1 class="font-display text-4xl md:text-6xl text-ink leading-[1.05] mb-4">Cost per study dose</h1>
+    <p class="text-muted text-lg max-w-2xl leading-relaxed mb-4">Monthly price of a supplement at the dose used in a cited human study, per brand, with the third-party testing the brand states. Context for comparing prices, not a dosing recommendation.</p>
+    <p class="text-sm text-muted mb-8">{rows.length} products, {cpdRecords.length} compounds, {costed} with a computed cost. Last updated {modified}. Download: <a href="/data/longevity-cost-per-dose.csv" class="text-green-bright underline">CSV</a> or <a href="/data/longevity-cost-per-dose.json" class="text-green-bright underline">JSON</a> (free to reuse with attribution, CC BY 4.0).</p>
+    <div class="flex items-start gap-3 rounded-xl border border-amber/30 bg-amber/5 px-4 py-3 mb-10" role="note">
+      <ShieldAlert class="w-4 h-4 text-amber mt-0.5 shrink-0" aria-hidden="true" />
+      <p class="text-xs text-muted leading-relaxed"><strong class="text-ink">Talk to your doctor first.</strong> Study doses are context. Some studies were in patients, and nothing here says a dose is safe or right for you.</p>
+    </div>
+
+    {rows.length === 0 ? (
+      <section class="rounded-2xl border border-dashed border-border bg-surface p-10 text-center" aria-live="polite">
+        <h2 class="font-display text-2xl text-ink mb-2">The audited table is not published yet</h2>
+        <p class="text-muted max-w-xl mx-auto">Every price and study dose in this table is checked against a source before it goes live.</p>
+      </section>
+    ) : (
+      <>
+        <label class="block mb-4"><span class="visually-hidden">Filter the table</span>
+          <input id="cpd-filter" type="search" placeholder="Filter by compound, brand or certifier" class="w-full sm:w-80 bg-surface border border-border rounded-xl px-4 py-2.5 text-sm text-ink placeholder:text-muted outline-none focus:border-green/50" />
+        </label>
+        <p id="cpd-count" class="text-xs text-muted mb-3" aria-live="polite">Showing all {rows.length} products</p>
+        <div class="table-wrap prose" style="max-width:none">
+          <table id="cpd-table">
+            <thead><tr><th scope="col">Compound</th><th scope="col">Brand and product</th><th scope="col">Price</th><th scope="col">Dose used in the study</th><th scope="col">Cost per month at that dose</th><th scope="col">Certifier and testing stated by the brand</th></tr></thead>
+            <tbody>
+              {rows.map((r) => (
+                <tr>
+                  <th scope="row">{r.compound}</th>
+                  <td><a href={r.priceSourceUrl} rel="noopener">{r.brand}: {r.product}</a><span class="block text-xs text-muted">Checked {r.checked}</span></td>
+                  <td>{money(r.price)}</td>
+                  <td>{r.dose.doseText}<span class="block text-xs"><a href={r.dose.sourceUrl} rel="noopener">PubMed record</a>{r.dose.doi ? <> · <a href={r.dose.doi} rel="noopener">DOI</a></> : null}</span></td>
+                  <td>{money(r.costPerStudyDosePerMonth)}{r.costBasisDose ? <span class="block text-xs text-muted">Basis: {r.costBasisDose}</span> : null}{r.note ? <span class="block text-xs text-muted">{r.note}</span> : null}</td>
+                  <td>{r.thirdPartyTestingSource ? <a href={r.thirdPartyTestingSource} rel="noopener">{r.thirdPartyTesting ?? "none stated"}</a> : (r.thirdPartyTesting ?? "none stated")}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </>
+    )}
+
+    <section class="mt-14" aria-labelledby="method-h"><h2 id="method-h" class="font-display text-3xl text-ink mb-3">Method</h2>
+      {method ? <pre class="whitespace-pre-wrap text-sm text-muted leading-relaxed font-sans">{method}</pre> : null}
+    </section>
+    <section class="mt-10" aria-labelledby="gaps-h"><h2 id="gaps-h" class="font-display text-3xl text-ink mb-3">Gaps and what is not verified</h2>
+      {gaps ? <pre class="whitespace-pre-wrap text-sm text-muted leading-relaxed font-sans">{gaps}</pre> : null}
+    </section>
+    <section class="mt-10" aria-labelledby="chg-h"><h2 id="chg-h" class="font-display text-3xl text-ink mb-3">Change log</h2>
+      {changelog ? <pre class="whitespace-pre-wrap text-sm text-muted leading-relaxed font-sans">{changelog}</pre> : null}
+    </section>
+    <p class="mt-10 text-sm text-muted">Related: <a href="/category/supplements" class="text-green-bright underline">supplement guides</a>, <a href="/database" class="text-green-bright underline">the research database</a>.</p>
+  </div>
+  <script>
+    const input = document.getElementById("cpd-filter") as HTMLInputElement | null;
+    const count = document.getElementById("cpd-count");
+    input?.addEventListener("input", () => {
+      const q = input.value.trim().toLowerCase();
+      let shown = 0;
+      const trs = document.querySelectorAll<HTMLTableRowElement>("#cpd-table tbody tr");
+      trs.forEach((tr) => { const hide = !!q && !tr.textContent!.toLowerCase().includes(q); tr.hidden = hide; if (!hide) shown++; });
+      if (count) count.textContent = q ? `Showing ${shown} of ${trs.length} products` : `Showing all ${trs.length} products`;
+    });
+  </script>
+</Base>

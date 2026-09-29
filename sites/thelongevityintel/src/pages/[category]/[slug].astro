@@ -1,0 +1,204 @@
+---
+import { render } from "astro:content";
+import { Calendar, Clock, Info, ShieldAlert, Check, X, ExternalLink, Award, FileSearch } from "@lucide/astro";
+import Base from "../../layouts/Base.astro";
+import Hero from "../../components/Hero.astro";
+import ArticleCard from "../../components/ArticleCard.astro";
+import EvidenceRubric from "../../components/EvidenceRubric.astro";
+import Breadcrumbs from "@portfolio/core/components/Breadcrumbs.astro";
+import EvidenceBadge from "@portfolio/core/components/EvidenceBadge.astro";
+import SourcesList from "@portfolio/core/components/SourcesList.astro";
+import UpdateLog from "@portfolio/core/components/UpdateLog.astro";
+import { article as articleLd, faqPage, canonicalUrl } from "@portfolio/core";
+import { orgInfo } from "../../lib/seo";
+import { ogUrl } from "../../lib/og";
+import { getAllArticles, articleFaqs, articleUrl, longDate, CATEGORY_LABEL, type Article } from "../../lib/content";
+import { clusterLinksFor } from "../../legacy/lib/contentClusters";
+import { affiliateLinks, isAffiliateDestination } from "../../legacy/lib/affiliateLinks";
+import { editorialTeam } from "../../legacy/lib/authors";
+import { heroSrcSet } from "../../lib/heroes";
+import site from "../../../site.config.json";
+
+export async function getStaticPaths() {
+  const all = await getAllArticles();
+  return all.map((a) => ({ params: { category: a.category, slug: a.slug }, props: { a } }));
+}
+const { a } = Astro.props as { a: Article };
+const d = a.data;
+const { Content, headings } = await render(a);
+const all = await getAllArticles();
+const url = articleUrl(a);
+const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
+const faqs = articleFaqs(a);
+const cluster = clusterLinksFor({ slug: a.slug, category: a.category, tags: d.tags, title: d.title, path: url }, 4);
+// related: same category 2 pts, shared tag 1 pt each
+const related = all
+  .filter((x) => x !== a)
+  .map((x) => ({ x, s: (x.category === a.category ? 2 : 0) + x.data.tags.filter((t) => d.tags.includes(t)).length }))
+  .filter((r) => r.s > 0).sort((p, q) => q.s - p.s).slice(0, 3).map((r) => r.x);
+const org = { ...orgInfo, name: site.name };
+const ogImage = ogUrl(`${a.category}/${a.slug}`);
+const jsonLd = [
+  articleLd({ title: d.title, description: d.description, url: canonicalUrl(site.origin, url, "never"), published: d.published, updated: d.updated, image: ogImage, evidence: d.evidence }, org),
+  ...(faqs.length ? [faqPage(faqs)] : []),
+];
+const pick = (p: { affiliateUrl: string }) => {
+  const slug = p.affiliateUrl.startsWith("/go/") ? p.affiliateUrl.slice(4) : "";
+  const live = slug ? isAffiliateDestination(slug) : false;
+  const href = live ? `/go/${slug}` : (affiliateLinks[slug] ?? p.affiliateUrl);
+  return { href, live };
+};
+const PRICE_CHECKED = "July 2026";
+const badgeClass: Record<string, string> = { "Best Pick": "grade-strong", "Runner-Up": "grade-moderate", Budget: "grade-emerging" };
+---
+<Base title={`${d.title} | ${site.name}`} description={d.description} path={url} type="article" preloads={d.image ? [{ href: `/img/heroes/${d.image}-800.webp`, as: "image", type: "image/webp", imagesrcset: heroSrcSet(d.image) ?? undefined, imagesizes: "(min-width:1152px) 1152px, 100vw" }] : []} image={ogImage} published={d.published} modified={d.updated ?? d.published} jsonLd={jsonLd}>
+  <div class="pt-28 pb-24">
+    <header class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: CATEGORY_LABEL[a.category], href: `/category/${a.category}` }, { name: d.title }]} />
+      <div class="flex items-center gap-2 mt-5 mb-4">
+        <span class="font-mono text-xs uppercase tracking-widest text-green-bright px-2.5 py-1 bg-green/10 border border-green/20 rounded-full">{CATEGORY_LABEL[a.category]}</span>
+        {d.featured && <span class="font-mono text-xs uppercase tracking-widest text-amber px-2.5 py-1 bg-amber/10 border border-amber/25 rounded-full">Featured</span>}
+      </div>
+      <h1 class="font-display text-4xl md:text-6xl text-ink leading-[1.05] mb-6 max-w-4xl">{d.h1 ?? d.title}</h1>
+      <p class="text-muted text-lg md:text-xl mb-7 max-w-2xl leading-relaxed">{d.description}</p>
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted pb-6 border-b border-border">
+        <a href="/authors/editorial-team" class="flex items-center gap-2 hover:text-green-bright transition-colors">
+          <span class="w-6 h-6 rounded-full bg-green/10 border border-green/25 flex items-center justify-center font-mono text-[9px] text-green-bright">{editorialTeam.initials}</span>{site.editorialName}
+        </a>
+        <span class="flex items-center gap-1.5"><Calendar class="w-3.5 h-3.5" aria-hidden="true" /><span>Published <time datetime={d.published}>{longDate(d.published)}</time>{d.publishedApprox && " (approx.)"}</span></span>
+        {d.updated && <span class="flex items-center gap-1.5">Updated <time datetime={d.updated}>{longDate(d.updated)}</time></span>}
+        <span class="flex items-center gap-1.5"><Clock class="w-3.5 h-3.5" aria-hidden="true" />{a.minutes} min read</span>
+      </div>
+      <div class="mt-5 flex items-start gap-3 rounded-xl border border-border bg-surface-2/60 px-4 py-3 max-w-4xl" role="note">
+        <FileSearch class="w-4 h-4 text-green-bright mt-0.5 shrink-0" aria-hidden="true" />
+        <div class="text-xs text-muted leading-relaxed"><EvidenceBadge evidence={d.evidence} sourceKinds="published studies and manufacturer specifications" checked={d.updated} /> <span>We have not tested products ourselves.</span> <a href="/about" class="underline underline-offset-2 hover:text-ink">How we research</a></div>
+      </div>
+    </header>
+
+    {d.image && (
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-14">
+        <div class="relative rounded-3xl overflow-hidden bg-surface-2 border border-border aspect-[16/9] md:aspect-[2.4/1]" style="box-shadow:var(--shadow-lg)">
+          <Hero id={d.image} alt="" eager sizes="(min-width:1152px) 1152px, 100vw" />
+          <div class="absolute inset-0 bg-linear-to-t from-black/35 via-transparent to-transparent"></div>
+        </div>
+      </div>
+    )}
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_300px] gap-14">
+        <div class="min-w-0">
+          {d.verdict && (
+            <section aria-labelledby="qv" class="relative overflow-hidden rounded-2xl border border-green/25 p-6 mb-10" style="background:linear-gradient(135deg,color-mix(in srgb,var(--green-glow) 10%,var(--surface)),var(--surface))">
+              <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full blur-3xl opacity-20 pointer-events-none" style="background:var(--green-glow)"></div>
+              <h2 id="qv" class="relative font-mono text-[10px] uppercase tracking-widest text-green-bright mb-2">Quick verdict</h2>
+              <p class="relative text-ink leading-relaxed">{d.verdict}</p>
+            </section>
+          )}
+
+          <div class="flex items-start gap-3 rounded-xl border border-amber/30 bg-amber/5 px-4 py-3 mb-10" role="note">
+            <ShieldAlert class="w-4 h-4 text-amber mt-0.5 shrink-0" aria-hidden="true" />
+            <p class="text-xs text-muted leading-relaxed"><strong class="text-ink">Talk to your doctor first.</strong> This is general information, not medical advice. Supplements and devices can interact with medicines and health conditions. We quote study protocols for context and do not recommend doses.</p>
+          </div>
+
+          {d.products.length > 0 && (
+            <section aria-labelledby="picks" class="my-10 space-y-5">
+              <h2 id="picks" class="font-display text-3xl text-ink">Top picks</h2>
+              <div class="flex items-start gap-2.5 px-4 py-3 bg-surface-2/60 border border-border rounded-xl">
+                <Info class="w-3.5 h-3.5 text-muted shrink-0 mt-0.5" aria-hidden="true" />
+                <p class="text-xs text-muted leading-relaxed"><strong class="text-ink">As an Amazon Associate, Longevity Intel earns from qualifying purchases.</strong> Some links are affiliate links; we may earn a commission at no extra cost to you. Commissions never change what we write. <a href="/about#affiliate" class="underline underline-offset-2 hover:text-ink">How we make money</a></p>
+              </div>
+              {d.products.map((p) => {
+                const link = pick(p);
+                return (
+                  <article class="bg-surface border border-border rounded-2xl overflow-hidden lift" style="box-shadow:var(--shadow-sm)">
+                    <div class="p-5 pb-0">
+                      {p.badge && <span class={`grade ${badgeClass[p.badge] ?? "grade-moderate"} mb-2`}><Award class="w-3 h-3" aria-hidden="true" />{p.badge}</span>}
+                      <h3 class="font-display text-2xl text-ink leading-tight">{p.name}</h3>
+                      <p class="text-muted text-sm mt-0.5">{p.brand} · {p.price}</p>
+                      <p class="text-muted text-[11px] mt-0.5">Price as of {PRICE_CHECKED}. Check the retailer for the current price and availability.</p>
+                    </div>
+                    <div class="p-5 grid sm:grid-cols-2 gap-5">
+                      <div>
+                        <p class="font-mono text-[10px] uppercase tracking-widest text-green-bright mb-2">Pros</p>
+                        <ul class="space-y-1.5">{p.pros.map((x) => <li class="flex items-start gap-1.5 text-sm text-ink"><Check class="w-3.5 h-3.5 text-green-bright mt-1 shrink-0" aria-hidden="true" /><span>{x}</span></li>)}</ul>
+                      </div>
+                      <div>
+                        <p class="font-mono text-[10px] uppercase tracking-widest text-amber mb-2">Cons</p>
+                        <ul class="space-y-1.5">{p.cons.map((x) => <li class="flex items-start gap-1.5 text-sm text-muted"><X class="w-3.5 h-3.5 text-amber mt-1 shrink-0" aria-hidden="true" /><span>{x}</span></li>)}</ul>
+                      </div>
+                    </div>
+                    <div class="px-5 pb-5">
+                      <a href={link.href} rel={link.live ? "sponsored nofollow noopener" : "noopener"} class="group flex items-center justify-center gap-2 w-full py-3 bg-green text-white rounded-xl font-medium text-sm hover:bg-green-bright transition-colors">
+                        View product<ExternalLink class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
+                      </a>
+                      {link.live && <p class="text-[11px] text-muted text-center mt-2 font-mono">Affiliate link · we may earn a commission</p>}
+                    </div>
+                  </article>
+                );
+              })}
+            </section>
+          )}
+
+          <div class="prose"><Content /></div>
+
+          {faqs.length > 0 && (
+            <section aria-labelledby="faq-h" class="mt-14">
+              <h2 id="faq-h" class="font-display text-3xl text-ink mb-4">Common questions</h2>
+              <div class="divide-y divide-border border-y border-border">
+                {faqs.map((f) => (
+                  <details class="group py-4"><summary class="cursor-pointer list-none flex items-center justify-between gap-4 font-display text-xl text-ink">{f.question}<span class="text-green-bright transition-transform group-open:rotate-45 text-2xl leading-none" aria-hidden="true">+</span></summary><p class="mt-3 text-muted leading-relaxed">{f.answer}</p></details>
+                ))}
+              </div>
+            </section>
+          )}
+
+          <div class="mt-14 space-y-8 sources-block">
+            {d.sources.length > 0 ? <SourcesList sources={d.sources} /> : d.needsSources && (
+              <aside class="rounded-xl border border-border bg-surface-2/60 px-4 py-4" aria-label="Sources status">
+                <h2 class="font-display text-xl text-ink mb-1">Sources</h2>
+                <p class="text-sm text-muted leading-relaxed">Study links for this page are being added. Until then, treat the figures and claims here as an unverified summary and check the original studies or the manufacturer before you rely on them.</p>
+              </aside>
+            )}
+            <UpdateLog entries={d.updateLog} />
+          </div>
+
+          <aside class="mt-14 bg-surface border border-border rounded-2xl p-6" style="box-shadow:var(--shadow-sm)" aria-label="About the author">
+            <p class="font-mono text-[10px] uppercase tracking-[0.14em] text-muted mb-4">Written by</p>
+            <div class="flex items-start gap-4">
+              <a href="/authors/editorial-team" class="w-14 h-14 rounded-2xl bg-green/10 border border-green/20 flex items-center justify-center shrink-0 font-mono text-base text-green-bright" aria-label="Editorial team">{editorialTeam.initials}</a>
+              <div>
+                <a href="/authors/editorial-team" class="font-display text-xl text-ink hover:text-green transition-colors">{site.editorialName}</a>
+                <p class="text-sm text-muted leading-relaxed mt-1">{editorialTeam.bio}</p>
+                <p class="text-xs text-muted font-mono mt-2">{editorialTeam.credentials}</p>
+              </div>
+            </div>
+          </aside>
+
+          {related.length > 0 && (
+            <section class="mt-16" aria-labelledby="rel-h">
+              <h2 id="rel-h" class="font-display text-3xl text-ink mb-6">Related reading</h2>
+              <div class="grid sm:grid-cols-3 gap-5">{related.map((r) => <ArticleCard article={r} size="sm" />)}</div>
+            </section>
+          )}
+        </div>
+
+        <aside class="hidden lg:block" aria-label="Page tools">
+          <div class="sticky top-28 space-y-5">
+            {cluster && (
+              <nav class="bg-surface border border-border rounded-2xl p-5" aria-label={cluster.cluster.name}>
+                <h2 class="font-mono text-xs uppercase tracking-widest text-muted mb-3">Keep reading</h2>
+                <ul class="space-y-3">{cluster.links.map((l) => <li><a href={l.href} class="group block"><span class="block text-sm font-medium text-ink group-hover:text-green transition-colors">{l.label}</span><span class="block text-xs text-muted">{l.desc}</span></a></li>)}</ul>
+              </nav>
+            )}
+            {toc.length >= 2 && (
+              <nav class="bg-surface border border-border rounded-2xl p-5 max-h-[45vh] overflow-y-auto" aria-label="Table of contents">
+                <h2 class="font-mono text-xs uppercase tracking-widest text-muted mb-3">On this page</h2>
+                <ul class="space-y-1.5">{toc.map((h) => <li class={h.depth === 3 ? "pl-3" : ""}><a href={`#${h.slug}`} class="text-[13px] text-muted hover:text-green-bright transition-colors leading-snug block py-0.5">{h.text}</a></li>)}</ul>
+              </nav>
+            )}
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</Base>

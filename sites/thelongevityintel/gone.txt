@@ -1,0 +1,1 @@
+# Paths answered with HTTP 410 (intentionally removed, no replacement). One per line. Run: pnpm seo:gone thelongevityintel

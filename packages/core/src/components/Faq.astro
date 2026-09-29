@@ -1,0 +1,13 @@
+---
+import { faqPage, jsonLdScript } from "../jsonld.ts";
+/** Visible FAQ. `schema` adds FAQPage JSON-LD (same text as the visible answers). Note: Google now shows FAQ rich results for nobody; other engines still read it. */
+interface Props { items: { question: string; answer: string }[]; schema?: boolean }
+const { items, schema = false } = Astro.props;
+---
+{items.length > 0 && (
+  <section class="faq" aria-labelledby="faq-h">
+    <h2 id="faq-h">Common questions</h2>
+    {items.map((it) => (<details><summary>{it.question}</summary><p>{it.answer}</p></details>))}
+  </section>
+)}
+{schema && items.length > 0 && <script type="application/ld+json" set:html={jsonLdScript(faqPage(items))} />}

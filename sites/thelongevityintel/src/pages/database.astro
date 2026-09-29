@@ -1,0 +1,10 @@
+---
+import Base from "../layouts/Base.astro";
+import EvidenceRubric from "../components/EvidenceRubric.astro";
+import Page from "../legacy/pages/database.tsx";
+import { products } from "../legacy/lib/products";
+---
+<Base title="Longevity Database: Evidence Grades | Longevity Intel" description={`${products.length} longevity products and compounds with an evidence grade and the rubric behind it. Filter by category, search, and read the full review.`} path="/database">
+  <Page client:load />
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 -mt-8"><EvidenceRubric /></div>
+</Base>

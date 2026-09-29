@@ -1,0 +1,15 @@
+---
+import { formatDate } from "../util.ts";
+interface Props { sources: { title: string; url: string; checked: string; approx?: boolean }[] }
+const { sources } = Astro.props;
+---
+{sources.length > 0 && (
+  <section class="sources" aria-labelledby="sources-h">
+    <h2 id="sources-h">Sources</h2>
+    <ul>
+      {sources.map((s) => (
+        <li><a href={s.url} rel="noopener">{s.title}</a> <span class="checked">{s.approx ? `checked around ${new Date(s.checked).toLocaleDateString("en-GB", { month: "long", year: "numeric", timeZone: "UTC" })}` : `checked ${formatDate(s.checked)}`}</span></li>
+      ))}
+    </ul>
+  </section>
+)}

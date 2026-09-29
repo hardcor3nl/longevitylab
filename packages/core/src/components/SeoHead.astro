@@ -1,0 +1,42 @@
+---
+import { jsonLdScript } from "../jsonld.ts";
+/**
+ * One place for everything indexable in <head>. English-only portfolio: no hreflang is emitted (Google:
+ * hreflang is only for localized variants of the same page; a single-language site needs none).
+ * robots is always explicit: indexable pages get max-image-preview:large so Google may show large image previews.
+ */
+interface Props {
+  title: string; description: string; canonical: string; noindex?: boolean;
+  image?: string; imageAlt?: string; imageWidth?: number; imageHeight?: number;
+  siteName: string; type?: "website" | "article"; jsonLd?: unknown[];
+  published?: string; modified?: string;
+  /** e.g. [{ rel: "alternate", type: "application/rss+xml", title: "Feed", href: "/feed.xml" }] */
+  links?: { rel: string; href: string; type?: string; title?: string }[];
+  /** preload the LCP image (and any other critical asset) */
+  preloads?: { href: string; as: "image" | "font" | "style"; type?: string; imagesrcset?: string; imagesizes?: string }[];
+}
+const { title, description, canonical, noindex = false, image, imageAlt, imageWidth = 1200, imageHeight = 630, siteName, type = "website", jsonLd = [], published, modified, links = [], preloads = [] } = Astro.props;
+---
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta name="robots" content={noindex ? "noindex,follow" : "index,follow,max-image-preview:large,max-snippet:-1"} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:type" content={type} />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:locale" content="en_GB" />
+{image && <meta property="og:image" content={image} />}
+{image && <meta property="og:image:width" content={String(imageWidth)} />}
+{image && <meta property="og:image:height" content={String(imageHeight)} />}
+{image && <meta property="og:image:alt" content={imageAlt ?? title} />}
+{type === "article" && published && <meta property="article:published_time" content={published} />}
+{type === "article" && (modified ?? published) && <meta property="article:modified_time" content={modified ?? published} />}
+<meta name="twitter:card" content={image ? "summary_large_image" : "summary"} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+{image && <meta name="twitter:image" content={image} />}
+{links.map((l) => <link rel={l.rel} href={l.href} type={l.type} title={l.title} />)}
+{preloads.map((p) => <link rel="preload" as={p.as} href={p.href} type={p.type} imagesrcset={p.imagesrcset} imagesizes={p.imagesizes} fetchpriority={p.as === "image" ? "high" : undefined} crossorigin={p.as === "font" ? "" : undefined} />)}
+{jsonLd.map((d) => <script type="application/ld+json" set:html={jsonLdScript(d)} />)}

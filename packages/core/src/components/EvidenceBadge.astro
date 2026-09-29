@@ -1,0 +1,11 @@
+---
+import { formatDate } from "../util.ts";
+interface Props { evidence: "research" | "compiled-data" | "owner-tested"; checked?: string; sourceKinds?: string }
+const { evidence, checked, sourceKinds = "official docs and public sources" } = Astro.props;
+const label = {
+  research: `Researched from ${sourceKinds}`,
+  "compiled-data": `Compiled from ${sourceKinds}`,
+  "owner-tested": "Tested first-hand; evidence files linked below",
+}[evidence];
+---
+<p class={`evidence-badge evidence-${evidence}`}>{label}{checked && <>, checked <time datetime={checked}>{formatDate(checked)}</time></>}.</p>

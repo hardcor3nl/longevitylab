@@ -1,0 +1,9 @@
+---
+import Base from "../layouts/Base.astro";
+import Page from "../legacy/pages/contact.tsx";
+import meta from "../legacy/pageMeta.json";
+const m = (meta as any)["contact"];
+---
+<Base title={`${m.title} | Longevity Intel`} description={m.description} path="/contact">
+  <Page client:load />
+</Base>

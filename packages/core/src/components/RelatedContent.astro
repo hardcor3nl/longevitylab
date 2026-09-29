@@ -1,0 +1,11 @@
+---
+/** "Keep reading" block: plain crawlable links with descriptive anchor text. Feed it relatedEntries(). */
+interface Props { items: { href: string; title: string; description?: string }[]; heading?: string }
+const { items, heading = "Related reading" } = Astro.props;
+---
+{items.length > 0 && (
+  <nav class="related" aria-labelledby="related-h">
+    <h2 id="related-h">{heading}</h2>
+    <ul class="index-list">{items.map((i) => <li><a href={i.href}>{i.title}</a>{i.description && <p>{i.description}</p>}</li>)}</ul>
+  </nav>
+)}

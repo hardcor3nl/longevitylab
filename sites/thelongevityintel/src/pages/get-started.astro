@@ -1,0 +1,9 @@
+---
+import Base from "../layouts/Base.astro";
+import Page from "../legacy/pages/get-started.tsx";
+import meta from "../legacy/pageMeta.json";
+const m = (meta as any)["get-started"];
+---
+<Base title={`${m.title} | Longevity Intel`} description={m.description} path="/get-started">
+  <Page client:load />
+</Base>

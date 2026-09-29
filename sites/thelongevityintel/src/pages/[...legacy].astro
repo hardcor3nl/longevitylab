@@ -1,0 +1,74 @@
+---
+import Base from "../layouts/Base.astro";
+import EvidenceRubric from "../components/EvidenceRubric.astro";
+import { protocols } from "../legacy/lib/protocols";
+import { authors, editorialTeam } from "../legacy/lib/authors";
+import { supplements } from "../legacy/lib/supplements";
+import pageMeta from "../legacy/pageMeta.json";
+import Breadcrumbs from "@portfolio/core/components/Breadcrumbs.astro";
+import ItemListLd from "@portfolio/core/components/ItemListLd.astro";
+import { article as articleLd, canonicalUrl } from "@portfolio/core";
+import { getArticlesByCategory } from "../legacy/lib/content";
+import { orgInfo } from "../lib/seo";
+import { ogUrl } from "../lib/og";
+import site from "../../site.config.json";
+
+/**
+ * Every page ported from the old App Router (about, compare/*, sleep, quiz, ...). The page bodies are the original
+ * components, rendered to static HTML at build time; the interactive ones (quiz, cardio calculator, get-started, contact) have their own .astro file and hydrate as islands.
+ */
+export function getStaticPaths() {
+  const modules = import.meta.glob("../legacy/pages/**/*.tsx", { eager: true }) as Record<string, unknown>;
+  const OWN_PAGE = new Set(["database", "cardio", "contact", "get-started", "quiz"]); // own .astro files (React islands)
+  const paths: { params: { legacy: string }; props: { key: string; params: Record<string, string> } }[] = [];
+  const add = (path: string, key: string, params: Record<string, string> = {}) => paths.push({ params: { legacy: path }, props: { key, params } });
+  for (const file of Object.keys(modules)) {
+    const rel = file.replace("../legacy/pages/", "").replace(/\.tsx$/, "");
+    if (OWN_PAGE.has(rel)) continue;
+    if (rel === "authors/[slug]") [...new Map([...authors, editorialTeam].map((a) => [a.slug, a])).values()].forEach((a) => add(`authors/${a.slug}`, file, { slug: a.slug }));
+    else if (rel === "category/[slug]") ["supplements", "wearables", "diagnostics", "protocols", "recovery", "best"].forEach((s) => add(`category/${s}`, file, { slug: s }));
+    else if (rel === "database/[id]") supplements.forEach((s) => add(`database/${s.id}`, file, { id: s.id }));
+    else if (rel === "protocols/[id]") protocols.forEach((p) => add(`protocols/${p.id}`, file, { id: p.id }));
+    else add(rel, file);
+  }
+  return paths;
+}
+
+const modules = import.meta.glob("../legacy/pages/**/*.tsx", { eager: true }) as Record<string, any>;
+const { key, params } = Astro.props;
+const mod = modules[key];
+const Page = mod.default;
+const rel = Astro.params.legacy!;
+const meta: any = mod.generateMetadata ? mod.generateMetadata({ params }) : (mod.metadata ?? (pageMeta as any)[rel] ?? {});
+const raw = typeof meta.title === "string" ? meta.title : meta.title?.absolute;
+const title = raw ? `${raw} | Longevity Intel` : "Longevity Intel: Science-Backed Longevity Reviews";
+const description = meta.description ?? "Evidence-focused longevity guides with sources and limitations made visible.";
+const isCategory = rel.startsWith("category/");
+const isProtocol = rel.startsWith("protocols/");
+const catLabel = isCategory ? String(params.slug).replace(/^./, (c) => c.toUpperCase()) : "";
+const crumbs = isCategory ? [{ name: "Home", href: "/" }, { name: catLabel }] : isProtocol ? [{ name: "Home", href: "/" }, { name: "Protocols", href: "/protocols" }, { name: title.replace(/ | Longevity Intel$/, "") }] : [];
+const items = isCategory ? getArticlesByCategory(params.slug).map((a) => ({ name: a.frontmatter.title, href: `/${a.category}/${a.slug}` })) : [];
+// expert protocol pages are article-like; their date is the day protocols.ts entered the old repo
+const ld = isProtocol ? [articleLd({ title: title.replace(/ | Longevity Intel$/, ""), description, url: canonicalUrl(site.origin, `/${rel}`, "never"), published: "2026-05-31", image: ogUrl("default"), evidence: "research" }, { ...orgInfo, name: site.name })] : [];
+---
+<Base title={title} description={description} path={`/${rel}`} type={rel.startsWith("compare/") || isProtocol ? "article" : "website"} jsonLd={ld} published={isProtocol ? "2026-05-31" : undefined} modified={isProtocol ? "2026-05-31" : undefined}>
+  {crumbs.length > 0 && <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 crumb-top"><Breadcrumbs items={crumbs} /></div>}
+  {isCategory && <ItemListLd items={items} name={`${catLabel} guides`} />}
+  <div class={crumbs.length ? "after-crumb" : ""}><Page params={params} /></div>
+  {rel === "category/supplements" && (
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20" aria-labelledby="cpd-h">
+      <div class="rounded-2xl border border-border bg-surface p-6">
+        <h2 id="cpd-h" class="font-display text-2xl text-ink mb-2">Cost per study dose</h2>
+        <p class="text-muted mb-3">What 12 supplements cost per month at the dose used in a cited human study, across 35 products, with the third-party testing each brand states. Context for comparing prices, not dosing advice.</p>
+        <a href="/cost-per-dose" class="text-green-bright underline">Open the cost per study dose table</a>
+      </div>
+    </section>
+  )}
+  {rel === "category/protocols" && (
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20" aria-labelledby="expert-h">
+      <h2 id="expert-h" class="font-display text-3xl text-ink mb-4">Expert protocols</h2>
+      <ul class="grid sm:grid-cols-3 gap-4">{protocols.map((p) => <li><a href={`/protocols/${p.id}`} class="block h-full rounded-2xl border border-border bg-surface p-5 lift"><span class="font-display text-xl text-ink block">{p.expert}</span><span class="text-sm text-muted">{p.role}</span></a></li>)}</ul>
+    </section>
+  )}
+  {rel.startsWith("database/") && <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 -mt-8"><EvidenceRubric compact /></div>}
+</Base>

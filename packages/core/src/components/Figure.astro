@@ -1,0 +1,8 @@
+---
+interface Props { src: string; alt: string; width: number; height: number; credit: string; caption?: string; eager?: boolean }
+const { src, alt, width, height, credit, caption, eager = false } = Astro.props;
+---
+<figure>
+  <img {src} {alt} {width} {height} loading={eager ? "eager" : "lazy"} decoding="async" fetchpriority={eager ? "high" : undefined} />
+  <figcaption>{caption}{caption && " "}<span class="credit">Credit: {credit}</span></figcaption>
+</figure>

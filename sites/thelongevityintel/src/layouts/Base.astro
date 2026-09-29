@@ -1,0 +1,227 @@
+---
+import SeoHead from "@portfolio/core/components/SeoHead.astro";
+import { canonicalUrl, organization, webSite } from "@portfolio/core";
+import { orgInfo } from "../lib/seo";
+import { ogUrl } from "../lib/og";
+import { FlaskConical, Search, Moon, Sun, Menu, X, ChevronDown, ArrowUp, ArrowUpRight } from "@lucide/astro";
+import "@fontsource/instrument-serif/latin-400.css";
+import "@fontsource/instrument-serif/latin-400-italic.css";
+import "@fontsource/dm-mono/latin-400.css";
+import "@fontsource/dm-mono/latin-500.css";
+import "../styles/global.css";
+import serifUrl from "@fontsource/instrument-serif/files/instrument-serif-latin-400-normal.woff2?url";
+import sansUrl from "@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2?url";
+import site from "../../site.config.json";
+import { NAV_GROUPS, FOOTER_LINKS } from "../lib/nav";
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  noindex?: boolean;
+  jsonLd?: unknown[];
+  type?: "website" | "article";
+  image?: string;
+  published?: string;
+  preloads?: { href: string; as: "image" | "font" | "style"; type?: string; imagesrcset?: string; imagesizes?: string }[];
+  modified?: string;
+}
+const { title, description, path, noindex, jsonLd = [], type = "website", image = ogUrl("default"), published, modified, preloads = [] } = Astro.props;
+const org = { ...orgInfo, name: site.name };
+const canonical = canonicalUrl(site.origin, path, "never");
+const year = new Date().getFullYear();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark");}catch(e){}</script>
+    <link rel="preload" as="font" type="font/woff2" href={serifUrl} crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href={sansUrl} crossorigin />
+    <meta name="theme-color" content="#f5f2eb" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a0f0b" media="(prefers-color-scheme: dark)" />
+    <meta name="impact-site-verification" content="5c36e911-416e-4424-8ebf-3cc92f0fef1d" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <SeoHead title={title} description={description} canonical={canonical} noindex={noindex} image={image} published={published} modified={modified} preloads={preloads} links={[{ rel: "alternate", type: "application/rss+xml", title: site.name, href: "/feed.xml" }, { rel: "alternate", type: "application/atom+xml", title: site.name + " (Atom)", href: "/atom.xml" }]} siteName={site.name} type={type} jsonLd={[organization(org), webSite(org), ...jsonLd]} />
+  </head>
+  <body>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2 focus:rounded-xl focus:bg-green focus:text-white focus:text-sm focus:font-semibold focus:shadow-lg">Skip to content</a>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary" data-scrolled="false">
+      <div class="max-w-7xl mx-auto px-4 sm:px-5">
+        <div class="flex items-center justify-between h-14">
+          <a href="/" class="flex items-center gap-2 group shrink-0" aria-label="Longevity Intel home">
+            <span class="w-7 h-7 rounded-lg bg-green flex items-center justify-center group-hover:bg-green-bright transition-colors"><FlaskConical class="w-3.5 h-3.5 text-white" aria-hidden="true" /></span>
+            <span class="font-display text-xl text-ink hidden sm:block">Longevity Intel</span>
+          </a>
+
+          <div class="hidden lg:flex items-center gap-1">
+            <a href="/get-started" class="px-3 py-1.5 text-sm font-semibold text-green-bright hover:bg-green/10 rounded-lg transition-colors">Build My Plan</a>
+            <span class="w-px h-4 bg-border mx-1" aria-hidden="true"></span>
+            {NAV_GROUPS.map((g) => (
+              <div class="nav-group">
+                <button type="button" aria-haspopup="true" aria-expanded="false" data-nav-toggle class="flex items-center gap-1 px-3 py-1.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-lg transition-colors cursor-pointer">
+                  {g.label}<ChevronDown class="w-3.5 h-3.5 chev" aria-hidden="true" />
+                </button>
+                <div class="nav-menu">
+                  {g.items.map((it) => (
+                    <a href={it.href} class="flex flex-col gap-0.5 px-3 py-2.5 rounded-xl hover:bg-surface-2 transition-colors group">
+                      <span class="text-sm font-medium text-ink group-hover:text-green transition-colors">{it.label}</span>
+                      <span class="text-xs text-muted">{it.desc}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+            <span class="w-px h-4 bg-border mx-1" aria-hidden="true"></span>
+            <a href="/quiz" class="px-3 py-1.5 text-sm font-medium text-muted hover:text-ink hover:bg-surface/80 rounded-lg transition-colors">Bio Age Quiz</a>
+          </div>
+
+          <div class="flex items-center gap-1">
+            <div class="relative" id="search-wrap">
+              <button type="button" id="search-open" class="p-2 rounded-xl hover:bg-surface/80 transition-colors cursor-pointer" aria-label="Search the site"><Search class="w-4 h-4 text-muted" aria-hidden="true" /></button>
+              <div id="search-box" hidden class="absolute right-0 top-full mt-2 w-[min(20rem,calc(100vw-2rem))] bg-surface border border-border rounded-xl shadow-xl overflow-hidden z-50" style="box-shadow:var(--shadow-lg)">
+                <label class="flex items-center gap-2 px-3 py-2.5 border-b border-border">
+                  <Search class="w-3.5 h-3.5 text-muted shrink-0" aria-hidden="true" />
+                  <span class="visually-hidden">Search articles</span>
+                  <input id="search-input" type="search" autocomplete="off" placeholder="Search guides, supplements, devices" class="bg-transparent text-sm text-ink placeholder:text-muted outline-none w-full" />
+                </label>
+                <div id="search-results" role="listbox" aria-label="Search results"></div>
+              </div>
+            </div>
+            <button type="button" id="theme-toggle" class="p-2 rounded-xl hover:bg-surface/80 transition-colors cursor-pointer" aria-label="Switch colour theme">
+              <Moon class="w-4 h-4 text-muted dark:hidden" aria-hidden="true" /><Sun class="w-4 h-4 text-amber hidden dark:block" aria-hidden="true" />
+            </button>
+            <button type="button" id="menu-toggle" class="lg:hidden p-2 rounded-xl hover:bg-surface/80 transition-colors cursor-pointer" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer"><Menu class="w-4 h-4" aria-hidden="true" /></button>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-drawer" class="mobile-drawer lg:hidden border-t border-border">
+        <div class="px-4 py-4 space-y-5 max-h-[75vh] overflow-y-auto">
+          <a href="/get-started" class="block px-3 py-2.5 bg-green/10 text-green-bright font-semibold text-sm rounded-xl">Build My Plan →</a>
+          {NAV_GROUPS.map((g) => (
+            <div>
+              <p class="text-xs font-mono uppercase tracking-widest text-muted px-3 mb-1">{g.label}</p>
+              {g.items.map((it) => (
+                <a href={it.href} class="block px-3 py-2.5 rounded-xl hover:bg-surface/80 transition-colors mb-0.5">
+                  <span class="block text-sm font-medium text-ink">{it.label}</span>
+                  <span class="block text-xs text-muted mt-0.5">{it.desc}</span>
+                </a>
+              ))}
+            </div>
+          ))}
+          <a href="/quiz" class="block px-3 py-2.5 text-sm font-medium text-muted hover:text-ink rounded-xl">Bio Age Quiz</a>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main-content"><slot /></main>
+
+    <footer class="bg-surface border-t border-border">
+      <div class="hairline"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10">
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-10 mb-14">
+          <div class="col-span-2">
+            <a href="/" class="flex items-center gap-2.5 mb-5 group w-fit">
+              <span class="w-8 h-8 rounded-xl bg-green flex items-center justify-center group-hover:bg-green-bright transition-colors"><FlaskConical class="w-4 h-4 text-white" aria-hidden="true" /></span>
+              <span class="font-display text-xl text-ink tracking-tight">Longevity Intel</span>
+            </a>
+            <p class="text-muted text-sm leading-relaxed mb-5 max-w-[280px]">Evidence-focused longevity guides with visible sources, limitations, and affiliate disclosures.</p>
+            <div class="flex flex-col gap-2">
+              {["Rankings are not sold", "Every grade shows its rubric", "No medical review is claimed"].map((t) => (
+                <div class="flex items-center gap-1.5 text-xs text-muted">
+                  <span class="w-3 h-3 rounded-full bg-green/20 border border-green/30 flex items-center justify-center shrink-0"><span class="w-1 h-1 rounded-full bg-green-bright"></span></span>{t}
+                </div>
+              ))}
+            </div>
+          </div>
+          {Object.entries(FOOTER_LINKS).map(([section, items]) => (
+            <div>
+              <h2 class="font-mono text-[10px] uppercase tracking-[0.12em] text-muted mb-4">{section}</h2>
+              <ul class="space-y-2.5">{items.map(([label, href]) => (<li><a href={href} class="text-sm text-muted hover:text-ink transition-colors inline-block hover:translate-x-0.5">{label}</a></li>))}</ul>
+            </div>
+          ))}
+        </div>
+        <div class="border-t border-border pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex flex-wrap gap-x-5 gap-y-1 text-xs text-muted font-mono">
+            <span>© {year} Longevity Intel</span>
+            <a href="/privacy" class="hover:text-ink transition-colors">Privacy</a>
+            <a href="/terms" class="hover:text-ink transition-colors">Terms</a>
+            <a href="/about#affiliate" class="hover:text-ink transition-colors">Affiliate Disclosure</a>
+            <a href="/contact" class="hover:text-ink transition-colors">Contact</a>
+          </div>
+          <p class="text-xs text-muted font-mono">For information only. Not medical advice: talk to your doctor before you change anything.</p>
+        </div>
+      </div>
+    </footer>
+
+    <button type="button" id="to-top" hidden aria-label="Back to top" class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-xl bg-surface border border-border text-muted hover:text-green-bright hover:border-green/40 transition-colors cursor-pointer flex items-center justify-center" style="box-shadow:var(--shadow-md)"><ArrowUp class="w-4 h-4" aria-hidden="true" /></button>
+
+    <script>
+      const $ = (id: string) => document.getElementById(id)!;
+      const root = document.documentElement;
+      // theme
+      $("theme-toggle").addEventListener("click", () => {
+        const dark = root.classList.toggle("dark");
+        try { localStorage.setItem("theme", dark ? "dark" : "light"); } catch {}
+      });
+      // nav shadow, reading progress, back to top (one passive listener, rAF-throttled)
+      const nav = $("site-nav"), bar = $("progress"), top = $("to-top") as HTMLButtonElement;
+      let ticking = false;
+      const onScroll = () => {
+        if (ticking) return; ticking = true;
+        requestAnimationFrame(() => {
+          const y = window.scrollY, max = root.scrollHeight - root.clientHeight;
+          nav.dataset.scrolled = String(y > 30);
+          bar.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
+          bar.style.opacity = y > 40 ? "1" : "0";
+          top.hidden = y < 900;
+          ticking = false;
+        });
+      };
+      addEventListener("scroll", onScroll, { passive: true }); onScroll();
+      top.addEventListener("click", () => scrollTo({ top: 0, behavior: "smooth" }));
+      // desktop dropdown buttons: keyboard and touch
+      document.querySelectorAll<HTMLElement>("[data-nav-toggle]").forEach((b) => {
+        b.addEventListener("click", () => {
+          const g = b.parentElement!; const open = g.dataset.open !== "true";
+          document.querySelectorAll<HTMLElement>(".nav-group").forEach((x) => { x.dataset.open = "false"; x.querySelector("button")?.setAttribute("aria-expanded", "false"); });
+          g.dataset.open = String(open); b.setAttribute("aria-expanded", String(open));
+        });
+      });
+      addEventListener("keydown", (e) => { if (e.key === "Escape") { document.querySelectorAll<HTMLElement>(".nav-group").forEach((x) => (x.dataset.open = "false")); closeSearch(); } });
+      document.addEventListener("click", (e) => { if (!(e.target as Element).closest(".nav-group")) document.querySelectorAll<HTMLElement>(".nav-group").forEach((x) => (x.dataset.open = "false")); if (!(e.target as Element).closest("#search-wrap")) closeSearch(); });
+      // mobile drawer
+      const drawer = $("mobile-drawer"), mt = $("menu-toggle");
+      mt.addEventListener("click", () => { const o = drawer.dataset.open !== "true"; drawer.dataset.open = String(o); mt.setAttribute("aria-expanded", String(o)); mt.setAttribute("aria-label", o ? "Close menu" : "Open menu"); });
+      // search island: Fuse and the index load on first use, never on page load
+      const box = $("search-box"), input = $("search-input") as HTMLInputElement, results = $("search-results");
+      let fuse: any = null, loading: Promise<void> | null = null;
+      function closeSearch() { box.hidden = true; }
+      function load() {
+        loading ??= Promise.all([import("fuse.js"), fetch("/search-index.json").then((r) => r.json())]).then(([{ default: Fuse }, data]) => {
+          fuse = new Fuse(data, { keys: ["title", "description", "category"], threshold: 0.4 });
+        }).catch(() => {});
+        return loading;
+      }
+      $("search-open").addEventListener("click", () => { box.hidden = !box.hidden; if (!box.hidden) { input.focus(); load(); } });
+      input.addEventListener("input", async () => {
+        await load();
+        const q = input.value.trim();
+        if (!q || !fuse) { results.replaceChildren(); return; }
+        const hits = fuse.search(q).slice(0, 6).map((r: any) => r.item);
+        results.replaceChildren(...hits.map((h: any) => {
+          const a = document.createElement("a"); a.href = `/${h.category}/${h.slug}`; a.className = "block px-4 py-3 border-b border-border last:border-0";
+          const t = document.createElement("span"); t.className = "block text-sm font-medium text-ink line-clamp-1"; t.textContent = h.title;
+          const c = document.createElement("span"); c.className = "block text-xs text-muted font-mono uppercase tracking-wide mt-0.5"; c.textContent = h.category;
+          a.append(t, c); return a;
+        }));
+      });
+    </script>
+  </body>
+</html>

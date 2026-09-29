@@ -1,0 +1,4 @@
+public/img/
+.astro/
+dist/
+node_modules/

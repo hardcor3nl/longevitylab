@@ -1,0 +1,323 @@
+[
+  {
+    "id": "nmn",
+    "name": "NMN",
+    "aliases": [
+      "Nicotinamide Mononucleotide",
+      "Beta-NMN"
+    ],
+    "category": "NAD+ Precursors",
+    "goals": [
+      "Longevity",
+      "Energy",
+      "Cognitive"
+    ],
+    "evidenceLevel": "Moderate",
+    "summary": "A direct NAD+ precursor that restores declining NAD+ levels with age. Strong mechanistic data, growing human trial evidence.",
+    "mechanism": "Converts to NAD+ via the Preiss-Handler pathway. NAD+ is essential for sirtuins, PARP DNA repair, and mitochondrial energy production.",
+    "dosage": "250–500mg/day",
+    "timing": "Morning with or without food",
+    "stacksWith": [
+      "resveratrol",
+      "tmg",
+      "coq10"
+    ],
+    "avoid": [],
+    "affiliateUrl": "/go/prohealth-nmn",
+    "reviewSlug": "supplements/best-nmn-supplements-2024"
+  },
+  {
+    "id": "nr",
+    "name": "NR",
+    "aliases": [
+      "Nicotinamide Riboside",
+      "Niagen"
+    ],
+    "category": "NAD+ Precursors",
+    "goals": [
+      "Longevity",
+      "Energy"
+    ],
+    "evidenceLevel": "Moderate",
+    "summary": "An alternative NAD+ precursor with more human trial data than NMN. Well-tolerated with strong safety profile.",
+    "mechanism": "Converts to NMN then NAD+ via the salvage pathway. Increases NAD+ in blood and tissues.",
+    "dosage": "300–600mg/day",
+    "timing": "Morning",
+    "stacksWith": [
+      "resveratrol",
+      "pterostilbene"
+    ],
+    "avoid": [],
+    "affiliateUrl": "/go/tru-niagen"
+  },
+  {
+    "id": "resveratrol",
+    "name": "Resveratrol",
+    "aliases": [
+      "Trans-resveratrol",
+      "RSV"
+    ],
+    "category": "Antioxidants",
+    "goals": [
+      "Longevity",
+      "Cardiovascular",
+      "Inflammation"
+    ],
+    "evidenceLevel": "Emerging",
+    "summary": "A polyphenol that activates sirtuins (SIRT1). Famous from David Sinclair's research. Human data more mixed than animal studies.",
+    "mechanism": "Activates SIRT1 and AMPK. Mimics some effects of caloric restriction. Anti-inflammatory via NF-κB inhibition.",
+    "dosage": "500mg–1g/day",
+    "timing": "With a fatty meal for absorption",
+    "stacksWith": [
+      "nmn",
+      "nr",
+      "quercetin"
+    ],
+    "avoid": [
+      "blood-thinners"
+    ],
+    "affiliateUrl": "/go/resveratrol"
+  },
+  {
+    "id": "omega3",
+    "name": "Omega-3 (EPA/DHA)",
+    "aliases": [
+      "Fish Oil",
+      "EPA",
+      "DHA",
+      "Marine Omega-3"
+    ],
+    "category": "Omega Fatty Acids",
+    "goals": [
+      "Cardiovascular",
+      "Inflammation",
+      "Cognitive",
+      "Longevity"
+    ],
+    "evidenceLevel": "Strong",
+    "summary": "The best-evidenced longevity supplement. Reduces cardiovascular mortality, systemic inflammation, and supports brain health.",
+    "mechanism": "Incorporated into cell membranes, reduces pro-inflammatory eicosanoids (PGE2, LTB4), activates anti-inflammatory resolvins.",
+    "dosage": "1–4g EPA+DHA daily",
+    "timing": "With meals",
+    "stacksWith": [
+      "vitamin-d",
+      "magnesium"
+    ],
+    "avoid": [],
+    "affiliateUrl": "/go/carlson-omega3",
+    "reviewSlug": "supplements/best-omega-3-fish-oil"
+  },
+  {
+    "id": "vitamin-d",
+    "name": "Vitamin D3",
+    "aliases": [
+      "Cholecalciferol",
+      "Vitamin D",
+      "D3"
+    ],
+    "category": "Vitamins & Minerals",
+    "goals": [
+      "Longevity",
+      "Cardiovascular",
+      "Inflammation"
+    ],
+    "evidenceLevel": "Strong",
+    "summary": "Deficiency is endemic (over 40% of Western adults) and associated with higher all-cause mortality. Supplementation corrects deficiency effectively.",
+    "mechanism": "Nuclear receptor activation regulates 200+ genes. Regulates calcium metabolism, immune function, and cellular differentiation.",
+    "dosage": "2,000–5,000 IU/day (test first)",
+    "timing": "With a fatty meal",
+    "stacksWith": [
+      "vitamin-k2",
+      "omega3",
+      "magnesium"
+    ],
+    "avoid": [],
+    "affiliateUrl": "/go/thorne-d3k2"
+  },
+  {
+    "id": "magnesium",
+    "name": "Magnesium",
+    "aliases": [
+      "Magnesium Glycinate",
+      "Magnesium L-Threonate",
+      "Magnesium Malate"
+    ],
+    "category": "Vitamins & Minerals",
+    "goals": [
+      "Sleep",
+      "Cardiovascular",
+      "Recovery",
+      "Cognitive"
+    ],
+    "evidenceLevel": "Strong",
+    "summary": "Required for 300+ enzymatic reactions. Deficiency is common and linked to poor sleep, muscle cramps, and cardiovascular risk.",
+    "mechanism": "Cofactor for ATP production, DNA repair, protein synthesis. Modulates NMDA receptors (cognitive) and regulates circadian rhythms.",
+    "dosage": "200–400mg elemental magnesium",
+    "timing": "Evening (supports sleep)",
+    "stacksWith": [
+      "vitamin-d",
+      "zinc",
+      "taurine"
+    ],
+    "avoid": [],
+    "affiliateUrl": "/go/pure-mag-glycinate"
+  },
+  {
+    "id": "coq10",
+    "name": "CoQ10",
+    "aliases": [
+      "Ubiquinol",
+      "Ubiquinone",
+      "Coenzyme Q10"
+    ],
+    "category": "Mitochondrial",
+    "goals": [
+      "Energy",
+      "Cardiovascular",
+      "Longevity"
+    ],
+    "evidenceLevel": "Moderate",
+    "summary": "Essential for mitochondrial electron transport chain. Levels decline with age and are depleted by statins. Ubiquinol form has better absorption.",
+    "mechanism": "Electron carrier in complexes I-III of the mitochondrial respiratory chain. Also a potent lipid-soluble antioxidant.",
+    "dosage": "100–300mg/day (ubiquinol preferred)",
+    "timing": "With a fatty meal",
+    "stacksWith": [
+      "nmn",
+      "pqq",
+      "alpha-lipoic-acid"
+    ],
+    "avoid": [],
+    "affiliateUrl": "/go/jarrow-ubiquinol"
+  },
+  {
+    "id": "ashwagandha",
+    "name": "Ashwagandha",
+    "aliases": [
+      "Withania somnifera",
+      "KSM-66",
+      "Sensoril"
+    ],
+    "category": "Adaptogens",
+    "goals": [
+      "Sleep",
+      "Recovery",
+      "Cognitive",
+      "Energy"
+    ],
+    "evidenceLevel": "Moderate",
+    "summary": "The best-evidenced adaptogen. Reduces cortisol, improves sleep quality, and supports thyroid function. KSM-66 extract has the best data.",
+    "mechanism": "Withanolides modulate cortisol via HPA axis downregulation. GABA-mimetic effects on sleep. Possible thyroid hormone potentiation.",
+    "dosage": "300–600mg KSM-66 extract",
+    "timing": "Evening (or split AM/PM)",
+    "stacksWith": [
+      "magnesium",
+      "l-theanine"
+    ],
+    "avoid": [
+      "thyroid-medication"
+    ],
+    "affiliateUrl": "/go/ksm66-ashwagandha"
+  },
+  {
+    "id": "creatine",
+    "name": "Creatine",
+    "aliases": [
+      "Creatine Monohydrate"
+    ],
+    "category": "Mitochondrial",
+    "goals": [
+      "Energy",
+      "Cognitive",
+      "Recovery",
+      "Longevity"
+    ],
+    "evidenceLevel": "Strong",
+    "summary": "The most evidence-backed performance supplement. Increasingly recognised for cognitive benefits and longevity effects beyond muscle.",
+    "mechanism": "Regenerates ATP via phosphocreatine system. Increases PCr stores in muscle and brain. Neuroprotective at multiple targets.",
+    "dosage": "3–5g/day (no loading needed)",
+    "timing": "Anytime — consistency matters more than timing",
+    "stacksWith": [
+      "vitamin-d",
+      "omega3"
+    ],
+    "avoid": [],
+    "affiliateUrl": "/go/thorne-creatine"
+  },
+  {
+    "id": "berberine",
+    "name": "Berberine",
+    "aliases": [
+      "Berberine HCl"
+    ],
+    "category": "Mitochondrial",
+    "goals": [
+      "Longevity",
+      "Cardiovascular",
+      "Energy"
+    ],
+    "evidenceLevel": "Moderate",
+    "summary": "Often called \"natural metformin\". Activates AMPK, improves insulin sensitivity, and has demonstrated cardiovascular benefits in multiple RCTs.",
+    "mechanism": "AMPK activator → mimics caloric restriction signalling. Modulates gut microbiome. Inhibits PTP1B (insulin sensitisation).",
+    "dosage": "500mg 2–3x/day with meals",
+    "timing": "With meals (GI tolerance)",
+    "stacksWith": [
+      "nmn",
+      "resveratrol"
+    ],
+    "avoid": [
+      "metformin",
+      "blood-sugar-medications"
+    ],
+    "affiliateUrl": "/go/thorne-berberine"
+  },
+  {
+    "id": "quercetin",
+    "name": "Quercetin",
+    "aliases": [
+      "Quercetin Phytosome",
+      "Quercetin + Bromelain"
+    ],
+    "category": "Antioxidants",
+    "goals": [
+      "Longevity",
+      "Inflammation",
+      "Cardiovascular"
+    ],
+    "evidenceLevel": "Emerging",
+    "summary": "A senolytic flavonoid that clears senescent (\"zombie\") cells. Typically used in pulsed protocols rather than daily. Often stacked with dasatinib (Rx).",
+    "mechanism": "Inhibits anti-apoptotic pathways in senescent cells (BCL-2, PI3K). Reduces SASP (senescence-associated secretory phenotype).",
+    "dosage": "500–1000mg (pulsed: 2 days on, 2 weeks off)",
+    "timing": "Pulsed protocol with food",
+    "stacksWith": [
+      "fisetin",
+      "resveratrol"
+    ],
+    "avoid": [],
+    "affiliateUrl": "/go/thorne-quercetin"
+  },
+  {
+    "id": "tmg",
+    "name": "TMG",
+    "aliases": [
+      "Trimethylglycine",
+      "Betaine"
+    ],
+    "category": "Vitamins & Minerals",
+    "goals": [
+      "Longevity",
+      "Cardiovascular",
+      "Energy"
+    ],
+    "evidenceLevel": "Emerging",
+    "summary": "A methyl donor that counteracts the methylation depletion caused by NMN/NR supplementation. Often recommended to stack with NAD+ precursors.",
+    "mechanism": "Donates methyl groups via BHMT pathway → regenerates SAM (S-adenosylmethionine). Lowers homocysteine.",
+    "dosage": "500mg–2g/day",
+    "timing": "Morning with NAD+ precursor",
+    "stacksWith": [
+      "nmn",
+      "nr"
+    ],
+    "avoid": [],
+    "affiliateUrl": "/go/jarrow-tmg"
+  }
+]

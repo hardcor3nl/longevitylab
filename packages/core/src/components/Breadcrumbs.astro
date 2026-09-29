@@ -1,0 +1,15 @@
+---
+import { breadcrumbsFromCrumbs, jsonLdScript } from "../jsonld.ts";
+interface Props { items: { name: string; href?: string }[] }
+const { items } = Astro.props;
+// BreadcrumbList JSON-LD mirrors the visible trail; needs `site` in astro.config (always set on portfolio sites).
+const ld = Astro.site && items.length > 1 ? breadcrumbsFromCrumbs(items, Astro.site, new URL(Astro.url.pathname, Astro.site).toString()) : null;
+---
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+  <ol>
+    {items.map((it, i) => (
+      <li>{it.href && i < items.length - 1 ? <a href={it.href}>{it.name}</a> : <span aria-current="page">{it.name}</span>}</li>
+    ))}
+  </ol>
+</nav>
+{ld && <script type="application/ld+json" set:html={jsonLdScript(ld)} />}

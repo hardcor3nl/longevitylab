@@ -1,0 +1,57 @@
+---
+import Base from "../layouts/Base.astro";
+import HomeHero from "../components/HomeHero.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+import CorrectionsBand from "../components/CorrectionsBand.astro";
+import { ArrowUpRight } from "@lucide/astro";
+import { TrustBar } from "../legacy/components/TrustBar";
+import { CategoryNav } from "../legacy/components/CategoryNav";
+import { HubPillars } from "../legacy/components/HubPillars";
+import { StartHere } from "../legacy/components/StartHere";
+import { TopGuides } from "../legacy/components/TopGuides";
+import { DatabaseTeaser } from "../legacy/components/DatabaseTeaser";
+import { ProtocolsTeaser } from "../legacy/components/ProtocolsTeaser";
+import { EditorialPromise } from "../legacy/components/EditorialPromise";
+import { QuizTeaser } from "../legacy/components/QuizTeaser";
+import { getAllArticles } from "../lib/content";
+import site from "../../site.config.json";
+
+const all = await getAllArticles();
+const latest = [...all.filter((a) => a.data.featured), ...all.filter((a) => !a.data.featured)].slice(0, 6);
+const guides = [
+  ["Complete Longevity Supplement Stack", "/best/complete-longevity-stack"],
+  ["Best NMN Supplements", "/supplements/best-nmn-supplements-2024"],
+  ["Sleep Hygiene Protocol", "/protocols/sleep-hygiene-protocol"],
+  ["Best Home Infrared Saunas", "/recovery/best-home-saunas-infrared-2024"],
+  ["Best Longevity Wearables", "/best/best-wearables-longevity-2024"],
+  ["Beginner Longevity Path", "/get-started"],
+];
+const itemList = { "@context": "https://schema.org", "@type": "ItemList", name: "Essential Longevity Guides", itemListElement: guides.map(([name, path], i) => ({ "@type": "ListItem", position: i + 1, name, url: new URL(path, site.origin).toString() })) };
+---
+<Base title="Longevity Intel: Science-Backed Reviews & Protocols" description="Evidence-focused supplement comparisons, wearable and recovery guides, protocols, and a research database, organised so you can weigh sources, limitations, and trade-offs." path="/" jsonLd={[itemList]}>
+  <HomeHero guides={all.length} />
+  <TrustBar />
+  <CategoryNav />
+  <HubPillars />
+  <StartHere />
+  <TopGuides />
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" aria-labelledby="latest-h">
+    <div class="flex items-end justify-between mb-10 reveal">
+      <div>
+        <div class="section-rule"></div>
+        <p class="font-mono text-xs uppercase tracking-[.14em] text-green-bright mb-2">Featured</p>
+        <h2 id="latest-h" class="font-display text-4xl md:text-5xl text-ink leading-tight">Recent reviews</h2>
+      </div>
+      <a href="/best" class="flex items-center gap-1.5 text-sm font-medium text-muted hover:text-ink transition-colors group">Best lists<ArrowUpRight class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" aria-hidden="true" /></a>
+    </div>
+    <div class="space-y-5">
+      <div class="reveal"><ArticleCard article={latest[0]} size="lg" /></div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">{latest.slice(1).map((a) => <div class="reveal"><ArticleCard article={a} /></div>)}</div>
+    </div>
+  </section>
+  <DatabaseTeaser />
+  <ProtocolsTeaser />
+  <EditorialPromise />
+  <QuizTeaser />
+  <CorrectionsBand />
+</Base>

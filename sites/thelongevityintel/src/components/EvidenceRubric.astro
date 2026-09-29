@@ -1,0 +1,29 @@
+---
+import { GRADES, CRITERIA } from "../lib/rubric";
+interface Props { compact?: boolean; id?: string }
+const { compact = false, id = "rubric" } = Astro.props;
+---
+<section id={id} aria-labelledby={`${id}-h`} class="rounded-2xl border border-border bg-surface p-6 md:p-7" style="box-shadow:var(--shadow-sm)">
+  <p class="font-mono text-[10px] uppercase tracking-[0.14em] text-green-bright mb-2">Rubric</p>
+  <h2 id={`${id}-h`} class="font-display text-2xl md:text-3xl text-ink leading-tight mb-2">How evidence grades work</h2>
+  <p class="text-sm text-muted leading-relaxed mb-5 max-w-2xl">A grade summarises the strength of the <strong class="text-ink">human</strong> evidence for a compound or device category. It is not a score, it is not a rating of any brand, and it changes when new studies land.</p>
+  <dl class="grid gap-3 md:grid-cols-2 mb-5">
+    {GRADES.map((g) => (
+      <div class="rounded-xl border border-border bg-cream/60 p-4">
+        <dt class="flex items-center justify-between gap-3 mb-1.5">
+          <span class={`grade grade-${g.id}`}>{g.label}</span>
+          <span class="grade-bars" aria-hidden="true">{[1, 2, 3, 4].map((n) => <i class={n <= g.bars ? "on" : ""}></i>)}</span>
+        </dt>
+        <dd class="text-xs text-muted leading-relaxed">{g.text}</dd>
+      </div>
+    ))}
+  </dl>
+  {!compact && (
+    <>
+      <h3 class="font-mono text-[10px] uppercase tracking-widest text-muted mb-3">What goes into a grade</h3>
+      <ol class="grid gap-x-8 gap-y-2 md:grid-cols-2 text-sm">
+        {CRITERIA.map(([t, d], i) => (<li class="flex gap-3"><span class="font-mono text-xs text-green-bright mt-0.5">0{i + 1}</span><span><strong class="text-ink font-medium">{t}.</strong> <span class="text-muted">{d}</span></span></li>))}
+      </ol>
+    </>
+  )}
+</section>

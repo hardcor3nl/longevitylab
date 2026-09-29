@@ -1,0 +1,45 @@
+{
+  "compare": {
+    "nmn-vs-nr": [
+      {
+        "question": "Should I take NMN or NR?",
+        "answer": "Take NMN if you want the more direct precursor with strong recent human data. Take NR if you prioritise the longer clinical safety record. Both raise NAD+; pick based on budget, tolerance, and brand testing quality."
+      },
+      {
+        "question": "Can I take NMN and NR together?",
+        "answer": "Some people alternate or combine, but most do not need both. Pick one evidence-backed product at a studied dose before stacking precursors."
+      }
+    ],
+    "whoop-vs-oura": [
+      {
+        "question": "Is WHOOP or Oura better for longevity?",
+        "answer": "Oura is usually better as a daily driver for sleep and comfort. WHOOP is better for recovery coaching and training load. Choose based on your primary metric, not marketing."
+      }
+    ],
+    "magnesium-forms": [
+      {
+        "question": "Glycinate, threonate, or malate — which magnesium should I buy?",
+        "answer": "Glycinate for sleep and general deficiency, L-threonate for cognitive focus, malate for daytime energy. Many people start with glycinate at night."
+      }
+    ],
+    "creatine-vs-hmb": [
+      {
+        "question": "Is creatine or HMB better for muscle and longevity?",
+        "answer": "Creatine monohydrate has a far larger evidence base for strength, muscle, and emerging cognitive outcomes. HMB may help in specific catabolic contexts but is not the default first buy."
+      }
+    ],
+    "cold-plunge-vs-ice-bath": [
+      {
+        "question": "Do I need a commercial cold plunge?",
+        "answer": "Not to get the physiology. DIY ice baths or chest freezers can reach similar temperatures. Commercial plunges buy convenience, filtration, and consistency."
+      }
+    ],
+    "sauna-types": [
+      {
+        "question": "Infrared or traditional sauna for longevity?",
+        "answer": "Traditional sauna has the strongest population mortality data. Infrared is often easier at home and still provides useful heat stress. Consistency of use beats perfection of modality."
+      }
+    ]
+  },
+  "articles": {}
+}

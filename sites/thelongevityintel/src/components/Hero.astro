@@ -1,0 +1,12 @@
+---
+import { heroSrcSet, heroFallback, heroDims } from "../lib/heroes";
+interface Props { id?: string; alt?: string; sizes?: string; eager?: boolean; class?: string; fill?: boolean }
+const { id = "", alt = "", sizes = "100vw", eager = false, class: cls = "", fill = true } = Astro.props;
+const srcset = heroSrcSet(id);
+const { width, height } = heroDims(id);
+---
+{srcset && (
+  <img src={heroFallback(id)} srcset={srcset} sizes={sizes} alt={alt} width={width} height={height}
+    loading={eager ? "eager" : "lazy"} decoding="async" fetchpriority={eager ? "high" : undefined}
+    class={`${fill ? "absolute inset-0 w-full h-full object-cover" : ""} ${cls}`} />
+)}

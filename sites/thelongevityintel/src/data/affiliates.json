@@ -1,0 +1,954 @@
+[
+  {
+    "id": "prohealth-nmn",
+    "programme": "prohealth-nmn",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=NMN+Longevity+Supplement&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "tru-niagen",
+    "programme": "tru-niagen",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=ChromaDex+Tru+Niagen&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "double-wood-nmn",
+    "programme": "double-wood-nmn",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Double+Wood+NMN&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "dexcom-stelo",
+    "programme": "dexcom-stelo",
+    "network": "none",
+    "url": "https://www.stelo.com/",
+    "status": "plain"
+  },
+  {
+    "id": "libre3",
+    "programme": "libre3",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Freestyle+Libre+3+sensor&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "carlson-omega3",
+    "programme": "carlson-omega3",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Carlson+Elite+Omega-3&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "nordic-omega3",
+    "programme": "nordic-omega3",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Nordic+Naturals+Ultimate+Omega&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "mito-red-1500",
+    "programme": "mito-red-1500",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Mito+Red+Light+MitoPRO+1500&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "lumebox",
+    "programme": "lumebox",
+    "network": "none",
+    "url": "https://www.lumebox.com/",
+    "status": "plain"
+  },
+  {
+    "id": "whoop-4",
+    "programme": "whoop-4",
+    "network": "none",
+    "url": "https://join.whoop.com/",
+    "status": "plain"
+  },
+  {
+    "id": "oura-gen3",
+    "programme": "oura-gen3",
+    "network": "none",
+    "url": "https://ouraring.com/",
+    "status": "plain"
+  },
+  {
+    "id": "garmin-fenix7",
+    "programme": "garmin-fenix7",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Garmin+Fenix+7&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "fisetin-lifeext",
+    "programme": "fisetin-lifeext",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4gAywip",
+    "status": "live"
+  },
+  {
+    "id": "function-health",
+    "programme": "function-health",
+    "network": "none",
+    "url": "https://www.functionhealth.com/",
+    "status": "plain"
+  },
+  {
+    "id": "insidetracker",
+    "programme": "insidetracker",
+    "network": "none",
+    "url": "https://www.insidetracker.com/",
+    "status": "plain"
+  },
+  {
+    "id": "gaia-rhodiola",
+    "programme": "gaia-rhodiola",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/3SV2tA1",
+    "status": "live"
+  },
+  {
+    "id": "ksm66-ashwagandha",
+    "programme": "ksm66-ashwagandha",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/3T0P8Gi",
+    "status": "live"
+  },
+  {
+    "id": "jarrow-nac",
+    "programme": "jarrow-nac",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Jarrow+NAC&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "jarrow-pqq",
+    "programme": "jarrow-pqq",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Jarrow+PQQ&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "jarrow-rala",
+    "programme": "jarrow-rala",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4f7ehGI",
+    "status": "live"
+  },
+  {
+    "id": "jarrow-tmg",
+    "programme": "jarrow-tmg",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Jarrow+TMG&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "jarrow-ubiquinol",
+    "programme": "jarrow-ubiquinol",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/3SN8GOx",
+    "status": "live"
+  },
+  {
+    "id": "lifeext-caakg",
+    "programme": "lifeext-caakg",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4wZpyAr",
+    "status": "live"
+  },
+  {
+    "id": "livon-vitamin-c",
+    "programme": "livon-vitamin-c",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4aSGAHM",
+    "status": "live"
+  },
+  {
+    "id": "now-taurine",
+    "programme": "now-taurine",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=NOW+Foods+Taurine&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "primeadine-spermidine",
+    "programme": "primeadine-spermidine",
+    "network": "Oxford Healthspan referral",
+    "url": "https://www.oxfordhealthspan.com/MICHAEL54679",
+    "status": "live"
+  },
+  {
+    "id": "pure-mag-glycinate",
+    "programme": "pure-mag-glycinate",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Pure+Encapsulations+Magnesium+Glycinate&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "thorne-berberine",
+    "programme": "thorne-berberine",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/3SJ1nap",
+    "status": "live"
+  },
+  {
+    "id": "thorne-creatine",
+    "programme": "thorne-creatine",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4p9D4Pe",
+    "status": "live"
+  },
+  {
+    "id": "thorne-d3k2",
+    "programme": "thorne-d3k2",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/44djRCp",
+    "status": "live"
+  },
+  {
+    "id": "thorne-quercetin",
+    "programme": "thorne-quercetin",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4y68Q3p",
+    "status": "live"
+  },
+  {
+    "id": "thorne-resveratrol",
+    "programme": "thorne-resveratrol",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4prSSNd",
+    "status": "live"
+  },
+  {
+    "id": "resveratrol",
+    "programme": "resveratrol",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4prSSNd",
+    "status": "live"
+  },
+  {
+    "id": "thorne-zinc",
+    "programme": "thorne-zinc",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4fgtWni",
+    "status": "live"
+  },
+  {
+    "id": "hostdefense-lionsmane",
+    "programme": "hostdefense-lionsmane",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Host+Defense+Lion%27s+Mane&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "ndga",
+    "programme": "ndga",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=NDGA+supplement&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "lithium-orotate",
+    "programme": "lithium-orotate",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4vW7SoX",
+    "status": "live"
+  },
+  {
+    "id": "joovv-solo-3",
+    "programme": "joovv-solo-3",
+    "network": "none",
+    "url": "https://joovv.com/",
+    "status": "plain"
+  },
+  {
+    "id": "biomax-300",
+    "programme": "biomax-300",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=PlatinumLED+BioMax+300&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "sunlighten-mpulse",
+    "programme": "sunlighten-mpulse",
+    "network": "Sunlighten referral",
+    "url": "https://share.sunlighten.com/MichaelRegeer",
+    "status": "live"
+  },
+  {
+    "id": "clearlight-sanctuary",
+    "programme": "clearlight-sanctuary",
+    "network": "Awin",
+    "url": "https://www.awin1.com/cread.php?awinmid=101701&awinaffid=2967749&ued=https%3A%2F%2Finfraredsauna.com%2F",
+    "status": "live"
+  },
+  {
+    "id": "serenelife-sauna",
+    "programme": "serenelife-sauna",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=SereneLife+Portable+Infrared+Sauna&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "the-plunge-pro",
+    "programme": "the-plunge-pro",
+    "network": "none",
+    "url": "https://www.coldplunge.com/",
+    "status": "plain"
+  },
+  {
+    "id": "morozko-forge",
+    "programme": "morozko-forge",
+    "network": "none",
+    "url": "https://morozkoforge.com/",
+    "status": "plain"
+  },
+  {
+    "id": "theragun-pro-6",
+    "programme": "theragun-pro-6",
+    "network": "none",
+    "url": "https://www.therabody.com/",
+    "status": "plain"
+  },
+  {
+    "id": "hypervolt-2-pro",
+    "programme": "hypervolt-2-pro",
+    "network": "Awin",
+    "url": "https://www.awin1.com/cread.php?awinmid=25761&awinaffid=2967749&ued=https%3A%2F%2Fhyperice.com%2F",
+    "status": "live"
+  },
+  {
+    "id": "renpho-r3",
+    "programme": "renpho-r3",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=RENPHO+R3+massage+gun&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "melatonin-timed-release",
+    "programme": "melatonin-timed-release",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4wy3mNk",
+    "status": "live"
+  },
+  {
+    "id": "blublox-glasses",
+    "programme": "blublox-glasses",
+    "network": "none",
+    "url": "https://www.blublox.com/",
+    "status": "plain"
+  },
+  {
+    "id": "citicoline-cognizin",
+    "programme": "citicoline-cognizin",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Double+Wood+Citicoline+Cognizin&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "bacopa-monnieri",
+    "programme": "bacopa-monnieri",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Himalaya+Bacopa+Monnieri&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "seed-ds01",
+    "programme": "seed-ds01",
+    "network": "none",
+    "url": "https://seed.com/",
+    "status": "plain"
+  },
+  {
+    "id": "thorne-meriva-curcumin",
+    "programme": "thorne-meriva-curcumin",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Thorne+Meriva-SF+Curcumin+Phytosome&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "now-curcubrain",
+    "programme": "now-curcubrain",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=now+curcubrain&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "mitopure-timeline",
+    "programme": "mitopure-timeline",
+    "network": "none",
+    "url": "https://www.timelinenutrition.com/",
+    "status": "plain"
+  },
+  {
+    "id": "urolithin-a-doublewood",
+    "programme": "urolithin-a-doublewood",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Double+Wood+Urolithin+A&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "almost-heaven-barrel",
+    "programme": "almost-heaven-barrel",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Almost+Heaven+Saunas+Independence+4-Person+Barrel+Sauna&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "harvia-heater-kit",
+    "programme": "harvia-heater-kit",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Harvia+KIP+Electric+Sauna+Heater+Kit&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "newtowne-hyperbaric",
+    "programme": "newtowne-hyperbaric",
+    "network": "none",
+    "url": "https://www.newtownehyperbarics.com/",
+    "status": "plain"
+  },
+  {
+    "id": "amazon-mild-hyperbaric-chamber",
+    "programme": "amazon-mild-hyperbaric-chamber",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=hyperbaric+oxygen+chamber&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "garmin-fenix-7",
+    "programme": "garmin-fenix-7",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Garmin+Fenix+7&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "jarrow-r-ala",
+    "programme": "jarrow-r-ala",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4f7ehGI",
+    "status": "live"
+  },
+  {
+    "id": "life-extension-fisetin",
+    "programme": "life-extension-fisetin",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4gAywip",
+    "status": "live"
+  },
+  {
+    "id": "host-defense-lions-mane",
+    "programme": "host-defense-lions-mane",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Host+Defense+Lion%27s+Mane&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "nordic-naturals",
+    "programme": "nordic-naturals",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Nordic+Naturals+Ultimate+Omega&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "primeadine",
+    "programme": "primeadine",
+    "network": "Oxford Healthspan referral",
+    "url": "https://www.oxfordhealthspan.com/MICHAEL54679",
+    "status": "live"
+  },
+  {
+    "id": "seed-synbiotic",
+    "programme": "seed-synbiotic",
+    "network": "none",
+    "url": "https://seed.com/",
+    "status": "plain"
+  },
+  {
+    "id": "theragun-pro",
+    "programme": "theragun-pro",
+    "network": "none",
+    "url": "https://www.therabody.com/",
+    "status": "plain"
+  },
+  {
+    "id": "thorne-dk2",
+    "programme": "thorne-dk2",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/44djRCp",
+    "status": "live"
+  },
+  {
+    "id": "thorne-ala",
+    "programme": "thorne-ala",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4f7ehGI",
+    "status": "live"
+  },
+  {
+    "id": "thorne-mag-glycinate",
+    "programme": "thorne-mag-glycinate",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Thorne+Magnesium+Glycinate&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "thorne-taurine",
+    "programme": "thorne-taurine",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Thorne+Taurine&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "apple-watch-s9",
+    "programme": "apple-watch-s9",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Apple+Watch+Series+9&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "apple-watch-ultra-2",
+    "programme": "apple-watch-ultra-2",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Apple+Watch+Ultra+2&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "fitbit-charge6",
+    "programme": "fitbit-charge6",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Fitbit+Charge+6&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "eight-sleep",
+    "programme": "eight-sleep",
+    "network": "none",
+    "url": "https://www.eightsleep.com/",
+    "status": "plain"
+  },
+  {
+    "id": "loop-quiet",
+    "programme": "loop-quiet",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Loop+Quiet+earplugs&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "manta-mask",
+    "programme": "manta-mask",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Manta+Sleep+Mask&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "levels-health",
+    "programme": "levels-health",
+    "network": "none",
+    "url": "https://www.levelshealth.com/",
+    "status": "plain"
+  },
+  {
+    "id": "marek-health",
+    "programme": "marek-health",
+    "network": "none",
+    "url": "https://marekhealth.com/",
+    "status": "plain"
+  },
+  {
+    "id": "elysium-basis",
+    "programme": "elysium-basis",
+    "network": "none",
+    "url": "https://www.elysiumhealth.com/",
+    "status": "plain"
+  },
+  {
+    "id": "elysium-index",
+    "programme": "elysium-index",
+    "network": "none",
+    "url": "https://www.elysiumhealth.com/",
+    "status": "plain"
+  },
+  {
+    "id": "trudiagnostic",
+    "programme": "trudiagnostic",
+    "network": "none",
+    "url": "https://www.trudiagnostic.com/",
+    "status": "plain"
+  },
+  {
+    "id": "viome",
+    "programme": "viome",
+    "network": "none",
+    "url": "https://www.viome.com/",
+    "status": "plain"
+  },
+  {
+    "id": "zoe",
+    "programme": "zoe",
+    "network": "none",
+    "url": "https://joinzoe.com/",
+    "status": "plain"
+  },
+  {
+    "id": "prolon",
+    "programme": "prolon",
+    "network": "none",
+    "url": "https://prolonlife.com/",
+    "status": "plain"
+  },
+  {
+    "id": "2xu-compression",
+    "programme": "2xu-compression",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4p0DUxk",
+    "status": "live"
+  },
+  {
+    "id": "air-relax",
+    "programme": "air-relax",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Air+Relax+compression+boots&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "normatec-3",
+    "programme": "normatec-3",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=NormaTec+3&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "triggerpoint-grid",
+    "programme": "triggerpoint-grid",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=TriggerPoint+GRID+foam+roller&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "flexpulse",
+    "programme": "flexpulse",
+    "network": "none",
+    "url": "https://www.bemergroup.com/",
+    "status": "plain"
+  },
+  {
+    "id": "higherdose-pemf",
+    "programme": "higherdose-pemf",
+    "network": "none",
+    "url": "https://www.higherdose.com/",
+    "status": "plain"
+  },
+  {
+    "id": "float-lab",
+    "programme": "float-lab",
+    "network": "none",
+    "url": "https://www.thefloatlab.com/",
+    "status": "plain"
+  },
+  {
+    "id": "samadhi-tank",
+    "programme": "samadhi-tank",
+    "network": "none",
+    "url": "https://www.samadhitank.com/",
+    "status": "plain"
+  },
+  {
+    "id": "bowflex-552",
+    "programme": "bowflex-552",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Bowflex+SelectTech+552&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "concept2-rowerg",
+    "programme": "concept2-rowerg",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Concept2+RowErg&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "rep-pr4000",
+    "programme": "rep-pr4000",
+    "network": "none",
+    "url": "https://www.repfitness.com/",
+    "status": "plain"
+  },
+  {
+    "id": "bulk-creatine",
+    "programme": "bulk-creatine",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4p9D4Pe",
+    "status": "live"
+  },
+  {
+    "id": "dihydroberberine",
+    "programme": "dihydroberberine",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=dihydroberberine+glucovantage&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "dw-berberine",
+    "programme": "dw-berberine",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Double+Wood+Berberine&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "it-berberine",
+    "programme": "it-berberine",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/3SJ1nap",
+    "status": "live"
+  },
+  {
+    "id": "jarrow-ashwagandha",
+    "programme": "jarrow-ashwagandha",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Jarrow+Ashwagandha&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "jarrow-bacopa",
+    "programme": "jarrow-bacopa",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Jarrow+Bacopa&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "le-dk2",
+    "programme": "le-dk2",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/44djRCp",
+    "status": "live"
+  },
+  {
+    "id": "le-ubiquinol",
+    "programme": "le-ubiquinol",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/3SJ1HG9",
+    "status": "live"
+  },
+  {
+    "id": "magtein",
+    "programme": "magtein",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4eMdUm0",
+    "status": "live"
+  },
+  {
+    "id": "momentous-ashwagandha",
+    "programme": "momentous-ashwagandha",
+    "network": "none",
+    "url": "https://www.livemomentous.com/",
+    "status": "plain"
+  },
+  {
+    "id": "nootropics-depot-lions-mane",
+    "programme": "nootropics-depot-lions-mane",
+    "network": "none",
+    "url": "https://nootropicsdepot.com/",
+    "status": "plain"
+  },
+  {
+    "id": "now-ashwagandha",
+    "programme": "now-ashwagandha",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4fi37A5",
+    "status": "live"
+  },
+  {
+    "id": "now-ps",
+    "programme": "now-ps",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4vNpp2M",
+    "status": "live"
+  },
+  {
+    "id": "now-quercetin",
+    "programme": "now-quercetin",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4y68Q3p",
+    "status": "live"
+  },
+  {
+    "id": "on-creatine",
+    "programme": "on-creatine",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Optimum+Nutrition+Creatine&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "pterostilbene",
+    "programme": "pterostilbene",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4eZjMqS",
+    "status": "live"
+  },
+  {
+    "id": "qunol-coq10",
+    "programme": "qunol-coq10",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Qunol+Ubiquinol+CoQ10&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "real-mushrooms-lions-mane",
+    "programme": "real-mushrooms-lions-mane",
+    "network": "none",
+    "url": "https://www.realmushrooms.com/",
+    "status": "plain"
+  },
+  {
+    "id": "ritual-synbiotic",
+    "programme": "ritual-synbiotic",
+    "network": "none",
+    "url": "https://ritual.com/",
+    "status": "plain"
+  },
+  {
+    "id": "sr-dk2",
+    "programme": "sr-dk2",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Sports+Research+Vitamin+D3%2BK2&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "uc2-collagen",
+    "programme": "uc2-collagen",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4y3FNO5",
+    "status": "live"
+  },
+  {
+    "id": "vital-proteins",
+    "programme": "vital-proteins",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4ve8rJF",
+    "status": "live"
+  },
+  {
+    "id": "wonderfeel-youngr",
+    "programme": "wonderfeel-youngr",
+    "network": "none",
+    "url": "https://getwonderfeel.com/",
+    "status": "plain"
+  },
+  {
+    "id": "donotage-spermidine",
+    "programme": "donotage-spermidine",
+    "network": "none",
+    "url": "https://donotage.org/",
+    "status": "plain"
+  },
+  {
+    "id": "bioptimizers-magnesium",
+    "programme": "bioptimizers-magnesium",
+    "network": "none",
+    "url": "https://bioptimizers.com/",
+    "status": "plain"
+  },
+  {
+    "id": "biolite-sunlight",
+    "programme": "biolite-sunlight",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4gWOC61",
+    "status": "live"
+  },
+  {
+    "id": "real-mushrooms-reishi",
+    "programme": "real-mushrooms-reishi",
+    "network": "none",
+    "url": "https://www.realmushrooms.com/",
+    "status": "plain"
+  },
+  {
+    "id": "real-mushrooms-cordyceps",
+    "programme": "real-mushrooms-cordyceps",
+    "network": "none",
+    "url": "https://www.realmushrooms.com/",
+    "status": "plain"
+  },
+  {
+    "id": "now-l-theanine",
+    "programme": "now-l-theanine",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4eTkTZa",
+    "status": "live"
+  },
+  {
+    "id": "dw-apigenin",
+    "programme": "dw-apigenin",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Double+Wood+Apigenin&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "bulk-glycine",
+    "programme": "bulk-glycine",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4y51kGa",
+    "status": "live"
+  },
+  {
+    "id": "now-chromium",
+    "programme": "now-chromium",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4y6tCQx",
+    "status": "live"
+  },
+  {
+    "id": "now-cinnamon",
+    "programme": "now-cinnamon",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/3SISFsO",
+    "status": "live"
+  },
+  {
+    "id": "thorne-vitamin-e",
+    "programme": "thorne-vitamin-e",
+    "network": "Amazon Associates",
+    "url": "https://www.amazon.com/s?k=Thorne+Vitamin+E+Mixed+Tocopherols&tag=michaelregeer-20",
+    "status": "live"
+  },
+  {
+    "id": "now-alcar",
+    "programme": "now-alcar",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/44cg8Fk",
+    "status": "live"
+  },
+  {
+    "id": "now-beta-alanine",
+    "programme": "now-beta-alanine",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4vntMk8",
+    "status": "live"
+  },
+  {
+    "id": "superbeets",
+    "programme": "superbeets",
+    "network": "none",
+    "url": "https://www.humann.com/",
+    "status": "plain"
+  },
+  {
+    "id": "now-sodium-bicarbonate",
+    "programme": "now-sodium-bicarbonate",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4p9EIAo",
+    "status": "live"
+  },
+  {
+    "id": "now-tart-cherry",
+    "programme": "now-tart-cherry",
+    "network": "Amazon Associates",
+    "url": "https://amzn.to/4aVExCT",
+    "status": "live"
+  }
+]
