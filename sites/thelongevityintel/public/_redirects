@@ -1,3 +1,2 @@
-# generated from content-ledger.csv by packages/tooling/src/migrate/longevity.ts; do not edit (manual addition below survives: old live redirect)
-# every live URL is kept, slashless
-/go/chest-freezer-guide /recovery/cold-plunge-ice-bath-review 302
+# generated from content-ledger.csv by packages/tooling/src/migrate/longevity.ts; do not edit
+# no redirects planned: every live URL is kept, slashless

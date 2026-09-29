@@ -950,5 +950,12 @@
     "network": "Amazon Associates",
     "url": "https://amzn.to/4aVExCT",
     "status": "live"
+  },
+  {
+    "id": "chest-freezer-guide",
+    "programme": "internal",
+    "network": "none",
+    "url": "https://thelongevityintel.com/recovery/cold-plunge-ice-bath-review",
+    "status": "plain"
   }
 ]
