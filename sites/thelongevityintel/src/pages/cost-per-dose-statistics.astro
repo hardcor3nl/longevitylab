@@ -1,0 +1,62 @@
+---
+import Base from "../layouts/Base.astro";
+import Breadcrumbs from "@portfolio/core/components/Breadcrumbs.astro";
+import CiteBox from "@portfolio/core/components/CiteBox.astro";
+import ChartFigure from "@portfolio/core/components/ChartFigure.astro";
+import StatGrid from "@portfolio/core/components/StatGrid.astro";
+import StatsTable from "@portfolio/core/components/StatsTable.astro";
+import { ShieldAlert } from "@lucide/astro";
+import { article, LK_ADAPTIVE } from "@portfolio/core";
+import CpdPanel from "../components/CpdPanel.astro";
+import { stats, charts, money, shortCompound, TESTING_LABEL } from "../lib/cpd-stats";
+import { cite } from "../lib/embeds";
+import { orgInfo } from "../lib/seo";
+import { ogUrl } from "../lib/og";
+import site from "../../site.config.json";
+const path = "/cost-per-dose-statistics";
+const title = "Supplement cost-per-dose statistics 2026";
+const s = stats;
+const lead = `Across ${s.products} products from ${s.brands} brands covering ${s.compounds} compounds, the median list price is ${money(s.medianPrice)}. At the dose used in a cited human study, ${s.costed} products have a computed monthly cost, with a median of ${money(s.medianCost)}, from ${money(s.lo.costPerStudyDosePerMonth)} (${s.lo.brand}, ${s.lo.compound}) to ${money(s.hi.costPerStudyDosePerMonth)} (${s.hi.brand}, ${s.hi.compound}). Numbers only, not dosing advice. Computed from our dataset, checked ${s.checked}.`;
+const desc = `Median monthly cost ${money(s.medianCost)} at cited study doses across ${s.costed} supplement products, ${s.compounds} compounds. Numbers only, not advice. From our dataset, ${s.checked}.`;
+const ld = [article({ title, description: desc, url: site.origin + path, published: "2026-09-29", updated: "2026-09-29", evidence: "compiled-data", image: ogUrl("default") }, { ...orgInfo, name: site.name })];
+const c1 = charts["supplement-cost-per-study-dose"], c2 = charts["supplement-testing-statements"];
+---
+<Base title={title} description={desc} {path} jsonLd={ld} published="2026-09-29" modified="2026-09-29" type="article">
+  <div class="pt-28 pb-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" style={LK_ADAPTIVE}>
+    <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Cost per study dose", href: "/cost-per-dose" }, { name: "Statistics" }]} />
+    <p class="font-mono text-xs uppercase tracking-[.14em] text-green-bright mt-6 mb-2">Computed from our dataset, checked {s.checked}</p>
+    <h1 class="font-display text-4xl md:text-6xl text-ink leading-[1.05] mb-4">{title}</h1>
+    <p class="text-muted text-lg max-w-3xl leading-relaxed mb-6">{lead}</p>
+    <div class="flex items-start gap-3 rounded-xl border border-amber/30 bg-amber/5 px-4 py-3 mb-8" role="note">
+      <ShieldAlert class="w-4 h-4 text-amber mt-0.5 shrink-0" aria-hidden="true" />
+      <p class="text-xs text-muted leading-relaxed"><strong class="text-ink">Talk to your doctor first.</strong> A study dose is context for comparing prices. Some studies were in patients, and nothing here says a dose is safe or right for you.</p>
+    </div>
+    <StatGrid items={[
+      { value: `${s.products}`, label: "products priced", note: `${s.brands} brands, ${s.compounds} compounds` },
+      { value: money(s.medianPrice), label: "median list price", note: "per product, USD" },
+      { value: money(s.medianCost), label: "median monthly cost at study dose", note: `n = ${s.costed} products with a computed cost` },
+      { value: `${s.under10} of ${s.costed}`, label: "under $10 a month at that dose", note: "computed cost" },
+      { value: `${s.over100} of ${s.costed}`, label: "over $100 a month at that dose", note: "computed cost" },
+      { value: `${s.cls.named} of ${s.products}`, label: "name a product certifier", note: "NSF Certified for Sport or IFOS" },
+    ]} />
+    <div class="max-w-3xl text-muted leading-relaxed">
+      <h2 class="font-display text-3xl text-ink mb-3 mt-10">Cost at the dose used in a study</h2>
+      <p class="mb-4">For each compound we take the dose used in a cited human study and work out what a month of a given product costs at that dose. {s.costed} of {s.products} products have a computed cost; the rest could not be calculated from the label. The spread is wide because study doses differ by orders of magnitude between compounds. It is a price comparison, not a recommendation of any dose.</p>
+    </div>
+    <ChartFigure svg={c1.svg} alt={c1.alt} caption={c1.caption} origin={site.origin} imgPath="/charts/supplement-cost-per-study-dose.svg" pagePath={path} brand="Longevity Intel" width={c1.width} height={c1.height} uid="cost" />
+    <StatsTable caption={`Monthly cost at the cited study dose, by compound (USD, n = ${s.products} products)`} head={["Compound", "Products", "Price range", "Cost range per month", "Median cost per month"]}
+      rows={s.byCompound.map((c) => [shortCompound(c.compound), c.products, c.minPrice === c.maxPrice ? money(c.minPrice)! : `${money(c.minPrice)} to ${money(c.maxPrice)}`, c.costed ? (c.minCost === c.maxCost ? money(c.minCost)! : `${money(c.minCost)} to ${money(c.maxCost)}`) : "not calculated", c.medianCost != null ? money(c.medianCost)! : "not calculated"])} />
+    <div class="max-w-3xl text-muted leading-relaxed">
+      <h2 class="font-display text-3xl text-ink mb-3 mt-10">What brands say about testing</h2>
+      <p class="mb-4">We record the testing statement on each product page as the brand wrote it. {s.cls.named} of {s.products} products name a product certifier, {s.cls.unnamed} state testing without naming one or publish only their own results, and {s.cls.none} state none. Among products with a computed cost, the median monthly cost is {s.medianNamed != null ? money(s.medianNamed) : "n/a"} for the {s.nNamed} that name a certifier and {s.medianOther != null ? money(s.medianOther) : "n/a"} for the other {s.nOther}. The sample is a convenience sample of brands whose pages we could read, so this is not a market ranking. We did not test any product.</p>
+    </div>
+    <ChartFigure svg={c2.svg} alt={c2.alt} caption={c2.caption} origin={site.origin} imgPath="/charts/supplement-testing-statements.svg" pagePath={path} brand="Longevity Intel" width={c2.width} height={c2.height} uid="testing" />
+    <StatsTable caption={`Testing statement classes (n = ${s.products} products)`} head={["Class", "Products"]} rows={(["named", "unnamed", "none"] as const).map((k) => [TESTING_LABEL[k], s.cls[k]])} />
+    <div class="max-w-3xl text-muted leading-relaxed">
+      <h2 class="font-display text-3xl text-ink mb-3 mt-10">Method</h2>
+      <p class="mb-4">Source: our <a href="/cost-per-dose" class="text-green-bright underline">supplement cost per study dose dataset</a>, {s.products} products and {s.compounds} compounds. Prices come from each brand's own product page in USD as shown to a US visitor, with no coupons or subscription discounts. Study doses are quoted as "dose used in" a study read from its PubMed record; cost = price per serving x (study dose / active amount per serving) x 30. Checked {s.checked}. Figures are recomputed each time the site is built. Related: <a href="/category/supplements" class="text-green-bright underline">supplement guides</a> and <a href="/database" class="text-green-bright underline">the research database</a>. Data files: <a href="/data/longevity-cost-per-dose.csv" class="text-green-bright underline">CSV</a> and <a href="/data/longevity-cost-per-dose.json" class="text-green-bright underline">JSON</a> (CC BY 4.0, link back).</p>
+    </div>
+    <CpdPanel />
+    <CiteBox uid="stats" cite={cite({ title, path, date: s.checked })} />
+  </div>
+</Base>

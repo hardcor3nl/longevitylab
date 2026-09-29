@@ -1,0 +1,32 @@
+---
+/** "Embed this" panel for the cost-per-dose card, with a compound picker that rewrites the snippets. */
+import EmbedPanel from "@portfolio/core/components/EmbedPanel.astro";
+import { cpdRecords } from "../lib/cpd";
+import { slugify } from "../lib/cpd-stats";
+import { cpdEmbed } from "../lib/embeds";
+const list = cpdRecords.map((r) => ({ slug: slugify(r.compound), name: r.compound as string }));
+const first = list.find((x) => x.slug === "creatine-monohydrate") ?? list[0];
+const names = Object.fromEntries(list.map((x) => [x.slug, x.name]));
+---
+<div data-cpd-panel data-names={JSON.stringify(names)}>
+  <div class="lk-panel" style="margin-bottom:0;border-bottom-left-radius:0;border-bottom-right-radius:0;border-bottom:0">
+    <label class="lk-l" for="cpd-pick">Choose the compound for the cost card</label><br />
+    <select id="cpd-pick" style="min-height:44px;margin-top:6px;padding:0 10px;border-radius:8px;border:1px solid var(--lk-line);background:var(--lk-field);color:var(--lk-field-ink);font:inherit;max-width:100%">
+      {list.map((x) => <option value={x.slug} selected={x.slug === first.slug}>{x.name}</option>)}
+    </select>
+  </div>
+  <EmbedPanel spec={cpdEmbed(first.slug, first.name)} heading="Embed a cost-per-dose card" note="Sourced prices and study doses only. It is not dosing advice." />
+</div>
+<script is:inline>
+  (function () {
+    var p = document.querySelector("[data-cpd-panel]"); if (!p) return;
+    var names = JSON.parse(p.getAttribute("data-names")), sel = document.getElementById("cpd-pick"), cur = sel.value;
+    sel.addEventListener("change", function () {
+      var next = sel.value;
+      p.querySelectorAll("textarea").forEach(function (t) {
+        t.value = t.value.split("cost-per-dose/" + cur).join("cost-per-dose/" + next).split("cpd-" + cur).join("cpd-" + next).split(names[cur]).join(names[next]);
+      });
+      cur = next;
+    });
+  })();
+</script>

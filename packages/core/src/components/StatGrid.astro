@@ -1,0 +1,21 @@
+---
+/** Headline figures for a statistics page: value, label, optional note. Theme with --lk-* variables. Static markup. */
+interface Props { items: { value: string; label: string; note?: string }[] }
+const { items } = Astro.props;
+---
+<ul class="st-grid">
+  {items.map((i) => (
+    <li class="st-cell">
+      <span class="st-val">{i.value}</span>
+      <span class="st-lab">{i.label}</span>
+      {i.note && <span class="st-note">{i.note}</span>}
+    </li>
+  ))}
+</ul>
+<style is:global>
+  .st-grid { list-style: none; margin: 1.5rem 0; padding: 0; display: grid; gap: .75rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); }
+  .st-cell { display: flex; flex-direction: column; gap: .2rem; padding: .9rem 1rem; border-radius: 10px; border: 1px solid var(--lk-line, #d4d4d8); background: var(--lk-bg, transparent); color: var(--lk-ink, inherit); }
+  .st-val { font-size: 1.75rem; line-height: 1.15; font-weight: 700; overflow-wrap: anywhere; }
+  .st-lab { font-size: .9rem; font-weight: 600; }
+  .st-note { font-size: .8rem; color: var(--lk-muted, inherit); opacity: .95; }
+</style>

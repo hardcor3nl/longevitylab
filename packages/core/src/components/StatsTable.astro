@@ -1,0 +1,22 @@
+---
+/** Small data table for statistics pages. Scrollable region is focusable so keyboard users can reach it. */
+interface Props { caption: string; head: string[]; rows: (string | number)[][]; numericFrom?: number }
+const { caption, head, rows, numericFrom = 1 } = Astro.props;
+---
+<div class="stt-wrap" tabindex="0" role="region" aria-label={caption}>
+  <table class="stt">
+    <caption>{caption}</caption>
+    <thead><tr>{head.map((h, i) => <th scope="col" class={i >= numericFrom ? "n" : ""}>{h}</th>)}</tr></thead>
+    <tbody>{rows.map((r) => <tr>{r.map((c, i) => i === 0 ? <th scope="row">{c}</th> : <td class={i >= numericFrom ? "n" : ""}>{c}</td>)}</tr>)}</tbody>
+  </table>
+</div>
+<style is:global>
+  .stt-wrap { overflow-x: auto; margin: 1rem 0 1.5rem; max-width: 100%; }
+  .stt { border-collapse: collapse; width: 100%; font-size: .9rem; color: inherit; }
+  .stt caption { text-align: left; font-weight: 600; padding: 0 0 .5rem; }
+  .stt th, .stt td { padding: .5rem .65rem; border-bottom: 1px solid var(--lk-line, #d4d4d8); text-align: left; vertical-align: top; }
+  .stt thead th { border-bottom-width: 2px; white-space: nowrap; }
+  .stt .n { text-align: right; font-variant-numeric: tabular-nums; }
+  .stt tbody th { font-weight: 600; }
+  .stt-wrap:focus-visible { outline: 2px solid var(--lk-accent, currentColor); outline-offset: 2px; }
+</style>

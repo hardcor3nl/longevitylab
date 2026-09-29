@@ -1,0 +1,14 @@
+---
+import type { GetStaticPaths } from "astro";
+import EmbedLayout from "@portfolio/core/components/EmbedLayout.astro";
+import CpdCard from "../../../components/CpdCard.astro";
+import { cpdRecords } from "../../../lib/cpd";
+import { slugify } from "../../../lib/cpd-stats";
+import { EM_VARS, cpdEmbed } from "../../../lib/embeds";
+import site from "../../../../site.config.json";
+export const getStaticPaths: GetStaticPaths = () => cpdRecords.map((rec) => ({ params: { slug: slugify(rec.compound) }, props: { rec } }));
+const { rec } = Astro.props;
+---
+<EmbedLayout title={`${rec.compound} cost per study dose (embed)`} canonical={site.origin + "/cost-per-dose"} brand={cpdEmbed("x", "").brand} creditLabel="Data" vars={EM_VARS}>
+  <CpdCard rec={rec} level="h1" />
+</EmbedLayout>

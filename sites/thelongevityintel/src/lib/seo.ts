@@ -17,7 +17,7 @@ export async function sitemapGroups(): Promise<SitemapGroup[]> {
     "/": dateOf(), "/best": dateOf("best"), "/protocols": dateOf("protocols"),
     "/category/supplements": dateOf("supplements"), "/category/wearables": dateOf("wearables"), "/category/recovery": dateOf("recovery"),
     "/category/diagnostics": dateOf("diagnostics"), "/category/protocols": dateOf("protocols"), "/category/best": dateOf("best"),
-    "/database": dateOf("supplements"), "/cost-per-dose": cpdModified(),
+    "/database": dateOf("supplements"), "/cost-per-dose": cpdModified(), "/cost-per-dose-statistics": "2026-09-29",
   };
   return [
     { name: "pages", entries: site.staticRoutes.map((r) => ({ loc: abs(r), lastmod: hubLastmod[r] })) },

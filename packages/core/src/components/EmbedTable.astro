@@ -1,0 +1,23 @@
+---
+/** Compact table for embed cards. Themed with the --em-* variables set by EmbedLayout. Scroll region is focusable. */
+interface Props { caption: string; head: string[]; rows: (string | number)[][]; numericFrom?: number }
+const { caption, head, rows, numericFrom = 1 } = Astro.props;
+---
+<div class="emt-wrap" tabindex="0" role="region" aria-label={caption}>
+  <table class="emt">
+    <caption class="emt-cap">{caption}</caption>
+    <thead><tr>{head.map((h, i) => <th scope="col" class={i >= numericFrom ? "n" : ""}>{h}</th>)}</tr></thead>
+    <tbody>{rows.map((r) => <tr>{r.map((c, i) => i === 0 ? <th scope="row">{c}</th> : <td class={i >= numericFrom ? "n" : ""}>{c}</td>)}</tr>)}</tbody>
+  </table>
+</div>
+<style is:global>
+  .emt-wrap { overflow-x: auto; max-width: 100%; }
+  .emt { border-collapse: collapse; width: 100%; font-size: 13.5px; color: inherit; }
+  .emt-cap { text-align: left; font-weight: 700; font-size: 16px; padding: 0 0 8px; }
+  .emt th, .emt td { padding: 6px 8px; border-bottom: 1px solid var(--em-line, #d4d4d8); text-align: left; vertical-align: top; }
+  .emt thead th { border-bottom-width: 2px; white-space: nowrap; font-size: 12px; color: var(--em-muted, #52525b); text-transform: uppercase; letter-spacing: .04em; }
+  .emt .n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .emt tbody th { font-weight: 600; }
+  .emt-wrap:focus-visible { outline: 2px solid var(--em-accent, currentColor); outline-offset: 2px; }
+  .em-note { margin: 10px 0 0; font-size: 12.5px; color: var(--em-muted, #52525b); }
+</style>

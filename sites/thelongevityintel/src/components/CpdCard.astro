@@ -1,0 +1,49 @@
+---
+/** Cost-per-study-dose card for one compound. Sourced numbers and dates only: no advice, no dosing. Static HTML, no JS. */
+import { money, testingClass, TESTING_LABEL } from "../lib/cpd-stats";
+interface Props { rec: any; level?: "h1" | "h2" }
+const { rec, level = "h2" } = Astro.props;
+const H = level;
+const dose = rec.studyDoses[0];
+const prods = (rec.products as any[]).slice(0, 5);
+const more = rec.products.length - prods.length;
+---
+<div class="cc">
+  <p class="cc-eye">Cost per study dose</p>
+  <H class="cc-h">{rec.compound}</H>
+  <p class="cc-dose">{dose.doseText}</p>
+  <p class="cc-src">Study: {dose.study}, {dose.year}. <a href={dose.sourceUrl} target="_blank" rel="noopener noreferrer">PubMed record</a></p>
+  <div class="cc-wrap" tabindex="0" role="region" aria-label={`${rec.compound} products and monthly cost at the study dose`}>
+    <table class="cc-t">
+      <caption class="cc-cap">Products, price and monthly cost at that dose (USD, checked {rec.checked})</caption>
+      <thead><tr><th scope="col">Product</th><th scope="col" class="n">Price</th><th scope="col" class="n">Per month at study dose</th></tr></thead>
+      <tbody>
+        {prods.map((p) => (
+          <tr>
+            <th scope="row"><a href={p.priceSourceUrl} target="_blank" rel="noopener noreferrer">{p.brand}: {p.product}</a><span class="cc-sub">{TESTING_LABEL[testingClass(p.thirdPartyTesting)]}</span></th>
+            <td class="n">{money(p.price)}</td>
+            <td class="n">{money(p.costPerStudyDosePerMonth) ?? "not calculated"}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  {more > 0 && <p class="cc-note">Plus {more} more product{more === 1 ? "" : "s"} on the full dataset page.</p>}
+  <p class="cc-note"><strong>Not dosing advice.</strong> A study dose is context for comparing prices. Some studies were in patients. Talk to your doctor before you change anything.</p>
+</div>
+<style is:global>
+  .cc-eye { margin: 0; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--em-accent); font-weight: 700; }
+  .cc-h { margin: 4px 0 6px; font-size: 22px; line-height: 1.2; }
+  .cc-dose { margin: 0 0 4px; font-size: 13.5px; font-weight: 600; }
+  .cc-src { margin: 0 0 10px; font-size: 12.5px; color: var(--em-muted); }
+  .cc-wrap { overflow-x: auto; max-width: 100%; }
+  .cc-wrap:focus-visible { outline: 2px solid var(--em-accent); outline-offset: 2px; }
+  .cc-t { border-collapse: collapse; width: 100%; font-size: 13px; }
+  .cc-cap { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .cc-t th, .cc-t td { padding: 6px 8px; border-bottom: 1px solid var(--em-line); text-align: left; vertical-align: top; }
+  .cc-t thead th { font-size: 11.5px; color: var(--em-muted); border-bottom-width: 2px; }
+  .cc-t .n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .cc-t tbody th { font-weight: 600; }
+  .cc-sub { display: block; font-weight: 400; font-size: 11.5px; color: var(--em-muted); }
+  .cc-note { margin: 8px 0 0; font-size: 12.5px; color: var(--em-muted); }
+</style>

@@ -52,6 +52,7 @@ export const FOOTER_LINKS: Record<string, [string, string][]> = {
     ["Build My Plan", "/get-started"],
     ["Research Database", "/database"],
     ["Cost per Study Dose", "/cost-per-dose"],
+    ["Cost-per-Dose Statistics", "/cost-per-dose-statistics"],
     ["Expert Protocols", "/protocols"],
     ["Bio Age Quiz", "/quiz"],
     ["Comparisons", "/compare"],
