@@ -40,6 +40,11 @@ export function checkHead(pages: Page[], cfg: SiteConfig, dist: string): { head:
     else if (count(/<meta[^>]+name=["']description["']/gi) > 1) hard.push(`${p.url}: more than one meta description`);
     if (p.noindex && p.canonical.length === 0) { /* noindex utility pages (e.g. a rewrite target) need no canonical */ }
     else if (p.canonical.length !== 1) hard.push(`${p.url}: ${p.canonical.length} canonical links (need exactly 1)`);
+    else if (p.noindex && /^\/embed\//.test(p.url)) {
+      // embed pages: noindex, canonical to the full page (an indexable, non-embed URL on this origin)
+      const c = p.canonical[0];
+      if (!c.startsWith(cfg.origin.replace(/\/$/, "") + "/") || /\/embed\//.test(c)) hard.push(`${p.url}: embed canonical ${c} must be the full page on ${cfg.origin}`);
+    }
     else if (p.canonical[0] !== canonicalFor(cfg, p.url)) hard.push(`${p.url}: canonical ${p.canonical[0]} is not the self URL ${canonicalFor(cfg, p.url)}`);
     const robotsTags = count(/<meta[^>]+name=["']robots["']/gi);
     if (robotsTags !== 1) hard.push(`${p.url}: ${robotsTags} robots meta tags (need exactly 1, explicit)`);

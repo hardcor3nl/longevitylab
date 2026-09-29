@@ -1,0 +1,34 @@
+---
+/** Shared styles and copy-button script for EmbedPanel, CiteBox and ChartFigure. Theme via --lk-* custom properties. */
+---
+<style is:global>
+  .lk-panel { margin: 2.5rem 0; padding: 1.25rem; border-radius: 12px; background: var(--lk-bg, #f4f4f5); color: var(--lk-ink, #111); border: 1px solid var(--lk-line, #d4d4d8); }
+  .lk-h { margin: 0 0 .5rem; font-size: 1.25rem; line-height: 1.3; color: var(--lk-ink, #111); }
+  .lk-p, .lk-l { overflow-wrap: anywhere; }
+  .lk-p { margin: 0 0 .75rem; font-size: .9rem; line-height: 1.6; color: var(--lk-muted, #3f3f46); }
+  .lk-a { color: var(--lk-accent, #1d4ed8); text-decoration: underline; }
+  .lk-v { margin-top: 1rem; }
+  .lk-row { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-bottom: .35rem; flex-wrap: wrap; }
+  .lk-l { font-size: .85rem; font-weight: 600; color: var(--lk-ink, #111); }
+  .lk-t { box-sizing: border-box; width: 100%; padding: .6rem .7rem; border-radius: 8px; border: 1px solid var(--lk-line, #d4d4d8); background: var(--lk-field, #fff); color: var(--lk-field-ink, #111); font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; resize: vertical; }
+  .lk-b { min-height: 44px; min-width: 76px; padding: 0 1rem; border-radius: 8px; border: 1px solid var(--lk-btn, var(--lk-accent, #1d4ed8)); background: var(--lk-btn, var(--lk-accent, #1d4ed8)); color: var(--lk-btn-ink, #fff); font-weight: 700; font-size: .85rem; cursor: pointer; }
+  .lk-b:focus-visible, .lk-t:focus-visible, .lk-a:focus-visible, .lk-use summary:focus-visible { outline: 2px solid var(--lk-accent, #1d4ed8); outline-offset: 2px; }
+  .lk-fig { margin: 2rem 0; }
+  .lk-svg svg { display: block; width: 100%; height: auto; border-radius: 10px; }
+  .lk-cap { margin-top: .5rem; font-size: .85rem; color: var(--lk-muted, #3f3f46); }
+  .lk-use { margin-top: .5rem; }
+  .lk-use summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; color: var(--lk-accent, #1d4ed8); font-weight: 600; }
+</style>
+<script is:inline>
+  (function () {
+    if (window.__lkCopy) return; window.__lkCopy = 1;
+    document.addEventListener("click", function (e) {
+      var b = e.target.closest && e.target.closest("[data-lk-copy]"); if (!b) return;
+      var t = document.getElementById(b.getAttribute("data-lk-copy")); if (!t) return;
+      t.focus(); t.select();
+      function done() { var o = b.textContent; b.textContent = "Copied"; setTimeout(function () { b.textContent = o; }, 1600); }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t.value).then(done, function () { try { document.execCommand("copy"); done(); } catch (x) {} });
+      else { try { document.execCommand("copy"); done(); } catch (x) {} }
+    });
+  })();
+</script>

@@ -33,10 +33,13 @@ export function normalizeLastmod(v?: string | Date): string | undefined {
 export const latestDate = (dates: (string | undefined)[]) =>
   dates.map((d) => normalizeLastmod(d)).filter(Boolean).sort().at(-1) as string | undefined;
 
+/** Embed pages (/embed/<widget>/) are noindex and never belong in a sitemap. */
+export const isEmbedUrl = (loc: string) => /^https?:\/\/[^/]+\/embed(\/|$)/.test(loc) || loc.startsWith("/embed/");
+
 export function urlset(entries: SitemapEntry[]): string {
   const seen = new Set<string>();
   const rows = entries
-    .filter((e) => !e.noindex)
+    .filter((e) => !e.noindex && !isEmbedUrl(e.loc))
     .filter((e) => (seen.has(e.loc) ? false : (seen.add(e.loc), true)))
     .map((e) => {
       const lm = normalizeLastmod(e.lastmod);
@@ -66,7 +69,7 @@ export function buildSitemaps(origin: string, groups: SitemapGroup[]): Map<strin
   const out = new Map<string, string>();
   const idx: { loc: string; lastmod?: string }[] = [];
   for (const g of groups) {
-    const live = g.entries.filter((e) => !e.noindex);
+    const live = g.entries.filter((e) => !e.noindex && !isEmbedUrl(e.loc));
     chunk(live).forEach((part, i) => {
       const file = `sitemap-${g.name}${i ? `-${i + 1}` : ""}.xml`;
       out.set(file, urlset(part));

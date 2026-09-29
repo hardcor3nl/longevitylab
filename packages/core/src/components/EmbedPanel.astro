@@ -1,0 +1,32 @@
+---
+/**
+ * "Embed this" panel for the full page. Copy-paste variants: iframe with auto-resize, plain iframe,
+ * image and link (HTML and Markdown). The credit link is part of every snippet, outside the iframe.
+ * Theme with --lk-* custom properties on a parent element.
+ */
+import LkBase from "./LkBase.astro";
+import { iframeSnippet, resizeSnippet, imageHtmlSnippet, markdownSnippet, type EmbedSpec } from "../embed/embed.ts";
+interface Props { spec: EmbedSpec; heading?: string; note?: string }
+const { spec, heading = "Embed this on your site", note = "" } = Astro.props;
+const id = spec.id;
+const variants = [
+  { key: "resize", label: "HTML with auto-resize (recommended)", text: resizeSnippet(spec), rows: 6 },
+  { key: "iframe", label: "Plain iframe", text: iframeSnippet(spec), rows: 4 },
+  ...(spec.imagePath ? [
+    { key: "img", label: "Image and link (HTML)", text: imageHtmlSnippet(spec), rows: 4 },
+    { key: "md", label: "Markdown for Reddit, Discord and forums", text: markdownSnippet(spec), rows: 4 },
+  ] : []),
+];
+---
+<LkBase />
+<section class="lk-panel" aria-labelledby={`lk-h-${id}`}>
+  <h2 id={`lk-h-${id}`} class="lk-h">{heading}</h2>
+  <p class="lk-p">Free to embed on any page, with one condition: keep the credit link to {spec.brand} that comes with every snippet. {note}</p>
+  <p class="lk-p"><a class="lk-a" href={spec.embedPath} target="_blank" rel="noopener">Open the embed on its own</a> to preview it.</p>
+  {variants.map((v) => (
+    <div class="lk-v">
+      <div class="lk-row"><label class="lk-l" for={`lk-${id}-${v.key}`}>{v.label}</label><button type="button" class="lk-b" data-lk-copy={`lk-${id}-${v.key}`}>Copy</button></div>
+      <textarea id={`lk-${id}-${v.key}`} class="lk-t" readonly rows={v.rows} spellcheck="false" set:text={v.text}></textarea>
+    </div>
+  ))}
+</section>

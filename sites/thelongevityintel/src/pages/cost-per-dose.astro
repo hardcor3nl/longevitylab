@@ -6,6 +6,8 @@ import { dataset as datasetLd, canonicalUrl } from "@portfolio/core";
 import { orgInfo } from "../lib/seo";
 import { cpdRecords, cpdDoc, cpdRows, cpdModified } from "../lib/cpd";
 import site from "../../site.config.json";
+import CiteBox from "@portfolio/core/components/CiteBox.astro";
+import { LK_ADAPTIVE } from "@portfolio/core";
 
 /** Cost per study dose: audited dataset at data/thelongevityintel/longevity-cost-per-dose/. Wording is always "dose used in <study>", never a recommendation. */
 const rows = cpdRows();
@@ -76,6 +78,7 @@ const ld = datasetLd({
       {changelog ? <pre class="whitespace-pre-wrap text-sm text-muted leading-relaxed font-sans">{changelog}</pre> : null}
     </section>
     <p class="mt-10 text-sm text-muted">Related: <a href="/category/supplements" class="text-green-bright underline">supplement guides</a>, <a href="/database" class="text-green-bright underline">the research database</a>.</p>
+<div style={LK_ADAPTIVE}><CiteBox uid="dataset" cite={{ title: "Supplement cost per study dose", author: site.editorialName, site: site.name, url: site.origin + "/cost-per-dose", date: modified }} /></div>
   </div>
   <script>
     const input = document.getElementById("cpd-filter") as HTMLInputElement | null;

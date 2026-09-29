@@ -1,0 +1,24 @@
+---
+/** "Cite this" box: APA, plain text and BibTeX for a dataset or data page. Theme with --lk-* variables. */
+import LkBase from "./LkBase.astro";
+import { citeApa, citePlain, citeBibtex, type CiteSpec } from "../embed/embed.ts";
+interface Props { cite: CiteSpec; heading?: string; uid?: string }
+const { cite, heading = "Cite this", uid } = Astro.props;
+const id = uid ?? "cite";
+const rows = [
+  { key: "apa", label: "APA 7", text: citeApa(cite), rows: 4 },
+  { key: "plain", label: "Plain text", text: citePlain(cite), rows: 3 },
+  { key: "bib", label: "BibTeX", text: citeBibtex(cite), rows: 9 },
+];
+---
+<LkBase />
+<section class="lk-panel" aria-labelledby={`lk-h-${id}`}>
+  <h2 id={`lk-h-${id}`} class="lk-h">{heading}</h2>
+  <p class="lk-p">Data version {cite.version ?? cite.date}. Stable address: <a class="lk-a" href={cite.url}>{cite.url}</a>. Free to reuse under CC BY 4.0 with a link back.</p>
+  {rows.map((r) => (
+    <div class="lk-v">
+      <div class="lk-row"><label class="lk-l" for={`lk-${id}-${r.key}`}>{r.label}</label><button type="button" class="lk-b" data-lk-copy={`lk-${id}-${r.key}`}>Copy</button></div>
+      <textarea id={`lk-${id}-${r.key}`} class="lk-t" readonly rows={r.rows} spellcheck="false" set:text={r.text}></textarea>
+    </div>
+  ))}
+</section>

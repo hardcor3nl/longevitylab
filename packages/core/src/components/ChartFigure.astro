@@ -1,0 +1,19 @@
+---
+/** Inline build-time SVG chart with a "Use this chart" snippet (image plus credit link, CC BY 4.0). */
+import LkBase from "./LkBase.astro";
+import { chartSnippet } from "../embed/embed.ts";
+interface Props { svg: string; alt: string; caption: string; origin: string; imgPath: string; pagePath: string; brand: string; width?: number; height?: number; uid: string }
+const { svg, alt, caption, origin, imgPath, pagePath, brand, width, height, uid } = Astro.props;
+const snippet = chartSnippet({ origin, imgPath, pagePath, alt, brand, width, height });
+---
+<LkBase />
+<figure class="lk-fig">
+  <div class="lk-svg" set:html={svg}></div>
+  <figcaption class="lk-cap">{caption}</figcaption>
+  <details class="lk-use">
+    <summary>Use this chart</summary>
+    <p class="lk-p">Free to reuse under CC BY 4.0 with a visible link to {brand}. Paste this where you want the chart.</p>
+    <div class="lk-row"><label class="lk-l" for={`lk-${uid}-chart`}>Chart snippet (HTML)</label><button type="button" class="lk-b" data-lk-copy={`lk-${uid}-chart`}>Copy</button></div>
+    <textarea id={`lk-${uid}-chart`} class="lk-t" readonly rows="4" spellcheck="false" set:text={snippet}></textarea>
+  </details>
+</figure>

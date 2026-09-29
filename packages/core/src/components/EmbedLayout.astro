@@ -1,0 +1,53 @@
+---
+/**
+ * Chrome-free layout for /embed/<widget>/ pages. Tiny: no site nav, no fonts, no framework JS.
+ * noindex + canonical to the full page; visible credit link; posts its height to the host so the
+ * "auto-resize" snippet works. The card carries its own background so it reads on light and dark hosts.
+ */
+interface Props {
+  title: string;
+  /** Absolute canonical URL of the full page */
+  canonical: string;
+  /** Credit anchor text (the brand name) and its label, e.g. "Data" */
+  brand: string;
+  creditLabel?: string;
+  /** CSS custom properties for the card, e.g. "--em-bg:#111;--em-ink:#fff;--em-accent:#0ff" */
+  vars?: string;
+  lang?: string;
+}
+const { title, canonical, brand, creditLabel = "Source", vars = "", lang = "en" } = Astro.props;
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href={canonical} />
+    <title>{title}</title>
+    <slot name="head" />
+    <style is:global>
+      html, body { margin: 0; padding: 0; background: transparent; }
+      body { font: 15px/1.5 var(--em-font, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif); }
+      .em-card { display: block; box-sizing: border-box; margin: 0; padding: 16px; border-radius: var(--em-radius, 10px); background: var(--em-bg, #ffffff); color: var(--em-ink, #111111); border: 1px solid var(--em-line, #d4d4d8); }
+      .em-card a { color: var(--em-link, var(--em-accent, #1d4ed8)); }
+      .em-card a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+      .em-credit { margin: 12px 0 0; padding-top: 10px; border-top: 1px solid var(--em-line, #d4d4d8); font-size: 13px; color: var(--em-muted, #52525b); }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+    </style>
+  </head>
+  <body>
+    <main class="em-card" style={vars}>
+      <slot />
+      <p class="em-credit">{creditLabel}: <a href={canonical} target="_blank" rel="noopener">{brand}</a></p>
+    </main>
+    <script is:inline>
+      (function () {
+        if (window.parent === window) return;
+        function send() { parent.postMessage({ portfolioEmbed: 1, height: Math.ceil(document.body.getBoundingClientRect().height) }, "*"); }
+        addEventListener("load", send);
+        if (window.ResizeObserver) new ResizeObserver(send).observe(document.body);
+      })();
+    </script>
+  </body>
+</html>
