@@ -54,7 +54,8 @@
     "priceSourceUrl": "https://livemomentous.com/products/creatine-monohydrate-60-servings-flavors",
     "note": "Grams of creatine per serving not readable from page text (supplement facts load in a pop-up). Some variants (flavours/sizes) may be out of stock; check the page.",
     "costPerStudyDosePerMonth": null,
-    "costBasisDose": null
+    "costBasisDose": null,
+    "checked": "2026-09-29"
    },
    {
     "brand": "Nutricost",
@@ -70,7 +71,8 @@
     "priceSourceUrl": "https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams",
     "note": "Servings derived: 500 g / 5 g per serving (both stated on page). Unflavored 500 G variant price. Page carries a generic 'third-party tested' statement but names no certifier.",
     "costPerStudyDosePerMonth": 7.19,
-    "costBasisDose": "5 g/day (Preen et al. 2003)"
+    "costBasisDose": "5 g/day (Preen et al. 2003)",
+    "checked": "2026-09-29"
    }
   ],
   "checked": "2026-09-28"
@@ -121,7 +123,8 @@
     "priceSourceUrl": "https://livemomentous.com/products/omega-3",
     "note": "Cost uses EPA+DHA per serving from the label (not total oil weight). Some variants (flavours/sizes) may be out of stock; check the page.",
     "costPerStudyDosePerMonth": 20.99,
-    "costBasisDose": "840 mg/day EPA+DHA (Manson et al. (VITAL) 2019, 1 g Omacor capsule = 460 EPA + 380 DHA)"
+    "costBasisDose": "840 mg/day EPA+DHA (Manson et al. (VITAL) 2019, 1 g Omacor capsule = 460 EPA + 380 DHA)",
+    "checked": "2026-09-29"
    },
    {
     "brand": "Transparent Labs",
@@ -187,7 +190,8 @@
     "priceSourceUrl": "https://livemomentous.com/products/vitamin-d3-2000-iu",
     "note": "Some variants (flavours/sizes) may be out of stock; check the page.",
     "costPerStudyDosePerMonth": 9.99,
-    "costBasisDose": "2000 IU/day (Manson et al. (VITAL) 2019)"
+    "costBasisDose": "2000 IU/day (Manson et al. (VITAL) 2019)",
+    "checked": "2026-09-29"
    },
    {
     "brand": "Nutricost",
@@ -203,7 +207,8 @@
     "priceSourceUrl": "https://nutricost.com/products/nutricost-vegan-vitamin-d3",
     "note": "Page says made in an NSF Certified facility; that is not a product certification.",
     "costPerStudyDosePerMonth": 2.39,
-    "costBasisDose": "2000 IU/day (Manson et al. (VITAL) 2019)"
+    "costBasisDose": "2000 IU/day (Manson et al. (VITAL) 2019)",
+    "checked": "2026-09-29"
    }
   ],
   "checked": "2026-09-28"
@@ -237,7 +242,8 @@
     "priceSourceUrl": "https://nutricost.com/products/nutricost-vitamin-k2-mk-7",
     "note": null,
     "costPerStudyDosePerMonth": 7.19,
-    "costBasisDose": "180 mcg/day (Knapen et al. 2015)"
+    "costBasisDose": "180 mcg/day (Knapen et al. 2015)",
+    "checked": "2026-09-29"
    },
    {
     "brand": "Jarrow Formulas",
@@ -253,7 +259,8 @@
     "priceSourceUrl": "https://www.jarrow.com/products/mk-7-180-mcg-30-softgels",
     "note": "Page cites a ConsumerLab user survey, which is not a product test.",
     "costPerStudyDosePerMonth": 21.99,
-    "costBasisDose": "180 mcg/day (Knapen et al. 2015)"
+    "costBasisDose": "180 mcg/day (Knapen et al. 2015)",
+    "checked": "2026-09-29"
    },
    {
     "brand": "Jarrow Formulas",
@@ -269,7 +276,8 @@
     "priceSourceUrl": "https://www.jarrow.com/products/mk-7-90-mcg-softgels",
     "note": "Amount per softgel from product name; 60ct variant price.",
     "costPerStudyDosePerMonth": 22.99,
-    "costBasisDose": "180 mcg/day (Knapen et al. 2015)"
+    "costBasisDose": "180 mcg/day (Knapen et al. 2015)",
+    "checked": "2026-09-29"
    }
   ],
   "checked": "2026-09-28"
@@ -345,7 +353,8 @@
     "priceSourceUrl": "https://nutricost.com/products/nutricost-magnesium-glycinate-powder-250-grams",
     "note": null,
     "costPerStudyDosePerMonth": 8.56,
-    "costBasisDose": "368 mg/day elemental Mg (Zhang et al. 2016)"
+    "costBasisDose": "368 mg/day elemental Mg (Zhang et al. 2016)",
+    "checked": "2026-09-29"
    },
    {
     "brand": "Momentous",
@@ -361,7 +370,8 @@
     "priceSourceUrl": "https://livemomentous.com/products/magnesium-threonate",
     "note": "Elemental Mg / threonate mg per serving not readable from page text. Some variants (flavours/sizes) may be out of stock; check the page.",
     "costPerStudyDosePerMonth": null,
-    "costBasisDose": null
+    "costBasisDose": null,
+    "checked": "2026-09-29"
    }
   ],
   "checked": "2026-09-28"
@@ -405,7 +415,8 @@
     "priceSourceUrl": "https://www.doublewoodsupplements.com/products/nicotinamide-mononucleotide",
     "note": "Bottle count not read from page.",
     "costPerStudyDosePerMonth": null,
-    "costBasisDose": null
+    "costBasisDose": null,
+    "checked": "2026-09-29"
    },
    {
     "brand": "Jarrow Formulas",
@@ -421,7 +432,8 @@
     "priceSourceUrl": "https://www.jarrow.com/products/nmn-300mg",
     "note": null,
     "costPerStudyDosePerMonth": 41.66,
-    "costBasisDose": "250 mg/day (Igarashi et al. 2022)"
+    "costBasisDose": "250 mg/day (Igarashi et al. 2022)",
+    "checked": "2026-09-29"
    },
    {
     "brand": "Renue By Science",
@@ -437,7 +449,8 @@
     "priceSourceUrl": "https://renuebyscience.com/products/slc-enteric-nmn-nicotinamide-mononucleotide-delayed-release-250mg-200ct",
     "note": "Blend also contains TMG, zinc, sodium bicarbonate. Product page showed Sold out on 2026-09-29 (audit date).",
     "costPerStudyDosePerMonth": 8.84,
-    "costBasisDose": "250 mg/day (Igarashi et al. 2022)"
+    "costBasisDose": "250 mg/day (Igarashi et al. 2022)",
+    "checked": "2026-09-29"
    }
   ],
   "checked": "2026-09-28"
@@ -481,7 +494,8 @@
     "priceSourceUrl": "https://www.truniagen.com/products/tru-niagen-300mg",
     "note": "Servings taken from the 30-count variant label; serving size field on page did not render.",
     "costPerStudyDosePerMonth": 326.67,
-    "costBasisDose": "2000 mg/day (Dollerup et al. 2019)"
+    "costBasisDose": "2000 mg/day (Dollerup et al. 2019)",
+    "checked": "2026-09-29"
    },
    {
     "brand": "Nutricost",
@@ -497,7 +511,8 @@
     "priceSourceUrl": "https://nutricost.com/products/nutricost-nicotinamide-riboside-resveratrol",
     "note": "NR mg per serving not extracted; page says 60 servings of 2 capsules.",
     "costPerStudyDosePerMonth": null,
-    "costBasisDose": null
+    "costBasisDose": null,
+    "checked": "2026-09-29"
    },
    {
     "brand": "Elysium Health",
@@ -613,7 +628,8 @@
     "priceSourceUrl": "https://www.doublewoodsupplements.com/products/glycine",
     "note": "Bottle count not extracted.",
     "costPerStudyDosePerMonth": null,
-    "costBasisDose": null
+    "costBasisDose": null,
+    "checked": "2026-09-29"
    },
    {
     "brand": "Bulk Supplements",
@@ -663,7 +679,8 @@
     "priceSourceUrl": "https://nutricost.com/products/nutricost-taurine-1000mg-400-capsules",
     "note": "1 serving = 1 capsule per page (stated for the 240-count).",
     "costPerStudyDosePerMonth": 2.47,
-    "costBasisDose": "1.5 g/day (lower bound of 1.5-3.0 range) (Meta-analysis of RCTs 2026)"
+    "costBasisDose": "1.5 g/day (lower bound of 1.5-3.0 range) (Meta-analysis of RCTs 2026)",
+    "checked": "2026-09-29"
    },
    {
     "brand": "Double Wood",
@@ -679,7 +696,8 @@
     "priceSourceUrl": "https://www.doublewoodsupplements.com/products/l-taurine-capsules-1-000mg",
     "note": null,
     "costPerStudyDosePerMonth": 9.97,
-    "costBasisDose": "1.5 g/day (lower bound of 1.5-3.0 range) (Meta-analysis of RCTs 2026)"
+    "costBasisDose": "1.5 g/day (lower bound of 1.5-3.0 range) (Meta-analysis of RCTs 2026)",
+    "checked": "2026-09-29"
    },
    {
     "brand": "Bulk Supplements",
@@ -755,7 +773,8 @@
     "priceSourceUrl": "https://www.doublewoodsupplements.com/products/liposomal-coq10-supplement",
     "note": null,
     "costPerStudyDosePerMonth": 29.92,
-    "costBasisDose": "300 mg/day (Mortensen et al. (Q-SYMBIO) 2014)"
+    "costBasisDose": "300 mg/day (Mortensen et al. (Q-SYMBIO) 2014)",
+    "checked": "2026-09-29"
    },
    {
     "brand": "Momentous",
@@ -771,7 +790,8 @@
     "priceSourceUrl": "https://livemomentous.com/products/ubiquinol",
     "note": "Softgel count not shown in extracted text. Some variants (flavours/sizes) may be out of stock; check the page.",
     "costPerStudyDosePerMonth": null,
-    "costBasisDose": null
+    "costBasisDose": null,
+    "checked": "2026-09-29"
    }
   ],
   "checked": "2026-09-28"
@@ -805,7 +825,8 @@
     "priceSourceUrl": "https://www.doublewoodsupplements.com/products/spermidine",
     "note": "Capsule count not extracted. Page showed backordered on the audit day (2026-09-29).",
     "costPerStudyDosePerMonth": null,
-    "costBasisDose": null
+    "costBasisDose": null,
+    "checked": "2026-09-29"
    },
    {
     "brand": "Renue By Science",
@@ -821,7 +842,8 @@
     "priceSourceUrl": "https://renuebyscience.com/products/lipo-spermidine-656165996902",
     "note": "90 capsules, 2-capsule serving; spermidine mg not extracted.",
     "costPerStudyDosePerMonth": null,
-    "costBasisDose": null
+    "costBasisDose": null,
+    "checked": "2026-09-29"
    }
   ],
   "checked": "2026-09-28"
