@@ -17,3 +17,10 @@
 - Addition, 2026-09-29 (content wave 2): Momentous Magnesium L-Threonate now 145 mg elemental Mg and 2 g Magtein per 3-capsule serving (from page); cost at 368 mg/day elemental Mg computed. Magtein PS trial formula differs from this product.
 
 - Correction, 2026-09-29 (independent audit, content wave 2): Timeline Mitopure Softgels price is $99 one-time (page structured data); the $89 previously used is the monthly-delivery plan price. Monthly cost at 1000 mg/day corrected $178 to $198. Mt. Angel testing field reworded (no certificate of analysis is offered on the page). Other wave 2 entries checked against brand pages: values unchanged.
+
+- Addition, 2026-09-29 (content wave 3): CoQ10 now 6 products. Nutricost 100 mg x 120 ($18.97), Jarrow Q-absorb ubiquinone 100 mg x 120 ($49.99) and Jarrow QH-absorb ubiquinol 100 mg x 120 ($85.99) added from storefront product data; Momentous ubiquinol softgel count filled (30, from page). Monthly cost at 300 mg/day (Q-SYMBIO): $14.23, $37.49, $64.49 and $104.97. Forms differ (ubiquinone vs ubiquinol); Q-SYMBIO used ubiquinone.
+
+- Addition, 2026-09-29 (content wave 3): omega-3 now 6 products. Carlson Super Omega-3 Gems (100 softgels, $36.60), Elite Omega-3 Gems (60, $28.20) and Maximum Omega 2000 (60, $39.90) added from Carlson's storefront data and product pages, IFOS certified per the page; monthly cost at the VITAL 840 mg/day EPA+DHA basis $18.45, $16.92 and $19.15.
+
+- Correction, 2026-09-29 (independent audit, content wave 3): five Nutricost entries (creatine monohydrate, vitamin D3, vitamin K2, magnesium glycinate, NR + resveratrol) were recorded as "none stated", but each page carries the site-wide "Third-Party Tested" banner (generic, no lab or certifier named); D3 and NR + resveratrol also say made in an NSF certified facility. Reworded as generic claims. Testing source URL added for Nutricost CoQ10. Prices and costs unchanged; all wave 3 prices re-read from brand pages and storefront data.
+- Correction, 2026-09-29 (independent audit, content wave 3): CoQ10 notes no longer say Q-SYMBIO used ubiquinone (its abstract names CoQ10 and does not state the form).
