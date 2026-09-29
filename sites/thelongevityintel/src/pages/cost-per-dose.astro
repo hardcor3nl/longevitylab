@@ -16,6 +16,7 @@ const method = cpdDoc("METHOD"), changelog = cpdDoc("CHANGELOG"), gaps = cpdDoc(
 const money = (n: number | null | undefined) => (n == null ? "not calculable" : `$${n.toFixed(2)}`);
 const url = canonicalUrl(site.origin, "/cost-per-dose", "never");
 const modified = cpdModified();
+const maxCost = Math.max(1, ...rows.map((r) => r.costPerStudyDosePerMonth ?? 0));
 const costed = rows.filter((r) => r.costPerStudyDosePerMonth != null).length;
 const ld = datasetLd({
   name: "Longevity supplement cost per study dose",
@@ -59,7 +60,7 @@ const ld = datasetLd({
                   <td><a href={r.priceSourceUrl} rel="noopener">{r.brand}: {r.product}</a><span class="block text-xs text-muted">Checked {r.checked}</span></td>
                   <td>{money(r.price)}</td>
                   <td>{r.dose.doseText}<span class="block text-xs"><a href={r.dose.sourceUrl} rel="noopener">PubMed record</a>{r.dose.doi ? <> · <a href={r.dose.doi} rel="noopener">DOI</a></> : null}</span></td>
-                  <td>{money(r.costPerStudyDosePerMonth)}{r.costBasisDose ? <span class="block text-xs text-muted">Basis: {r.costBasisDose}</span> : null}{r.note ? <span class="block text-xs text-muted">{r.note}</span> : null}</td>
+                  <td>{money(r.costPerStudyDosePerMonth)}{r.costPerStudyDosePerMonth != null ? <span class="cost-bar" style={`--w:${Math.max(0.02, r.costPerStudyDosePerMonth / maxCost).toFixed(3)}`} aria-hidden="true"></span> : null}{r.costBasisDose ? <span class="block text-xs text-muted">Basis: {r.costBasisDose}</span> : null}{r.note ? <span class="block text-xs text-muted">{r.note}</span> : null}</td>
                   <td>{r.thirdPartyTestingSource ? <a href={r.thirdPartyTestingSource} rel="noopener">{r.thirdPartyTesting ?? "none stated"}</a> : (r.thirdPartyTesting ?? "none stated")}</td>
                 </tr>
               ))}

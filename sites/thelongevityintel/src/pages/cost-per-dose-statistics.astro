@@ -19,9 +19,11 @@ const s = stats;
 const lead = `Across ${s.products} products from ${s.brands} brands covering ${s.compounds} compounds, the median list price is ${money(s.medianPrice)}. At the dose used in a cited human study, ${s.costed} products have a computed monthly cost, with a median of ${money(s.medianCost)}, from ${money(s.lo.costPerStudyDosePerMonth)} (${s.lo.brand}, ${s.lo.compound}) to ${money(s.hi.costPerStudyDosePerMonth)} (${s.hi.brand}, ${s.hi.compound}). Numbers only, not dosing advice. Computed from our dataset, checked ${s.checked}.`;
 const desc = `Median monthly cost ${money(s.medianCost)} at cited study doses across ${s.costed} supplement products, ${s.compounds} compounds. Numbers only, not advice. From our dataset, ${s.checked}.`;
 const ld = [article({ title, description: desc, url: site.origin + path, published: "2026-09-29", updated: "2026-09-29", evidence: "compiled-data", image: ogUrl("default") }, { ...orgInfo, name: site.name })];
+const barRows = s.byCompound.filter((c) => c.medianCost != null).sort((a, b) => b.medianCost! - a.medianCost!);
+const barMax = Math.max(1, ...barRows.map((c) => c.medianCost!));
 const c1 = charts["supplement-cost-per-study-dose"], c2 = charts["supplement-testing-statements"];
 ---
-<Base title={title} description={desc} {path} jsonLd={ld} published="2026-09-29" modified="2026-09-29" type="article">
+<Base title={title} description={desc} {path} jsonLd={ld} published="2026-09-29" modified="2026-09-29" type="article" motion={true}>
   <div class="pt-28 pb-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" style={LK_ADAPTIVE}>
     <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Cost per study dose", href: "/cost-per-dose" }, { name: "Statistics" }]} />
     <p class="font-mono text-xs uppercase tracking-[.14em] text-green-bright mt-6 mb-2">Computed from our dataset, checked {s.checked}</p>
@@ -46,6 +48,11 @@ const c1 = charts["supplement-cost-per-study-dose"], c2 = charts["supplement-tes
     <ChartFigure svg={c1.svg} alt={c1.alt} caption={c1.caption} origin={site.origin} imgPath="/charts/supplement-cost-per-study-dose.svg" pagePath={path} brand="Longevity Intel" width={c1.width} height={c1.height} uid="cost" />
     <StatsTable caption={`Monthly cost at the cited study dose, by compound (USD, n = ${s.products} products)`} head={["Compound", "Products", "Price range", "Cost range per month", "Median cost per month"]}
       rows={s.byCompound.map((c) => [shortCompound(c.compound), c.products, c.minPrice === c.maxPrice ? money(c.minPrice)! : `${money(c.minPrice)} to ${money(c.maxPrice)}`, c.costed ? (c.minCost === c.maxCost ? money(c.minCost)! : `${money(c.minCost)} to ${money(c.maxCost)}`) : "not calculated", c.medianCost != null ? money(c.medianCost)! : "not calculated"])} />
+    <ol class="cost-bars" aria-label="Median monthly cost at the cited study dose, by compound (USD)">
+      {barRows.map((c) => (
+        <li><span>{shortCompound(c.compound)}</span><span class="track" aria-hidden="true"><i style={`--w:${Math.max(0.02, c.medianCost! / barMax).toFixed(3)}`}></i></span><span class="v">{money(c.medianCost)}</span></li>
+      ))}
+    </ol>
     <div class="max-w-3xl text-muted leading-relaxed">
       <h2 class="font-display text-3xl text-ink mb-3 mt-10">What brands say about testing</h2>
       <p class="mb-4">We record the testing statement on each product page as the brand wrote it. {s.cls.named} of {s.products} products name a product certifier, {s.cls.unnamed} state testing without naming one or publish only their own results, and {s.cls.none} state none. Among products with a computed cost, the median monthly cost is {s.medianNamed != null ? money(s.medianNamed) : "n/a"} for the {s.nNamed} that name a certifier and {s.medianOther != null ? money(s.medianOther) : "n/a"} for the other {s.nOther}. The sample is a convenience sample of brands whose pages we could read, so this is not a market ranking. We did not test any product.</p>
