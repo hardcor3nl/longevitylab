@@ -95,6 +95,10 @@ export default function ProtocolPage({ params }: { params: { id: string } }) {
                     className="inline-flex items-center gap-1 text-xs text-green-bright hover:text-green transition-colors cursor-pointer">
                     {protocol.website} <ExternalLink className="w-3 h-3" />
                   </a>
+                  <p className="text-muted text-[11px] mt-2">
+                    Photo: <a href={protocol.expertImageCredit.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-ink">{protocol.expertImageCredit.author}</a>,{' '}
+                    <a href={protocol.expertImageCredit.licenseUrl} target="_blank" rel="noopener noreferrer license" className="underline hover:text-ink">{protocol.expertImageCredit.license}</a>, via {protocol.expertImageCredit.source}
+                  </p>
                 </div>
               </div>
 

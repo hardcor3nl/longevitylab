@@ -1,4 +1,4 @@
-import { protocols } from '@/lib/protocols'
+import { protocols, creditLine } from '@/lib/protocols'
 import Link from 'next/link'
 import Image from 'next/image'
 import { AnimatedSection } from '@/components/AnimatedSection'
@@ -46,6 +46,7 @@ export default function ProtocolsPage() {
                     <div className="min-w-0 pb-0.5">
                       <h2 className="font-display text-2xl text-white leading-tight mb-0.5">{protocol.expert}</h2>
                       <p className="text-white/60 text-xs font-mono line-clamp-1">{protocol.role}</p>
+                      <p className="text-white/40 text-[10px] line-clamp-1">{creditLine(protocol.expertImageCredit)}</p>
                     </div>
                   </div>
                   <div className="absolute top-4 right-4">
