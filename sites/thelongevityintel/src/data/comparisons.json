@@ -4,19 +4,23 @@
     "title": "NMN vs NR",
     "subtitle": "Which NAD+ precursor is better?",
     "category": "Supplements",
-    "verdict": "NMN for direct pathway; NR for trial depth",
-    "description": "Both raise NAD+. We break down bioavailability, RCT count, safety history, dosing, and who should pick which.",
+    "verdict": "No head-to-head trial; both raise blood NAD+, outcomes mixed",
+    "description": "NMN and NR compared from human trials: NAD+ results, functional outcomes, cost at the trial dose, and NMN's current US regulatory status.",
     "a": "NMN",
     "b": "NR",
     "featured": true,
     "related": [
       {
         "href": "/supplements/best-nmn-supplements-2024",
-        "label": "Best NMN"
+        "label": "NMN status, trials and cost"
       },
       {
         "href": "/supplements/nad-boosters-complete-guide",
         "label": "NAD+ guide"
+      },
+      {
+        "href": "/cost-per-dose",
+        "label": "Cost per study dose"
       }
     ]
   },

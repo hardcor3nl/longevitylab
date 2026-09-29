@@ -2,378 +2,281 @@
   {
     "id": "bryan-johnson",
     "expert": "Bryan Johnson",
-    "title": "Bryan Johnson's Blueprint Protocol (2025)",
+    "title": "Bryan Johnson's Blueprint Protocol, as Published",
     "slug": "bryan-johnson-blueprint-protocol",
-    "description": "The most extensively documented longevity protocol in history. Bryan Johnson spends ~$2M/year attempting to reverse biological aging with a 100+ compound daily stack, strict noon cutoff diet, and a team of 30+ physicians.",
-    "longDescription": "Bryan Johnson sold Braintree/Venmo to PayPal for $800M and redirected his life and fortune toward a single goal: don't die. His Blueprint protocol is publicly documented at protocol.bryanjohnson.com and updated monthly. It includes daily blood draws, continuous glucose monitoring, nightly MRI sleep tracking, quarterly full-body imaging, and over 100 biomarker tests. The protocol is managed algorithmically — Johnson removed human willpower from the equation entirely.",
+    "description": "Bryan Johnson's Blueprint routine as listed on his own protocol page (checked 29 Sept 2026), with the evidence status of each element. Bloomberg reported a cost of about $2 million a year in 2023, per Wikipedia.",
+    "longDescription": "Bryan Johnson sold Braintree to PayPal (announced 2013 at $800 million, per Wikipedia) and now publishes a daily routine called Blueprint at protocol.bryanjohnson.com. This page lists what his protocol page states, checked on 29 Sept 2026. The biomarker results are self-reported by a founder who sells related products, and no independent trial has tested the combination. It is description, not advice, and not a suggestion to copy any element.",
     "expertImage": "/experts/bryan-johnson.jpg",
-    "role": "Tech entrepreneur, founder of Blueprint, CEO of OS Fund",
+    "role": "Entrepreneur; founder of Blueprint",
     "website": "protocol.bryanjohnson.com",
-    "approach": "Algorithmic self-optimisation — remove human decision-making, follow biomarker data exclusively",
+    "approach": "A published daily routine of fixed timing, exercise, diet, supplements and prescription medicines, with self-reported test results",
     "keyPhilosophy": [
-      "\"Don't die\" — death prevention as the singular life mission",
-      "Algorithms over willpower: all health decisions made by data, not cravings or mood",
-      "Eating window closes at noon — 23-hour fast daily, all calories consumed in the morning",
-      "Measure everything: 100+ biomarkers monthly, continuous glucose, nightly sleep staging, quarterly full-body MRI",
-      "Blueprint Stack: 74 compounds in one system — the world's most documented supplement protocol",
-      "Exercise 1 hour every single day without exception",
-      "Sleep is the highest priority: 8:30pm bedtime, blackout room, temperature controlled"
+      "Last meal at noon, about 2,250 calories a day, described on his page as 10% calorie restriction",
+      "Bedtime 8:30 pm, waking about 5:00 am",
+      "Six hours of exercise a week: three strength sessions and three cardio sessions",
+      "Results are published on his own page and are not independently verified"
     ],
     "sections": [
       {
-        "title": "Pre-Workout & Morning Nutrition (5:25–5:35 AM)",
-        "description": "Johnson begins every day the same way. Pre-workout comes first, then the primary meal immediately after training. All food is consumed by noon.",
+        "title": "Morning supplements (as listed on his page)",
+        "description": "Johnson's protocol page lists a morning stack of his own branded products plus creatine, collagen, olive oil, omega-3 and an adaptogen blend. Doses below are what his page states, not recommendations.",
         "items": [
           {
-            "name": "Blueprint Longevity Mix",
-            "dose": "1 scoop",
-            "timing": "5:25 AM pre-workout",
-            "purpose": "Comprehensive micronutrient foundation — 74 compounds including vitamins, minerals, polyphenols, and longevity compounds",
-            "evidenceNote": "Johnson's proprietary formulation. Contains CA-AKG, glucosamine sulfate, hyaluronic acid, and numerous compounds not found in standard multivitamins"
+            "name": "Longevity Mix",
+            "dose": "Per his protocol page: listed, amount not stated here",
+            "timing": "Morning",
+            "purpose": "A branded multi-ingredient powder sold by Johnson's company",
+            "evidenceNote": "Proprietary mix sold by his own company; we have not verified its contents or any effect."
           },
           {
             "name": "Creatine Monohydrate",
-            "dose": "7.5g total (5g + 2.5g in mix)",
-            "timing": "Pre-workout",
-            "purpose": "Muscle strength, cognitive neuroprotection, mitochondrial health",
-            "evidenceNote": "One of the most evidence-backed supplements — 500+ studies",
+            "dose": "Per his protocol page: 5 g",
+            "timing": "Morning",
+            "purpose": "Listed in his morning stack",
+            "evidenceNote": "Creatine has the strongest human evidence in this stack for exercise performance; see the graded supplement ladder on this site.",
             "supplementId": "creatine"
           },
           {
-            "name": "Prebiotic Fibre Stack",
-            "dose": "GOS 0.5 tsp + Inulin 1 tsp + Arabinogalactan 1 tsp",
-            "timing": "Morning",
-            "purpose": "Microbiome diversity, gut barrier integrity, SCFA production",
-            "evidenceNote": "Johnson measures his gut microbiome monthly via stool testing — the most quantified microbiome protocol in existence"
+            "name": "Collagen Peptides",
+            "dose": "Per his protocol page: 11 g",
+            "timing": "Morning; a further scoop at noon",
+            "purpose": "Listed in his morning stack"
           },
           {
-            "name": "Blueprint Collagen Peptides",
-            "dose": "11g",
-            "timing": "Post-workout breakfast",
-            "purpose": "Connective tissue, joint health, skin structure",
-            "evidenceNote": "Vitamin C cofactor required for collagen synthesis — also included in the mix"
-          },
-          {
-            "name": "Extra Virgin Olive Oil (Snake Oil)",
-            "dose": "30mL (2 tablespoons)",
-            "timing": "With breakfast",
-            "purpose": "Oleocanthal (anti-inflammatory), polyphenols, fat-soluble nutrient absorption",
-            "evidenceNote": "Johnson launched his own EVOO brand \"Snake Oil\" — cold-pressed, with third-party polyphenol testing stated by the brand"
-          },
-          {
-            "name": "NMN or NR (alternating)",
-            "dose": "NMN 500mg OR NR 450mg",
-            "timing": "With breakfast",
-            "purpose": "NAD+ precursor — restores declining NAD+ with age",
-            "evidenceNote": "Johnson alternates between NMN and NR 6 days per week. Recent data suggests cycling may prevent adaptation.",
-            "supplementId": "nmn"
+            "name": "Extra Virgin Olive Oil",
+            "dose": "Per his protocol page: 1 tablespoon",
+            "timing": "Morning and noon",
+            "purpose": "Listed in his stack",
+            "evidenceNote": "Johnson sells his own olive oil brand; that is a commercial interest."
           },
           {
             "name": "EPA/DHA Omega-3",
-            "dose": "800mg EPA/DHA/DPA",
-            "timing": "With breakfast",
-            "purpose": "Cardiovascular protection, neurological health, anti-inflammation",
+            "dose": "Per his protocol page: 800 mg",
+            "timing": "Morning",
+            "purpose": "Listed in his morning stack",
+            "evidenceNote": "A large trial of ordinary fish-oil capsules (VITAL) found no reduction in major cardiovascular events; see the supplement ladder.",
             "supplementId": "omega3"
           },
           {
-            "name": "Ashwagandha + Rhodiola",
-            "dose": "KSM-66 Ashwagandha 120mg + Rhodiola 120mg",
+            "name": "Ashwagandha & Rhodiola",
+            "dose": "Per his protocol page: 1 capsule",
             "timing": "Morning",
-            "purpose": "Cortisol regulation, adaptogenic stress response, cognitive clarity",
+            "purpose": "Listed in his morning stack",
             "supplementId": "ashwagandha"
           }
         ]
       },
       {
-        "title": "Prescription Medications (Noon)",
-        "description": "Johnson takes all prescription medications at noon with his final calorie intake of the day. Several are among the most investigated longevity drugs in science.",
+        "title": "Prescription medications (as listed on his page)",
+        "description": "Johnson's page lists prescription medicines. They are taken under his own physicians. This is a description of one person's protocol, not a suggestion; every item needs a prescriber.",
         "items": [
           {
-            "name": "Metformin",
-            "dose": "500mg (6-week on/off cycles)",
-            "timing": "Noon with food",
-            "purpose": "AMPK activation, glucose regulation, longevity signalling via AMPK pathway",
-            "evidenceNote": "Rx only. Johnson cycles metformin 6 weeks on, 6 weeks off to prevent adaptation, unlike some longevity physicians who have abandoned metformin over exercise-adaptation concerns.",
-            "isRx": true
-          },
-          {
             "name": "Acarbose",
-            "dose": "200mg",
-            "timing": "With meals",
-            "purpose": "Blunts post-meal glucose spikes by inhibiting alpha-glucosidase enzyme. Extended ITP mouse lifespan.",
-            "evidenceNote": "Rx only. One of only 3 drugs to extend lifespan in the Interventions Testing Program (ITP). Johnson wears a CGM and tracks glucose responses in real time.",
+            "dose": "Per his protocol page: 400 mg",
+            "timing": "As listed",
+            "purpose": "Listed on his page",
+            "evidenceNote": "Prescription only.",
             "isRx": true
           },
           {
             "name": "Jardiance (Empagliflozin)",
-            "dose": "10mg",
-            "timing": "Morning",
-            "purpose": "SGLT2 inhibitor — reduces cardiovascular mortality, renal protection, metabolic benefits",
-            "evidenceNote": "Rx only. Originally a diabetes drug with extraordinary cardiovascular mortality data (EMPA-REG trial: 38% reduction in CV death). Several longevity physicians also use SGLT2i for high-risk patients.",
+            "dose": "Per his protocol page: 10 mg",
+            "timing": "As listed",
+            "purpose": "Listed on his page",
+            "evidenceNote": "Prescription only; approved for diabetes and other conditions, not for longevity.",
             "isRx": true
           },
           {
             "name": "Candesartan",
-            "dose": "8mg",
-            "timing": "Daily",
-            "purpose": "ARB blood pressure agent with emerging neuroprotective and longevity data",
-            "evidenceNote": "Rx only. ARBs (angiotensin receptor blockers) have epidemiological associations with reduced dementia risk beyond blood pressure effects.",
+            "dose": "Per his protocol page: 8 mg",
+            "timing": "As listed",
+            "purpose": "Listed on his page",
+            "evidenceNote": "Prescription only.",
             "isRx": true
           },
           {
             "name": "Repatha (Evolocumab)",
-            "dose": "140mg injection every 2 weeks",
-            "timing": "Biweekly injection",
-            "purpose": "PCSK9 inhibitor — aggressively lowers LDL-C and ApoB to near-zero cardiovascular risk range",
-            "evidenceNote": "Rx only. Johnson targets ApoB under 60 mg/dL — the most aggressive cardiovascular prevention stance available outside clinical trials.",
+            "dose": "Per his protocol page: 140 mg every 2 weeks",
+            "timing": "Injection every two weeks",
+            "purpose": "Listed on his page",
+            "evidenceNote": "Prescription only.",
             "isRx": true
           },
           {
             "name": "Armour Thyroid + Levothyroxine",
-            "dose": "60mg + 100mcg",
-            "timing": "Daily",
-            "purpose": "Thyroid hormone replacement and optimisation",
-            "evidenceNote": "Rx only. Johnson discovered suboptimal thyroid function via comprehensive testing. Many people have subclinical thyroid dysfunction that goes undetected.",
+            "dose": "Per his protocol page: 60 mg + 100 mcg",
+            "timing": "As listed",
+            "purpose": "Listed on his page",
+            "evidenceNote": "Prescription only.",
             "isRx": true
           },
           {
-            "name": "Tadalafil (Cialis)",
-            "dose": "2.5–5mg",
-            "timing": "Daily",
-            "purpose": "PDE5 inhibitor — vasodilation, erectile function, potential cardiovascular and neuroprotective benefits",
-            "evidenceNote": "Rx only. Low-dose daily tadalafil improves endothelial function. Emerging data on longevity and neurological protection.",
+            "name": "Tadalafil",
+            "dose": "Per his protocol page: 5 mg",
+            "timing": "As listed",
+            "purpose": "Listed on his page",
+            "evidenceNote": "Prescription only.",
             "isRx": true
           },
           {
             "name": "Oral Minoxidil",
-            "dose": "3.75mg",
-            "timing": "Daily",
-            "purpose": "Hair retention — systemic vasodilator at low doses",
-            "evidenceNote": "Rx only. Johnson developed significant hair thinning. Oral minoxidil at low dose is effective and increasingly prescribed off-label.",
+            "dose": "Per his protocol page: 3.75 mg",
+            "timing": "As listed",
+            "purpose": "Listed on his page",
+            "evidenceNote": "Prescription only.",
             "isRx": true
           }
         ]
       },
       {
-        "title": "Diet: The Super Veggie & Noon Cutoff",
-        "description": "Food is medicine in the Blueprint protocol. Johnson eats the same meals daily — removing decision fatigue and optimising every calorie for longevity nutrients.",
+        "title": "Diet: noon cutoff and calories",
+        "description": "His page describes a last meal at noon and about 2,250 calories a day.",
         "items": [
-          {
-            "name": "Super Veggie Bowl",
-            "dose": "1 bowl",
-            "timing": "Post-workout breakfast (primary meal)",
-            "purpose": "Lentils + broccoli + cauliflower + mushrooms + garlic + ginger + lime + hemp seeds + olive oil. Designed to maximise polyphenols, fibre, and plant protein.",
-            "evidenceNote": "Broccoli sprouts (sulforaphane), garlic (allicin), mushrooms (beta-glucans), and hemp seeds (complete protein) all have individual longevity evidence bases."
-          },
           {
             "name": "Noon Food Cutoff",
-            "dose": "All food consumed by 12:00 PM",
-            "timing": "Daily protocol",
-            "purpose": "AMPK activation, autophagy induction, metabolic flexibility, growth hormone release during fasting period",
-            "evidenceNote": "Johnson's 23-hour fasting window is the most aggressive time-restriction protocol among longevity experts. He reports fasting IGF-1 at levels 40% below population average."
+            "dose": "Per his protocol page: stops eating around noon",
+            "timing": "Daily",
+            "purpose": "Time-restricted eating",
+            "evidenceNote": "In a 139-person randomised trial in people with obesity (NEJM 2022), time restriction did not beat ordinary calorie restriction for weight loss or metabolic markers."
           },
           {
-            "name": "Caloric Restriction 10%",
-            "dose": "2,250 kcal/day (~10% below calculated TDEE)",
+            "name": "Calorie Restriction, about 10%",
+            "dose": "Per his protocol page: 2,250 kcal/day, described as 10% restriction; 130 g protein, 206 g carbohydrate, 101 g fat",
             "timing": "Daily",
-            "purpose": "Mild CR activates longevity pathways (AMPK, sirtuins) without sarcopenia risk",
-            "evidenceNote": "Johnson tracks macros precisely: 130g protein (25%), 206g carbs (35%), 101g fat (40%). Macros optimised per his regular body composition testing."
+            "purpose": "Mild calorie restriction",
+            "evidenceNote": "The CALERIE trial used 25% restriction for two years and found a slower DunedinPACE measure but no significant change in PhenoAge or GrimAge; his level is lower than the trial's."
           }
         ]
       },
       {
-        "title": "Brain Protection — 2026 Additions",
-        "description": "Johnson updated his stack significantly in early 2026: he dropped rapamycin entirely after concluding the immunosuppression tradeoff wasn't justified by his biomarkers, cut NMN/NR from daily to 6 days a week, and added two new compounds focused specifically on neuroprotection.",
+        "title": "Exercise (as listed on his page)",
+        "description": "His page lists six hours of exercise a week.",
         "items": [
           {
-            "name": "Lithium Orotate",
-            "dose": "Microdose (sub-clinical, well below bipolar treatment range)",
-            "timing": "Included in Blueprint Essential Capsules",
-            "purpose": "Neuroprotection — trace lithium is associated with lower dementia rates in population studies of municipal water supplies",
-            "evidenceNote": "Not the high-dose lithium carbonate used for bipolar disorder. Epidemiological data (not RCTs) links higher trace lithium in drinking water to reduced all-cause and dementia mortality. Consult a physician before supplementing — lithium has a narrow safety margin and requires blood monitoring at any meaningful dose.",
-            "productSlug": "lithium-orotate"
+            "name": "Strength and cardio",
+            "dose": "Per his protocol page: 6 hours a week: 3 strength and 3 cardio sessions",
+            "timing": "Weekly",
+            "purpose": "Strength and cardiorespiratory fitness",
+            "evidenceNote": "A cohort of 122,007 patients found the lowest fitness group had about five times the mortality of the elite group (JAMA Netw Open 2018); it is observational."
           },
           {
-            "name": "NDGA (Nordihydroguaiaretic Acid)",
-            "dose": "50mg",
-            "timing": "Daily",
-            "purpose": "One of only a handful of compounds with replicated lifespan extension in the NIA Interventions Testing Program (ITP) — extended median lifespan in male mice",
-            "evidenceNote": "ITP data is the gold standard for mouse longevity compounds (multi-site, genetically diverse mice). Human data is essentially nonexistent — Johnson is testing this entirely on ITP mouse evidence plus his own biomarker tracking.",
-            "productSlug": "ndga"
+            "name": "Zone 2 and vigorous cardio",
+            "dose": "Per his protocol page: 150 min moderate (zone 2) and 75 min vigorous per week",
+            "timing": "Within the cardio sessions",
+            "purpose": "Aerobic base and high-intensity work"
           }
         ]
       },
       {
-        "title": "Exercise Protocol (6 Hours/Week)",
-        "description": "Johnson trains 60–90 minutes every single morning, combining strength, cardio, flexibility, and balance work — treating the daily session as a non-negotiable habit rather than a decision made fresh each day.",
-        "items": [
-          {
-            "name": "Daily Combined Session",
-            "dose": "60–90 minutes",
-            "timing": "6:00–7:30 AM, every day",
-            "purpose": "Strength, cardio, flexibility, and balance combined into a single session to remove decision fatigue around \"what workout today\"",
-            "evidenceNote": "Weekly target is 6 hours total: 3 strength sessions, 3 cardio sessions. Johnson's stated principle is \"do it every day, no matter what\" — automating exercise as identity rather than choice."
-          },
-          {
-            "name": "Zone 2 Cardio",
-            "dose": "150 min/week moderate intensity",
-            "timing": "Within daily sessions",
-            "purpose": "Conversation-maintainable aerobic base — mitochondrial density, metabolic flexibility, cardiovascular longevity",
-            "evidenceNote": "Matches the Zone 2 volume most longevity physicians recommend as a baseline aerobic foundation."
-          },
-          {
-            "name": "HIIT / Vigorous Cardio",
-            "dose": "75 min/week vigorous intensity",
-            "timing": "Within daily sessions",
-            "purpose": "VO₂ max development — the cardio metric with the single strongest association with all-cause mortality reduction in observational data",
-            "evidenceNote": "Vigorous = unable to hold a conversation. Combined with Zone 2 volume, matches current exercise-longevity literature recommending both zones rather than either alone."
-          },
-          {
-            "name": "Micro-Movement Breaks",
-            "dose": "2–3 minutes",
-            "timing": "Every 30 minutes throughout the day",
-            "purpose": "Counters the metabolic and vascular harm of prolonged sitting independent of total exercise volume",
-            "evidenceNote": "Light movement (walking, stretching, bodyweight exercises) every 30 minutes — plus 5–10 minutes of activity after each meal to blunt post-meal glucose spikes."
-          }
-        ]
-      },
-      {
-        "title": "Advanced Recovery — Sauna, HBOT & Shockwave",
-        "description": "Johnson's morning routine includes a stack of recovery therapies most people never encounter outside elite sports medicine. The measured before/after biomarker data from these sessions is unusually well documented for a self-experimenter.",
+        "title": "Recovery therapies (as listed on his page)",
+        "description": "His page lists sauna, hyperbaric oxygen, red light and shockwave sessions. Outcomes quoted are self-reported single-person results, not a controlled trial.",
         "items": [
           {
             "name": "Dry Sauna",
-            "dose": "175°F (93°C), 20 minutes",
-            "timing": "7:30 AM, daily",
-            "purpose": "Cardiovascular conditioning, heat shock protein activation, toxin clearance",
-            "evidenceNote": "After 15–23 sessions, Johnson documented undetectable levels of several urinary toxins (MEP, MEHP, perchlorate all reduced to zero) plus a 12.6% reduction in central blood pressure. Uses ice pack on groin for testicular protection — critical detail: 15 sessions WITHOUT ice protection caused a 54–57% decline in his sperm motility and concentration, which recovered with ice protection over subsequent sessions.",
+            "dose": "Per his protocol page: 175 F (about 79 C), 20 minutes, daily, with ice protection",
+            "timing": "Daily",
+            "purpose": "Heat exposure",
             "isRx": false
           },
           {
-            "name": "Red & Near-Infrared Light Therapy",
-            "dose": "6 minutes",
-            "timing": "8:00 AM and evening, 2x daily",
-            "purpose": "Photobiomodulation — mitochondrial ATP production, skin and hair follicle stimulation"
+            "name": "Red and Near-Infrared Light Therapy",
+            "dose": "Per his protocol page: 6 minutes, twice a day",
+            "timing": "Twice daily",
+            "purpose": "Photobiomodulation",
+            "evidenceNote": "See the red light evidence page: support for some hair and skin outcomes, none for strength in healthy people."
           },
           {
             "name": "Hyperbaric Oxygen Therapy (HBOT)",
-            "dose": "60–90 minutes at 2 atmospheres, 100% oxygen",
-            "timing": "9:00 AM, most weekdays (alternates with IHHT)",
-            "purpose": "Increases tissue oxygenation, stimulates angiogenesis and stem cell mobilisation",
-            "evidenceNote": "After 60 sessions, Johnson documented a 2.6% increase in telomere length and telomerase activity consistent with a 12-year-younger biological age by that specific marker, plus a 300% increase in VEGF (vascular growth factor) and a 28.6% reduction in pTAU217, a blood biomarker associated with dementia risk. These are self-reported single-subject results, not a controlled trial — read as hypothesis-generating, not proof.",
+            "dose": "Per his protocol page: 60 sessions, 5 a week, 90 minutes each, 100% oxygen at 2 atmospheres",
+            "timing": "Weekday sessions",
+            "purpose": "Oxygen at raised pressure",
+            "evidenceNote": "His page reports after 60 sessions a 2.6% telomere length increase, telomerase activity at an age-12 equivalent, hsCRP below detectable levels, a 28.6% pTAU217 reduction and a 300% VEGF increase. These are self-reported results from one person with no control group; read as hypothesis-generating, not proof.",
             "isRx": false
           },
           {
             "name": "Shockwave Therapy",
-            "dose": "4,500 shocks per session, intensity level 14",
-            "timing": "8:15 AM, 3x per week",
-            "purpose": "Applied to spine, shoulders, hips, knees and other joints — stimulates blood vessel formation and tissue regeneration in tendons and connective tissue"
+            "dose": "Per his protocol page: 4,500 shocks, level 14, 3 times a week",
+            "timing": "Three times a week",
+            "purpose": "Listed on his page"
           }
         ]
       },
       {
-        "title": "Sleep & Evening Protocol",
-        "description": "Johnson treats sleep as the highest-priority health intervention. His evening protocol is as rigid as his morning one.",
+        "title": "Sleep and skin (as listed on his page)",
+        "description": "His page lists a fixed sleep schedule and a skin routine.",
         "items": [
           {
             "name": "Sleep Timing",
-            "dose": "8:30 PM bedtime, 5:00 AM wake",
-            "timing": "Every night without exception",
-            "purpose": "8.5 hours in bed. Johnson tracks sleep with Oura Ring and nightly EEG headband. Deep sleep percentage is a primary optimisation target.",
-            "evidenceNote": "No food after noon, no liquids after 4 PM — reduces nocturnal digestion and bathroom interruptions. Johnson's deep sleep is documented at levels significantly above population average."
+            "dose": "Per his protocol page: 8:30 pm bedtime, about 5:00 am wake",
+            "timing": "Nightly",
+            "purpose": "Fixed sleep schedule"
           },
           {
-            "name": "Melatonin",
-            "dose": "0.25–0.5mg (very low dose)",
-            "timing": "30 min before 8:30 PM bedtime",
-            "purpose": "Circadian signal — Johnson uses pharmacologically accurate dose, not the 5–10mg commonly sold OTC",
-            "evidenceNote": "Research shows 0.3mg is the dose that matches endogenous melatonin levels. Most OTC doses (5–10mg) are 10–30x higher than needed — causing receptor downregulation over time.",
-            "productSlug": "melatonin-timed-release"
-          },
-          {
-            "name": "Blueprint Skin Protocol",
-            "dose": "Cleanser + Serum + Moisturiser + Tretinoin 0.025%",
-            "timing": "8:00 PM",
-            "purpose": "Skin biological age reduction — Johnson has documented facial age reversal via VISIA skin analysis",
-            "evidenceNote": "Tretinoin is the only topical ingredient with RCT evidence for reversing photoaging. Prescription only. Johnson's skin biological age is documented as significantly younger than chronological age."
+            "name": "Skin routine with tretinoin",
+            "dose": "Per his protocol page: tretinoin 0.025 to 0.1%",
+            "timing": "Daily",
+            "purpose": "Skin routine",
+            "evidenceNote": "Prescription strength products need a prescriber. His page reports a skin age of 40 at age 44 and 39 at age 48, self-reported."
           }
         ]
       },
       {
-        "title": "Measured Results — Biological Age Data",
-        "description": "Unlike most self-experimenters, Johnson publishes his actual biomarker results rather than just his protocol. Here is what the data shows, measured through epigenetic clocks and organ-specific biomarker panels rather than self-report.",
+        "title": "Self-reported results",
+        "description": "These figures are published by Johnson on his own protocol page and have not been independently verified. We could not find a DunedinPACE value on the page on 29 Sept 2026, so any specific figure quoted elsewhere should be treated as unverified.",
         "items": [
           {
-            "name": "DunedinPACE (Pace of Aging)",
-            "dose": "Score: 0.69",
-            "timing": "Measured periodically via blood draw",
-            "purpose": "DunedinPACE estimates how fast a person is aging year-to-year based on 173 DNA methylation markers, calibrated against 20 years of longitudinal organ-function decline in the Dunedin birth cohort study. A score of 1.0 represents the population-average pace of aging.",
-            "evidenceNote": "A 0.69 score means Johnson's body is aging at roughly 69% of the average rate — for every 12 months that pass, his body accumulates the biological wear of about 8.3 months. This is one of the more scientifically credible aging-pace metrics in use, since DunedinPACE was validated against real decades-long health outcome data rather than just correlated with chronological age."
+            "name": "Biomarker and fitness percentiles",
+            "dose": "Per his protocol page: muscle 98th percentile; bone density 99th percentile; grip strength top 5%",
+            "timing": "As published",
+            "purpose": "Self-reported by a founder who sells related products",
+            "evidenceNote": "One person, no control group; not evidence the routine causes these results."
           },
           {
-            "name": "Epigenetic Age Testing (TruAge, GrimAge)",
-            "dose": "Multiple clocks tracked in parallel",
-            "timing": "Periodic blood draws, analysed via TruDiagnostic",
-            "purpose": "DNA methylation-based \"epigenetic clocks\" estimate biological age from chemical modifications to DNA that accumulate predictably with age. Johnson uses TruDiagnostic's TruAge panel, which analyses 900,000+ methylation markers across the genome plus organ-specific sub-scores.",
-            "evidenceNote": "Reported results show several organ-specific ages below chronological age, including notably younger readings for select organ systems in his published panels. Important context: epigenetic clocks are an active, evolving research area — different clocks (Horvath, GrimAge, PhenoAge, DunedinPACE) can disagree with each other on the same blood sample, and none has been validated as a clinical-grade predictor of actual remaining lifespan. Treat these as promising research tools, not medical certainty."
-          },
-          {
-            "name": "Blueprint Biomarker Testing Platform",
-            "dose": "$365/year, 2 panels annually",
-            "timing": "Launched 2026",
-            "purpose": "Johnson opened up a consumer version of his own testing methodology — 100+ biomarkers across two annual panels, positioned as a lower-cost way for the public to track the same categories of data he uses internally.",
-            "evidenceNote": "This is a commercial product from Johnson's own company, not an independent third party — read results and marketing claims with that in mind. It sits in the same competitive space as Function Health and InsideTracker, both independently reviewed on this site."
-          },
-          {
-            "name": "Cost vs. Benefit Reality Check",
-            "dose": "Full protocol ~$2M/year; foundational habits <$100/month",
-            "timing": "Ongoing",
-            "purpose": "Johnson himself has acknowledged that the bulk of his measurable health improvement likely comes from the foundational basics — sleep consistency, the noon eating cutoff, daily exercise, and core supplementation — not the six-figure experimental therapies (HBOT, shockwave, stem cell injections) that generate the most headlines.",
-            "evidenceNote": "This is a useful honesty check for readers: the diet, sleep, and exercise fundamentals covered earlier on this page are freely replicable and represent the highest-confidence portion of the protocol. The experimental therapies are the part with the least individual causal attribution."
+            "name": "Reported cost",
+            "dose": "Bloomberg reported about $2 million a year (2023)",
+            "timing": "As reported by Wikipedia",
+            "purpose": "Third-party report, not confirmed on his page",
+            "evidenceNote": "His page says only that he has spent millions of dollars; the exact total is not stated there."
           }
         ]
       }
     ],
-    "totalSupplements": 100,
-    "estimatedCost": "$1,000–2,000/month (supplements only). Full protocol ~$2M/year with physician team.",
+    "totalSupplements": "30+ compounds referenced",
+    "estimatedCost": "Not published by Johnson; Bloomberg reported about $2 million a year in 2023 (via Wikipedia)",
     "difficulty": "Advanced",
-    "lastUpdated": "2026-06",
-    "disclaimer": "Bryan Johnson's protocol is the most extreme documented longevity intervention in existence. Most items require prescriptions (metformin, acarbose, Jardiance, Repatha, Candesartan, thyroid medications, tadalafil, minoxidil). Note: Johnson discontinued rapamycin in 2024 after concluding the immunosuppression tradeoff wasn't justified by his biomarkers — it is no longer part of his protocol despite frequent claims otherwise. This page is strictly educational. Do not replicate prescription or lithium elements without physician oversight and blood monitoring. Johnson is testing himself as an experiment of one — not as a clinical trial.",
+    "lastUpdated": "2026-09",
+    "disclaimer": "This page describes one person's published protocol, checked on 29 Sept 2026, and is not advice. Several elements are prescription medicines taken under his own physicians; do not copy any prescription or medical procedure without a doctor. Johnson is an experiment of one, not a clinical trial, and his results are self-reported.",
     "affiliateDisclosure": "As an Amazon Associate, Longevity Intel earns from qualifying purchases. We also earn a commission on some other affiliate links. This never influences our coverage.",
     "resultsStats": [
       {
-        "label": "DunedinPACE score",
-        "value": "0.69"
+        "label": "Last meal",
+        "value": "Noon"
       },
       {
-        "label": "Aging pace vs. average",
-        "value": "~31% slower"
+        "label": "Calories (his page)",
+        "value": "2,250 a day"
       },
       {
-        "label": "Annual protocol cost",
-        "value": "~$2M (full); <$100/mo core)"
+        "label": "Exercise (his page)",
+        "value": "6 hours a week"
       },
       {
-        "label": "Biomarkers tracked",
-        "value": "100+"
+        "label": "Skin age (self-reported)",
+        "value": "39 at age 48"
       }
     ],
     "faq": [
       {
         "question": "How much does Bryan Johnson spend on his Blueprint protocol?",
-        "answer": "Johnson has stated the full protocol — including his physician team, quarterly imaging, HBOT, and experimental therapies — costs around $2 million per year. However, he has acknowledged the foundational elements (diet, sleep timing, core supplements, daily exercise) cost under $100/month and likely account for the majority of the measurable health benefit."
-      },
-      {
-        "question": "Does Bryan Johnson still take rapamycin?",
-        "answer": "No. Johnson discontinued rapamycin in 2024 after concluding the immunosuppression tradeoff was not justified by his own biomarker data. This is a common point of confusion since many articles still list it as part of his current stack."
+        "answer": "Bloomberg reported a cost of around $2 million a year in 2023 (as relayed by Wikipedia). His own protocol page says only that he has spent millions of dollars and gives no exact figure."
       },
       {
         "question": "What is Bryan Johnson's biological age?",
-        "answer": "Johnson tracks biological age through multiple methods, including a DunedinPACE score of approximately 0.69 (meaning his body is aging at roughly 69% of the average population rate) and TruDiagnostic epigenetic panel testing showing several organ-specific ages below his chronological age. These are self-reported research-grade measurements, not clinically validated predictions of remaining lifespan."
+        "answer": "His protocol page reports a skin age of 39 at chronological age 48 and several fitness percentiles. These are self-reported and not independently verified. We could not find a DunedinPACE value on his page on 29 Sept 2026."
       },
       {
         "question": "What supplements does Bryan Johnson take?",
-        "answer": "Johnson's Blueprint stack includes roughly 100 compounds, though the core daily list is closer to 8-13 items: a proprietary Longevity Mix, creatine, collagen peptides, extra virgin olive oil, NMN or NR (alternating), EPA/DHA omega-3, ashwagandha and rhodiola, plus 2026 additions of low-dose lithium orotate and NDGA. The full breakdown with doses and timing is on this page."
+        "answer": "His page lists a morning stack of branded products (Longevity Mix, Essentials capsules, antioxidants, protein) plus creatine, collagen peptides, olive oil, EPA/DHA and an ashwagandha and rhodiola capsule. Wikipedia reports that he cut his daily supplements from 111 to 30 by March 2026. This describes his routine and is not a recommendation."
       }
     ],
     "image": "photo-1532187863486-abf9dbad1b69",

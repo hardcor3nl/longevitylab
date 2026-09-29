@@ -3,10 +3,10 @@
   "compound": "Creatine monohydrate",
   "studyDoses": [
    {
-    "study": "Burke et al., Int J Sport Nutr Exerc Metab",
+    "study": "Preen et al., Int J Sport Nutr Exerc Metab",
     "year": 2003,
     "design": "RCT, 18 men",
-    "doseText": "Dose used in Burke 2003: 5 g/day maintenance after a 5-day 20 g/day loading phase",
+    "doseText": "Dose used in Preen 2003: 5 g/day maintenance after a 5-day 20 g/day loading phase",
     "doseAmount": 5,
     "doseUnit": "g/day",
     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/12660409/",
@@ -38,7 +38,7 @@
     "priceSourceUrl": "https://www.thorne.com/products/dp/creatine",
     "note": null,
     "costPerStudyDosePerMonth": 14.67,
-    "costBasisDose": "5 g/day (Burke et al. 2003)"
+    "costBasisDose": "5 g/day (Preen et al. 2003)"
    },
    {
     "brand": "Momentous",
@@ -70,7 +70,7 @@
     "priceSourceUrl": "https://nutricost.com/products/nutricost-creatine-monohydrate-powder-500-grams",
     "note": "Servings derived: 500 g / 5 g per serving (both stated on page). Unflavored 500 G variant price. Page carries a generic 'third-party tested' statement but names no certifier.",
     "costPerStudyDosePerMonth": 7.19,
-    "costBasisDose": "5 g/day (Burke et al. 2003)"
+    "costBasisDose": "5 g/day (Preen et al. 2003)"
    }
   ],
   "checked": "2026-09-28"
@@ -456,7 +456,7 @@
     "doi": "https://doi.org/10.1210/jc.2019-01081"
    },
    {
-    "study": "Nielsen et al. (NR + pterostilbene), JCI Insight",
+    "study": "Jensen et al. (NR + pterostilbene), JCI Insight",
     "year": 2022,
     "design": "RCT, 32 older adults",
     "doseText": "Dose used in this trial: NR 1,000 mg + pterostilbene 200 mg daily (combination product)",
@@ -522,10 +522,10 @@
   "compound": "Urolithin A",
   "studyDoses": [
    {
-    "study": "Singh et al., JAMA Netw Open",
+    "study": "Liu et al., JAMA Netw Open",
     "year": 2022,
     "design": "RCT, older adults, 4 months",
-    "doseText": "Dose used in Singh 2022: urolithin A 1000 mg/day",
+    "doseText": "Dose used in Liu 2022: urolithin A 1000 mg/day",
     "doseAmount": 1000,
     "doseUnit": "mg/day",
     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/35050355/",
@@ -547,7 +547,7 @@
     "priceSourceUrl": "https://timeline.com/products/mitopure-softgels-vegan",
     "note": "60 softgels/month, 2 per serving, 500 mg per serving per page.",
     "costPerStudyDosePerMonth": 178.0,
-    "costBasisDose": "1000 mg/day (Singh et al. 2022)"
+    "costBasisDose": "1000 mg/day (Liu et al. 2022)"
    },
    {
     "brand": "Timeline",
