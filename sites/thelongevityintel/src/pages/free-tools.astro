@@ -1,0 +1,23 @@
+---
+import Base from "../layouts/Base.astro";
+import Breadcrumbs from "@portfolio/core/components/Breadcrumbs.astro";
+import HubBody from "@portfolio/core/components/HubBody.astro";
+import { ShieldAlert } from "@lucide/astro";
+import { LK_ADAPTIVE } from "@portfolio/core";
+import { hub } from "../lib/l3";
+const path = "/free-tools";
+const title = "Free supplement cost cards, charts and data";
+const desc = "Embed a supplement cost-per-study-dose card, reuse our charts and download the cost-per-dose dataset. Numbers only, not advice. Free with a credit link.";
+---
+<Base title={title} description={desc} {path}>
+  <div class="pt-28 pb-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-ink" style={LK_ADAPTIVE}>
+    <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Free tools and data" }]} />
+    <h1 class="font-display text-4xl md:text-6xl text-ink leading-[1.05] mt-6 mb-4">{title}</h1>
+    <p class="text-muted text-lg max-w-3xl leading-relaxed mb-6">A cost card for each compound, charts and the dataset. Prices and study doses only, no advice. All free, all with a plain credit link back.</p>
+    <div class="flex items-start gap-3 rounded-xl border border-amber/30 bg-amber/5 px-4 py-3 mb-8" role="note">
+      <ShieldAlert class="w-4 h-4 text-amber mt-0.5 shrink-0" aria-hidden="true" />
+      <p class="text-xs text-muted leading-relaxed"><strong class="text-ink">Talk to your doctor first.</strong> A study dose is context for comparing prices. Some studies were in patients, and nothing here says a dose is safe or right for you.</p>
+    </div>
+    <HubBody {hub} />
+  </div>
+</Base>

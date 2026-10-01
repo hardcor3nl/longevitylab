@@ -1,0 +1,77 @@
+---
+/** Free tools and data hub: every embed, chart, dataset, statistics page and API endpoint with copy-paste snippets. */
+import L3Base from "./L3Base.astro";
+import { resizeSnippet, imageHtmlSnippet, markdownSnippet, chartSnippet, abs } from "../embed/embed.ts";
+import type { HubSpec } from "../embed/l3.ts";
+interface Props { hub: HubSpec; uid?: string }
+const { hub, uid = "hub" } = Astro.props;
+---
+<L3Base />
+<div class="l3">
+  <p class="l3-lead">Everything on this page is free to reuse. Embeds and charts need one thing: keep the visible credit link to {hub.brand} that comes with each snippet. Data files are CC BY 4.0 with a link back. Nothing here is hidden, paid or tracked.</p>
+  <ul class="l3-list">
+    <li>Jump to: <a class="l3-a" href="#embeds">embeds</a>, {hub.charts.length > 0 && <><a class="l3-a" href="#charts">charts</a>, </>}<a class="l3-a" href="#data">datasets</a>, <a class="l3-a" href="#statistics">{(hub.statsTitle ?? "statistics pages").toLowerCase()}</a>{hub.tools.length > 0 && <>, <a class="l3-a" href="#code">open-source code</a></>}.</li>
+    <li>Fetching the data in code? See the <a class="l3-a" href={hub.apiPath}>data API documentation</a>. Writing about us? See the <a class="l3-a" href={hub.pressPath}>press and media kit</a>.</li>
+  </ul>
+
+  <h2 id="embeds">Embeds</h2>
+  {hub.embeds.map((e, i) => (
+    <section class="l3-card" aria-labelledby={`l3-${uid}-e${i}`}>
+      <h3 id={`l3-${uid}-e${i}`}>{e.name}</h3>
+      <p>{e.description}</p>
+      {e.variants && <p class="l3-muted">{e.variants}</p>}
+      <p><a class="l3-a" href={e.spec.embedPath} target="_blank" rel="noopener">Open the live embed</a> or <a class="l3-a" href={e.spec.pagePath}>read the full page</a>.</p>
+      <div class="lk-row"><label class="lk-l" for={`lk-${uid}-e${i}`}>HTML with auto-resize and credit link</label><button type="button" class="lk-b" data-lk-copy={`lk-${uid}-e${i}`}>Copy</button></div>
+      <textarea id={`lk-${uid}-e${i}`} class="lk-t" readonly rows="6" spellcheck="false" set:text={resizeSnippet(e.spec)}></textarea>
+      {e.spec.imagePath && (
+        <details>
+          <summary>Image and Markdown versions</summary>
+          <div class="lk-row"><label class="lk-l" for={`lk-${uid}-e${i}-img`}>Image and link (HTML)</label><button type="button" class="lk-b" data-lk-copy={`lk-${uid}-e${i}-img`}>Copy</button></div>
+          <textarea id={`lk-${uid}-e${i}-img`} class="lk-t" readonly rows="4" spellcheck="false" set:text={imageHtmlSnippet(e.spec)}></textarea>
+          <div class="lk-row"><label class="lk-l" for={`lk-${uid}-e${i}-md`}>Markdown for Reddit, Discord and forums</label><button type="button" class="lk-b" data-lk-copy={`lk-${uid}-e${i}-md`}>Copy</button></div>
+          <textarea id={`lk-${uid}-e${i}-md`} class="lk-t" readonly rows="4" spellcheck="false" set:text={markdownSnippet(e.spec)}></textarea>
+        </details>
+      )}
+    </section>
+  ))}
+
+  {hub.charts.length > 0 && <>
+    <h2 id="charts">Charts</h2>
+    <p class="l3-lead">Each chart is an SVG drawn from our own dataset, with the domain as a small watermark. CC BY 4.0: use it with a visible link to the page below it.</p>
+    {hub.charts.map((c, i) => (
+      <section class="l3-card" aria-labelledby={`l3-${uid}-c${i}`}>
+        <h3 id={`l3-${uid}-c${i}`}>{c.title}</h3>
+        <p><a class="l3-a" href={c.imgPath}>Chart file (SVG)</a> from <a class="l3-a" href={c.pagePath}>the page it belongs to</a>.</p>
+        <div class="lk-row"><label class="lk-l" for={`lk-${uid}-c${i}`}>Chart snippet (HTML)</label><button type="button" class="lk-b" data-lk-copy={`lk-${uid}-c${i}`}>Copy</button></div>
+        <textarea id={`lk-${uid}-c${i}`} class="lk-t" readonly rows="4" spellcheck="false" set:text={chartSnippet({ origin: hub.origin, imgPath: c.imgPath, pagePath: c.pagePath, alt: c.alt, brand: hub.brand, width: c.width, height: c.height })}></textarea>
+      </section>
+    ))}
+  </>}
+
+  <h2 id="data">Datasets</h2>
+  {hub.datasets.map((d, i) => (
+    <section class="l3-card" aria-labelledby={`l3-${uid}-d${i}`}>
+      <h3 id={`l3-${uid}-d${i}`}>{d.name}</h3>
+      <p>{d.description}</p>
+      <ul class="l3-list">
+        {d.files.map((f) => <li><a class="l3-a" href={f.href}>{f.label}</a> <span class="l3-muted">({abs(hub.origin, f.href)})</span></li>)}
+        <li><a class="l3-a" href={d.pagePath}>Browse the dataset on the site</a></li>
+        {d.repoUrl && <li><a class="l3-a" href={d.repoUrl}>Open-data repository on GitHub</a></li>}
+      </ul>
+      <p class="l3-muted">CC BY 4.0. Credit {hub.brand} and link to <a class="l3-a" href={d.pagePath}>{abs(hub.origin, d.pagePath)}</a>.</p>
+    </section>
+  ))}
+
+  <h2 id="statistics">{hub.statsTitle ?? "Statistics pages"}</h2>
+  <ul class="l3-list">
+    {hub.stats.map((s) => <li><a class="l3-a" href={s.href}>{s.name}</a>: {s.description}</li>)}
+  </ul>
+
+  {hub.tools.length > 0 && <>
+    <h2 id="code">Open-source code</h2>
+    <p class="l3-lead">The logic behind some tools is small enough to read and reuse. MIT licence, with a credit line.</p>
+    <ul class="l3-list">
+      {hub.tools.map((t) => <li><strong>{t.name}</strong>: {t.description} <a class="l3-a" href={t.href}>Live tool</a>{t.repoUrl && <> and <a class="l3-a" href={t.repoUrl}>source on GitHub</a></>}.</li>)}
+    </ul>
+  </>}
+</div>

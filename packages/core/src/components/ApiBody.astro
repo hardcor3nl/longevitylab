@@ -1,0 +1,51 @@
+---
+/** Public data API documentation: endpoints, fields (inferred from the served file), cadence, licence, CORS. */
+import L3Base from "./L3Base.astro";
+import CiteBox from "./CiteBox.astro";
+import StatsTable from "./StatsTable.astro";
+import { abs } from "../embed/embed.ts";
+import { fetchSnippet } from "../embed/l3.ts";
+import type { ApiSpec } from "../embed/l3.ts";
+interface Props { api: ApiSpec }
+const { api } = Astro.props;
+---
+<L3Base />
+<div class="l3">
+  <p class="l3-lead">These are plain static files. There is no key, no sign-up and no rate limit beyond ordinary good manners: cache what you fetch and please do not poll more than once a day, because the files only change when we re-check the data.</p>
+  <ul class="l3-list">
+    <li><strong>Licence:</strong> CC BY 4.0. {api.licenceNote}</li>
+    <li><strong>CORS:</strong> every file under <code>/data/</code> is served with <code>Access-Control-Allow-Origin: *</code>, so you can call it straight from browser JavaScript.</li>
+    <li><strong>Update cadence:</strong> {api.cadence}</li>
+    <li><strong>Versioning:</strong> files are overwritten in place. The checked date below tells you which version you have.</li>
+    <li><strong>Related:</strong> <a class="l3-a" href={api.hubPath}>embeds, charts and downloads</a> and the <a class="l3-a" href={api.pressPath}>press and media kit</a>.</li>
+  </ul>
+
+  <h2 id="endpoints">Endpoints</h2>
+  <ul class="l3-list">
+    {api.endpoints.map((e, i) => <li><a class="l3-a" href={`#ep-${i}`}><code>GET {e.path}</code></a>: {e.title} ({e.format.toUpperCase()}, {e.records} {e.format === "csv" ? "rows" : "records"})</li>)}
+  </ul>
+
+  {api.endpoints.map((e, i) => (
+    <section class="l3-card" id={`ep-${i}`} aria-labelledby={`ep-h-${i}`}>
+      <h3 id={`ep-h-${i}`}><code>GET {e.path}</code></h3>
+      <p>{e.description}</p>
+      <p class="l3-muted">Full URL: <a class="l3-a" href={e.path}>{abs(api.origin, e.path)}</a>. Format: {e.format === "json" ? "application/json" : "text/csv"}. {e.records} {e.format === "csv" ? "rows" : "records"}. Last checked {e.checked}. Described on <a class="l3-a" href={e.pagePath}>{abs(api.origin, e.pagePath)}</a>.</p>
+      <pre class="l3-code" tabindex="0" aria-label={`Example request for ${e.path}`}><code>{fetchSnippet(api.origin, e.path, e.format)}</code></pre>
+      <details>
+        <summary>{e.format === "json" ? `Fields (${e.fields.length})` : `Columns (${e.fields.length})`}</summary>
+        {e.format === "json"
+          ? <StatsTable caption={`Top-level fields of ${e.path}, read from the served file`} head={["Field", "Type", "Example", "Filled"]} rows={e.fields.map((f) => [f.name, f.type, f.example, f.filled])} numericFrom={9} />
+          : <StatsTable caption={`CSV columns of ${e.path}, read from the served file`} head={["Column"]} rows={e.fields.map((f) => [f.name])} numericFrom={9} />}
+        <p class="l3-muted">Empty or null means the source did not state it, not that the answer is zero. Money is in the source's own currency and is never converted. Dates are ISO 8601.</p>
+      </details>
+    </section>
+  ))}
+
+  <h2 id="attribution">How to credit</h2>
+  <p class="l3-lead">A visible mention with a link is enough, for example: "Data: {api.brand} ({api.origin.replace("https://", "")}), CC BY 4.0." The citation below is ready to copy.</p>
+  <CiteBox cite={api.cite} uid="api" />
+</div>
+<style is:global>
+  .l3 pre.l3-code { margin: .5rem 0; }
+  .l3 code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .9em; overflow-wrap: anywhere; }
+</style>

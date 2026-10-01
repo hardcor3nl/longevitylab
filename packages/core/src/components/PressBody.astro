@@ -1,0 +1,56 @@
+---
+/** Press and media kit: headline statistics with citations, downloadable charts, logos, how to cite. */
+import L3Base from "./L3Base.astro";
+import CiteBox from "./CiteBox.astro";
+import type { CiteSpec } from "../embed/embed.ts";
+import type { PressSpec } from "../embed/l3.ts";
+interface Props { press: PressSpec; cite: CiteSpec }
+const { press, cite } = Astro.props;
+---
+<L3Base />
+<div class="l3">
+  <p class="l3-lead">{press.about}</p>
+  <ul class="l3-list">
+    <li>Questions or corrections: <a class="l3-a" href={press.contactPath}>contact page</a>. How we work: <a class="l3-a" href={press.aboutPath}>about and method</a>.</li>
+    <li>Every figure below is computed from our own dataset when the site is built, with its method and date. If a number changes, the dataset changed. More: the <a class="l3-a" href={press.apiPath}>data API</a> and the <a class="l3-a" href={press.hubPath}>free tools and downloads</a>.</li>
+  </ul>
+
+  <h2 id="figures">Key figures</h2>
+  <ul class="l3-facts">
+    {press.facts.map((f) => (
+      <li class="l3-fact">
+        <span class="v">{f.value}</span>
+        <span class="t">{f.label}</span>
+        <span class="m">Method: {f.method} Source: <a class="l3-a" href={f.sourcePath}>{f.sourceName}</a>, checked {f.checked}.</span>
+      </li>
+    ))}
+  </ul>
+
+  {press.charts.length > 0 && <>
+    <h2 id="charts">Charts to download</h2>
+    <p class="l3-lead">SVG files, CC BY 4.0, with the domain as a small watermark. They scale without loss for print and web.</p>
+    <ul class="l3-list">
+      {press.charts.map((c) => <li><a class="l3-a" href={c.href} download>{c.label}</a>{c.note && <span class="l3-muted"> ({c.note})</span>}</li>)}
+    </ul>
+  </>}
+
+  <h2 id="data">Data downloads</h2>
+  <ul class="l3-list">
+    {press.datasets.map((d) => <li><a class="l3-a" href={d.href} download>{d.label}</a>{d.note && <span class="l3-muted"> ({d.note})</span>}</li>)}
+  </ul>
+
+  <h2 id="logos">Logos</h2>
+  <p class="l3-lead">Use as supplied. Please do not recolour or crop them, or imply endorsement.</p>
+  <div class="l3-card">
+    {press.logos.map((l) => (
+      <div style="margin:.5rem 0;display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+        <img class="l3-ico" src={l.href} alt="" width="96" height="96" loading="lazy" style="object-fit:contain;width:96px;height:96px" />
+        <span><a class="l3-a" href={l.href} download>{l.label}</a>{l.note && <span class="l3-muted"> ({l.note})</span>}</span>
+      </div>
+    ))}
+  </div>
+
+  <h2 id="cite">How to cite us</h2>
+  <p class="l3-lead">Credit {press.brand} and link to the page you used. Cite the dataset version by its checked date. Stable address: <a class="l3-a" href={cite.url.replace(press.origin, "")}>{cite.url}</a>.</p>
+  <CiteBox cite={cite} uid="press" />
+</div>

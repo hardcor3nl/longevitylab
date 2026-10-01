@@ -63,7 +63,10 @@
     "/database/creatine",
     "/database/berberine",
     "/database/quercetin",
-    "/database/tmg"
+    "/database/tmg",
+    "/free-tools",
+    "/api",
+    "/press"
   ],
   "checkLinks": true,
   "indexNowKey": "e05f53c1bece75a46e684434e7c06923",
