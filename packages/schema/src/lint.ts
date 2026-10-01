@@ -1,4 +1,5 @@
 import { frontmatterSchema, type Frontmatter } from "./frontmatter.ts";
+import { countTells, nearDuplicates, templatedEnds, wordCount } from "./aitells.ts";
 
 export type Severity = "fail" | "warn";
 export interface Issue {
@@ -110,6 +111,20 @@ export function lintDocument(doc: Doc, ctx: LintContext): Issue[] {
     if (findPhrase(text, p) || findPhrase(fm.title + " " + fm.description, p))
       add("banned-phrase", "fail", `banned phrase "${p}"`);
   }
+
+  // Job R: AI-pattern tells. Strongest tells fail the build, the rest warn with a per-page count.
+  const tells = countTells(doc.body);
+  for (const t of tells.strong) {
+    if (fm.allowPhrases?.includes(t.label)) continue;
+    add("ai-tell-strong", "fail", `stock AI phrasing "${t.label}" x${t.count}`);
+  }
+  const soft: string[] = [];
+  if (tells.weakTotal) soft.push(`${tells.weakTotal} stock phrases`);
+  if (tells.emDashExcess) soft.push(`${tells.emDashes} em-dashes (${tells.emDashPer1k.toFixed(1)}/1k words)`);
+  if (tells.rhetoricalOpeners) soft.push(`${tells.rhetoricalOpeners} question-opener paragraphs`);
+  if (tells.superlatives) soft.push(`${tells.superlatives} unsourced superlatives`);
+  if (tells.fillerParas) soft.push(`${tells.fillerParas} paragraphs restating their heading`);
+  if (soft.length) add("ai-tell", "warn", soft.join(", "));
 
   // Prices with no sources
   const hasPrices = PRICE_RE.test(text);

@@ -35,7 +35,6 @@
     "/category/recovery",
     "/category/diagnostics",
     "/category/protocols",
-    "/category/best",
     "/sleep",
     "/cardio",
     "/nutrition",
@@ -76,7 +75,6 @@
     "/category/wearables": "/wearables/",
     "/category/recovery": "/recovery/",
     "/category/diagnostics": "/diagnostics/",
-    "/category/protocols": "/protocols/",
-    "/category/best": "/best/"
+    "/category/protocols": "/protocols/"
   }
 }

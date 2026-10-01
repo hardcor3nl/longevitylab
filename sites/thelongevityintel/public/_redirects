@@ -1,2 +1,6 @@
 # generated from content-ledger.csv by packages/tooling/src/migrate/longevity.ts; do not edit
-# no redirects planned: every live URL is kept, slashless
+# Job R merges, 1 Oct 2026 (see content-ledger.csv)
+/supplements/best-rapamycin-guide /supplements/rapamycin-longevity-guide 301
+/supplements/best-rapamycin-guide/ /supplements/rapamycin-longevity-guide 301
+/category/best /best 301
+/category/best/ /best 301

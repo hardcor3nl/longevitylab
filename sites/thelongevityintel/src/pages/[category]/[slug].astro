@@ -54,7 +54,7 @@ const badgeClass: Record<string, string> = { "Best Pick": "grade-strong", "Runne
 <Base title={`${d.title} | ${site.name}`} description={d.description} path={url} type="article" preloads={d.image ? [{ href: `/img/heroes/${d.image}-800.webp`, as: "image", type: "image/webp", imagesrcset: heroSrcSet(d.image) ?? undefined, imagesizes: "(min-width:1152px) 1152px, 100vw" }] : []} image={ogImage} published={d.published} modified={d.updated ?? d.published} jsonLd={jsonLd}>
   <div class="pt-28 pb-24">
     <header class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: CATEGORY_LABEL[a.category], href: `/category/${a.category}` }, { name: d.title }]} />
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: CATEGORY_LABEL[a.category], href: a.category === "best" ? "/best" : `/category/${a.category}` }, { name: d.title }]} />
       <div class="flex items-center gap-2 mt-5 mb-4">
         <span class="font-mono text-xs uppercase tracking-widest text-green-bright px-2.5 py-1 bg-green/10 border border-green/20 rounded-full">{CATEGORY_LABEL[a.category]}</span>
         {d.featured && <span class="font-mono text-xs uppercase tracking-widest text-amber px-2.5 py-1 bg-amber/10 border border-amber/25 rounded-full">Featured</span>}

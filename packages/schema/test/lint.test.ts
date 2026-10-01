@@ -26,7 +26,7 @@ describe("passing fixtures", () => {
 describe("failing fixtures", () => {
   it("prices without sources", () => expect(rules("fail-prices-no-sources.md")).toEqual(new Set(["sources"])));
   it("banned phrase + testing claim", () =>
-    expect(rules("fail-banned-and-claim.md")).toEqual(new Set(["banned-phrase", "testing-claim"])));
+    expect(rules("fail-banned-and-claim.md")).toEqual(new Set(["banned-phrase", "testing-claim", "ai-tell-strong"])));
   it("schema (title length) ", () => expect(rules("fail-schema-author.md")).toContain("schema"));
 });
 

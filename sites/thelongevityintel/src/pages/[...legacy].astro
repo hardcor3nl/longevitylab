@@ -26,7 +26,7 @@ export function getStaticPaths() {
     const rel = file.replace("../legacy/pages/", "").replace(/\.tsx$/, "");
     if (OWN_PAGE.has(rel)) continue;
     if (rel === "authors/[slug]") [...new Map([...authors, editorialTeam].map((a) => [a.slug, a])).values()].forEach((a) => add(`authors/${a.slug}`, file, { slug: a.slug }));
-    else if (rel === "category/[slug]") ["supplements", "wearables", "diagnostics", "protocols", "recovery", "best"].forEach((s) => add(`category/${s}`, file, { slug: s }));
+    else if (rel === "category/[slug]") ["supplements", "wearables", "diagnostics", "protocols", "recovery"].forEach((s) => add(`category/${s}`, file, { slug: s }));
     else if (rel === "database/[id]") supplements.forEach((s) => add(`database/${s.id}`, file, { id: s.id }));
     else if (rel === "protocols/[id]") protocols.forEach((p) => add(`protocols/${p.id}`, file, { id: p.id }));
     else add(rel, file);

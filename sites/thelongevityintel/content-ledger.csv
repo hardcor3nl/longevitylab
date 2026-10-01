@@ -8,7 +8,7 @@ url,decision,target_query,reason,redirect_target,date,status,word_count,needs_so
 /supplements/best-magnesium-supplements,keep,best magnesium supplements,no GSC pages export for this domain: no cuts or merges proposed,,2026-09-29,proposed,809,true,article,2026-07-16,2026-06-04
 /supplements/best-nmn-supplements-2024,keep,nmn supplements in,no GSC pages export for this domain: no cuts or merges proposed,,2026-09-29,proposed,934,false,article,2026-09-08,2026-06-04
 /supplements/best-omega-3-fish-oil,keep,best omega-3 fish oil,no GSC pages export for this domain: no cuts or merges proposed,,2026-09-29,proposed,523,true,article,2026-07-16,2026-06-04
-/supplements/best-rapamycin-guide,keep,best rapamycin,no GSC pages export for this domain: no cuts or merges proposed,,2026-09-29,proposed,1014,true,article,2024-12-24,2026-06-04
+/supplements/best-rapamycin-guide,merge,best rapamycin,two pages for one rapamycin task (Job R); PEARL facts and source folded into the guide,/supplements/rapamycin-longevity-guide,2026-10-01,applied,1014,true,article,2024-12-24,2026-06-04
 /supplements/best-resveratrol-pterostilbene,keep,resveratrol vs pterostilbene,no GSC pages export for this domain: no cuts or merges proposed,,2026-09-29,proposed,873,true,article,2025-01-14,2026-06-06
 /supplements/best-taurine-supplements,keep,taurine,no GSC pages export for this domain: no cuts or merges proposed,,2026-09-29,proposed,992,true,article,2025-01-15,2026-06-06
 /supplements/best-vitamin-d3-k2,keep,best vitamin d3 + k2 supplements,no GSC pages export for this domain: no cuts or merges proposed,,2026-09-29,proposed,819,true,article,2026-07-16,2026-06-04
@@ -114,7 +114,7 @@ url,decision,target_query,reason,redirect_target,date,status,word_count,needs_so
 /category/recovery,keep,,"hub, tool or data page rebuilt on the new templates",,2026-09-29,proposed,,,static,,
 /category/diagnostics,keep,,"hub, tool or data page rebuilt on the new templates",,2026-09-29,proposed,,,static,,
 /category/protocols,keep,,"hub, tool or data page rebuilt on the new templates",,2026-09-29,proposed,,,static,,
-/category/best,keep,,"hub, tool or data page rebuilt on the new templates",,2026-09-29,proposed,,,static,,
+/category/best,merge,,74% duplicate of the /best hub (Job R),/best,2026-10-01,applied,,,static,,
 /sleep,keep,,"hub, tool or data page rebuilt on the new templates",,2026-09-29,proposed,,,static,,
 /cardio,keep,,"hub, tool or data page rebuilt on the new templates",,2026-09-29,proposed,,,static,,
 /nutrition,keep,,"hub, tool or data page rebuilt on the new templates",,2026-09-29,proposed,,,static,,
