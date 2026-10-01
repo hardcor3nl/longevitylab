@@ -1,0 +1,51 @@
+---
+import Base from "../layouts/Base.astro";
+import Breadcrumbs from "@portfolio/core/components/Breadcrumbs.astro";
+
+---
+<Base title="How we research | Longevity Intel" description="How Longevity Intel researches health claims: source hierarchy, what the evidence grades mean, how prices are dated, what we do not test, and how AI assistance is used." path="/how-we-research/">
+  <div class="pt-28 pb-24 trust-page">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "How we research" }]} />
+      <header class="mt-6 mb-10" style="max-width:46rem">
+        <p class="font-mono text-xs uppercase tracking-widest text-green-bright mb-3">Trust</p>
+        <h1 class="font-display text-5xl text-ink mb-5 leading-tight">How we research</h1>
+        <p class="text-muted text-xl leading-relaxed">Every health claim traces to a study or an official source we link. We do not test products ourselves, give dosing advice or claim medical review.</p>
+        <p class="font-mono text-xs uppercase tracking-widest text-muted mt-4">Last updated 1 October 2026</p>
+      </header>
+      <div class="prose">
+  <h2 id="hierarchy">Source hierarchy</h2>
+  <p>For a health claim we use sources in this order:</p>
+  <ol>
+    <li><strong>Systematic reviews and meta-analyses</strong> of human trials, read from the published abstract or paper.</li>
+    <li><strong>Randomised controlled trials</strong> in people, with sample size, duration and funding noted.</li>
+    <li><strong>Regulators and official bodies</strong>: FDA, NHS, national and professional guidance.</li>
+    <li><strong>Manufacturer pages</strong> for specifications, labels, ingredient amounts and prices, treated as claims, not evidence.</li>
+    <li><strong>Independent reviewers' published measurements</strong>, cited by name, with any commercial tie they disclose.</li>
+  </ol>
+  <p>Animal and cell studies are labelled as such and never presented as proof of an effect in people. When a study's authors or funders have ties to a product, the page says so.</p>
+  <h2 id="labels">What our evidence labels mean</h2>
+  <ul>
+    <li><strong>Strong</strong>: several human trials or meta-analyses agree, the effect matters, and long-term safety is established.</li>
+    <li><strong>Moderate</strong>: some human trials, but small, short or mixed.</li>
+    <li><strong>Emerging</strong>: mostly animal or mechanism studies, or very small human studies.</li>
+    <li><strong>Weak</strong>: little or contradictory evidence, no benefit shown, or a safety concern outweighs the evidence.</li>
+  </ul>
+  <h2 id="dates">How prices and specs are checked and dated</h2>
+  <p>Prices are the amount shown on the seller's own page on the date we read it, with the pack size and cost per serving or per study dose worked out in the open so you can redo the sum. Every page shows when it was last checked and keeps an update log for substantive changes. Prices and availability change faster than studies; treat any price as a dated reading, not a quote.</p>
+  <h2 id="not-tested">What we do not do</h2>
+  <p>We do not test supplements, devices or wearables ourselves, and no page claims we did. There are no scores. A grade summarises published human evidence for a compound or device category; it is not a rating of any brand. Where an independent reviewer measured a product, we cite them by name and say whether they disclose a commercial tie.</p>
+  <h2 id="medical">Health boundary</h2>
+  <p>Longevity Intel is for information only and is not medical advice. We quote the dose a cited study used and label it that way; we do not recommend doses or treatments. We never describe pages as medically reviewed: no named medical reviewer is attached to any page. Talk to your doctor or pharmacist before you start, stop or combine supplements, especially if you take medication, are pregnant, or have a health condition.</p>
+  
+  <h2 id="ai">AI assistance</h2>
+  <p>Pages are researched and drafted with AI assistance. Every fact is checked against its cited source, and a separate review pass that did not write the page audits it before publication. A second reviewer who did not write the page audits it against the sources. The <a href="/corrections">corrections log</a> lists what independent audits and readers have caught.</p>
+  <h2 id="data">Open data</h2>
+  <p>Cost per study dose data is public: <a href="https://github.com/hardcor3nl/longevity-cost-per-dose">github.com/hardcor3nl/longevity-cost-per-dose</a>. See the <a href="/cost-per-dose">cost per study dose table</a>.</p>
+  <h2 id="more">More</h2>
+  <p>See <a href="/about">About</a>, the <a href="/editorial-policy">editorial policy</a>, the <a href="/corrections">corrections log</a> and <a href="/contact">contact</a>.</p>
+      </div>
+    </div>
+  </div>
+</Base>
+<style is:global>.trust-page .prose > p:first-of-type::first-letter{float:none;font-size:inherit;line-height:inherit;margin:0;color:inherit;font-family:inherit}</style>

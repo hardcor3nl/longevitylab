@@ -1,0 +1,40 @@
+---
+import Base from "../layouts/Base.astro";
+import Breadcrumbs from "@portfolio/core/components/Breadcrumbs.astro";
+
+---
+<Base title="Editorial policy | Longevity Intel" description="Longevity Intel editorial policy: independence from brands, how affiliate links work, the health boundary, update cadence and corrections." path="/editorial-policy/">
+  <div class="pt-28 pb-24 trust-page">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Editorial policy" }]} />
+      <header class="mt-6 mb-10" style="max-width:46rem">
+        <p class="font-mono text-xs uppercase tracking-widest text-green-bright mb-3">Trust</p>
+        <h1 class="font-display text-5xl text-ink mb-5 leading-tight">Editorial policy</h1>
+        <p class="text-muted text-xl leading-relaxed">Brands cannot buy a grade, a ranking or a better write-up. Affiliate income never changes what a page says.</p>
+        <p class="font-mono text-xs uppercase tracking-widest text-muted mt-4">Last updated 1 October 2026</p>
+      </header>
+      <div class="prose">
+  <h2 id="independence">Independence</h2>
+  <p>Longevity Intel editorial is an independent research publication. No brand owns, funds or approves our pages. We do not accept payment, free products or other benefits in exchange for coverage or a better grade. Brands and readers can send studies or corrections through the <a href="/contact">contact page</a>; we check them against the source like any other claim.</p>
+  <h2 id="affiliate">Affiliate policy</h2>
+  <p>Some links are affiliate links, including as an Amazon Associate. They may pay us a commission at no extra cost to you. Affiliate status is shown beside the link, a commission never changes a grade or a verdict, and some brands we cover pay us nothing. The plain-words disclosure is on the <a href="/about#affiliate">About page</a>.</p>
+  <h2 id="writing">How pages are written</h2>
+  <p>Answer first, evidence second, detail third. Key facts carry a source link, and each page shows when it was last checked. Doses appear only as &quot;dose used in&quot; a cited study. We do not tell readers what to take. See <a href="/how-we-research">how we research</a> for the sources and grades.</p>
+  <h2 id="cadence">Update cadence</h2>
+  <ul>
+    <li>Prices and availability: re-read when a page is updated, and each price carries its read date.</li>
+    <li>Studies and regulatory status: re-checked when new trials or regulator letters are published for a page's topic, and at least once a year.</li>
+    <li>Updates are logged on the page. A page only gets a new date when something was actually re-checked.</li>
+  </ul>
+  <h2 id="health">Health content</h2>
+  <p>Health statements cite a study, a major review or a regulator. We make no treatment claims and give no dosing advice beyond what a cited study used. We do not say content is medically reviewed. See the full <a href="/how-we-research#medical">health boundary</a>.</p>
+  
+  <h2 id="corrections">Corrections</h2>
+  <p>If we get something wrong we fix it, change the date and record it on the <a href="/corrections">corrections log</a>. Substantive changes are dated, not silently overwritten. To report an error, use the <a href="/contact">contact page</a>.</p>
+  <h2 id="people">Authorship</h2>
+  <p>Pages are published under the Longevity Intel editorial team. We do not use personal bylines or invented reviewer profiles.</p>
+      </div>
+    </div>
+  </div>
+</Base>
+<style is:global>.trust-page .prose > p:first-of-type::first-letter{float:none;font-size:inherit;line-height:inherit;margin:0;color:inherit;font-family:inherit}</style>

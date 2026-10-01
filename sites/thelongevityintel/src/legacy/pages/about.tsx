@@ -74,6 +74,16 @@ export default function AboutPage() {
           </div>
         </AnimatedSection>
 
+        {/* Publisher and trust pages */}
+        <AnimatedSection className="mb-16" delay={0.18}>
+          <h2 className="font-display text-3xl text-ink mb-6">Who publishes this</h2>
+          <div className="bg-surface border border-border rounded-2xl p-6 text-muted text-sm leading-relaxed">
+            <p className="mb-3">Longevity Intel is published by the Longevity Intel editorial team, an independent research publication, live since June 2026. We cover supplements, wearables, recovery devices, diagnostics and expert protocols, and we do not cover treatment or give medical advice.</p>
+            <p className="mb-3">Pages are researched and drafted with AI assistance. Every fact is checked against its cited source, and a separate review pass that did not write the page audits it before publication. We do not test products ourselves, and we never describe a page as medically reviewed. This site is for information only: talk to your doctor before you change anything.</p>
+            <p>Read <a href="/how-we-research" className="text-green-bright underline">how we research</a>, the <a href="/editorial-policy" className="text-green-bright underline">editorial policy</a> and the dated <a href="/corrections" className="text-green-bright underline">corrections log</a>. To report an error, use <a href="/contact" className="text-green-bright underline">contact</a>.</p>
+          </div>
+        </AnimatedSection>
+
         {/* Editorial attribution */}
         <AnimatedSection className="mb-16" delay={0.2}>
           <h2 className="font-display text-3xl text-ink mb-6">Editorial Attribution</h2>

@@ -62,6 +62,7 @@ const c1 = charts["supplement-cost-per-study-dose"], c2 = charts["supplement-tes
     <div class="max-w-3xl text-muted leading-relaxed">
       <h2 class="font-display text-3xl text-ink mb-3 mt-10">Method</h2>
       <p class="mb-4">Source: our <a href="/cost-per-dose" class="text-green-bright underline">supplement cost per study dose dataset</a>, {s.products} products and {s.compounds} compounds. Prices come from each brand's own product page in USD as shown to a US visitor, with no coupons or subscription discounts. Study doses are quoted as "dose used in" a study read from its PubMed record; cost = price per serving x (study dose / active amount per serving) x 30. Checked {s.checked}. Figures are recomputed each time the site is built. Related: <a href="/category/supplements" class="text-green-bright underline">supplement guides</a> and <a href="/database" class="text-green-bright underline">the research database</a>. Data files: <a href="/data/longevity-cost-per-dose.csv" class="text-green-bright underline">CSV</a> and <a href="/data/longevity-cost-per-dose.json" class="text-green-bright underline">JSON</a> (CC BY 4.0, link back).</p>
+      <p class="mb-4"><a href="https://github.com/hardcor3nl/longevity-cost-per-dose" rel="noopener" class="inline-flex items-center px-4 py-2 rounded-xl border border-border text-ink text-sm font-semibold hover:border-green/40 transition-colors">Download the dataset on GitHub</a></p>
     </div>
     <CpdPanel />
     <CiteBox uid="stats" cite={cite({ title, path, date: s.checked })} />

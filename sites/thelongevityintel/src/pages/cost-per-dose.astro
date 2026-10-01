@@ -34,6 +34,7 @@ const ld = datasetLd({
     <h1 class="font-display text-4xl md:text-6xl text-ink leading-[1.05] mb-4">Cost per study dose</h1>
     <p class="text-muted text-lg max-w-2xl leading-relaxed mb-4">Monthly price of a supplement at the dose used in a cited human study, per brand, with the third-party testing the brand states. Context for comparing prices, not a dosing recommendation.</p>
     <p class="text-sm text-muted mb-8">{rows.length} products, {cpdRecords.length} compounds, {costed} with a computed cost. Last updated {modified}. Download: <a href="/data/longevity-cost-per-dose.csv" class="text-green-bright underline">CSV</a> or <a href="/data/longevity-cost-per-dose.json" class="text-green-bright underline">JSON</a> (free to reuse with attribution, CC BY 4.0).</p>
+    <p class="mb-8"><a href="https://github.com/hardcor3nl/longevity-cost-per-dose" rel="noopener" class="inline-flex items-center px-4 py-2 rounded-xl border border-border text-ink text-sm font-semibold hover:border-green/40 transition-colors">Download the dataset on GitHub</a></p>
     <div class="flex items-start gap-3 rounded-xl border border-amber/30 bg-amber/5 px-4 py-3 mb-10" role="note">
       <ShieldAlert class="w-4 h-4 text-amber mt-0.5 shrink-0" aria-hidden="true" />
       <p class="text-xs text-muted leading-relaxed"><strong class="text-ink">Talk to your doctor first.</strong> Study doses are context. Some studies were in patients, and nothing here says a dose is safe or right for you.</p>

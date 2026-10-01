@@ -19,7 +19,7 @@ ${form.name} <${form.email}>`
 
   const reasons = [
     { icon: Handshake, title: 'Brand Partnerships', desc: 'Interested in working with Longevity Intel? We work with brands that align with our editorial standards.', email: 'partnerships@thelongevityintel.com' },
-    { icon: FlaskConical, title: 'Product Review Submissions', desc: 'Want your product considered for review? We purchase products independently but welcome submissions for consideration.', email: 'reviews@thelongevityintel.com' },
+    { icon: FlaskConical, title: 'Product Review Submissions', desc: 'Want your product considered? We research from published studies, labels and official pages, and we do not test products ourselves. Send us the studies and documents you want us to read; a submission does not buy a review or a grade.', email: 'reviews@thelongevityintel.com' },
     { icon: MessageSquare, title: 'Editorial & Press', desc: 'Media enquiries, expert commentary, or corrections to published content.', email: 'editorial@thelongevityintel.com' },
   ]
 

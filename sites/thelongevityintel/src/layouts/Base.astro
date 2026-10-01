@@ -31,6 +31,7 @@ interface Props {
 const { title, description, path, noindex, jsonLd = [], type = "website", image = ogUrl("default"), published, modified, preloads = [], motion: motionProp } = Astro.props;
 const motion = motionProp ?? type !== "article"; // motion layer never ships on real articles
 const org = { ...orgInfo, name: site.name };
+const orgFull = { ...org, foundingDate: "2026-06", publishingPrinciples: site.origin + "/how-we-research", correctionsPolicy: site.origin + "/corrections", contactUrl: site.origin + "/contact", email: "editorial@thelongevityintel.com" };
 const canonical = canonicalUrl(site.origin, path, "never");
 const year = new Date().getFullYear();
 ---
@@ -49,7 +50,7 @@ const year = new Date().getFullYear();
     <link rel="icon" href="/icon.png" type="image/png" />
     <link rel="apple-touch-icon" href="/icon-192.png" />
     <link rel="manifest" href="/manifest.json" />
-    <SeoHead title={title} description={description} canonical={canonical} noindex={noindex} image={image} published={published} modified={modified} preloads={preloads} links={[{ rel: "alternate", type: "application/rss+xml", title: site.name, href: "/feed.xml" }, { rel: "alternate", type: "application/atom+xml", title: site.name + " (Atom)", href: "/atom.xml" }]} siteName={site.name} type={type} jsonLd={[organization(org), webSite(org), ...jsonLd]} />
+    <SeoHead title={title} description={description} canonical={canonical} noindex={noindex} image={image} published={published} modified={modified} preloads={preloads} links={[{ rel: "alternate", type: "application/rss+xml", title: site.name, href: "/feed.xml" }, { rel: "alternate", type: "application/atom+xml", title: site.name + " (Atom)", href: "/atom.xml" }]} siteName={site.name} type={type} jsonLd={[organization(orgFull), webSite(org), ...jsonLd]} />
   </head>
   <body>
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2 focus:rounded-xl focus:bg-green focus:text-white focus:text-sm focus:font-semibold focus:shadow-lg">Skip to content</a>
@@ -156,6 +157,9 @@ const year = new Date().getFullYear();
             <a href="/privacy" class="hover:text-ink transition-colors">Privacy</a>
             <a href="/terms" class="hover:text-ink transition-colors">Terms</a>
             <a href="/about#affiliate" class="hover:text-ink transition-colors">Affiliate Disclosure</a>
+            <a href="/how-we-research" class="hover:text-ink transition-colors">How we research</a>
+            <a href="/editorial-policy" class="hover:text-ink transition-colors">Editorial policy</a>
+            <a href="/corrections" class="hover:text-ink transition-colors">Corrections</a>
             <a href="/contact" class="hover:text-ink transition-colors">Contact</a>
           </div>
           <p class="text-xs text-muted font-mono">For information only. Not medical advice: talk to your doctor before you change anything.</p>

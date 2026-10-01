@@ -1,0 +1,141 @@
+---
+import Base from "../layouts/Base.astro";
+import Breadcrumbs from "@portfolio/core/components/Breadcrumbs.astro";
+const log: { date: string; page: string; href?: string; text: string }[] = [
+ {
+  "date": "29 September 2026",
+  "page": "Best longevity supplements",
+  "href": "/best/best-longevity-supplements",
+  "text": "We corrected a creatine trial that was credited to the wrong first author, and said what it actually measured (muscle uptake in a maintenance arm, not memory). The omega-3 row now states the dose the VITAL trial gave: 1 g of fish oil a day, which the trial's later paper puts at 840 mg EPA plus DHA."
+ },
+ {
+  "date": "29 September 2026",
+  "page": "Bryan Johnson biological age explainer",
+  "href": "/protocols/bryan-johnson-biological-age-explained",
+  "text": "We removed an October 2021 start date and a named newspaper source that our reference did not support, and kept only what the source states."
+ },
+ {
+  "date": "29 September 2026",
+  "page": "Joovv, Mito Red Light and PlatinumLED reviews",
+  "href": "/recovery/joovv-solo-3-review",
+  "text": "We corrected the dating of the independent reviewer's article, quoted Joovv's full regulatory indication, and disclosed that the only independent tester has affiliate ties to some of the brands. A new \"who measured it\" section on the Mito page says so plainly."
+ },
+ {
+  "date": "29 September 2026",
+  "page": "Best NMN supplements",
+  "href": "/supplements/best-nmn-supplements-2024",
+  "text": "We corrected a trial credited to the wrong author, added its null result for muscle recovery, and fixed a conflict-of-interest statement and an unverifiable date. The page now reflects the FDA's September and December 2025 letters on NMN's status."
+ },
+ {
+  "date": "29 September 2026",
+  "page": "Stelo vs Lingo",
+  "href": "/wearables/stelo-vs-lingo",
+  "text": "We corrected a price shown as a range: Stelo is $89, with $99 as the struck-through price. We also changed \"the one independent study\" to \"the first\"."
+ },
+ {
+  "date": "29 September 2026",
+  "page": "Hyperbaric oxygen therapy",
+  "href": "/recovery/hyperbaric-oxygen-therapy",
+  "text": "We replaced a paraphrase that was not the FDA's wording with the FDA's actual statement, dated its 2013 complaint count, and told readers to check the current FDA page."
+ },
+ {
+  "date": "29 September 2026",
+  "page": "PEMF therapy guide",
+  "href": "/recovery/pemf-therapy-guide",
+  "text": "The cited review concluded PEMF does not support better acute fracture healing. The page had said only that there was no consensus; it now states the finding."
+ },
+ {
+  "date": "29 September 2026",
+  "page": "Oura Ring Gen 3 review",
+  "href": "/wearables/oura-ring-gen3-review",
+  "text": "We corrected a verdict that said Oura Gen 3 had the closest HRV of five wearables (the study ranked Gen 4 first) and a claim that it was the best of six for sleep stages, which it was not."
+ },
+ {
+  "date": "29 September 2026",
+  "page": "Garmin fenix 7 review and Garmin vs WHOOP",
+  "href": "/wearables/garmin-fenix-7-review",
+  "text": "We removed a claim that a Garmin press release lists ECG on the fenix 9, which it does not, and marked WHOOP prices we could not read directly with their sources and dates."
+ },
+ {
+  "date": "29 September 2026",
+  "page": "WHOOP vs Oura",
+  "href": "/wearables/whoop-vs-oura-comparison",
+  "text": "The two-year cost table left out WHOOP's 24-month plans; we added them, corrected the ring finishes, reworded a study described as Oura-funded to what its authors disclose, and recomputed every total."
+ },
+ {
+  "date": "29 September 2026",
+  "page": "Cold plunge, sauna and massage gun pages",
+  "href": "/recovery/morozko-forge-review",
+  "text": "We corrected the Morozko Forge price (the page showed one price for two tub sizes), the Clearlight sauna price (about $7,300 to $7,800 at retailers, not $4,995), a claim that a Sunlighten rival heats the same way for less, and \"sold out\" claims about massage guns that the retailer's data did not support."
+ },
+ {
+  "date": "29 September 2026",
+  "page": "Epigenetic age testing",
+  "href": "/diagnostics/epigenetic-age-testing",
+  "text": "We removed a licensing-tie claim about one provider that its source did not support, reworded a validation claim for the DunedinPACE clock that no abstract made, and added the study size and the small effect size to the calorie-restriction results."
+ },
+ {
+  "date": "29 September 2026",
+  "page": "Urolithin A guide",
+  "href": "/supplements/urolithin-a-mitopure-guide",
+  "text": "We corrected a wrong Timeline price: $89 is the monthly-delivery plan and the one-time price is $99. The page, the cost-per-dose dataset and the ladder row on the best-supplements page now agree. We also removed an unsupported claim of a 20% price cut."
+ },
+ {
+  "date": "29 September 2026",
+  "page": "Best creatine supplements",
+  "href": "/supplements/best-creatine-supplements",
+  "text": "The FAQ said creatine raises serum creatinine, citing a meta-analysis whose abstract reports no significant change. We corrected it, downgraded the kidney row to Weak and the memory row to Emerging."
+ },
+ {
+  "date": "29 September 2026",
+  "page": "Best omega-3 fish oil",
+  "href": "/supplements/best-omega-3-fish-oil",
+  "text": "The overall grade for over-the-counter fish oil was Moderate even though three large trials were null. It is now Weak, with Moderate kept only for prescription EPA in its high-risk group."
+ },
+ {
+  "date": "29 September 2026",
+  "page": "Best ashwagandha, berberine and curcumin pages",
+  "href": "/supplements/best-ashwagandha-supplements",
+  "text": "We downgraded ashwagandha's anxiety and stress grade to Emerging because the authors rate their certainty low, stated the liver-injury case series accurately (four of five took other supplements), corrected a berberine interaction figure, and replaced an unsourced blood-thinner claim on curcumin with the cited liver-injury data."
+ },
+ {
+  "date": "29 September 2026",
+  "page": "Best taurine, resveratrol, spermidine and CoQ10 pages",
+  "href": "/supplements/best-taurine-supplements",
+  "text": "We corrected dose ranges that were a meta-analysis subgroup finding rather than a trial dose, added null results that had been omitted (resveratrol, CoQ10), and stated industry ties for authors and trial extracts where their papers disclose them."
+ },
+ {
+  "date": "29 September 2026",
+  "page": "Third-party testing in supplements",
+  "href": "/supplements/third-party-testing-supplements",
+  "text": "We corrected our description of Informed Sport's process after reading its own site, labelled two certifiers as secondary-sourced because their sites blocked us, and recounted the dataset: the earlier category counts were wrong."
+ },
+ {
+  "date": "29 September 2026",
+  "page": "Best wearables and red light therapy panels",
+  "href": "/best/best-wearables-longevity-2024",
+  "text": "We corrected the Apple Watch SE price, replaced a superseded Garmin battery figure, noted Stelo's struck-through price, and added the older prices on the red-light comparison."
+ }
+];
+---
+<Base title="Corrections log | Longevity Intel" description="Dated corrections to Longevity Intel pages: what was wrong, what we changed and why. Report an error through the contact page." path="/corrections/">
+  <div class="pt-28 pb-24 trust-page">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Corrections log" }]} />
+      <header class="mt-6 mb-10" style="max-width:46rem">
+        <p class="font-mono text-xs uppercase tracking-widest text-green-bright mb-3">Trust</p>
+        <h1 class="font-display text-5xl text-ink mb-5 leading-tight">Corrections log</h1>
+        <p class="text-muted text-xl leading-relaxed">When an independent review finds an error, or a reader reports one, we fix it and record it here with the date.</p>
+        <p class="font-mono text-xs uppercase tracking-widest text-muted mt-4">Last updated 1 October 2026</p>
+      </header>
+      <div class="prose">
+  <p>These entries come from independent audits, in which a reviewer who did not write a page re-read each cited study abstract and each price source. To report an error yourself, use <a href="/contact">contact</a>. Our approach is on the <a href="/editorial-policy">editorial policy</a>.</p>
+  <ul class="corrections">
+    {log.map((c) => <li><strong>{c.date}: {c.href ? <a href={c.href}>{c.page}</a> : c.page}.</strong> {c.text}</li>)}
+  </ul>
+  <p>Pages that were checked and needed no change are not listed.</p>
+      </div>
+    </div>
+  </div>
+</Base>
+<style is:global>.trust-page .prose > p:first-of-type::first-letter{float:none;font-size:inherit;line-height:inherit;margin:0;color:inherit;font-family:inherit}</style>

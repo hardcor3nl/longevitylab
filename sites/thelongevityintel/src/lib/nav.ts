@@ -61,6 +61,9 @@ export const FOOTER_LINKS: Record<string, [string, string][]> = {
   Company: [
     ["About", "/about"],
     ["Editorial Team", "/authors"],
+    ["How we research", "/how-we-research"],
+    ["Editorial policy", "/editorial-policy"],
+    ["Corrections log", "/corrections"],
     ["Contact", "/contact"],
     ["Affiliate Disclosure", "/about#affiliate"],
     ["Privacy Policy", "/privacy"],

@@ -1,5 +1,9 @@
 /** JSON-LD builders. No Person (owner decision); Review/Rating only for owner-tested pages with a visible rubric. */
-export interface OrgInfo { name: string; url: string; logo?: string; sameAs?: string[]; description?: string }
+export interface OrgInfo {
+  name: string; url: string; logo?: string; sameAs?: string[]; description?: string;
+  /** trust layer (Job T): absolute URLs of the methodology and corrections pages, the contact page and email */
+  publishingPrinciples?: string; correctionsPolicy?: string; contactUrl?: string; email?: string; foundingDate?: string;
+}
 export interface ArticleInfo {
   title: string; description: string; url: string; published: string; updated?: string;
   /** absolute URL(s) of the page's primary image (1200x630 OG image is fine) */
@@ -11,6 +15,10 @@ export const organization = (o: OrgInfo) => ({
   ...(o.logo ? { logo: { "@type": "ImageObject", url: o.logo } } : {}),
   ...(o.sameAs?.length ? { sameAs: o.sameAs } : {}),
   ...(o.description ? { description: o.description } : {}),
+  ...(o.foundingDate ? { foundingDate: o.foundingDate } : {}),
+  ...(o.publishingPrinciples ? { publishingPrinciples: o.publishingPrinciples } : {}),
+  ...(o.correctionsPolicy ? { correctionsPolicy: o.correctionsPolicy } : {}),
+  ...(o.contactUrl || o.email ? { contactPoint: { "@type": "ContactPoint", contactType: "editorial", ...(o.email ? { email: o.email } : {}), ...(o.contactUrl ? { url: o.contactUrl } : {}) } } : {}),
 });
 
 export const webSite = (o: OrgInfo) => ({

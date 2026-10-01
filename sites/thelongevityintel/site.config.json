@@ -26,6 +26,9 @@
     "/about",
     "/contact",
     "/privacy",
+    "/how-we-research",
+    "/editorial-policy",
+    "/corrections",
     "/terms",
     "/category/supplements",
     "/category/wearables",
@@ -66,7 +69,7 @@
   "checkLinks": true,
   "indexNowKey": "e05f53c1bece75a46e684434e7c06923",
   "logo": "https://thelongevityintel.com/icon-512.png",
-  "sameAs": [],
+  "sameAs": ["https://github.com/hardcor3nl/longevity-cost-per-dose"],
   "datasetRoutes": [],
   "hubPages": {
     "/category/supplements": "/supplements/",
