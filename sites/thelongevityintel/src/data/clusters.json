@@ -466,7 +466,7 @@
       "slugs": [
         "best-wearables-longevity-2024",
         "whoop-4-review",
-        "oura-ring-gen3-review",
+        "smart-rings-compared",
         "whoop-vs-oura-comparison",
         "garmin-fenix-7-review",
         "garmin-vs-whoop-comparison",
@@ -495,9 +495,9 @@
           "kind": "guide"
         },
         {
-          "href": "/wearables/oura-ring-gen3-review",
-          "label": "Oura Ring Gen 3 Review",
-          "desc": "Best consumer sleep staging",
+          "href": "/wearables/smart-rings-compared",
+          "label": "Smart Rings Compared (Oura Ring 4 and 5)",
+          "desc": "Oura prices and validation studies",
           "kind": "guide"
         },
         {

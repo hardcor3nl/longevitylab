@@ -133,7 +133,7 @@ export default function WhoopVsOuraPage() {
             <Link href="/database" className="flex items-center gap-2 px-5 py-3 bg-green text-white rounded-xl font-semibold text-sm hover:bg-green-bright transition-colors cursor-pointer">
               View Wearables Database <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link href="/wearables/oura-ring-gen3-review" className="flex items-center gap-2 px-5 py-3 bg-surface border border-border text-ink rounded-xl font-semibold text-sm hover:border-green/40 transition-colors cursor-pointer">
+            <Link href="/wearables/smart-rings-compared" className="flex items-center gap-2 px-5 py-3 bg-surface border border-border text-ink rounded-xl font-semibold text-sm hover:border-green/40 transition-colors cursor-pointer">
               Read Full Oura Review
             </Link>
           </div>

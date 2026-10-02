@@ -30,7 +30,8 @@ url,decision,target_query,reason,redirect_target,date,status,word_count,needs_so
 /wearables/dexcom-stelo-review,keep,dexcom stelo review,no GSC pages export for this domain: no cuts or merges proposed,,2026-09-29,proposed,986,true,article,2024-10-01,2026-06-04
 /wearables/garmin-fenix-7-review,keep,garmin fenix 7 review,no GSC pages export for this domain: no cuts or merges proposed,,2026-09-29,proposed,1179,true,article,2024-10-25,2026-06-04
 /wearables/garmin-vs-whoop-comparison,keep,garmin vs whoop,no GSC pages export for this domain: no cuts or merges proposed,,2026-09-29,proposed,1164,true,article,2025-01-27,2026-06-06
-/wearables/oura-ring-gen3-review,keep,oura ring gen 3 review,no GSC pages export for this domain: no cuts or merges proposed,,2026-09-29,proposed,772,true,article,2026-07-16,2026-06-04
+/wearables/oura-ring-gen3-review,merge,oura ring gen 3 review,stale Gen 3 review superseded by the smart rings page (wave 4),/wearables/smart-rings-compared,2026-10-02,applied,772,true,article,2026-07-16,2026-06-04
+/wearables/smart-rings-compared,keep,oura ring 4 review,new page replacing the Gen 3 review (wave 4),,2026-10-02,applied,,false,article,,2026-10-02
 /wearables/whoop-4-review,keep,whoop 5 review,no GSC pages export for this domain: no cuts or merges proposed,,2026-09-29,proposed,897,false,article,2026-07-16,2026-06-04
 /wearables/whoop-vs-oura-comparison,keep,whoop 5.0 vs oura ring 4,no GSC pages export for this domain: no cuts or merges proposed,,2026-09-29,proposed,820,false,article,2026-07-16,2026-06-04
 /recovery/best-home-saunas-infrared-2024,keep,best infrared home saunas,no GSC pages export for this domain: no cuts or merges proposed,,2026-09-29,proposed,1258,true,article,2026-07-16,2026-06-04
