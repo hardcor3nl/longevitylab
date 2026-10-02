@@ -6,7 +6,7 @@
     "slug": "bryan-johnson-blueprint-protocol",
     "description": "Bryan Johnson's Blueprint routine as listed on his own protocol page (checked 29 Sept 2026), with the evidence status of each element. Bloomberg reported a cost of about $2 million a year in 2023, per Wikipedia.",
     "longDescription": "Bryan Johnson sold Braintree to PayPal (announced 2013 at $800 million, per Wikipedia) and now publishes a daily routine called Blueprint at protocol.bryanjohnson.com. This page lists what his protocol page states, checked on 29 Sept 2026. The biomarker results are self-reported by a founder who sells related products, and no independent trial has tested the combination. It is description, not advice, and not a suggestion to copy any element.",
-    "expertImage": "/experts/bryan-johnson.jpg",
+    "expertImage": "/experts/bryan-johnson.webp",
     "role": "Entrepreneur; founder of Blueprint",
     "website": "protocol.bryanjohnson.com",
     "approach": "A published daily routine of fixed timing, exercise, diet, supplements and prescription medicines, with self-reported test results",
@@ -293,30 +293,30 @@
     "expert": "Andrew Huberman, PhD",
     "title": "Huberman's Supplement Protocol (2025)",
     "slug": "andrew-huberman-supplement-protocol",
-    "description": "Stanford neuroscientist Andrew Huberman's complete supplement stack — from his AG1 morning foundation and sleep stack to his testosterone support protocol and cognitive performance compounds.",
-    "longDescription": "Dr. Andrew Huberman is a Professor of Neurobiology and Ophthalmology at Stanford School of Medicine. His Huberman Lab podcast reaches 50+ million monthly listeners and has done more to popularise evidence-based health tools than perhaps any media platform in history. His philosophy is behaviour-first: morning sunlight, cold exposure, NSDR, and sleep quality precede any supplement recommendation. Huberman has updated his stack significantly in 2024–2025 — adding grape seed extract and boron, cycling out consistent NMN use, and refining his testosterone support protocol.",
-    "expertImage": "/experts/andrew-huberman.jpg",
+    "description": "Stanford neuroscientist Andrew Huberman's complete supplement stack: from his AG1 morning foundation and sleep stack to his testosterone support protocol and cognitive performance compounds.",
+    "longDescription": "Dr. Andrew Huberman is a Professor of Neurobiology and Ophthalmology at Stanford School of Medicine. His Huberman Lab podcast reaches 50+ million monthly listeners and has done more to popularise evidence-based health tools than perhaps any media platform in history. His philosophy is behaviour-first: morning sunlight, cold exposure, NSDR, and sleep quality precede any supplement recommendation. Huberman has updated his stack significantly in 2024–2025, adding grape seed extract and boron, cycling out consistent NMN use, and refining his testosterone support protocol.",
+    "expertImage": "/experts/andrew-huberman.webp",
     "role": "Professor of Neurobiology, Stanford School of Medicine. Host of Huberman Lab podcast.",
     "website": "hubermanlab.com",
-    "approach": "Behaviour-first neuroscience — foundational behaviours (light, sleep, exercise, stress) before supplements",
+    "approach": "Behaviour-first neuroscience: foundational behaviours (light, sleep, exercise, stress) before supplements",
     "keyPhilosophy": [
       "Foundational behaviours first: morning sunlight, quality sleep, Zone 2 exercise, breathwork",
-      "Delay caffeine 90–120 minutes after waking to allow adenosine clearance — avoids afternoon energy crash",
-      "Non-sleep deep rest (NSDR / Yoga Nidra) for 10–20 min daily — as effective as sleep for dopamine restoration",
-      "Supplements are \"tools for the specific job\" — not a foundation, not magic",
+      "Delay caffeine 90–120 minutes after waking to allow adenosine clearance, avoids afternoon energy crash",
+      "Non-sleep deep rest (NSDR / Yoga Nidra) for 10–20 min daily, as effective as sleep for dopamine restoration",
+      "Supplements are \"tools for the specific job\", not a foundation, not magic",
       "Cold exposure 3–5x/week as a deliberate stress inoculation practice",
       "Testosterone is modifiable: sleep, training, stress management, and targeted supplementation all move the needle"
     ],
     "sections": [
       {
         "title": "Daily Foundation",
-        "description": "Huberman's consistent daily stack — taken year-round regardless of circumstances.",
+        "description": "Huberman's consistent daily stack: taken year-round regardless of circumstances.",
         "items": [
           {
             "name": "AG1 (Athletic Greens)",
             "dose": "1 scoop in water",
             "timing": "Morning, fasted before eating",
-            "purpose": "Comprehensive micronutrient foundation — greens, probiotics, adaptogens, enzymes. Huberman has been a paid partner since 2021.",
+            "purpose": "Comprehensive micronutrient foundation: greens, probiotics, adaptogens, enzymes. Huberman has been a paid partner since 2021.",
             "evidenceNote": "AG1 is a disclosed sponsorship. Independently: useful as a micronutrient insurance policy, particularly for those with inconsistent vegetable intake. Not a substitute for whole food nutrition."
           },
           {
@@ -336,7 +336,7 @@
           {
             "name": "Creatine Monohydrate",
             "dose": "5g/day",
-            "timing": "Anytime — consistency matters",
+            "timing": "Anytime: consistency matters",
             "purpose": "Muscle performance, cognitive function, brain protection. Huberman added creatine to his daily stack in 2023 after reviewing the cognitive evidence.",
             "supplementId": "creatine"
           },
@@ -344,21 +344,21 @@
             "name": "Grape Seed Extract",
             "dose": "400–800mg",
             "timing": "With food",
-            "purpose": "Vascular function — OPCs in grape seed extract support endothelial health and nitric oxide production",
+            "purpose": "Vascular function: OPCs in grape seed extract support endothelial health and nitric oxide production",
             "evidenceNote": "Huberman added this in 2024. Moderately evidenced for blood pressure and vascular function."
           },
           {
             "name": "Opti-Men Multivitamin",
             "dose": "2–3 tablets",
             "timing": "With food",
-            "purpose": "Micronutrient insurance — covers gaps in B vitamins, minerals, and trace elements",
+            "purpose": "Micronutrient insurance: covers gaps in B vitamins, minerals, and trace elements",
             "evidenceNote": "Huberman uses a high-potency multivitamin on days when AG1 is not available, or in combination."
           }
         ]
       },
       {
         "title": "Sleep Stack",
-        "description": "Huberman's most requested protocol — the sleep stack he takes nightly. Emphasis: these supplements improve sleep onset and quality, not quantity. Sleep hygiene comes first.",
+        "description": "Huberman's most requested protocol: the sleep stack he takes nightly. Emphasis: these supplements improve sleep onset and quality, not quantity. Sleep hygiene comes first.",
         "items": [
           {
             "name": "Magnesium L-Threonate or Bisglycinate",
@@ -371,7 +371,7 @@
             "name": "Apigenin",
             "dose": "50mg",
             "timing": "30–60 min before bed",
-            "purpose": "Mild anxiolytic — binds GABA-A receptors. Found naturally in chamomile. Reduces anxiety without sedation.",
+            "purpose": "Mild anxiolytic: binds GABA-A receptors. Found naturally in chamomile. Reduces anxiety without sedation.",
             "evidenceNote": "Huberman considers this a \"subtle but real\" sleep-onset aid. Modest clinical evidence but very safe. Not recommended if prone to vivid dreams.",
             "productSlug": "dw-apigenin"
           },
@@ -379,8 +379,8 @@
             "name": "L-Theanine",
             "dose": "100–200mg",
             "timing": "30–60 min before bed",
-            "purpose": "Alpha wave induction — calming without sedation. Synergistic with magnesium for sleep onset.",
-            "evidenceNote": "Huberman cautions: do NOT take L-Theanine if prone to vivid or intense dreams — it significantly amplifies dream vividness in some people. Start at 100mg to test.",
+            "purpose": "Alpha wave induction: calming without sedation. Synergistic with magnesium for sleep onset.",
+            "evidenceNote": "Huberman cautions: do NOT take L-Theanine if prone to vivid or intense dreams. It significantly amplifies dream vividness in some people. Start at 100mg to test.",
             "productSlug": "now-l-theanine"
           },
           {
@@ -388,21 +388,21 @@
             "dose": "2–3g",
             "timing": "30 min before bed",
             "purpose": "Core body temperature reduction, sleep quality, collagen synthesis",
-            "evidenceNote": "Occasional addition for Huberman — not every night. Glycine lowers core body temperature which facilitates sleep onset. Safe, low cost.",
+            "evidenceNote": "Occasional addition for Huberman: not every night. Glycine lowers core body temperature which facilitates sleep onset. Safe, low cost.",
             "productSlug": "bulk-glycine"
           },
           {
             "name": "GABA (occasional)",
             "dose": "100mg",
             "timing": "Before bed when stressed",
-            "purpose": "GABAergic calming — Huberman uses rarely, primarily during high-stress periods",
+            "purpose": "GABAergic calming: Huberman uses rarely, primarily during high-stress periods",
             "evidenceNote": "Huberman is cautious about GABA supplementation becoming habitual. Uses situationally."
           }
         ]
       },
       {
         "title": "Testosterone & Hormone Support",
-        "description": "Huberman's testosterone optimisation protocol — focusing on evidence-based compounds that support the HPG axis without testosterone replacement.",
+        "description": "Huberman's testosterone optimisation protocol: focusing on evidence-based compounds that support the HPG axis without testosterone replacement.",
         "items": [
           {
             "name": "Tongkat Ali (Longjack)",
@@ -415,7 +415,7 @@
             "name": "Fadogia Agrestis",
             "dose": "600mg",
             "timing": "Morning",
-            "purpose": "LH stimulation through different mechanism than Tongkat Ali — potentially additive effect",
+            "purpose": "LH stimulation through different mechanism than Tongkat Ali, potentially additive effect",
             "evidenceNote": "Huberman cycles: 8 weeks on, 2 weeks off. Fewer human studies than Tongkat Ali. Huberman advocates cycling to prevent LH receptor desensitisation."
           },
           {
@@ -437,35 +437,35 @@
       },
       {
         "title": "Focus & Cognitive Performance",
-        "description": "Situational supplements for demanding cognitive work — not taken daily.",
+        "description": "Situational supplements for demanding cognitive work: not taken daily.",
         "items": [
           {
             "name": "Alpha-GPC",
             "dose": "300mg",
             "timing": "30 min before cognitive work sessions",
-            "purpose": "Acetylcholine precursor — enhances focus, working memory, and learning consolidation",
-            "evidenceNote": "Huberman cycles this — not daily. Excessive acetylcholine can cause brain fog in some. 300mg is conservative. Used on high-output creative or analytical work days."
+            "purpose": "Acetylcholine precursor: enhances focus, working memory, and learning consolidation",
+            "evidenceNote": "Huberman cycles this: not daily. Excessive acetylcholine can cause brain fog in some. 300mg is conservative. Used on high-output creative or analytical work days."
           },
           {
             "name": "L-Tyrosine",
             "dose": "500mg",
             "timing": "30 min before demanding or stressful tasks",
-            "purpose": "Dopamine and norepinephrine precursor — motivation, focus under pressure, stress resilience",
-            "evidenceNote": "Context-dependent. Huberman notes L-Tyrosine is most effective for maintaining performance under stress — not for baseline performance in low-stress conditions."
+            "purpose": "Dopamine and norepinephrine precursor: motivation, focus under pressure, stress resilience",
+            "evidenceNote": "Context-dependent. Huberman notes L-Tyrosine is most effective for maintaining performance under stress. Not for baseline performance in low-stress conditions."
           },
           {
             "name": "Caffeine",
             "dose": "100–200mg",
             "timing": "90–120 min after waking (NOT immediately)",
-            "purpose": "Adenosine antagonist — enhanced alertness, physical performance",
-            "evidenceNote": "Critical timing note: Huberman delays caffeine 90 min to allow natural adenosine clearance. Immediate caffeine just delays the adenosine crash — delaying it eliminates the crash entirely. This is one of his most popularised \"tools\"."
+            "purpose": "Adenosine antagonist: enhanced alertness, physical performance",
+            "evidenceNote": "Critical timing note: Huberman delays caffeine 90 min to allow natural adenosine clearance. Immediate caffeine just delays the adenosine crash, delaying it eliminates the crash entirely. This is one of his most popularised \"tools\"."
           },
           {
             "name": "Ashwagandha KSM-66",
             "dose": "600mg",
             "timing": "Evening during high-stress periods",
             "purpose": "Cortisol reduction, HPG axis support, sleep quality",
-            "evidenceNote": "Huberman cycles ashwagandha — uses during stressful periods, takes breaks. Cycles prevent HPA axis adaptation.",
+            "evidenceNote": "Huberman cycles ashwagandha: uses during stressful periods, takes breaks. Cycles prevent HPA axis adaptation.",
             "supplementId": "ashwagandha"
           }
         ]
@@ -475,7 +475,7 @@
     "estimatedCost": "$120–200/month",
     "difficulty": "Intermediate",
     "lastUpdated": "2025-01",
-    "disclaimer": "Huberman's protocol evolves frequently — always check his current podcast episodes for updates. AG1 is a paid sponsorship. Fadogia Agrestis has limited human safety data — Huberman himself recommends cycling and monitoring.",
+    "disclaimer": "Huberman's protocol evolves frequently: always check his current podcast episodes for updates. AG1 is a paid sponsorship. Fadogia Agrestis has limited human safety data. Huberman himself recommends cycling and monitoring.",
     "affiliateDisclosure": "As an Amazon Associate, Longevity Intel earns from qualifying purchases. We also earn a commission on some other affiliate links. This never influences our coverage.",
     "image": "photo-1559757148-5c350d0d3c56",
     "expertImageCredit": {
@@ -491,46 +491,46 @@
     "expert": "David Sinclair, PhD",
     "title": "David Sinclair's Longevity Protocol (2025)",
     "slug": "david-sinclair-longevity-protocol",
-    "description": "Harvard genetics professor David Sinclair's evolving supplement stack — updated with his June 2025 interview data. NMN, resveratrol, fisetin (kept), quercetin (dropped), berberine replacing metformin, and new additions.",
+    "description": "Harvard genetics professor David Sinclair's evolving supplement stack, updated with his June 2025 interview data. NMN, resveratrol, fisetin (kept), quercetin (dropped), berberine replacing metformin, and new additions.",
     "longDescription": "Dr. David Sinclair is Professor of Genetics at Harvard Medical School and co-director of the Paul F. Glenn Center for Biology of Aging Research. His 2019 book Lifespan and his Information Theory of Aging established him as the most widely read longevity scientist in the world. His protocol has evolved significantly from the one described in Lifespan: he dropped quercetin in 2023 (new research suggested SIRT6/NRF2 interference), largely replaced metformin with berberine (GI tolerance), added rapamycin quarterly, and added nattokinase and spermidine to his stack.",
-    "expertImage": "/experts/david-sinclair.jpg",
+    "expertImage": "/experts/david-sinclair.webp",
     "role": "Professor of Genetics, Harvard Medical School. Author of Lifespan.",
     "website": "sinclair.hms.harvard.edu",
-    "approach": "Information Theory of Aging — restore epigenetic information that drives youthful gene expression via sirtuins, NAD+, and senolytics",
+    "approach": "Information Theory of Aging: restore epigenetic information that drives youthful gene expression via sirtuins, NAD+, and senolytics",
     "keyPhilosophy": [
-      "Aging is a disease — and like all diseases, it can be treated and reversed",
+      "Aging is a disease: and like all diseases, it can be treated and reversed",
       "The Information Theory of Aging: cells lose epigenetic information over time; restoring it is the key to reversing aging",
-      "NAD+ is the master regulator — sirtuins require it; restoring declining NAD+ (via NMN) is central to his longevity strategy",
+      "NAD+ is the master regulator: sirtuins require it; restoring declining NAD+ (via NMN) is central to his longevity strategy",
       "Xenohormesis: compounds made by stressed plants (resveratrol, fisetin, quercetin) activate our own survival pathways",
-      "Skips breakfast daily — fasting activates AMPK, sirtuins, and autophagy that food shuts down",
-      "Dropped quercetin (2023), dropped metformin (largely), added rapamycin quarterly — the protocol evolves with evidence"
+      "Skips breakfast daily: fasting activates AMPK, sirtuins, and autophagy that food shuts down",
+      "Dropped quercetin (2023), dropped metformin (largely), added rapamycin quarterly. The protocol evolves with evidence"
     ],
     "sections": [
       {
         "title": "Core Morning Stack",
-        "description": "Sinclair's primary daily supplements — unchanged for years at their core, though doses and additions have evolved.",
+        "description": "Sinclair's primary daily supplements: unchanged for years at their core, though doses and additions have evolved.",
         "items": [
           {
             "name": "NMN",
             "dose": "1g",
             "timing": "Morning with yogurt (fat improves absorption)",
-            "purpose": "NAD+ restoration — Sinclair was instrumental in popularising NMN as the primary NAD+ precursor",
-            "evidenceNote": "Sinclair takes 1g — twice to four times higher than typical clinical trial doses (250–500mg). He argues higher doses are warranted given the steep NAD+ decline with age.",
+            "purpose": "NAD+ restoration: Sinclair was instrumental in popularising NMN as the primary NAD+ precursor",
+            "evidenceNote": "Sinclair takes 1g: twice to four times higher than typical clinical trial doses (250–500mg). He argues higher doses are warranted given the steep NAD+ decline with age.",
             "supplementId": "nmn"
           },
           {
             "name": "Resveratrol",
             "dose": "1g",
-            "timing": "Morning with olive oil or yogurt — fat required for absorption",
-            "purpose": "SIRT1 activator — core of Sinclair's sirtuin activation strategy. Synergistic with NMN.",
-            "evidenceNote": "Resveratrol's human evidence is more contested than Sinclair's own enthusiasm suggests. He acknowledges the human RCT data is mixed — but continues based on mechanistic plausibility and his own biomarkers.",
+            "timing": "Morning with olive oil or yogurt: fat required for absorption",
+            "purpose": "SIRT1 activator: core of Sinclair's sirtuin activation strategy. Synergistic with NMN.",
+            "evidenceNote": "Resveratrol's human evidence is more contested than Sinclair's own enthusiasm suggests. He acknowledges the human RCT data is mixed, but continues based on mechanistic plausibility and his own biomarkers.",
             "productSlug": "thorne-resveratrol"
           },
           {
             "name": "Berberine",
             "dose": "1g/day",
             "timing": "With food",
-            "purpose": "AMPK activator — largely replaced metformin. Similar mechanism, better GI tolerance, no prescription required.",
+            "purpose": "AMPK activator: largely replaced metformin. Similar mechanism, better GI tolerance, no prescription required.",
             "evidenceNote": "Sinclair switched from metformin primarily due to GI side effects. Berberine activates AMPK through a slightly different mechanism (mitochondrial complex I inhibition vs. metformin's direct AMPK activation).",
             "supplementId": "berberine"
           },
@@ -538,7 +538,7 @@
             "name": "Vitamin D3 + K2",
             "dose": "5,000 IU D3",
             "timing": "Morning",
-            "purpose": "Immune function, bone health, cancer risk reduction — Sinclair considers vitamin D deficiency a significant longevity risk",
+            "purpose": "Immune function, bone health, cancer risk reduction. Sinclair considers vitamin D deficiency a significant longevity risk",
             "productSlug": "thorne-d3k2"
           },
           {
@@ -567,13 +567,13 @@
       },
       {
         "title": "Senolytics & Autophagy",
-        "description": "Sinclair's updated senolytic protocol — quercetin dropped in 2023, fisetin retained, spermidine added for autophagy.",
+        "description": "Sinclair's updated senolytic protocol: quercetin dropped in 2023, fisetin retained, spermidine added for autophagy.",
         "items": [
           {
             "name": "Fisetin",
             "dose": "500mg daily",
             "timing": "With fat",
-            "purpose": "Senolytic — clears senescent cells. Retained after dropping quercetin in 2023. More potent senolytic than quercetin in mouse studies.",
+            "purpose": "Senolytic: clears senescent cells. Retained after dropping quercetin in 2023. More potent senolytic than quercetin in mouse studies.",
             "evidenceNote": "Sinclair dropped quercetin in 2023 after research suggested possible SIRT6 and NRF2 pathway interference. Fisetin does not have this concern and shows stronger senolytic activity in animal models.",
             "productSlug": "fisetin-lifeext"
           },
@@ -581,7 +581,7 @@
             "name": "Spermidine",
             "dose": "1–2mg",
             "timing": "Morning",
-            "purpose": "Autophagy inducer — triggers cellular self-cleaning. Found in aged cheese, wheat germ, mushrooms.",
+            "purpose": "Autophagy inducer: triggers cellular self-cleaning. Found in aged cheese, wheat germ, mushrooms.",
             "evidenceNote": "Sinclair added spermidine after 2022 human studies showed cognitive protection and cardiovascular benefits. The mechanistic case (autophagy induction) is strong; long-term human RCTs are emerging.",
             "productSlug": "primeadine-spermidine"
           },
@@ -589,28 +589,28 @@
             "name": "Nattokinase",
             "dose": "Daily (standard dose)",
             "timing": "Away from food (best absorbed on empty stomach)",
-            "purpose": "Fibrinolytic enzyme from fermented soybeans — reduces fibrin and clot formation. Emerging cardiovascular data.",
+            "purpose": "Fibrinolytic enzyme from fermented soybeans: reduces fibrin and clot formation. Emerging cardiovascular data.",
             "evidenceNote": "Sinclair added nattokinase in 2023. Mechanistically interesting for cardiovascular risk. Human trial data growing but not yet conclusive."
           }
         ]
       },
       {
         "title": "Prescription & Quarterly Interventions",
-        "description": "Sinclair's pharmacological longevity interventions — some quarterly pulsed, some daily.",
+        "description": "Sinclair's pharmacological longevity interventions: some quarterly pulsed, some daily.",
         "items": [
           {
             "name": "Rapamycin",
             "dose": "~6mg quarterly (pulsed)",
             "timing": "Every 3 months",
-            "purpose": "mTOR inhibition — Sinclair uses a quarterly pulsed protocol rather than a weekly continuous approach",
-            "evidenceNote": "Rx only. Sinclair argues that intermittent rapamycin may capture mTOR inhibition benefits while minimising immunosuppression. This is a contentious area — the optimal dosing frequency is genuinely unknown.",
+            "purpose": "mTOR inhibition: Sinclair uses a quarterly pulsed protocol rather than a weekly continuous approach",
+            "evidenceNote": "Rx only. Sinclair argues that intermittent rapamycin may capture mTOR inhibition benefits while minimising immunosuppression. This is a contentious area. The optimal dosing frequency is genuinely unknown.",
             "isRx": true
           },
           {
             "name": "Low-dose Aspirin",
             "dose": "81mg",
             "timing": "Daily",
-            "purpose": "Anti-inflammatory, cardiovascular protection — Sinclair continues despite updated cardiology guidance against routine aspirin in healthy adults",
+            "purpose": "Anti-inflammatory, cardiovascular protection: Sinclair continues despite updated cardiology guidance against routine aspirin in healthy adults",
             "evidenceNote": "Rx-free but contested. Updated AHA/ACC guidelines (2022) no longer recommend aspirin for primary prevention in most adults. Sinclair continues based on his personal risk assessment."
           },
           {
@@ -625,29 +625,29 @@
             "name": "Metformin (occasional)",
             "dose": "1g when taken",
             "timing": "Evening",
-            "purpose": "AMPK activation — Sinclair reduced metformin use due to GI side effects but has not entirely eliminated it",
-            "evidenceNote": "Rx only. Sinclair has not publicly abandoned metformin — he uses it more sporadically than previously. The berberine switch is largely pragmatic (GI tolerance) rather than philosophical.",
+            "purpose": "AMPK activation: Sinclair reduced metformin use due to GI side effects but has not entirely eliminated it",
+            "evidenceNote": "Rx only. Sinclair has not publicly abandoned metformin. He uses it more sporadically than previously. The berberine switch is largely pragmatic (GI tolerance) rather than philosophical.",
             "isRx": true
           }
         ]
       },
       {
         "title": "Lifestyle & Fasting",
-        "description": "Sinclair's non-supplement longevity practices — which he argues are equal in importance to his pill protocol.",
+        "description": "Sinclair's non-supplement longevity practices: which he argues are equal in importance to his pill protocol.",
         "items": [
           {
             "name": "Intermittent Fasting (skip breakfast)",
             "dose": "First meal at 1–2 PM, last meal 8–9 PM",
             "timing": "Daily",
             "purpose": "AMPK activation, sirtuin activation, autophagy induction, IGF-1 reduction. Sinclair has skipped breakfast for a decade.",
-            "evidenceNote": "Sinclair's IGF-1 is reported at 40% below population average — consistent with reduced mTOR/IGF-1 signalling that animal longevity models associate with extended lifespan."
+            "evidenceNote": "Sinclair's IGF-1 is reported at 40% below population average, consistent with reduced mTOR/IGF-1 signalling that animal longevity models associate with extended lifespan."
           },
           {
             "name": "Cold Exposure",
             "dose": "2–3x/week cold shower or brief outdoor cold",
             "timing": "Post-exercise or morning",
-            "purpose": "Xenohormesis — mild stress activates survival pathways. Norepinephrine release, mitochondrial biogenesis.",
-            "evidenceNote": "Sinclair frames cold exposure as a form of xenohormesis — the same concept as plant polyphenols activating human survival pathways."
+            "purpose": "Xenohormesis: mild stress activates survival pathways. Norepinephrine release, mitochondrial biogenesis.",
+            "evidenceNote": "Sinclair frames cold exposure as a form of xenohormesis, the same concept as plant polyphenols activating human survival pathways."
           },
           {
             "name": "Plant-heavy, Low Red Meat Diet",
@@ -663,7 +663,7 @@
     "estimatedCost": "$80–150/month (excluding Rx)",
     "difficulty": "Intermediate",
     "lastUpdated": "2025-01",
-    "disclaimer": "Sinclair's protocol has changed significantly since Lifespan was published in 2019 — always use current interview data, not the book. Rapamycin, statins, and metformin require prescriptions. The scientific community has ongoing debates about several of Sinclair's claims, particularly resveratrol's human efficacy.",
+    "disclaimer": "Sinclair's protocol has changed significantly since Lifespan was published in 2019, always use current interview data, not the book. Rapamycin, statins, and metformin require prescriptions. The scientific community has ongoing debates about several of Sinclair's claims, particularly resveratrol's human efficacy.",
     "affiliateDisclosure": "As an Amazon Associate, Longevity Intel earns from qualifying purchases. We also earn a commission on some other affiliate links.",
     "image": "photo-1582719478250-c89cae4dc85b",
     "expertImageCredit": {

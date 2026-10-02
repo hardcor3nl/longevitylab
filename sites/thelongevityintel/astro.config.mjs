@@ -4,7 +4,7 @@ import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 import { unified } from "@astrojs/markdown-remark";
 import { fileURLToPath } from "node:url";
-import rehypeTables from "./rehype-tables.mjs";
+import rehypeTables, { rehypeWrapTables } from "./rehype-tables.mjs";
 import rehypeAffiliates from "./rehype-affiliates.mjs";
 
 const legacy = (p) => fileURLToPath(new URL(`./src/legacy/${p}`, import.meta.url));
@@ -15,7 +15,7 @@ export default defineConfig({
   trailingSlash: "never",
   build: { format: "file", inlineStylesheets: "always" },
   integrations: [mdx(), react()],
-  markdown: { processor: unified({ rehypePlugins: [rehypeTables, rehypeAffiliates] }) },
+  markdown: { processor: unified({ rehypePlugins: [rehypeTables, rehypeWrapTables, rehypeAffiliates] }) },
   image: { service: { entrypoint: "astro/assets/services/sharp" } },
   vite: {
     plugins: [tailwindcss()],

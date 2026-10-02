@@ -29,7 +29,7 @@ export default function SaunaComparison() {
 
         {/* Comparison Table */}
         <AnimatedSection delay={0.1}>
-          <div className="overflow-x-auto mb-12">
+          <div className="overflow-x-auto mb-12" tabIndex={0} role="region" aria-label="Comparison table, scrolls sideways">
             <table className="w-full text-sm">
               <thead className="bg-surface border-b border-border">
                 <tr>

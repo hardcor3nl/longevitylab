@@ -39,7 +39,7 @@ export function EditorialPromise() {
           </h2>
           <p className="text-muted leading-relaxed mb-6 max-w-xl">
             Longevity content is flooded with protocols without hierarchy and products without
-            evidence grades. We organise the field so you can act in the right order — sleep,
+            evidence grades. We organise the field so you can act in the right order, sleep,
             training, labs, then stack.
           </p>
           <div className="flex flex-wrap gap-3">

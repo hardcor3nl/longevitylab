@@ -15,11 +15,11 @@ export function generateMetadata({ params }: { params: { id: string } }): Metada
   if (!s) return {}
   const url = absoluteUrl(`/database/${params.id}`)
   return {
-    title: `${s.name} — Evidence Review`,
+    title: `${s.name}, Evidence Review`,
     description: s.summary,
     alternates: { canonical: url },
     openGraph: {
-      title: `${s.name} — Evidence Review`,
+      title: `${s.name}, Evidence Review`,
       description: s.summary,
       url,
       type: 'article',

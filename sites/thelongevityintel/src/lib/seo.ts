@@ -35,7 +35,7 @@ export async function relatedFor(a: Article) {
   const cand = (x: Article): RelatedCandidate => ({ href: articleUrl(x), title: x.data.h1 ?? x.data.title, description: x.data.description, date: entryDate(x.data), text: x.data.targetQuery, cluster: x.category, tags: x.data.tags });
   const all = (await getAllArticles()).map(cand);
   const cur = all.find((c) => c.href === articleUrl(a))!;
-  return relatedEntries(cur, all, { limit: 5, min: 4 }).map(({ href, title, description }) => ({ href, title, description }));
+  return relatedEntries(cur, all, { limit: 3, min: 3, minInbound: 3, maxExtra: 2 }).map(({ href, title, description }) => ({ href, title, description }));
 }
 
 export const feedMeta: FeedMeta = { title: `${site.name}: new and updated pages`, link: abs("/"), description: "Evidence summaries on supplements, wearables, recovery devices, diagnostics and protocols.", feedUrl: abs("/feed.xml"), author: site.editorialName };

@@ -21,3 +21,8 @@ it("paginates with self-contained urls", () => {
   expect(p.map((x) => x.path)).toEqual(["/guides/", "/guides/page/2/", "/guides/page/3/"]);
   expect(p[1].prev).toBe("/guides/"); expect(p[2].next).toBeUndefined(); expect(p[0].items).toEqual([1, 2]);
 });
+it("minInbound balances links so no page is under-linked", () => {
+  const many = [...Array.from({ length: 8 }, (_, i) => mk(`h${i}`, "Hot", `Hot topic ${i} guide`)), mk("lone", "Cold", "Lonely page")];
+  const count = (href: string) => many.filter((c) => relatedEntries(c, many, { limit: 3, min: 3, minInbound: 3 }).some((r) => r.href === href)).length;
+  expect(count("/lone/")).toBeGreaterThanOrEqual(3);
+});

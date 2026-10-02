@@ -1,7 +1,7 @@
 import { Shield, BookOpen, Scale, HeartPulse } from 'lucide-react'
 
 const items = [
-  { icon: Shield,      label: 'Independent — no brand-funded scores' },
+  { icon: Shield,      label: 'Independent: no brand-funded scores' },
   { icon: BookOpen,    label: 'Sources and limitations shown' },
   { icon: Scale,       label: 'Human evidence separated from animal research' },
   { icon: HeartPulse,  label: 'Evidence hierarchy: sleep → train → stack' },

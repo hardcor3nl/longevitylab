@@ -28,7 +28,7 @@ const steps = [
     icon: Salad,
     step: '04',
     title: 'Dial In Nutrition',
-    desc: 'An evidence-first eating framework — no diet ideology, just the data.',
+    desc: 'An evidence-first eating framework: no diet ideology, just the data.',
     href: '/protocols/longevity-nutrition-framework',
   },
   {
@@ -49,7 +49,7 @@ export function StartHere() {
           <p className="font-mono text-xs uppercase tracking-[0.14em] text-green-bright mb-2">New Here?</p>
           <h2 className="font-display text-4xl text-ink leading-tight">The 5-Step Longevity Path</h2>
           <p className="text-muted mt-2.5 max-w-lg leading-relaxed">
-            Skip the noise. This is the order of operations our research supports —
+            Skip the noise. This is the order of operations our research supports:
             each step builds on the one before it.
           </p>
         </div>

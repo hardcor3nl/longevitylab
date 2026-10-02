@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   alternates: { canonical: pageUrl },
   openGraph: {
     title: 'NMN vs NR: Human Evidence and Limitations',
-    description: 'What human trials show—and do not show—about two NAD+ precursors.',
+    description: 'What human trials show, and do not show, about two NAD+ precursors.',
     url: pageUrl,
     type: 'article',
     siteName: SITE.name,
@@ -45,7 +45,7 @@ export default function NMNvsNRPage() {
           </div>
 
           {/* Head-to-head table */}
-          <div className="overflow-x-auto mb-10">
+          <div className="overflow-x-auto mb-10" tabIndex={0} role="region" aria-label="Comparison table, scrolls sideways">
             <table className="w-full">
               <thead>
                 <tr className="border-b border-border">
@@ -89,7 +89,7 @@ export default function NMNvsNRPage() {
             <div>
               <h2 className="font-display text-3xl text-ink mb-4">Evidence Table</h2>
               <p className="text-muted leading-relaxed mb-4">Sources checked 5 September 2026. This is a focused evidence sample, not a complete systematic review.</p>
-              <div className="overflow-x-auto">
+              <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Evidence table, scrolls sideways">
                 <table className="w-full text-sm">
                   <thead><tr className="border-b border-border"><th className="text-left py-3">Study</th><th className="text-left py-3">Population and design</th><th className="text-left py-3">Observed result</th><th className="text-left py-3">Important limit</th></tr></thead>
                   <tbody>

@@ -15,15 +15,15 @@ interface Question {
 const questions: Question[] = [
   // Sleep
   { id: 'sleep_hours', category: 'Sleep', icon: Moon, text: 'How many hours of sleep do you get on average per night?', options: [{ label: '< 5 hours', value: -8 }, { label: '5–6 hours', value: -4 }, { label: '7–8 hours', value: 4 }, { label: '> 9 hours', value: 1 }] },
-  { id: 'sleep_quality', category: 'Sleep', icon: Moon, text: 'How would you rate your sleep quality?', options: [{ label: 'Poor — wake often', value: -5 }, { label: 'Fair — some disruption', value: -2 }, { label: 'Good — mostly rested', value: 2 }, { label: 'Excellent — deep & consistent', value: 5 }] },
+  { id: 'sleep_quality', category: 'Sleep', icon: Moon, text: 'How would you rate your sleep quality?', options: [{ label: 'Poor, wake often', value: -5 }, { label: 'Fair, some disruption', value: -2 }, { label: 'Good, mostly rested', value: 2 }, { label: 'Excellent, deep & consistent', value: 5 }] },
   // Exercise
   { id: 'exercise_freq', category: 'Exercise', icon: Zap, text: 'How often do you do structured exercise per week?', options: [{ label: 'Rarely / never', value: -8 }, { label: '1–2 times', value: -2 }, { label: '3–4 times', value: 5 }, { label: '5+ times', value: 4 }] },
   { id: 'strength_train', category: 'Exercise', icon: Zap, text: 'Do you include resistance/strength training?', options: [{ label: 'Never', value: -4 }, { label: 'Occasionally', value: 0 }, { label: 'Weekly', value: 3 }, { label: '2–3x per week', value: 5 }] },
   // Nutrition
-  { id: 'diet_quality', category: 'Nutrition', icon: Apple, text: 'How would you describe your diet?', options: [{ label: 'Mostly processed foods', value: -8 }, { label: 'Mixed — some healthy choices', value: -2 }, { label: 'Mostly whole foods', value: 4 }, { label: 'Strictly whole foods, Mediterranean-style', value: 7 }] },
+  { id: 'diet_quality', category: 'Nutrition', icon: Apple, text: 'How would you describe your diet?', options: [{ label: 'Mostly processed foods', value: -8 }, { label: 'Mixed: some healthy choices', value: -2 }, { label: 'Mostly whole foods', value: 4 }, { label: 'Strictly whole foods, Mediterranean-style', value: 7 }] },
   { id: 'sugar', category: 'Nutrition', icon: Apple, text: 'How much added sugar do you consume daily?', options: [{ label: 'High (sodas, sweets daily)', value: -6 }, { label: 'Moderate (occasional)', value: -2 }, { label: 'Low (rarely)', value: 3 }, { label: 'Almost none', value: 5 }] },
   // Stress & Mental
-  { id: 'stress', category: 'Mental Health', icon: Brain, text: 'How would you rate your chronic stress levels?', options: [{ label: 'Very high — constant pressure', value: -8 }, { label: 'High — most days stressful', value: -4 }, { label: 'Moderate — manageable', value: 1 }, { label: 'Low — generally calm', value: 5 }] },
+  { id: 'stress', category: 'Mental Health', icon: Brain, text: 'How would you rate your chronic stress levels?', options: [{ label: 'Very high, constant pressure', value: -8 }, { label: 'High, most days stressful', value: -4 }, { label: 'Moderate, manageable', value: 1 }, { label: 'Low, generally calm', value: 5 }] },
   { id: 'meditation', category: 'Mental Health', icon: Brain, text: 'Do you practice mindfulness, meditation, or breathwork?', options: [{ label: 'Never', value: -1 }, { label: 'Occasionally', value: 1 }, { label: 'Weekly', value: 3 }, { label: 'Daily practice', value: 5 }] },
   // Biomarkers
   { id: 'last_bloodwork', category: 'Biomarkers', icon: Heart, text: 'When did you last have comprehensive bloodwork?', options: [{ label: 'Never or > 3 years', value: -5 }, { label: '1–3 years ago', value: -1 }, { label: 'Within the last year', value: 3 }, { label: 'Within the last 6 months', value: 5 }] },
@@ -48,7 +48,7 @@ function getRecommendations(answers: Record<string, number>): Recommendation[] {
     recs.push({ title: 'Add Resistance Training', description: 'Creatine monohydrate is the most evidence-backed supplement for supporting muscle health and cognitive function.', href: '/database/creatine', label: 'View Creatine' })
   }
   if ((answers.diet_quality ?? 0) < 0 || (answers.sugar ?? 0) < 0) {
-    recs.push({ title: 'Reduce Metabolic Age', description: 'Berberine activates AMPK and improves insulin sensitivity — often called nature\'s metformin.', href: '/database/berberine', label: 'View Berberine' })
+    recs.push({ title: 'Reduce Metabolic Age', description: 'Berberine activates AMPK and improves insulin sensitivity: often called nature\'s metformin.', href: '/database/berberine', label: 'View Berberine' })
   }
   if ((answers.stress ?? 0) < 0) {
     recs.push({ title: 'Lower Chronic Stress', description: 'Ashwagandha (KSM-66) has strong evidence for cortisol reduction and HPA axis regulation.', href: '/database/ashwagandha', label: 'View Ashwagandha' })
@@ -116,7 +116,7 @@ export default function QuizPage() {
               </div>
               <h1 className="font-display text-5xl text-ink mb-4">Biological Age Quiz</h1>
               <p className="text-muted text-lg leading-relaxed mb-8 max-w-md mx-auto">
-                Answer 10 science-backed questions about your lifestyle and get your estimated biological age — plus personalised supplement recommendations.
+                Answer 10 science-backed questions about your lifestyle and get your estimated biological age, plus personalised supplement recommendations.
               </p>
               <div className="grid grid-cols-3 gap-4 mb-10 text-center">
                 {[['10', 'Questions'], ['2 min', 'Duration'], ['Free', 'No sign-up']].map(([val, label]) => (
@@ -234,7 +234,7 @@ export default function QuizPage() {
                 </div>
 
                 <p className="text-muted text-sm max-w-sm mx-auto">
-                  Based on {questions.length} lifestyle factors. This is an estimate — get bloodwork for precision.
+                  Based on {questions.length} lifestyle factors. This is an estimate, get bloodwork for precision.
                 </p>
               </div>
 

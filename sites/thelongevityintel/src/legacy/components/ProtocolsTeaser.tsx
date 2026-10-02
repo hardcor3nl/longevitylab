@@ -29,7 +29,7 @@ export function ProtocolsTeaser() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <p className="font-display text-white text-lg leading-tight">{p.expert}</p>
-                  <p className="text-white/50 text-xs font-mono mt-1 line-clamp-1">{p.approach.split('—')[0].trim()}</p>
+                  <p className="text-white/50 text-xs font-mono mt-1 line-clamp-1">{p.approach.split(':')[0].trim()}</p>
                   <p className="text-white/40 text-[10px] mt-1 line-clamp-1">{creditLine(p.expertImageCredit)}</p>
                   <div className="flex items-center gap-1 mt-3 text-white/80 text-xs font-medium group-hover:text-white transition-colors">
                     View protocol <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />

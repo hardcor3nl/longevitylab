@@ -10,7 +10,8 @@ import EvidenceBadge from "@portfolio/core/components/EvidenceBadge.astro";
 import SourcesList from "@portfolio/core/components/SourcesList.astro";
 import UpdateLog from "@portfolio/core/components/UpdateLog.astro";
 import { article as articleLd, faqPage, canonicalUrl } from "@portfolio/core";
-import { orgInfo } from "../../lib/seo";
+import { orgInfo, relatedFor } from "../../lib/seo";
+import { datasetLinksFor } from "../../lib/datasetLinks";
 import { ogUrl } from "../../lib/og";
 import { getAllArticles, articleFaqs, articleUrl, longDate, CATEGORY_LABEL, type Article } from "../../lib/content";
 import { clusterLinksFor } from "../../legacy/lib/contentClusters";
@@ -31,11 +32,10 @@ const url = articleUrl(a);
 const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
 const faqs = articleFaqs(a);
 const cluster = clusterLinksFor({ slug: a.slug, category: a.category, tags: d.tags, title: d.title, path: url }, 4);
-// related: same category 2 pts, shared tag 1 pt each
-const related = all
-  .filter((x) => x !== a)
-  .map((x) => ({ x, s: (x.category === a.category ? 2 : 0) + x.data.tags.filter((t) => d.tags.includes(t)).length }))
-  .filter((r) => r.s > 0).sort((p, q) => q.s - p.s).slice(0, 3).map((r) => r.x);
+// related: balanced across the whole library (cluster, shared tags, topic words) so no page is left under-linked
+const relatedHrefs = (await relatedFor(a)).map((r) => r.href);
+const related = relatedHrefs.map((h) => all.find((x) => articleUrl(x) === h)).filter(Boolean) as typeof all;
+const datasetLinks = datasetLinksFor(a);
 const org = { ...orgInfo, name: site.name };
 const ogImage = ogUrl(`${a.category}/${a.slug}`);
 const jsonLd = [
@@ -173,6 +173,13 @@ const badgeClass: Record<string, string> = { "Best Pick": "grade-strong", "Runne
               </div>
             </div>
           </aside>
+
+          {datasetLinks.length > 0 && (
+            <section class="mt-16" aria-labelledby="data-h">
+              <h2 id="data-h" class="font-display text-3xl text-ink mb-6">Data and comparisons</h2>
+              <ul class="grid sm:grid-cols-2 gap-5">{datasetLinks.map((l) => <li class="bg-surface border border-border rounded-2xl p-5"><a href={l.href} class="block text-ink font-medium hover:text-green transition-colors">{l.label}</a>{l.note && <p class="text-sm text-muted leading-relaxed mt-1">{l.note}</p>}</li>)}</ul>
+            </section>
+          )}
 
           {related.length > 0 && (
             <section class="mt-16" aria-labelledby="rel-h">

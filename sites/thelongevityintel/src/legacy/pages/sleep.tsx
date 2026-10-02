@@ -35,7 +35,7 @@ export default function SleepProtocol() {
               <div className="mb-12">
                 <h2 className="font-display text-3xl text-ink mb-4">Why Sleep is Your Longevity Superpower</h2>
                 <p className="text-muted text-lg leading-relaxed mb-6">
-                  Sleep isn&apos;t just rest—it&apos;s when your brain clears metabolic waste via the glymphatic system, muscles repair, hormones rebalance, and memories consolidate. Poor sleep accelerates aging, impairs cognition, disrupts metabolism, and increases disease risk. The goal: 7-9 hours of deep, consolidated sleep with consistent timing.
+                  Sleep isn&apos;t just rest, it&apos;s when your brain clears metabolic waste via the glymphatic system, muscles repair, hormones rebalance, and memories consolidate. Poor sleep accelerates aging, impairs cognition, disrupts metabolism, and increases disease risk. The goal: 7-9 hours of deep, consolidated sleep with consistent timing.
                 </p>
                 <div className="grid grid-cols-3 gap-4">
                   <div className="bg-surface border border-border rounded-lg p-4">
@@ -183,11 +183,11 @@ export default function SleepProtocol() {
                 <div className="bg-surface border border-border rounded-lg p-4 mt-6">
                   <h3 className="font-display text-ink mb-2">Sample Bedtime Routine (21:00)</h3>
                   <div className="space-y-2 text-sm text-muted">
-                    <p>20:00 — Dim lights, put on blue-light glasses</p>
-                    <p>20:15 — Magnesium glycinate + apigenin with dinner</p>
-                    <p>20:45 — L-theanine + glycine with herbal tea (chamomile, passionflower)</p>
-                    <p>21:00 — Melatonin 1 mg (if needed)</p>
-                    <p>21:30 — Lights off, 65°F, dark silent room</p>
+                    <p>20:00: Dim lights, put on blue-light glasses</p>
+                    <p>20:15: Magnesium glycinate + apigenin with dinner</p>
+                    <p>20:45: L-theanine + glycine with herbal tea (chamomile, passionflower)</p>
+                    <p>21:00: Melatonin 1 mg (if needed)</p>
+                    <p>21:30: Lights off, 65°F, dark silent room</p>
                   </div>
                 </div>
               </div>
@@ -222,7 +222,7 @@ export default function SleepProtocol() {
               <div className="mb-12">
                 <h2 className="font-display text-3xl text-ink mb-4">Sleep Tracking: Wearables That Matter</h2>
                 <p className="text-muted mb-6">
-                  Sleep trackers estimate sleep stages via heart rate variability (HRV), movement, and breathing. No wearable measures sleep perfectly, but consistency matters—track trends, not absolute values.
+                  Sleep trackers estimate sleep stages via heart rate variability (HRV), movement, and breathing. No wearable measures sleep perfectly, but consistency matters, track trends, not absolute values.
                 </p>
 
                 <div className="grid gap-4">

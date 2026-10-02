@@ -40,7 +40,7 @@ We do not sell your personal information to third parties.`
 
 **What this means for you:**
 - Clicking our affiliate links may result in a tracking cookie being set by the merchant
-- We earn a commission if you make a purchase — at no extra cost to you
+- We earn a commission if you make a purchase, at no extra cost to you
 - This commission funding enables us to continue independent research and testing
 - Our editorial recommendations are never influenced by commission rates
 

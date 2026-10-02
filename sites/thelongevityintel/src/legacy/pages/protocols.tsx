@@ -8,7 +8,7 @@ import { absoluteUrl } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Expert Longevity Protocols',
-  description: "The complete supplement stacks and lifestyle protocols from the world's leading longevity experts — Andrew Huberman, Bryan Johnson, and David Sinclair.",
+  description: "The complete supplement stacks and lifestyle protocols from the world's leading longevity experts. Andrew Huberman, Bryan Johnson, and David Sinclair.",
   alternates: { canonical: absoluteUrl('/protocols') },
 }
 
@@ -26,7 +26,7 @@ export default function ProtocolsPage() {
           <p className="font-mono text-xs uppercase tracking-widest text-green-bright mb-3">Expert Protocols</p>
           <h1 className="font-display text-5xl text-ink mb-4">Longevity Protocols</h1>
           <p className="text-muted text-lg max-w-2xl leading-relaxed">
-            The complete supplement stacks, dietary approaches, and lifestyle practices from the world&apos;s most prominent longevity researchers and practitioners — analysed and explained.
+            The complete supplement stacks, dietary approaches, and lifestyle practices from the world&apos;s most prominent longevity researchers and practitioners, analysed and explained.
           </p>
         </AnimatedSection>
 

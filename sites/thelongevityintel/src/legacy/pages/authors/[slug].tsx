@@ -16,7 +16,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   if (!author) return {}
   const url = absoluteUrl(`/authors/${author.slug}`)
   return {
-    title: `${author.name} — ${author.role}`,
+    title: `${author.name}, ${author.role}`,
     description: `${author.bio} Credentials: ${author.credentials}`,
     alternates: { canonical: url },
     openGraph: {

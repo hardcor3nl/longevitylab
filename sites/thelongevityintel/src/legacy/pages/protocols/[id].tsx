@@ -226,7 +226,7 @@ export default function ProtocolPage({ params }: { params: { id: string } }) {
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-muted">Approach</span>
-                      <span className="text-xs text-muted text-right max-w-[140px]">{protocol.approach.split('—')[0].trim()}</span>
+                      <span className="text-xs text-muted text-right max-w-[140px]">{protocol.approach.split(':')[0].trim()}</span>
                     </div>
                   </div>
                 </div>

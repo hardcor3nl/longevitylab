@@ -32,7 +32,7 @@ export default function CardioModalitiesComparison() {
 
         {/* Full Comparison Table */}
         <AnimatedSection delay={0.1} className="mb-12">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Comparison table, scrolls sideways">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-border">
@@ -167,7 +167,7 @@ export default function CardioModalitiesComparison() {
               icon: '🚶',
               pros: ['Strength + cardio blend', 'Quad/glute engagement', 'Lower injury risk than running', 'Metabolic rate boost'],
               cons: ['Not true Zone 2 (quads fatigue)', 'Knee stress if overused', 'Less VO₂ max stimulus than pure cardio', 'Requires gym access'],
-              science: 'Stairclimber combines isometric leg strength with cardio. Metabolic demand high but not pure aerobic—quads fatigue before cardio system maxes.',
+              science: 'Stairclimber combines isometric leg strength with cardio. Metabolic demand high but not pure aerobic, quads fatigue before cardio system maxes.',
               longevity: 'Best as 1–2x/week complement to primary cardio (not standalone). Useful for sarcopenia prevention.',
               protocol: 'Not Zone 2 primary modality. Use as 2x/week 20–30 min complement. Can layer: 30 min zone 2 on another modality, then 20 min stairclimber.',
               cost: '$0–20/month (gym membership)',
@@ -236,7 +236,7 @@ export default function CardioModalitiesComparison() {
                 <strong>For Sustainability (10+ years):</strong> Cycling or Swimming. Running requires exceptional biomechanics and strength work to avoid chronic injury. Rowing is intense and technique-dependent, making it hard to maintain long-term without coaching.
               </p>
               <p>
-                <strong>Recommendation:</strong> Build a dual modality stack—primary (50% volume) + secondary (30% volume) + strength/skill work (20%). Example: 3x/week cycling + 2x/week rowing/swimming + 2x/week strength training.
+                <strong>Recommendation:</strong> Build a dual modality stack: primary (50% volume) + secondary (30% volume) + strength/skill work (20%). Example: 3x/week cycling + 2x/week rowing/swimming + 2x/week strength training.
               </p>
             </div>
           </div>

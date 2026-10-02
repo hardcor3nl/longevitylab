@@ -85,7 +85,7 @@ export function HubPillars() {
           The hub map
         </p>
         <h2 className="font-display text-4xl text-ink leading-tight max-w-2xl">
-          Everything you need to optimise healthspan — in one place
+          Everything you need to optimise healthspan, in one place
         </h2>
         <p className="text-muted mt-3 max-w-2xl leading-relaxed">
           Most longevity sites sell a product or a personality. We organise evidence into clear

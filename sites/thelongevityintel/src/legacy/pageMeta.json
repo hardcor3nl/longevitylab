@@ -13,7 +13,7 @@
   },
   "cardio": {
     "title": "Zone 2 Cardio & VO₂ Max Protocol",
-    "description": "Interactive Zone 2 heart-rate calculator and longevity cardio protocol — the foundation for VO₂ max and healthspan."
+    "description": "Interactive Zone 2 heart-rate calculator and longevity cardio protocol, the foundation for VO₂ max and healthspan."
   },
   "compare/cardio-modalities": {
     "title": "Cardio Modalities Compared for Longevity",
@@ -29,7 +29,7 @@
   },
   "compare/magnesium-forms": {
     "title": "Magnesium Glycinate vs L-Threonate vs Malate: Which Form Wins? (2026)",
-    "description": "The form of magnesium matters enormously for absorption and effect. Full evidence-based comparison of glycinate, L-threonate, and malate — which one for sleep, which for cognition, which for energy."
+    "description": "The form of magnesium matters enormously for absorption and effect. Full evidence-based comparison of glycinate, L-threonate, and malate, which one for sleep, which for cognition, which for energy."
   },
   "compare/meditation-apps": {
     "title": "Meditation Apps: Honest Comparison",
@@ -41,7 +41,7 @@
   },
   "compare": {
     "title": "Longevity Comparisons: NMN vs NR & More",
-    "description": "Decision matrix for longevity: NMN vs NR, WHOOP vs Oura, sauna types, magnesium forms, creatine vs HMB, and cold plunge vs DIY — with clear verdicts."
+    "description": "Decision matrix for longevity: NMN vs NR, WHOOP vs Oura, sauna types, magnesium forms, creatine vs HMB, and cold plunge vs DIY, with clear verdicts."
   },
   "compare/sauna-types": {
     "title": "Infrared vs Traditional Sauna: Full Comparison",
@@ -49,7 +49,7 @@
   },
   "compare/whoop-vs-oura": {
     "title": "WHOOP 5.0 vs Oura Ring 4: Evidence & Cost (2026)",
-    "description": "WHOOP 5.0 vs Oura Ring 4 compared for recovery, sleep, battery life, cost, and published validation—with no unsupported hands-on claims."
+    "description": "WHOOP 5.0 vs Oura Ring 4 compared for recovery, sleep, battery life, cost, and published validation, with no unsupported hands-on claims."
   },
   "contact": {
     "title": "Contact",
@@ -58,15 +58,15 @@
   "database": {},
   "exotic-methods": {
     "title": "Advanced Longevity Methods",
-    "description": "Peptides, NAD+ IV, rapamycin, and other advanced longevity interventions — evidence, risks, and practical framing."
+    "description": "Peptides, NAD+ IV, rapamycin, and other advanced longevity interventions, evidence, risks, and practical framing."
   },
   "get-started": {
-    "title": "Build Your Longevity Plan — Beginner Path",
+    "title": "Build Your Longevity Plan: Beginner Path",
     "description": "A guided 5-step longevity path: baseline testing, sleep, Zone 2 cardio, nutrition, and a tiered supplement stack. Personalised for your goal and budget."
   },
   "glossary": {
     "title": "Longevity Glossary: Biomarkers & Terms",
-    "description": "Plain-English explanations of the biomarkers, tests, and scientific terms used in longevity medicine — HRV, ApoB, NAD+, VO2 max, and more."
+    "description": "Plain-English explanations of the biomarkers, tests, and scientific terms used in longevity medicine, HRV, ApoB, NAD+, VO2 max, and more."
   },
   "nutrition": {
     "title": "Longevity Nutrition Framework",
@@ -78,7 +78,7 @@
   },
   "protocols": {
     "title": "Expert Longevity Protocols",
-    "description": "The complete supplement stacks and lifestyle protocols from the world's leading longevity experts — Andrew Huberman, Bryan Johnson, and David Sinclair."
+    "description": "The complete supplement stacks and lifestyle protocols from the world's leading longevity experts: Andrew Huberman, Bryan Johnson, and David Sinclair."
   },
   "quiz": {
     "title": "Biological Age Quiz: Free Assessment",
@@ -86,7 +86,7 @@
   },
   "sleep": {
     "title": "Sleep Optimization for Longevity",
-    "description": "Science-backed sleep protocols, tools, and stacks — the highest-leverage intervention in longevity medicine."
+    "description": "Science-backed sleep protocols, tools, and stacks, the highest-leverage intervention in longevity medicine."
   },
   "stress-resilience": {
     "title": "Stress Resilience Protocols",

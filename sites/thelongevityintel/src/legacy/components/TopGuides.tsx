@@ -2,13 +2,13 @@ import Link from 'next/link'
 import { ArrowUpRight, Star } from 'lucide-react'
 import { AnimatedSection } from './AnimatedSection'
 
-/** Curated money pages — the routes people (and Google) should find first. */
+/** Curated money pages: the routes people (and Google) should find first. */
 const guides = [
   {
     href: '/best/complete-longevity-stack',
     category: 'Stack',
     title: 'Complete Longevity Supplement Stack',
-    desc: 'Tiered what / when / why — start with foundations, not hype compounds.',
+    desc: 'Tiered what / when / why: start with foundations, not hype compounds.',
   },
   {
     href: '/supplements/best-nmn-supplements-2024',
@@ -32,13 +32,13 @@ const guides = [
     href: '/recovery/cold-plunge-ice-bath-review',
     category: 'Recovery',
     title: 'Best Cold Plunges 2026',
-    desc: 'DIY to pro pods — temperature, filtration, and training timing.',
+    desc: 'DIY to pro pods: temperature, filtration, and training timing.',
   },
   {
     href: '/best/best-wearables-longevity-2024',
     category: 'Wearables',
     title: 'Best Longevity Wearables',
-    desc: 'WHOOP, Oura, Garmin, and CGM — ranked by use case.',
+    desc: 'WHOOP, Oura, Garmin, and CGM, ranked by use case.',
   },
   {
     href: '/recovery/best-red-light-therapy-panels-2024',
@@ -68,7 +68,7 @@ export function TopGuides() {
               The pages that answer real questions
             </h2>
             <p className="text-muted mt-2.5 max-w-xl leading-relaxed">
-              Not a feed of everything we publish — the decision-grade guides our readers open first.
+              Not a feed of everything we publish: the decision-grade guides our readers open first.
             </p>
           </div>
           <Link

@@ -346,7 +346,7 @@ export default function CardioProtocol() {
                   <div>
                     <p className="font-mono text-xs uppercase tracking-widest text-amber mb-2">Important Disclaimer</p>
                     <p className="text-sm text-ink leading-relaxed">
-                      This is educational content, not medical advice. Before starting a new training program, consult a physician or cardiologist—especially if you have heart disease risk factors, hypertension, or take medications. High-intensity exercise can be risky without medical clearance. Listen to your body; overtraining increases injury and illness risk.
+                      This is educational content, not medical advice. Before starting a new training program, consult a physician or cardiologist, especially if you have heart disease risk factors, hypertension, or take medications. High-intensity exercise can be risky without medical clearance. Listen to your body; overtraining increases injury and illness risk.
                     </p>
                   </div>
                 </div>

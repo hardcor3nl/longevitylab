@@ -30,11 +30,11 @@ export default function TermsPage() {
             },
             {
               title: '3. Affiliate Relationships',
-              body: 'Longevity Intel participates in affiliate marketing programmes. We earn commissions when you click our links and make purchases. These commissions fund our operations and independent research. Our editorial content is never influenced by affiliate relationships — we review products based solely on merit. All affiliate relationships are disclosed.'
+              body: 'Longevity Intel participates in affiliate marketing programmes. We earn commissions when you click our links and make purchases. These commissions fund our operations and independent research. Our editorial content is never influenced by affiliate relationships. We review products based solely on merit. All affiliate relationships are disclosed.'
             },
             {
               title: '4. Intellectual Property',
-              body: 'All content on Longevity Intel — including text, images, graphics, and code — is the property of Longevity Intel and protected by copyright. You may share our content with attribution and a link back to the source. Commercial reproduction without permission is prohibited.'
+              body: 'All content on Longevity Intel, including text, images, graphics, and code, is the property of Longevity Intel and protected by copyright. You may share our content with attribution and a link back to the source. Commercial reproduction without permission is prohibited.'
             },
             {
               title: '5. Limitation of Liability',

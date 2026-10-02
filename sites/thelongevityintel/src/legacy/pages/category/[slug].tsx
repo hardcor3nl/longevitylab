@@ -75,7 +75,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
           </AnimatedSection>
         ) : (
           <div className="space-y-5">
-            {/* Featured article — wide card */}
+            {/* Featured article: wide card */}
             {featured && (
               <AnimatedSection>
                 <Link href={`/${featured.category}/${featured.slug}`}
@@ -128,7 +128,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
               </div>
             )}
 
-            {/* Hub-style related tools — keeps readers inside the decision graph */}
+            {/* Hub-style related tools: keeps readers inside the decision graph */}
             {categoryHubLinks[params.slug] && (
               <AnimatedSection className="mt-14 pt-10 border-t border-border">
                 <p className="font-mono text-xs uppercase tracking-widest text-green-bright mb-2">

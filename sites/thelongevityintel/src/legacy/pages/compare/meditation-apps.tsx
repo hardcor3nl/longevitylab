@@ -20,7 +20,7 @@ export default function MeditationAppComparison() {
           </Link>
           <h1 className="font-display text-4xl text-ink mb-4">Meditation Apps: Honest Comparison</h1>
           <p className="text-muted text-lg max-w-2xl mb-12">
-            Five top meditation apps compared on approach, science backing, cost, and best use cases. No app is universally best—it depends on your goal and learning style.
+            Five top meditation apps compared on approach, science backing, cost, and best use cases. No app is universally best. It depends on your goal and learning style.
           </p>
         </AnimatedSection>
 

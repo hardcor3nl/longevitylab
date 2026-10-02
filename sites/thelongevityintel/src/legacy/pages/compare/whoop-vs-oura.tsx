@@ -8,7 +8,7 @@ import { absoluteUrl } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'WHOOP 5.0 vs Oura Ring 4 (2026)',
-  description: 'WHOOP 5.0 vs Oura Ring 4 compared for recovery, sleep, battery life, cost, and published validation—with no unsupported hands-on claims.',
+  description: 'WHOOP 5.0 vs Oura Ring 4 compared for recovery, sleep, battery life, cost, and published validation, with no unsupported hands-on claims.',
   alternates: { canonical: absoluteUrl('/compare/whoop-vs-oura') },
 }
 
@@ -31,11 +31,11 @@ export default function WhoopVsOuraPage() {
           {/* Quick verdict */}
           <div className="bg-green/5 border border-green/20 rounded-2xl p-6 mb-10">
             <p className="font-mono text-xs uppercase tracking-widest text-green-bright mb-2">Our Verdict</p>
-            <p className="text-ink font-medium text-lg">Depends on goal. Choose WHOOP if training load, HRV-driven recovery scoring, and daily strain management are your priority. Choose Oura if sleep architecture, all-day wearability, and battery life matter more. Neither is a clear universal winner — the two devices optimise for genuinely different use cases.</p>
+            <p className="text-ink font-medium text-lg">Depends on goal. Choose WHOOP if training load, HRV-driven recovery scoring, and daily strain management are your priority. Choose Oura if sleep architecture, all-day wearability, and battery life matter more. Neither is a clear universal winner. The two devices optimise for genuinely different use cases.</p>
           </div>
 
           {/* Head-to-head table */}
-          <div className="overflow-x-auto mb-10">
+          <div className="overflow-x-auto mb-10" tabIndex={0} role="region" aria-label="Comparison table, scrolls sideways">
             <table className="w-full">
               <thead>
                 <tr className="border-b border-border">
@@ -46,16 +46,16 @@ export default function WhoopVsOuraPage() {
               </thead>
               <tbody>
                 {[
-                  ['Form factor', 'Wristband / bicep band (screenless)', 'Ring — worn on finger'],
-                  ['Display', 'None — app only', 'None — app only'],
+                  ['Form factor', 'Wristband / bicep band (screenless)', 'Ring, worn on finger'],
+                  ['Display', 'None, app only', 'None, app only'],
                   ['Hardware cost', 'Included with annual plan', 'From $349 one-time'],
                   ['Subscription', 'From $199/year', '$5.99/month or $69.99/year (US)'],
                   ['Claimed battery life', '14+ days', 'Typically 5–8 days'],
                   ['HRV use', 'Nightly recovery baseline', 'Overnight trends'],
                   ['Published validation', 'Earlier WHOOP models studied', 'Oura Gen3 studied'],
                   ['Recovery score', 'Whoop Recovery (HRV + RHR + sleep)', 'Oura Readiness (similar inputs)'],
-                  ['Strain / training load', 'Whoop Strain — detailed, exercise-specific', 'Activity score — more general'],
-                  ['Comfort for 24/7 wear', 'Good, some find band bulky for sleep', 'Excellent — least intrusive form factor'],
+                  ['Strain / training load', 'Whoop Strain, detailed, exercise-specific', 'Activity score, more general'],
+                  ['Comfort for 24/7 wear', 'Good, some find band bulky for sleep', 'Excellent, least intrusive form factor'],
                   ['Water resistance', 'Confirm for chosen device/accessory', '100m'],
                   ['Best for', 'Athletes tracking training load precisely', 'Sleep-focused optimisation, discreet wear'],
                 ].map(([factor, whoop, oura]) => (
@@ -73,7 +73,7 @@ export default function WhoopVsOuraPage() {
             <div>
               <h2 className="font-display text-3xl text-ink mb-4">The Core Design Difference</h2>
               <p className="text-muted leading-relaxed">WHOOP and Oura both turn heart rate, HRV, sleep, and activity data into proprietary scores, but their buying models and emphasis differ.</p>
-              <p className="text-muted leading-relaxed mt-3">WHOOP 5.0 is a screenless wearable bundled with an annual membership and emphasizes strain, recovery, and coaching. Oura Ring 4 is purchased upfront and emphasizes sleep, readiness, stress, and a discreet ring form. Those are product-positioning differences—not proof that either score is a clinical diagnosis.</p>
+              <p className="text-muted leading-relaxed mt-3">WHOOP 5.0 is a screenless wearable bundled with an annual membership and emphasizes strain, recovery, and coaching. Oura Ring 4 is purchased upfront and emphasizes sleep, readiness, stress, and a discreet ring form. Those are product-positioning differences, not proof that either score is a clinical diagnosis.</p>
             </div>
 
             <div>
@@ -90,8 +90,8 @@ export default function WhoopVsOuraPage() {
 
             <div>
               <h2 className="font-display text-3xl text-ink mb-4">Training Load & Strain</h2>
-              <p className="text-muted leading-relaxed">If you&apos;re a serious athlete tracking periodization, WHOOP&apos;s Strain metric is the more purpose-built tool. It quantifies cardiovascular load across an entire day — workouts, walking, stress — on a 0–21 scale, and pairs it directly against your recovery score to flag overtraining risk. This is the feature set that made WHOOP popular with professional and competitive athletes specifically.</p>
-              <p className="text-muted leading-relaxed mt-3">Oura&apos;s Activity score covers similar ground but is less granular for structured training — it&apos;s built more for general activity and movement consistency than serious periodization.</p>
+              <p className="text-muted leading-relaxed">If you&apos;re a serious athlete tracking periodization, WHOOP&apos;s Strain metric is the more purpose-built tool. It quantifies cardiovascular load across an entire day, workouts, walking, stress, on a 0–21 scale, and pairs it directly against your recovery score to flag overtraining risk. This is the feature set that made WHOOP popular with professional and competitive athletes specifically.</p>
+              <p className="text-muted leading-relaxed mt-3">Oura&apos;s Activity score covers similar ground but is less granular for structured training. It&apos;s built more for general activity and movement consistency than serious periodization.</p>
             </div>
 
             <div>

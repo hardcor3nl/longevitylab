@@ -10,7 +10,7 @@ const url = absoluteUrl('/compare')
 export const metadata: Metadata = {
   title: 'Longevity Comparisons: NMN vs NR & More',
   description:
-    'Decision matrix for longevity: NMN vs NR, WHOOP vs Oura, sauna types, magnesium forms, creatine vs HMB, and cold plunge vs DIY — with clear verdicts.',
+    'Decision matrix for longevity: NMN vs NR, WHOOP vs Oura, sauna types, magnesium forms, creatine vs HMB, and cold plunge vs DIY, with clear verdicts.',
   alternates: { canonical: url },
   openGraph: {
     title: `Comparisons | ${SITE.name}`,
@@ -138,7 +138,7 @@ export default function ComparePage() {
         <AnimatedSection className="mt-12 p-6 rounded-2xl border border-border bg-surface">
           <h3 className="font-display text-xl text-ink mb-2">How we decide winners</h3>
           <p className="text-sm text-muted leading-relaxed max-w-3xl">
-            Verdicts weigh human evidence, safety, practicality, and cost — not sponsor preference.
+            Verdicts weigh human evidence, safety, practicality, and cost. Not sponsor preference.
             When the evidence is close, we say so and route you to the deeper protocol or product guide.
           </p>
           <div className="flex flex-wrap gap-3 mt-4">

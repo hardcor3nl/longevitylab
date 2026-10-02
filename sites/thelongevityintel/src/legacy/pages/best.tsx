@@ -30,7 +30,7 @@ export default function BestPage() {
 
   return (
     <div className="pt-24 pb-24 min-h-screen">
-      {/* Header band — consistent with category pages */}
+      {/* Header band: consistent with category pages */}
       <div className="border-b border-border bg-surface/30 mb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <AnimatedSection>
@@ -41,7 +41,7 @@ export default function BestPage() {
             </div>
             <h1 className="font-display text-4xl sm:text-5xl text-ink mb-3 leading-tight">The Best in Longevity</h1>
             <p className="text-muted text-lg max-w-2xl leading-relaxed">
-              Top-ranked products, protocols, and tools for every longevity goal —
+              Top-ranked products, protocols, and tools for every longevity goal,
               researched from published studies and product specifications.
             </p>
           </AnimatedSection>

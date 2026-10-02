@@ -153,7 +153,7 @@ img { height: auto; }
 /* ── Prose (article body) ────────────────────────────────────────────────── */
 .prose { color: var(--ink); max-width: none; font-size: 1.0625rem; }
 .prose > * { max-width: 42.5rem; }
-.prose > table, .prose > .table-wrap, .prose > figure, .prose > pre { max-width: none; }
+.prose > table, .prose > .table-wrap, .prose > .table-scroll, .prose > figure, .prose > pre { max-width: none; }
 .prose a { color: var(--green-bright); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; transition: color 150ms, text-decoration-color 150ms; }
 .prose a:hover { color: var(--green); text-decoration-thickness: 2px; }
 .prose code { font-family: var(--font-mono); font-size: .875em; background: var(--surface-2); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border); }
@@ -188,6 +188,17 @@ img { height: auto; }
 .prose tbody tr { transition: background 120ms; }
 .prose tbody tr:hover > * { background: color-mix(in srgb, var(--green-glow) 6%, var(--surface)); }
 .prose img { border-radius: .75rem; }
+.prose .table-scroll { overflow-x: auto; max-width: 100%; -webkit-overflow-scrolling: touch; }
+/* single-column grids (Tailwind `grid` without columns) size to their widest child on phones: let items shrink instead */
+@media (max-width: 1023.98px) { .grid > * { min-width: 0; } }
+/* right-aligned value columns beside a title (glossary, protocol items) may shrink and wrap on phones */
+@media (max-width: 639.98px) { .shrink-0.text-right { flex-shrink: 1; min-width: 0; max-width: 55%; overflow-wrap: anywhere; } }
+/* mobile overflow guard: long words, URLs, code and media stay inside the column; tables and pre scroll inside themselves */
+.prose { overflow-wrap: break-word; min-width: 0; }
+.prose th, .prose td { overflow-wrap: normal; }
+.prose :is(p, li, h2, h3, h4) :is(a, code) { overflow-wrap: anywhere; }
+.prose pre { max-width: 100%; overflow-x: auto; }
+.prose :is(img, video, iframe, svg) { max-width: 100%; }
 
 /* ── Signature pieces ───────────────────────────────────────────────────── */
 .section-rule { width: 2.5rem; height: 2px; background: linear-gradient(to right, var(--green-glow), var(--green)); border-radius: 2px; margin-bottom: 1rem; }

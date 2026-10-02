@@ -14,7 +14,7 @@
     "evidenceLevel": "Strong",
     "price": "$599",
     "badge": "Best Pick",
-    "summary": "The MitoPRO 1500 delivers 97 mW/cm² irradiance — among the highest irradiance figures the manufacturer advertises in its price range. True dual-chip 660nm + 850nm wavelengths, zero flicker, 5-year warranty.",
+    "summary": "The MitoPRO 1500 delivers 97 mW/cm² irradiance: among the highest irradiance figures the manufacturer advertises in its price range. True dual-chip 660nm + 850nm wavelengths, zero flicker, 5-year warranty.",
     "keyBenefits": [
       "95+ mW/cm² irradiance",
       "True 660nm + 850nm dual-chip",
@@ -44,7 +44,7 @@
     "summary": "The original consumer red light brand. Beautiful build, app control, ambient mode, and modular design. Irradiance trails cheaper competitors but the ecosystem is unmatched.",
     "keyBenefits": [
       "App-controlled dosing",
-      "Modular — connects to other panels",
+      "Modular: connects to other panels",
       "Ambient mode for circadian support",
       "Premium build quality"
     ],
@@ -57,7 +57,7 @@
     "id": "biomax-300",
     "name": "BioMax 300",
     "brand": "PlatinumLED",
-    "tagline": "Best small panel — 5 wavelengths, ideal for face & joints",
+    "tagline": "Best small panel: 5 wavelengths, ideal for face & joints",
     "category": "Red Light Therapy",
     "goals": [
       "Skin & Collagen",
@@ -70,7 +70,7 @@
     "summary": "5-wavelength panel (630, 660, 810, 830, 850nm) in a compact form factor. Best value for targeted face, joint, or injury treatment.",
     "keyBenefits": [
       "5 therapeutic wavelengths",
-      "Compact — ideal for face & joints",
+      "Compact: ideal for face & joints",
       "Excellent irradiance for size",
       "No prescription required"
     ],
@@ -160,7 +160,7 @@
     "id": "serenelife-sauna",
     "name": "Portable Infrared Sauna",
     "brand": "SereneLife",
-    "tagline": "Affordable portable sauna tent — real benefits, no installation",
+    "tagline": "Affordable portable sauna tent: real benefits, no installation",
     "category": "Infrared Saunas",
     "goals": [
       "Recovery",
@@ -195,12 +195,12 @@
     "evidenceLevel": "Strong",
     "price": "$4,895",
     "badge": "Best Pick",
-    "summary": "The landmark KIHD cohort study linking sauna use to a 40% reduction in cardiovascular mortality was conducted on traditional Finnish saunas — high heat (170–195°F), low humidity with optional steam from water on hot rocks — not infrared. This is the closest home replication of that exact exposure. Western red cedar construction, wood or electric heater options.",
+    "summary": "The landmark KIHD cohort study linking sauna use to a 40% reduction in cardiovascular mortality was conducted on traditional Finnish saunas, high heat (170–195°F), low humidity with optional steam from water on hot rocks, not infrared. This is the closest home replication of that exact exposure. Western red cedar construction, wood or electric heater options.",
     "keyBenefits": [
       "Matches the sauna type used in the KIHD mortality study",
       "Higher achievable temperature than infrared (up to 195°F)",
       "Optional löyly (steam) from water on rocks",
-      "Western red cedar — naturally rot and insect resistant",
+      "Western red cedar: naturally rot and insect resistant",
       "No installation plumbing required"
     ],
     "bestFor": "Those specifically wanting to replicate the traditional Finnish sauna protocol behind the strongest cardiovascular mortality data",
@@ -221,7 +221,7 @@
     "evidenceLevel": "Strong",
     "price": "$899–1,400",
     "badge": "Budget",
-    "summary": "For those converting an existing room or building a custom sauna, Harvia is the Finnish industry-standard heater brand — the same heater type used in most commercial and home saunas throughout Scandinavia. Requires 240V electrical connection; pairs with any properly ventilated cedar or spruce-lined room.",
+    "summary": "For those converting an existing room or building a custom sauna, Harvia is the Finnish industry-standard heater brand, the same heater type used in most commercial and home saunas throughout Scandinavia. Requires 240V electrical connection; pairs with any properly ventilated cedar or spruce-lined room.",
     "keyBenefits": [
       "Industry-standard Finnish heater brand",
       "Significantly cheaper than a pre-built cabin",
@@ -230,7 +230,7 @@
     ],
     "bestFor": "DIY builders converting an existing space into a traditional sauna",
     "affiliateUrl": "/go/harvia-heater-kit",
-    "dosage": "Requires 240V dedicated circuit — check local electrical code before purchase"
+    "dosage": "Requires 240V dedicated circuit: check local electrical code before purchase"
   },
   {
     "id": "newtowne-hyperbaric-chamber",
@@ -246,10 +246,10 @@
     "evidenceLevel": "Moderate",
     "price": "$18,500",
     "badge": "Best Pick",
-    "summary": "Important context before buying: the landmark Tel Aviv telomere-lengthening study used clinical HBOT at 2.0 ATA with 100% oxygen — a pressure level only achievable in hard-shell chambers with a physician-administered oxygen concentrator, not soft home chambers. Mild hyperbaric chambers like this one operate at 1.3 ATA on ambient air, which has far less direct longevity evidence but is the realistic option for home use. Read our full HBOT evidence breakdown before purchasing.",
+    "summary": "Important context before buying: the landmark Tel Aviv telomere-lengthening study used clinical HBOT at 2.0 ATA with 100% oxygen, a pressure level only achievable in hard-shell chambers with a physician-administered oxygen concentrator, not soft home chambers. Mild hyperbaric chambers like this one operate at 1.3 ATA on ambient air, which has far less direct longevity evidence but is the realistic option for home use. Read our full HBOT evidence breakdown before purchasing.",
     "keyBenefits": [
       "FDA-registered mild hyperbaric chamber",
-      "1.3 ATA — the standard pressure for soft-shell home use",
+      "1.3 ATA: the standard pressure for soft-shell home use",
       "Large enough for comfortable multi-person or extended sessions",
       "No physician administration required at this pressure level"
     ],
@@ -272,10 +272,10 @@
     "evidenceLevel": "Moderate",
     "price": "$2,500–4,000",
     "badge": "Budget",
-    "summary": "Amazon carries a range of entry-level soft-shell mild hyperbaric chambers, typically operating at 1.3 ATA, at a fraction of the cost of FDA-registered brands like Newtowne or OxyHealth. Build quality, seam durability, and safety certification vary significantly between listings — read seller documentation and verified reviews carefully before buying, and confirm FDA registration status if that matters to you.",
+    "summary": "Amazon carries a range of entry-level soft-shell mild hyperbaric chambers, typically operating at 1.3 ATA, at a fraction of the cost of FDA-registered brands like Newtowne or OxyHealth. Build quality, seam durability, and safety certification vary significantly between listings, read seller documentation and verified reviews carefully before buying, and confirm FDA registration status if that matters to you.",
     "keyBenefits": [
       "Meaningfully lower upfront cost than premium brands",
-      "1.3 ATA — same pressure class as premium soft chambers",
+      "1.3 ATA: same pressure class as premium soft chambers",
       "Easier to trial the format before a larger investment"
     ],
     "bestFor": "Budget-conscious buyers wanting to trial mild HBOT before committing to a premium chamber",
@@ -288,7 +288,7 @@
     "id": "the-plunge-pro",
     "name": "The Plunge Pro",
     "brand": "The Plunge",
-    "tagline": "Best all-around cold plunge — chills to 37°F with filtration",
+    "tagline": "Best all-around cold plunge: chills to 37°F with filtration",
     "category": "Cold Plunge & Ice Baths",
     "goals": [
       "Recovery",
@@ -303,7 +303,7 @@
     "keyBenefits": [
       "Chills to 37°F (3°C)",
       "Built-in filtration + sanitation",
-      "App scheduling — pre-chill overnight",
+      "App scheduling: pre-chill overnight",
       "Insulated to maintain temp",
       "450 lbs capacity"
     ],
@@ -316,7 +316,7 @@
     "id": "morozko-forge",
     "name": "Morozko Forge",
     "brand": "Morozko",
-    "tagline": "Coldest plunge on the market — chills to 33°F with ozone filtration",
+    "tagline": "Coldest plunge on the market: chills to 33°F with ozone filtration",
     "category": "Cold Plunge & Ice Baths",
     "goals": [
       "Recovery",
@@ -326,10 +326,10 @@
     "evidenceLevel": "Strong",
     "price": "$7,990",
     "badge": "Premium",
-    "summary": "The coldest consumer cold plunge available — reaches 33°F with ozone-filtered crystal-clear water. Commercial-grade compressor. Overkill for most, perfect for extreme cold therapy enthusiasts.",
+    "summary": "The coldest consumer cold plunge available: reaches 33°F with ozone-filtered crystal-clear water. Commercial-grade compressor. Overkill for most, perfect for extreme cold therapy enthusiasts.",
     "keyBenefits": [
       "Coldest on market (33°F)",
-      "Ozone filtration — crystal clear",
+      "Ozone filtration: crystal clear",
       "Commercial-grade compressor",
       "Can form actual ice"
     ],
@@ -353,7 +353,7 @@
     "evidenceLevel": "Strong",
     "price": "$239 + $30/mo",
     "badge": "Best Pick",
-    "summary": "The gold standard for recovery and HRV tracking. No screen — every resource goes into sensor accuracy. Daily recovery and strain scores, best-in-class sleep staging.",
+    "summary": "The gold standard for recovery and HRV tracking. No screen: every resource goes into sensor accuracy. Daily recovery and strain scores, best-in-class sleep staging.",
     "keyBenefits": [
       "Best HRV accuracy",
       "Daily recovery + strain scores",
@@ -370,7 +370,7 @@
     "id": "oura-gen3",
     "name": "Ring Gen 3",
     "brand": "Oura",
-    "tagline": "Most accurate sleep tracker — worn as a ring",
+    "tagline": "Most accurate sleep tracker: worn as a ring",
     "category": "Fitness Trackers & HRV",
     "goals": [
       "Sleep",
@@ -408,7 +408,7 @@
     "evidenceLevel": "Strong",
     "price": "$649",
     "badge": "Runner-Up",
-    "summary": "Premium GPS watch with serious health tracking — HRV Status, Body Battery recovery score, VO2 max estimation, and 14-day battery. No subscription required.",
+    "summary": "Premium GPS watch with serious health tracking: HRV Status, Body Battery recovery score, VO2 max estimation, and 14-day battery. No subscription required.",
     "keyBenefits": [
       "HRV Status (4-week baseline)",
       "Body Battery recovery system",
@@ -425,7 +425,7 @@
     "id": "dexcom-stelo",
     "name": "Stelo",
     "brand": "Dexcom",
-    "tagline": "First FDA-cleared CGM for non-diabetics — no prescription needed",
+    "tagline": "First FDA-cleared CGM for non-diabetics: no prescription needed",
     "category": "Continuous Glucose Monitors",
     "goals": [
       "Metabolic Health",
@@ -452,7 +452,7 @@
     "id": "theragun-pro-6",
     "name": "Pro Gen 6",
     "brand": "Theragun",
-    "tagline": "Professional percussive therapy — deepest amplitude available",
+    "tagline": "Professional percussive therapy: deepest amplitude available",
     "category": "Massage & Recovery",
     "goals": [
       "Recovery",
@@ -461,7 +461,7 @@
     "evidenceLevel": "Moderate",
     "price": "$599",
     "badge": "Best Pick",
-    "summary": "16mm amplitude and 60 lbs stall force — the professional standard for percussive therapy. Rotating arm, OLED screen, Bluetooth app with 30+ guided routines.",
+    "summary": "16mm amplitude and 60 lbs stall force: the professional standard for percussive therapy. Rotating arm, OLED screen, Bluetooth app with 30+ guided routines.",
     "keyBenefits": [
       "16mm amplitude (deepest available)",
       "60 lbs stall force",
@@ -478,7 +478,7 @@
     "id": "hypervolt-2-pro",
     "name": "Hypervolt 2 Pro",
     "brand": "Hyperice",
-    "tagline": "Quietest premium massage gun — 55dB at full speed",
+    "tagline": "Quietest premium massage gun: 55dB at full speed",
     "category": "Massage & Recovery",
     "goals": [
       "Recovery",
@@ -503,7 +503,7 @@
     "id": "nmn",
     "name": "NMN Pro",
     "brand": "ProHealth Longevity",
-    "tagline": "NMN — 500mg sublingual, third-party testing stated by the brand",
+    "tagline": "NMN: 500mg sublingual, third-party testing stated by the brand",
     "category": "NAD+ Precursors",
     "goals": [
       "Longevity",
@@ -536,7 +536,7 @@
     "id": "nr-tru-niagen",
     "name": "Tru Niagen",
     "brand": "ChromaDex",
-    "tagline": "Most studied NR — patented formula with 38+ clinical trials",
+    "tagline": "Most studied NR: patented formula with 38+ clinical trials",
     "category": "NAD+ Precursors",
     "goals": [
       "Longevity",
@@ -563,7 +563,7 @@
     "id": "omega3-carlson",
     "name": "Elite Omega-3",
     "brand": "Carlson",
-    "tagline": "IFOS 5-star rated — 1600mg EPA+DHA, Friend of the Sea certified",
+    "tagline": "IFOS 5-star rated: 1600mg EPA+DHA, Friend of the Sea certified",
     "category": "Omega Fatty Acids",
     "goals": [
       "Cardiovascular",
@@ -574,7 +574,7 @@
     "evidenceLevel": "Strong",
     "price": "$34.99",
     "badge": "Best Pick",
-    "summary": "Carlson Elite Omega-3 is IFOS 5-star certified — the highest purity standard for fish oil. 1600mg EPA+DHA per serving from Friend-of-the-Sea certified sources.",
+    "summary": "Carlson Elite Omega-3 is IFOS 5-star certified: the highest purity standard for fish oil. 1600mg EPA+DHA per serving from Friend-of-the-Sea certified sources.",
     "keyBenefits": [
       "IFOS 5-star purity certified",
       "1600mg EPA+DHA per serving",
@@ -592,7 +592,7 @@
     "id": "creatine-mono",
     "name": "Creatine Monohydrate",
     "brand": "Thorne",
-    "tagline": "Most evidence-backed supplement in sports science — 5g/day",
+    "tagline": "Most evidence-backed supplement in sports science: 5g/day",
     "category": "Mitochondrial Support",
     "goals": [
       "Strength & Muscle",
@@ -611,16 +611,16 @@
       "Cognitive + physical benefits",
       "Pharmaceutical-grade manufacturing"
     ],
-    "bestFor": "Everyone over 30 — the most evidence-backed supplement for longevity beyond the gym",
+    "bestFor": "Everyone over 30: the most evidence-backed supplement for longevity beyond the gym",
     "affiliateUrl": "/go/thorne-creatine",
     "dosage": "3–5g/day",
-    "timing": "Anytime — consistency matters"
+    "timing": "Anytime: consistency matters"
   },
   {
     "id": "magnesium-glycinate",
     "name": "Magnesium Glycinate",
     "brand": "Pure Encapsulations",
-    "tagline": "Best-absorbed magnesium — sleep, recovery, cardiovascular",
+    "tagline": "Best-absorbed magnesium: sleep, recovery, cardiovascular",
     "category": "Vitamins & Minerals",
     "goals": [
       "Sleep",
@@ -633,7 +633,7 @@
     "badge": "Best Pick",
     "summary": "Magnesium glycinate has the best absorption-to-tolerance ratio of all magnesium forms. Pure Encapsulations is hypoallergenic and free from common fillers.",
     "keyBenefits": [
-      "Glycinate form — best absorbed",
+      "Glycinate form: best absorbed",
       "Hypoallergenic formula",
       "No GI side effects",
       "Supports sleep onset and quality"
@@ -647,7 +647,7 @@
     "id": "vitamin-d3-k2",
     "name": "Vitamin D3+K2",
     "brand": "Thorne",
-    "tagline": "D3 with MK-7 K2 — bone, immune, cardiovascular support",
+    "tagline": "D3 with MK-7 K2: bone, immune, cardiovascular support",
     "category": "Vitamins & Minerals",
     "goals": [
       "Longevity",
@@ -673,7 +673,7 @@
     "id": "coq10-ubiquinol",
     "name": "Ubiquinol CoQ10",
     "brand": "Jarrow Formulas",
-    "tagline": "Ubiquinol form — superior absorption for mitochondrial energy",
+    "tagline": "Ubiquinol form: superior absorption for mitochondrial energy",
     "category": "Mitochondrial Support",
     "goals": [
       "Energy",
@@ -683,11 +683,11 @@
     "evidenceLevel": "Moderate",
     "price": "$42.99",
     "badge": "Best Pick",
-    "summary": "Ubiquinol is the active, reduced form of CoQ10 with superior bioavailability — especially important over age 40 when conversion from ubiquinone declines.",
+    "summary": "Ubiquinol is the active, reduced form of CoQ10 with superior bioavailability, especially important over age 40 when conversion from ubiquinone declines.",
     "keyBenefits": [
       "Ubiquinol form (better absorbed)",
       "Essential for statin users",
-      "Declines with age — supplementation restores",
+      "Declines with age: supplementation restores",
       "Lipid-soluble antioxidant"
     ],
     "bestFor": "People over 40, statin users, and those optimising mitochondrial function",
@@ -699,7 +699,7 @@
     "id": "ashwagandha-ksm66",
     "name": "KSM-66 Ashwagandha",
     "brand": "Ixoreal / KSM-66",
-    "tagline": "Most studied ashwagandha extract — 67 clinical trials",
+    "tagline": "Most studied ashwagandha extract: 67 clinical trials",
     "category": "Adaptogens",
     "goals": [
       "Sleep",
@@ -726,7 +726,7 @@
     "id": "berberine-hcl",
     "name": "Berberine HCl",
     "brand": "Thorne",
-    "tagline": "Nature's metformin — AMPK activator with cardiovascular benefits",
+    "tagline": "Nature's metformin: AMPK activator with cardiovascular benefits",
     "category": "Mitochondrial Support",
     "goals": [
       "Longevity",
@@ -752,7 +752,7 @@
     "id": "curcumin-meriva",
     "name": "Meriva-SF Curcumin Phytosome",
     "brand": "Thorne",
-    "tagline": "Phytosome delivery — up to 29x better absorption than standard curcumin",
+    "tagline": "Phytosome delivery: up to 29x better absorption than standard curcumin",
     "category": "Antioxidants & Senolytics",
     "goals": [
       "Longevity",
@@ -761,14 +761,14 @@
     "evidenceLevel": "Strong",
     "price": "$54.00",
     "badge": "Best Pick",
-    "summary": "A meta-analysis of nearly 6,000 participants found curcumin significantly reduces CRP, IL-6, and TNF-α. The catch is bioavailability — standard turmeric is barely absorbed. Meriva phytosome technology solves this, delivering up to 29x more curcumin into circulation than unformulated powder.",
+    "summary": "A meta-analysis of nearly 6,000 participants found curcumin significantly reduces CRP, IL-6, and TNF-α. The catch is bioavailability, standard turmeric is barely absorbed. Meriva phytosome technology solves this, delivering up to 29x more curcumin into circulation than unformulated powder.",
     "keyBenefits": [
       "Reduces CRP, IL-6, TNF-α (meta-analysis, n=5,870)",
-      "Phytosome tech — clinically validated absorption boost",
+      "Phytosome tech: clinically validated absorption boost",
       "No piperine required for bioavailability",
       "NSF Certified for Sport"
     ],
-    "bestFor": "Systemic inflammation reduction — pairs well with omega-3s",
+    "bestFor": "Systemic inflammation reduction: pairs well with omega-3s",
     "affiliateUrl": "/go/thorne-meriva-curcumin",
     "dosage": "500–1,000mg/day (Meriva-equivalent)",
     "timing": "With a meal containing fat"
@@ -785,14 +785,14 @@
     ],
     "evidenceLevel": "Emerging",
     "price": "$28.99",
-    "summary": "Extracted from the creosote bush, NDGA extended median lifespan in male mice in the NIA Interventions Testing Program — the gold-standard, multi-site mouse longevity study. Bryan Johnson added 50mg/day to his Blueprint stack in 2026 on the strength of this animal data. Human evidence is essentially nonexistent.",
+    "summary": "Extracted from the creosote bush, NDGA extended median lifespan in male mice in the NIA Interventions Testing Program, the gold-standard multi-site mouse longevity study. Bryan Johnson added 50mg/day to his Blueprint stack in 2026 on the strength of this animal data. Human evidence is essentially nonexistent.",
     "keyBenefits": [
       "Replicated lifespan extension in ITP mouse studies",
       "Potent lipoxygenase inhibitor (anti-inflammatory)",
       "Antioxidant via free radical scavenging",
       "Added to Bryan Johnson's 2026 Blueprint stack"
     ],
-    "bestFor": "Experimental longevity stackers comfortable acting on strong animal — but no human — data",
+    "bestFor": "Experimental longevity stackers comfortable acting on strong animal, but no human, data",
     "affiliateUrl": "/go/ndga",
     "dosage": "50mg/day (Bryan Johnson's dose)",
     "timing": "With food"
@@ -801,7 +801,7 @@
     "id": "fisetin",
     "name": "Fisetin",
     "brand": "Life Extension",
-    "tagline": "Potent senolytic — clears zombie cells, a plant senolytic studied in preclinical work",
+    "tagline": "Potent senolytic: clears zombie cells, a plant senolytic studied in preclinical work",
     "category": "Antioxidants & Senolytics",
     "goals": [
       "Longevity",
@@ -814,7 +814,7 @@
     "summary": "Fisetin is a flavonoid found in strawberries with senolytic activity reported in preclinical studies. David Sinclair uses 500mg daily after dropping quercetin in 2023.",
     "keyBenefits": [
       "Strongest plant senolytic in animal studies",
-      "Blood-brain barrier penetrant — neuroprotective",
+      "Blood-brain barrier penetrant: neuroprotective",
       "David Sinclair's preferred senolytic",
       "Autophagy activation",
       "Anti-inflammatory"
@@ -828,7 +828,7 @@
     "id": "quercetin",
     "name": "Quercetin",
     "brand": "Thorne",
-    "tagline": "Senolytic flavonoid — often stacked with dasatinib for zombie cell clearance",
+    "tagline": "Senolytic flavonoid: often stacked with dasatinib for zombie cell clearance",
     "category": "Antioxidants & Senolytics",
     "goals": [
       "Longevity",
@@ -837,7 +837,7 @@
     ],
     "evidenceLevel": "Emerging",
     "price": "$28.99",
-    "summary": "Quercetin was a key part of Sinclair's stack until 2023 (dropped over SIRT6 concern). Still widely used as a senolytic — typically pulsed, not daily.",
+    "summary": "Quercetin was a key part of Sinclair's stack until 2023 (dropped over SIRT6 concern). Still widely used as a senolytic, typically pulsed, not daily.",
     "keyBenefits": [
       "Senolytic activity (pulsed protocol)",
       "Anti-inflammatory via NF-κB",
@@ -856,7 +856,7 @@
     "id": "resveratrol",
     "name": "Trans-Resveratrol",
     "brand": "Thorne",
-    "tagline": "Sirtuin activator — David Sinclair's signature longevity compound",
+    "tagline": "Sirtuin activator: David Sinclair's signature longevity compound",
     "category": "Antioxidants & Senolytics",
     "goals": [
       "Longevity",
@@ -865,7 +865,7 @@
     ],
     "evidenceLevel": "Emerging",
     "price": "$35.99",
-    "summary": "Resveratrol activates SIRT1 and is central to Sinclair's longevity strategy. Human data is more mixed than animal studies — but mechanistic plausibility and Sinclair's personal use keep it popular.",
+    "summary": "Resveratrol activates SIRT1 and is central to Sinclair's longevity strategy. Human data is more mixed than animal studies, but mechanistic plausibility and Sinclair's personal use keep it popular.",
     "keyBenefits": [
       "SIRT1 activator",
       "Anti-inflammatory via NF-κB",
@@ -904,7 +904,7 @@
     "bestFor": "Evening stress wind-down, immune support",
     "affiliateUrl": "/go/real-mushrooms-reishi",
     "dosage": "1–2g dried or 300–500mg extract/day",
-    "timing": "Evening — can be sedating"
+    "timing": "Evening: can be sedating"
   },
   {
     "id": "cordyceps",
@@ -919,17 +919,17 @@
     ],
     "evidenceLevel": "Moderate",
     "price": "$32.99",
-    "summary": "Cordyceps is studied primarily for exercise performance and energy — some evidence points to improved oxygen utilization (VO2 max) and reduced perceived exertion during endurance activity, plus cortisol-buffering effects during prolonged stress.",
+    "summary": "Cordyceps is studied primarily for exercise performance and energy; some evidence points to improved oxygen utilization (VO2 max) and reduced perceived exertion during endurance activity, plus cortisol-buffering effects during prolonged stress.",
     "keyBenefits": [
       "Studied for VO2 max and exercise capacity",
       "Cortisol buffering during endurance efforts",
-      "Stimulating — not sedating",
+      "Stimulating: not sedating",
       "Traditional energy tonic"
     ],
     "bestFor": "Pre-exercise energy and endurance stamina",
     "affiliateUrl": "/go/real-mushrooms-cordyceps",
     "dosage": "500–1,000mg/day",
-    "timing": "Morning, pre-exercise — avoid near bedtime (stimulating)"
+    "timing": "Morning, pre-exercise: avoid near bedtime (stimulating)"
   },
   {
     "id": "rhodiola-rosea",
@@ -948,7 +948,7 @@
     "keyBenefits": [
       "Reduces mental fatigue (multiple RCTs)",
       "Improves focus under stress",
-      "Adaptogenic — bidirectional stress response",
+      "Adaptogenic: bidirectional stress response",
       "Bryan Johnson includes in Blueprint"
     ],
     "bestFor": "Mental performance, stress resilience, and fatigue reduction",
@@ -964,7 +964,7 @@
     "id": "lions-mane",
     "name": "Lion's Mane Mushroom",
     "brand": "Host Defense",
-    "tagline": "NGF stimulator — the only mushroom with clinical cognitive data",
+    "tagline": "NGF stimulator: the only mushroom with clinical cognitive data",
     "category": "Adaptogens",
     "goals": [
       "Cognitive",
@@ -973,7 +973,7 @@
     ],
     "evidenceLevel": "Emerging",
     "price": "$29.99",
-    "summary": "Lion's Mane stimulates Nerve Growth Factor (NGF) synthesis — promoting neuroplasticity, myelination, and cognitive function. 3 human RCTs show significant cognitive improvement in older adults.",
+    "summary": "Lion's Mane stimulates Nerve Growth Factor (NGF) synthesis, promoting neuroplasticity, myelination, and cognitive function. 3 human RCTs show significant cognitive improvement in older adults.",
     "keyBenefits": [
       "Stimulates NGF and BDNF",
       "3 human RCTs in cognitive impairment",
@@ -1022,7 +1022,7 @@
     "price": "$14.99",
     "summary": "Ceylon cinnamon (distinct from the cheaper, coumarin-heavier Cassia cinnamon sold as grocery-store spice) has modest evidence for supporting healthy post-meal glucose response. Ceylon has meaningfully lower coumarin content, relevant for anyone using it at supplement-level daily doses rather than as an occasional spice.",
     "keyBenefits": [
-      "Lower coumarin than Cassia cinnamon — safer for daily supplemental use",
+      "Lower coumarin than Cassia cinnamon: safer for daily supplemental use",
       "Modest evidence for post-meal glucose support",
       "Commonly stacked with berberine and chromium"
     ],
@@ -1058,7 +1058,7 @@
     "id": "vitamin-c",
     "name": "Vitamin C (Liposomal)",
     "brand": "LivOn Labs",
-    "tagline": "Most bioavailable vitamin C — liposomal delivery for superior absorption",
+    "tagline": "Most bioavailable vitamin C: liposomal delivery for superior absorption",
     "category": "Vitamins & Minerals",
     "goals": [
       "Longevity",
@@ -1084,7 +1084,7 @@
     "id": "zinc-picolinate",
     "name": "Zinc Picolinate",
     "brand": "Thorne",
-    "tagline": "Best-absorbed zinc — immune, testosterone, and protein synthesis",
+    "tagline": "Best-absorbed zinc: immune, testosterone, and protein synthesis",
     "category": "Vitamins & Minerals",
     "goals": [
       "Longevity",
@@ -1111,7 +1111,7 @@
     "id": "nac",
     "name": "N-Acetyl Cysteine (NAC)",
     "brand": "Jarrow Formulas",
-    "tagline": "Glutathione precursor — master antioxidant replenishment",
+    "tagline": "Glutathione precursor: master antioxidant replenishment",
     "category": "Vitamins & Minerals",
     "goals": [
       "Longevity",
@@ -1120,7 +1120,7 @@
     ],
     "evidenceLevel": "Moderate",
     "price": "$21.99",
-    "summary": "NAC is the rate-limiting precursor to glutathione — the body's master antioxidant. Reduces oxidative stress, supports liver detoxification, and has mucolytic properties. Widely used in clinical medicine.",
+    "summary": "NAC is the rate-limiting precursor to glutathione: the body's master antioxidant. Reduces oxidative stress, supports liver detoxification, and has mucolytic properties. Widely used in clinical medicine.",
     "keyBenefits": [
       "Glutathione precursor",
       "Liver protection and detoxification",
@@ -1150,11 +1150,11 @@
     "keyBenefits": [
       "Counteracts NMN-induced methylation depletion",
       "Lowers homocysteine",
-      "Osmolyte — cell volume regulation",
+      "Osmolyte: cell volume regulation",
       "Liver protection",
       "Athletic performance (betaine)"
     ],
-    "bestFor": "Anyone taking NMN or NR — methylation support is essential",
+    "bestFor": "Anyone taking NMN or NR: methylation support is essential",
     "affiliateUrl": "/go/jarrow-tmg",
     "dosage": "500mg–3g/day",
     "timing": "Morning with NMN/NR",
@@ -1206,12 +1206,12 @@
     "evidenceLevel": "Strong",
     "price": "$50–110/month",
     "badge": "Editor's Choice",
-    "summary": "Urolithin A triggers mitophagy — clearing damaged mitochondria so they can be replaced. Four separate human RCTs (Nature Metabolism, Cell Reports Medicine, JAMA Network Open, Nature Aging) using this exact formulation showed improved muscle strength, endurance, and immune cell function.",
+    "summary": "Urolithin A triggers mitophagy: clearing damaged mitochondria so they can be replaced. Four separate human RCTs (Nature Metabolism, Cell Reports Medicine, JAMA Network Open, Nature Aging) using this exact formulation showed improved muscle strength, endurance, and immune cell function.",
     "keyBenefits": [
       "4 published human RCTs on this exact formulation",
       "Improved muscle strength and endurance (biopsy-verified)",
       "Nature Aging 2025: improved immune cell metabolism",
-      "No dietary source reliably produces it — most people's gut bacteria can't make enough"
+      "No dietary source reliably produces it: most people's gut bacteria can't make enough"
     ],
     "bestFor": "Adults 40+ targeting mitochondrial quality and muscle-related aging",
     "affiliateUrl": "/go/mitopure-timeline",
@@ -1222,7 +1222,7 @@
     "id": "pqq",
     "name": "PQQ (Pyrroloquinoline Quinone)",
     "brand": "Jarrow Formulas",
-    "tagline": "Mitochondrial biogenesis — the only compound that grows new mitochondria",
+    "tagline": "Mitochondrial biogenesis: the only compound that grows new mitochondria",
     "category": "Mitochondrial Support",
     "goals": [
       "Energy",
@@ -1231,7 +1231,7 @@
     ],
     "evidenceLevel": "Emerging",
     "price": "$26.99",
-    "summary": "PQQ is unique in that it stimulates mitochondrial biogenesis — the growth of new mitochondria. Most supplements support existing mitochondria; PQQ may actually increase their number.",
+    "summary": "PQQ is unique in that it stimulates mitochondrial biogenesis, the growth of new mitochondria. Most supplements support existing mitochondria; PQQ may actually increase their number.",
     "keyBenefits": [
       "Stimulates mitochondrial biogenesis (PGC-1alpha)",
       "Neuroprotective",
@@ -1250,7 +1250,7 @@
     "id": "alpha-lipoic-acid",
     "name": "R-Alpha Lipoic Acid",
     "brand": "Jarrow Formulas",
-    "tagline": "Universal antioxidant — regenerates vitamin C, E and glutathione",
+    "tagline": "Universal antioxidant: regenerates vitamin C, E and glutathione",
     "category": "Mitochondrial Support",
     "goals": [
       "Longevity",
@@ -1280,7 +1280,7 @@
     "id": "taurine",
     "name": "Taurine",
     "brand": "NOW Foods",
-    "tagline": "Taurine deficiency linked to aging — may be the longevity molecule of 2023",
+    "tagline": "Taurine deficiency linked to aging: may be the longevity molecule of 2023",
     "category": "Mitochondrial Support",
     "goals": [
       "Longevity",
@@ -1296,7 +1296,7 @@
       "Lifespan extension in multiple animal models",
       "Cardiovascular protection",
       "Mitochondrial function",
-      "Very safe — high natural occurrence"
+      "Very safe: high natural occurrence"
     ],
     "bestFor": "Longevity optimisation based on emerging taurine-aging research",
     "affiliateUrl": "/go/now-taurine",
@@ -1307,7 +1307,7 @@
     "id": "spermidine",
     "name": "Spermidine",
     "brand": "Primeadine",
-    "tagline": "Autophagy inducer from wheat germ — cellular self-cleaning activation",
+    "tagline": "Autophagy inducer from wheat germ: cellular self-cleaning activation",
     "category": "Mitochondrial Support",
     "goals": [
       "Longevity",
@@ -1316,15 +1316,15 @@
     ],
     "evidenceLevel": "Emerging",
     "price": "$59.99",
-    "summary": "Spermidine induces autophagy — the cellular self-cleaning process that declines with age. David Sinclair and multiple longevity researchers now include it. Human RCTs show cognitive protection and cardiovascular benefits.",
+    "summary": "Spermidine induces autophagy: the cellular self-cleaning process that declines with age. David Sinclair and multiple longevity researchers now include it. Human RCTs show cognitive protection and cardiovascular benefits.",
     "keyBenefits": [
       "Potent autophagy inducer",
       "Cognitive protection in human RCTs",
       "Cardiovascular data emerging",
       "David Sinclair's stack",
-      "Natural — found in aged cheese and wheat germ"
+      "Natural: found in aged cheese and wheat germ"
     ],
-    "bestFor": "Autophagy activation and longevity — especially combined with intermittent fasting",
+    "bestFor": "Autophagy activation and longevity: especially combined with intermittent fasting",
     "affiliateUrl": "/go/primeadine-spermidine",
     "dosage": "1–2mg/day",
     "timing": "Morning away from food"
@@ -1333,7 +1333,7 @@
     "id": "nordic-naturals-omega3",
     "name": "Ultimate Omega",
     "brand": "Nordic Naturals",
-    "tagline": "Triglyceride form omega-3 — best absorbed, no fishy taste",
+    "tagline": "Triglyceride form omega-3: best absorbed, no fishy taste",
     "category": "Omega Fatty Acids",
     "goals": [
       "Cardiovascular",
@@ -1343,7 +1343,7 @@
     "evidenceLevel": "Strong",
     "price": "$52.99",
     "badge": "Runner-Up",
-    "summary": "Nordic Naturals Ultimate Omega uses the triglyceride form of omega-3 — the natural form found in fish, with superior absorption vs ethyl ester form. No fishy aftertaste.",
+    "summary": "Nordic Naturals Ultimate Omega uses the triglyceride form of omega-3, the natural form found in fish, with superior absorption vs ethyl ester form. No fishy aftertaste.",
     "keyBenefits": [
       "Triglyceride form = best absorption",
       "No fishy aftertaste",
@@ -1360,7 +1360,7 @@
     "id": "ca-akg",
     "name": "Ca-AKG (Calcium Alpha-Ketoglutarate)",
     "brand": "Life Extension",
-    "tagline": "TCA cycle intermediate — extended biological age reversal data",
+    "tagline": "TCA cycle intermediate: extended biological age reversal data",
     "category": "NAD+ Precursors",
     "goals": [
       "Longevity",
@@ -1376,7 +1376,7 @@
       "Biological age marker improvement",
       "Epigenetic clock reversal in human pilot data"
     ],
-    "bestFor": "Advanced longevity stack — for those wanting to target the TCA cycle",
+    "bestFor": "Advanced longevity stack: for those wanting to target the TCA cycle",
     "affiliateUrl": "/go/lifeext-caakg",
     "dosage": "1–2g/day",
     "timing": "Morning"
@@ -1385,7 +1385,7 @@
     "id": "function-health",
     "name": "Function Health",
     "brand": "Function",
-    "tagline": "160+ biomarkers — the most comprehensive DTC blood panel",
+    "tagline": "160+ biomarkers: the most comprehensive DTC blood panel",
     "category": "Blood & Diagnostics",
     "goals": [
       "Longevity",
@@ -1395,7 +1395,7 @@
     "evidenceLevel": "Strong",
     "price": "$499/year",
     "badge": "Best Pick",
-    "summary": "Function Health offers 160+ biomarkers including ApoB, Lp(a), fasting insulin, homocysteine, and TMAO — more than most concierge practices. Co-founded by Dr. Mark Hyman.",
+    "summary": "Function Health offers 160+ biomarkers including ApoB, Lp(a), fasting insulin, homocysteine, and TMAO, more than most concierge practices. Co-founded by Dr. Mark Hyman.",
     "keyBenefits": [
       "160+ biomarkers",
       "Includes ApoB, Lp(a), fasting insulin",
@@ -1446,7 +1446,7 @@
     ],
     "evidenceLevel": "Strong",
     "price": "$14.99",
-    "summary": "L-theanine promotes alpha brain wave activity associated with relaxed alertness, working through GABA and glutamate modulation. Well studied for reducing pre-sleep mental chatter without causing drowsiness on its own — commonly stacked with magnesium in evening wind-down routines.",
+    "summary": "L-theanine promotes alpha brain wave activity associated with relaxed alertness, working through GABA and glutamate modulation. Well studied for reducing pre-sleep mental chatter without causing drowsiness on its own, commonly stacked with magnesium in evening wind-down routines.",
     "keyBenefits": [
       "Promotes alpha wave relaxation",
       "No next-day grogginess",
@@ -1471,7 +1471,7 @@
     "price": "$21.99",
     "summary": "Apigenin is the flavonoid responsible for chamomile's traditional calming reputation, binding to GABA-A receptors similarly to (but much more mildly than) pharmaceutical benzodiazepines. Popularized in longevity circles partly through David Sinclair's stack.",
     "keyBenefits": [
-      "GABA-A receptor binding — mild anxiolytic",
+      "GABA-A receptor binding: mild anxiolytic",
       "Doesn't reduce next-day alertness at typical doses",
       "Included in several longevity researcher stacks"
     ],
@@ -1492,7 +1492,7 @@
     ],
     "evidenceLevel": "Strong",
     "price": "$12.99",
-    "summary": "Glycine supplementation before bed has RCT evidence for improving subjective sleep quality and next-day cognitive performance, likely through mild core-body-temperature reduction — a physiological signal that helps trigger sleep onset. Inexpensive and well tolerated at gram-level doses.",
+    "summary": "Glycine supplementation before bed has RCT evidence for improving subjective sleep quality and next-day cognitive performance, likely through mild core-body-temperature reduction. A physiological signal that helps trigger sleep onset. Inexpensive and well tolerated at gram-level doses.",
     "keyBenefits": [
       "RCT evidence for subjective sleep quality improvement",
       "May lower core body temperature to aid sleep onset",
@@ -1516,7 +1516,7 @@
     ],
     "evidenceLevel": "Moderate",
     "price": "$34.99",
-    "summary": "Unlike other magnesium forms, L-threonate has published evidence of meaningfully raising magnesium concentration in cerebrospinal fluid — of particular interest for REM sleep quality and cognitive function specifically, though it delivers less elemental magnesium per dose than glycinate.",
+    "summary": "Unlike other magnesium forms, L-threonate has published evidence of meaningfully raising magnesium concentration in cerebrospinal fluid, of particular interest for REM sleep quality and cognitive function specifically, though it delivers less elemental magnesium per dose than glycinate.",
     "keyBenefits": [
       "Strongest published blood-brain barrier evidence of any magnesium form",
       "May enhance REM sleep quality",
@@ -1618,7 +1618,7 @@
       "Antioxidant and adaptogenic effects",
       "Well-studied safety profile"
     ],
-    "bestFor": "Long-term memory support — requires 8-12 weeks for full effect",
+    "bestFor": "Long-term memory support: requires 8-12 weeks for full effect",
     "affiliateUrl": "/go/bacopa-monnieri",
     "dosage": "300mg standardized extract (50% bacosides)",
     "timing": "With food, consistent daily use"
@@ -1635,16 +1635,16 @@
     ],
     "evidenceLevel": "Emerging",
     "price": "$15.99",
-    "summary": "Population studies of municipal water supplies consistently associate higher trace lithium levels with lower rates of dementia and all-cause mortality. Microdose lithium orotate (often under 5mg elemental lithium) is far below the therapeutic dose used for bipolar disorder. Bryan Johnson added it to his Blueprint Essential Capsules in 2026. Evidence is epidemiological, not RCT-based — and lithium has a narrow safety margin even at low doses.",
+    "summary": "Population studies of municipal water supplies consistently associate higher trace lithium levels with lower rates of dementia and all-cause mortality. Microdose lithium orotate (often under 5mg elemental lithium) is far below the therapeutic dose used for bipolar disorder. Bryan Johnson added it to his Blueprint Essential Capsules in 2026. Evidence is epidemiological, not RCT-based, and lithium has a narrow safety margin even at low doses.",
     "keyBenefits": [
       "Epidemiological link to lower dementia rates",
       "Sub-clinical dose, far below psychiatric range",
       "Added to Bryan Johnson's 2026 Blueprint stack",
       "May support GSK-3 inhibition relevant to neuroprotection"
     ],
-    "bestFor": "Experimental neuroprotection stacking — requires physician oversight and periodic bloodwork",
+    "bestFor": "Experimental neuroprotection stacking: requires physician oversight and periodic bloodwork",
     "affiliateUrl": "/go/lithium-orotate",
-    "dosage": "Microdose only — consult a physician; do not self-dose without guidance",
+    "dosage": "Microdose only: consult a physician; do not self-dose without guidance",
     "timing": "Daily, with food"
   },
   {
@@ -1685,11 +1685,11 @@
     ],
     "evidenceLevel": "Strong",
     "price": "$16.99",
-    "summary": "Beta-alanine raises intramuscular carnosine levels, which buffers the acidosis that limits performance during 1-4 minute high-intensity efforts (Zone 4/5 cardio, repeated sprints). Effect is cumulative — carnosine loading takes 4+ weeks of consistent daily use, not a single pre-workout dose.",
+    "summary": "Beta-alanine raises intramuscular carnosine levels, which buffers the acidosis that limits performance during 1-4 minute high-intensity efforts (Zone 4/5 cardio, repeated sprints). Effect is cumulative: carnosine loading takes 4+ weeks of consistent daily use, not a single pre-workout dose.",
     "keyBenefits": [
       "Buffers lactate/H+ accumulation in muscle",
       "Well-established for high-intensity interval performance",
-      "Cumulative effect — most consistent evidence of any performance amino acid"
+      "Cumulative effect: most consistent evidence of any performance amino acid"
     ],
     "bestFor": "Zone 4/5 interval training, repeated sprint efforts",
     "affiliateUrl": "/go/now-beta-alanine",
@@ -1730,13 +1730,13 @@
     ],
     "evidenceLevel": "Moderate",
     "price": "$11.99",
-    "summary": "Sodium bicarbonate buffers extracellular pH, complementing beta-alanine's intracellular buffering. Evidence is specific to short, high-intensity anaerobic efforts (1-10 minutes) — it doesn't meaningfully help Zone 2 aerobic training. GI distress is a common practical limiter; test tolerance before competition use.",
+    "summary": "Sodium bicarbonate buffers extracellular pH, complementing beta-alanine's intracellular buffering. Evidence is specific to short, high-intensity anaerobic efforts (1-10 minutes). It doesn't meaningfully help Zone 2 aerobic training. GI distress is a common practical limiter; test tolerance before competition use.",
     "keyBenefits": [
       "Extracellular pH buffering, complements beta-alanine",
       "Established evidence for high-intensity anaerobic performance",
       "Not useful for Zone 2/aerobic training specifically"
     ],
-    "bestFor": "High-intensity anaerobic efforts only — not Zone 2 cardio",
+    "bestFor": "High-intensity anaerobic efforts only: not Zone 2 cardio",
     "affiliateUrl": "/go/now-sodium-bicarbonate",
     "dosage": "0.3g/kg bodyweight",
     "timing": "60 minutes before high-intensity effort; test GI tolerance first"
@@ -1754,10 +1754,10 @@
     ],
     "evidenceLevel": "Moderate",
     "price": "$18.99",
-    "summary": "Tart cherry (Montmorency variety) is rich in anthocyanins with anti-inflammatory and antioxidant activity. Studied for reducing exercise-induced muscle soreness and, separately, has a modest natural melatonin content contributing to sleep-quality benefits — a rare dual-purpose recovery and sleep compound.",
+    "summary": "Tart cherry (Montmorency variety) is rich in anthocyanins with anti-inflammatory and antioxidant activity. Studied for reducing exercise-induced muscle soreness and, separately, has a modest natural melatonin content contributing to sleep-quality benefits, a rare dual-purpose recovery and sleep compound.",
     "keyBenefits": [
       "Reduces exercise-induced muscle soreness in RCTs",
-      "Contains natural melatonin — dual recovery/sleep benefit",
+      "Contains natural melatonin: dual recovery/sleep benefit",
       "Antioxidant anthocyanin content"
     ],
     "bestFor": "Post-exercise recovery, especially when training late enough to also benefit sleep",

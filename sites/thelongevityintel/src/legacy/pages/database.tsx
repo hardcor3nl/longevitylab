@@ -64,7 +64,7 @@ function ProductCard({ p, index }: { p: Product; index: number }) {
         </div>
       </div>
 
-      {/* Card footer — buttons */}
+      {/* Card footer: buttons */}
       <div className="px-5 pb-5 space-y-2 border-t border-border pt-4 mt-auto">
         {p.reviewSlug && (
           <Link href={`/${p.reviewSlug}`}
@@ -151,7 +151,7 @@ export default function DatabasePage() {
                 type="text"
                 value={query}
                 onChange={e => setQuery(e.target.value)}
-                placeholder={`Search ${products.length} products — 'red light', 'sauna', 'NMN', 'HRV'...`}
+                placeholder={`Search ${products.length} products: 'red light', 'sauna', 'NMN', 'HRV'...`}
                 className="flex-1 bg-transparent text-sm text-ink placeholder-muted outline-none"
               />
               {query && <button onClick={() => setQuery('')} className="cursor-pointer"><X className="w-3.5 h-3.5 text-muted hover:text-ink" /></button>}

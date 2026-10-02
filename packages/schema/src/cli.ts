@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { existsSync, readFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
+import { scanDataFiles } from "./scandata.ts";
 import { loadDocs, lintCorpus, type LintContext } from "./index.ts";
 
 // usage: check-content --site ./site.config.json [--content ./src/content]
@@ -28,7 +29,10 @@ const ctx: LintContext = {
   routes: site.checkLinks === false ? undefined : routes,
   fileExists: (p) => existsSync(join(root, p)),
 };
-const issues = lintCorpus(docs, ctx);
+const issues = [
+  ...lintCorpus(docs, ctx),
+  ...scanDataFiles(root).map((d) => ({ severity: d.severity, rule: d.rule, file: join(root, d.file), message: d.message })),
+] as ReturnType<typeof lintCorpus>;
 const fails = issues.filter((i) => i.severity === "fail");
 const warns = issues.filter((i) => i.severity === "warn");
 for (const i of [...fails, ...warns].slice(0, Number(opt("--max", "80"))))

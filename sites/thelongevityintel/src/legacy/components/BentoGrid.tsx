@@ -39,7 +39,7 @@ export function BentoGrid({ articles }: { articles: Article[] }) {
         viewport={{ once: true, margin: '-80px' }}
         className="space-y-5"
       >
-        {/* Row 1 — full width hero */}
+        {/* Row 1: full width hero */}
         {articles[0] && (
           <motion.div variants={item}>
             <Link href={`/${articles[0].category}/${articles[0].slug}`} className="group block">
@@ -70,7 +70,7 @@ export function BentoGrid({ articles }: { articles: Article[] }) {
           </motion.div>
         )}
 
-        {/* Row 2 — 2 column */}
+        {/* Row 2: 2 column */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {articles.slice(1, 3).map((article) => (
             <motion.article key={article.slug} variants={item}
@@ -95,7 +95,7 @@ export function BentoGrid({ articles }: { articles: Article[] }) {
           ))}
         </div>
 
-        {/* Row 3 — 3 column */}
+        {/* Row 3: 3 column */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {articles.slice(3, 6).map((article) => (
             <motion.article key={article.slug} variants={item}

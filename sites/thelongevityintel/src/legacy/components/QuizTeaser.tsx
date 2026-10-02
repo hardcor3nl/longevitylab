@@ -44,7 +44,7 @@ export function QuizTeaser() {
                     }}>Biological Age?</span>
                   </h2>
                   <p className="text-[#7aad7d] text-lg leading-relaxed mb-8 max-w-md">
-                    Answer 10 science-backed questions and get your estimated biological age —
+                    Answer 10 science-backed questions and get your estimated biological age,
                     plus a personalised protocol to reduce it.
                   </p>
 
@@ -68,7 +68,7 @@ export function QuizTeaser() {
                   </Link>
                 </div>
 
-                {/* Right — decorative score card */}
+                {/* Right: decorative score card */}
                 <div className="hidden lg:block shrink-0 w-64">
                   <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
                     <p className="font-mono text-[10px] uppercase tracking-widest text-white/40 mb-4">Sample Result</p>

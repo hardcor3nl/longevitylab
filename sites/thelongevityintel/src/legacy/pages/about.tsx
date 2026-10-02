@@ -112,8 +112,8 @@ export default function AboutPage() {
                   when it exists, is clearly labelled. Readers should still compare the cited
                   evidence, limitations, and current product information.
                   <br /><br />
-                  Prices, availability, and product details shown on this site are estimates and may not reflect current pricing —
-                  always confirm the live price on the retailer&apos;s site before purchasing.
+                  Prices, availability, and product details shown on this site are estimates and may not reflect current pricing.
+                  Always confirm the live price on the retailer&apos;s site before purchasing.
                 </p>
               </div>
             </div>

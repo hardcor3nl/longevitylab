@@ -20,3 +20,18 @@ export default function rehypeTables() {
     });
   };
 }
+
+/** Wrap every markdown table in a keyboard-focusable, labelled scroll region so wide tables scroll inside themselves (no page-level horizontal scroll). */
+export function rehypeWrapTables() {
+  return (tree) => {
+    let n = 0;
+    (function visit(node) {
+      if (!node.children) return;
+      node.children = node.children.map((c) => {
+        if (el(c, "table")) return { type: "element", tagName: "div", properties: { className: ["table-scroll"], tabIndex: 0, role: "region", "aria-label": `Table ${++n}, scrolls sideways` }, children: [c] };
+        visit(c);
+        return c;
+      });
+    })(tree);
+  };
+}

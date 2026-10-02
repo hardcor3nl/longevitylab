@@ -45,7 +45,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
             <h3 className="font-display text-xl text-ink leading-tight">{product.name}</h3>
             <p className="text-muted text-sm mt-0.5">{product.brand} · {product.price}</p>
             <p className="text-muted/70 text-[10px] mt-0.5">
-              Price accurate as of {PRICE_LAST_VERIFIED} — see retailer for current price &amp; availability.
+              Price accurate as of {PRICE_LAST_VERIFIED}, see retailer for current price &amp; availability.
             </p>
           </div>
         </div>
@@ -77,7 +77,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
         </div>
       </div>
 
-      {/* CTA — always route via /go/ so disclosures + tracking stay consistent */}
+      {/* CTA: always route via /go/ so disclosures + tracking stay consistent */}
       <div className="px-5 pb-5">
         <Link
           href={product.affiliateUrl}

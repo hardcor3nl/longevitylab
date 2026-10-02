@@ -33,7 +33,7 @@ export default function StressResilienceProtocol() {
               <div className="mb-12">
                 <h2 className="font-display text-3xl text-ink mb-4">Why Stress Management is Longevity</h2>
                 <p className="text-muted text-lg leading-relaxed mb-6">
-                  Chronic stress (elevated cortisol, HPA axis dysregulation) accelerates aging, impairs immunity, disrupts sleep, increases inflammation, and raises cardiovascular disease risk. Resilience—the ability to recover quickly from stress—is trainable.
+                  Chronic stress (elevated cortisol, HPA axis dysregulation) accelerates aging, impairs immunity, disrupts sleep, increases inflammation, and raises cardiovascular disease risk. Resilience, the ability to recover quickly from stress, is trainable.
                 </p>
                 <ul className="space-y-3">
                   {[
@@ -54,7 +54,7 @@ export default function StressResilienceProtocol() {
               <div className="mb-12">
                 <h2 className="font-display text-3xl text-ink mb-4">Meditation: Types & Mechanisms</h2>
                 <p className="text-muted mb-6">
-                  Different meditation styles activate different neural pathways. Pick the one that resonates with you—consistency matters more than type.
+                  Different meditation styles activate different neural pathways. Pick the one that resonates with you, consistency matters more than type.
                 </p>
 
                 <div className="space-y-4">
@@ -188,7 +188,7 @@ export default function StressResilienceProtocol() {
                       '15–30 min barefoot on grass, sand, or soil daily',
                       'Ocean swimming (saltwater contact)',
                       'Grounding mats (under desk or bed; mixed evidence but low risk)',
-                      'Forest bathing (Shinrin-yoku) — 20+ min in nature, slow walking',
+                      'Forest bathing (Shinrin-yoku): 20+ min in nature, slow walking',
                     ].map((method, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <Check className="w-4 h-4 text-purple-400 shrink-0 mt-0.5" />

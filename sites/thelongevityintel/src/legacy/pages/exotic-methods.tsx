@@ -189,7 +189,7 @@ export default function ExoticMethodsProtocol() {
                   <div>
                     <p className="font-mono text-xs uppercase tracking-widest text-red-600 mb-2">Critical Disclaimer</p>
                     <p className="text-sm text-ink leading-relaxed">
-                      This is educational content ONLY. Do not attempt any of these interventions without professional medical guidance. Psilocybin and ketamine are controlled substances in most jurisdictions. Peptides and stem cells lack regulatory approval. Serious risks include: legal consequences, medical complications, addiction, and death. Consult medical professionals—not biohacker forums—before pursuing ANY of these approaches.
+                      This is educational content ONLY. Do not attempt any of these interventions without professional medical guidance. Psilocybin and ketamine are controlled substances in most jurisdictions. Peptides and stem cells lack regulatory approval. Serious risks include: legal consequences, medical complications, addiction, and death. Consult medical professionals, not biohacker forums, before pursuing ANY of these approaches.
                     </p>
                   </div>
                 </div>

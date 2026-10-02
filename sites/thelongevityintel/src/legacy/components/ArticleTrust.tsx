@@ -36,7 +36,7 @@ export function AffiliateDisclosure() {
       <Info className="w-3.5 h-3.5 text-muted shrink-0 mt-0.5" />
       <p className="text-xs text-muted leading-relaxed">
         <strong className="text-ink">As an Amazon Associate, Longevity Intel earns from qualifying purchases.</strong>{' '}
-        We may also earn a commission from other retailer links — at no extra cost to you. Commissions never influence
+        We may also earn a commission from other retailer links, at no extra cost to you. Commissions never influence
         rankings or scores.{' '}
         <Link href="/about#affiliate" className="underline underline-offset-2 hover:text-ink transition-colors">
           How we stay independent
@@ -46,7 +46,7 @@ export function AffiliateDisclosure() {
   )
 }
 
-/* Author bio card at the end of every article — E-E-A-T anchor. */
+/* Author bio card at the end of every article. E-E-A-T anchor. */
 export function AuthorCard({ authorName }: { authorName: string }) {
   const author = getAuthorByName(authorName)
   const profileHref = `/authors/${author.slug}`
