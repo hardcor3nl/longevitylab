@@ -297,7 +297,7 @@ export default function ProtocolPage({ params }: { params: { id: string } }) {
                   className="block w-full text-center px-5 py-3.5 bg-green text-white rounded-xl font-semibold text-sm hover:bg-green-bright transition-colors cursor-pointer">
                   Find Your Own Protocol →
                 </Link>
-                <p className="text-xs text-center text-muted mt-2">Free biological age quiz</p>
+                <p className="text-xs text-center text-muted mt-2">Free health-habits reflection</p>
               </AnimatedSection>
             </div>
           </div>
