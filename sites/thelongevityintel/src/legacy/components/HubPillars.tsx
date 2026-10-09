@@ -22,7 +22,7 @@ const pillars = [
     accent: 'bg-green/10 text-green-bright border-green/20',
     links: [
       { href: '/get-started', label: '5-step beginner path' },
-      { href: '/quiz', label: 'Health habits reflection' },
+      { href: '/quiz', label: 'Bio age quiz' },
       { href: '/about', label: 'How we review' },
     ],
   },

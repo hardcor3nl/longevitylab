@@ -145,3 +145,5 @@ url,decision,target_query,reason,redirect_target,date,status,word_count,needs_so
 /database/berberine,keep,,"hub, tool or data page rebuilt on the new templates",,2026-09-29,proposed,,,evidence-card,,
 /database/quercetin,keep,,"hub, tool or data page rebuilt on the new templates",,2026-09-29,proposed,,,evidence-card,,
 /database/tmg,keep,,"hub, tool or data page rebuilt on the new templates",,2026-09-29,proposed,,,evidence-card,,
+/database/creatine-mono,redirect,creatine monohydrate,legacy product URL still crawled and 404 in GSC (2026-10-09); database entry is /database/creatine,/database/creatine,2026-10-09,applied,,,legacy,,
+/database/l-theanine,redirect,l-theanine,legacy product URL still crawled and 404 in GSC (2026-10-09); no L-theanine entry in the database,/database,2026-10-09,applied,,,legacy,,

@@ -7,3 +7,8 @@
 # Wave 4: Gen 3 review replaced by smart rings page (see content-ledger.csv)
 /wearables/oura-ring-gen3-review /wearables/smart-rings-compared 301
 /wearables/oura-ring-gen3-review/ /wearables/smart-rings-compared 301
+# GSC 404 cleanup, 9 Oct 2026 (see content-ledger.csv)
+/database/creatine-mono /database/creatine 301
+/database/creatine-mono/ /database/creatine 301
+/database/l-theanine /database 301
+/database/l-theanine/ /database 301
