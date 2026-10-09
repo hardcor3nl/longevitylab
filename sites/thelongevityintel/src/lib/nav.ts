@@ -57,7 +57,7 @@ export const FOOTER_LINKS: Record<string, [string, string][]> = {
     ["Data API", "/api"],
     ["Press Kit", "/press"],
     ["Expert Protocols", "/protocols"],
-    ["Bio Age Quiz", "/quiz"],
+    ["Habit Reflection", "/quiz"],
     ["Comparisons", "/compare"],
     ["Glossary", "/glossary"],
   ],
